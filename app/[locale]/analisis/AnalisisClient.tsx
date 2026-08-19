@@ -16,6 +16,9 @@ import {
   Layers,
   ArrowRight,
   ShieldCheck,
+  Download,
+  Copy,
+  Check,
 } from "lucide-react";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
@@ -118,6 +121,8 @@ export function AnalisisClient({
   const [selectedType, setSelectedType] = useState<string>("general");
   const [customPrompt, setCustomPrompt] = useState<string>("");
   const [loading, setLoading] = useState(false);
+  const [downloadingPdf, setDownloadingPdf] = useState(false);
+  const [copied, setCopied] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
   const activeReport = reports.find((r) => r.id === selectedReportId) || reports[0] || null;
@@ -165,6 +170,49 @@ export function AnalisisClient({
     } catch (err) {
       console.error(err);
     }
+  };
+
+  const handleDownloadPdf = async () => {
+    if (!activeReport) return;
+    setDownloadingPdf(true);
+    try {
+      const element = document.getElementById("report-content");
+      if (!element) return;
+      const html2pdfModule = await import("html2pdf.js");
+      const html2pdf = html2pdfModule.default || html2pdfModule;
+      const opt = {
+        margin: 12,
+        filename: `psique-${activeReport.type}-${new Date().toISOString().slice(0, 10)}.pdf`,
+        image: { type: "jpeg" as const, quality: 0.98 },
+        html2canvas: { scale: 2, useCORS: true, backgroundColor: "#0c1424" },
+        jsPDF: { unit: "mm" as const, format: "a4" as const, orientation: "portrait" as const },
+        pagebreak: { mode: ["avoid-all", "css", "legacy"] },
+      };
+      await html2pdf().set(opt).from(element).save();
+    } catch (e) {
+      console.error("PDF generation failed, falling back to print:", e);
+      window.print();
+    } finally {
+      setDownloadingPdf(false);
+    }
+  };
+
+  const handleDownloadMarkdown = () => {
+    if (!activeReport) return;
+    const blob = new Blob([activeReport.content], { type: "text/markdown;charset=utf-8;" });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = `psique-${activeReport.type}-${new Date().toISOString().slice(0, 10)}.md`;
+    a.click();
+    URL.revokeObjectURL(url);
+  };
+
+  const handleCopy = async () => {
+    if (!activeReport) return;
+    await navigator.clipboard.writeText(activeReport.content);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
   };
 
   const handlePrint = () => {
@@ -315,7 +363,10 @@ export function AnalisisClient({
       {/* Columna Derecha: Visor de Documento */}
       <div className="lg:col-span-8">
         {activeReport ? (
-          <article className="rounded-xl border border-line bg-card p-8 md:p-10 print:m-0 print:border-none print:bg-transparent print:p-0">
+          <article
+            id="report-content"
+            className="rounded-xl border border-line bg-card p-8 md:p-10 print:m-0 print:border-none print:bg-transparent print:p-0"
+          >
             {/* Cabecera de Documento Clínico / Editorial */}
             <div className="mb-8 border-b border-line pb-6">
               <div className="flex flex-wrap items-center justify-between gap-4">
@@ -328,14 +379,51 @@ export function AnalisisClient({
                   </span>
                 </div>
 
-                <button
-                  onClick={handlePrint}
-                  className="flex items-center gap-2 rounded-md border border-line bg-card2/60 px-3.5 py-1.5 font-mono text-xs text-muted transition hover:border-accent hover:text-fg print:hidden"
-                  title="Exportar documento en PDF"
-                >
-                  <Printer className="h-3.5 w-3.5" />
-                  <span>Imprimir / PDF</span>
-                </button>
+                <div className="flex flex-wrap items-center gap-2 print:hidden">
+                  <button
+                    onClick={handleDownloadPdf}
+                    disabled={downloadingPdf}
+                    className="flex items-center gap-1.5 rounded-md border border-line bg-card2/80 px-3 py-1.5 font-mono text-xs text-fg transition hover:border-accent hover:text-accent disabled:opacity-60"
+                    title="Descargar archivo PDF directo"
+                  >
+                    {downloadingPdf ? (
+                      <Loader2 className="h-3.5 w-3.5 animate-spin" />
+                    ) : (
+                      <Download className="h-3.5 w-3.5" />
+                    )}
+                    <span>{downloadingPdf ? "Generando PDF..." : "Descargar PDF"}</span>
+                  </button>
+
+                  <button
+                    onClick={handleDownloadMarkdown}
+                    className="flex items-center gap-1.5 rounded-md border border-line bg-card2/80 px-3 py-1.5 font-mono text-xs text-muted transition hover:border-accent hover:text-fg"
+                    title="Descargar archivo Markdown (.md)"
+                  >
+                    <FileText className="h-3.5 w-3.5" />
+                    <span>.MD</span>
+                  </button>
+
+                  <button
+                    onClick={handleCopy}
+                    className="flex items-center gap-1.5 rounded-md border border-line bg-card2/80 px-3 py-1.5 font-mono text-xs text-muted transition hover:border-accent hover:text-fg"
+                    title="Copiar texto del informe"
+                  >
+                    {copied ? (
+                      <Check className="h-3.5 w-3.5 text-good" />
+                    ) : (
+                      <Copy className="h-3.5 w-3.5" />
+                    )}
+                    <span>{copied ? "Copiado" : "Copiar"}</span>
+                  </button>
+
+                  <button
+                    onClick={handlePrint}
+                    className="flex items-center gap-1.5 rounded-md border border-line bg-card2/60 px-2.5 py-1.5 font-mono text-xs text-muted transition hover:border-accent hover:text-fg"
+                    title="Abrir menú de impresión del navegador"
+                  >
+                    <Printer className="h-3.5 w-3.5" />
+                  </button>
+                </div>
               </div>
 
               <h2 className="font-display mt-3 text-2xl text-fg md:text-3xl">

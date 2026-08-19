@@ -178,6 +178,7 @@ STYLE AND FORMAT RULES:
 - Begin DIRECTLY with the top-level Markdown title: # Title
 - Tone: Clinical, objective, articulate, mature, and deeply perceptive. Address the subject directly using second person ("you" / "tú" / "vous" / "du", etc.).
 - Formatting: Use structured Markdown (## Section titles, ordered/unordered lists, bolded concepts).
+- NO ASCII BOXES: NEVER generate ASCII art, plain text box drawings, or pseudo-code boxes. Use standard Markdown tables (| Col | Col |) or Mermaid diagrams instead.
 - Include at least one valid, clean \`\`\`mermaid\`\`\` code block diagram synthesizing the trait map or relational flow.
     `;
 

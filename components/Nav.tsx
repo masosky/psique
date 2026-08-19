@@ -46,6 +46,23 @@ export async function Nav() {
 
         <div className="ml-auto flex items-center gap-4 text-sm">
           <a
+            href="https://blueberrybytes.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hidden items-center gap-1.5 font-mono text-[11px] text-muted transition hover:text-fg sm:flex"
+            title="Built by BlueBerryBytes"
+          >
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="https://blueberrybytes.com/bbb.svg"
+              alt="Blueberry Bytes"
+              className="h-4 w-4 rounded-sm object-contain"
+            />
+            <span className="text-muted/60">by</span>
+            <span className="font-medium text-fg hover:underline">blueberrybytes.com</span>
+          </a>
+
+          <a
             href="https://github.com/masosky/psique"
             target="_blank"
             rel="noopener noreferrer"
