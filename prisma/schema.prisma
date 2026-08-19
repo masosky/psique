@@ -66,6 +66,9 @@ model User {
   // consent. Off unless the user ticks it.
   sharePolitics Boolean @default(false) @map("share_politics")
 
+  // Resumen generado por IA (Gemini) sobre el perfil del usuario.
+  aiAnalysis String? @map("ai_analysis") @db.Text
+
   accounts     Account[]
   sessions     Session[]
   testAttempts TestAttempt[]

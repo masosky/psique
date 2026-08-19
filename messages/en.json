@@ -131,7 +131,17 @@
     "moralLabel": "Moral profile",
     "moralTop": "Your dominant foundation: {trait}",
     "esteemLabel": "Self-esteem · {score}/100",
-    "locusLabel": "Locus of control · {score}/100"
+    "locusLabel": "Locus of control · {score}/100",
+    "bigFiveLabel": "Personality",
+    "bigFiveTop": "Dominant trait: {trait}",
+    "aiTitle": "AI Analysis",
+    "aiSubtitle": "Get a comprehensive psychological analysis based on your tests.",
+    "aiGenerate": "Generate Analysis",
+    "aiGenerating": "Analyzing...",
+    "aiError": "Error generating analysis. Please try again.",
+    "aiNotEnoughData": "Complete at least 5 tests to unlock your AI profile analysis.",
+    "aiReadMore": "Read more",
+    "aiReadLess": "Read less"
   },
   "compass": {
     "axisX": "X axis",
@@ -1224,6 +1234,48 @@
       "t5": {
         "name": "At the helm of everything",
         "description": "Everything depends on you — the good, and what was never yours. Share the blame better."
+      }
+    },
+    "bigfive": {
+      "visionario": {
+        "name": "Visionary",
+        "description": "Driven by ideas, aesthetics and new experiences."
+      },
+      "pragmatico": {
+        "name": "Pragmatist",
+        "description": "Grounded, traditional and resistant to untested ideas."
+      },
+      "organizador": {
+        "name": "Organizer",
+        "description": "Highly disciplined, reliable and goal-oriented."
+      },
+      "improvisador": {
+        "name": "Improviser",
+        "description": "Spontaneous, flexible and comfortable with chaos."
+      },
+      "sociable": {
+        "name": "Socialite",
+        "description": "Energized by people, action and external stimulation."
+      },
+      "reservado": {
+        "name": "Reserved",
+        "description": "Independent, quiet and easily drained by crowds."
+      },
+      "conciliador": {
+        "name": "Peacemaker",
+        "description": "Empathetic, trusting and highly cooperative."
+      },
+      "competitivo": {
+        "name": "Challenger",
+        "description": "Skeptical, demanding and driven to win."
+      },
+      "vigilante": {
+        "name": "Vigilant",
+        "description": "Highly attuned to risk, stress and negative emotions."
+      },
+      "placido": {
+        "name": "Placid",
+        "description": "Calm, resilient and rarely shaken by stress."
       }
     }
   },

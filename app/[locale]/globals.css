@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
 
 /* "Psique" theme: deep navy ink, trust-blue accent, amber details.
    ⚠ The canonical values live in lib/theme.ts — the root layout injects them

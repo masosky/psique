@@ -1,12 +1,14 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Link, redirect } from "@/i18n/routing";
 import { auth } from "@/lib/auth";
+import { prisma } from "@/lib/prisma";
 import { loadProfile } from "@/lib/profile";
 import { percentilesFor, politicalCloud, populationCount } from "@/lib/population";
 import { TESTS } from "@/lib/tests";
 import { CATEGORIES, CATEGORY_EMOJI, TRAITS, TRAIT_IDS, type TraitCategory } from "@/lib/traits";
 import {
   attachmentStyle,
+  bigFiveArchetype,
   darkLevel,
   lockedInsightCount,
   locusLevel,
@@ -19,6 +21,7 @@ import { CATEGORY_COLOR } from "@/lib/theme";
 import { Compass } from "@/components/charts/Compass";
 import { RadarBlock } from "@/components/charts/RadarBlock";
 import { TraitBar } from "@/components/charts/TraitBar";
+import { AIAnalysisBlock } from "./AIAnalysisBlock";
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
@@ -56,6 +59,8 @@ export default async function PerfilPage({
   ]);
 
   const profile = await loadProfile(user.id!);
+  const dbUser = await prisma.user.findUnique({ where: { id: user.id } });
+  const aiAnalysis = dbUser?.aiAnalysis || null;
   const measured = Object.keys(profile);
 
   if (measured.length === 0) {
@@ -81,6 +86,7 @@ export default async function PerfilPage({
   ]);
 
   const politico = politicalArchetype(profile);
+  const bigFive = bigFiveArchetype(profile);
   const dark = darkLevel(profile);
   const pusi = pusilanimeIndex(profile);
   const apegoStyle = attachmentStyle(profile);
@@ -100,6 +106,7 @@ export default async function PerfilPage({
 
   const labelsFor = (id: string) => ({
     name: tr(`${id}.name`),
+    description: tr(`${id}.description`),
     low: tr(`${id}.low`),
     high: tr(`${id}.high`),
   });
@@ -147,6 +154,16 @@ export default async function PerfilPage({
 
       {/* Headlines */}
       <section className="mb-10 grid gap-4 sm:grid-cols-3">
+        {bigFive && (
+          <div className="rounded-xl border border-accent/30 bg-card p-5">
+            <p className="mb-1 text-xs tracking-wider text-accent uppercase">{t("bigFiveLabel")}</p>
+            <p className="font-display text-2xl">{ta(`bigfive.${bigFive.key}.name`)}</p>
+            <p className="mt-1 text-sm text-muted">{ta(`bigfive.${bigFive.key}.description`)}</p>
+            <p className="mt-2 text-xs text-muted">
+              {t("bigFiveTop", { trait: tr(`${bigFive.dominant}.name`) })}
+            </p>
+          </div>
+        )}
         {politico && (
           <div className="rounded-xl border border-sky/30 bg-card p-5">
             <p className="mb-1 text-xs tracking-wider text-sky uppercase">{t("archetypeLabel")}</p>
@@ -212,6 +229,21 @@ export default async function PerfilPage({
           </div>
         )}
       </section>
+
+      <AIAnalysisBlock
+        initialAnalysis={aiAnalysis}
+        canGenerate={measured.length >= 5}
+        labels={{
+          title: t("aiTitle"),
+          subtitle: t("aiSubtitle"),
+          generateBtn: t("aiGenerate"),
+          generating: t("aiGenerating"),
+          errorText: t("aiError"),
+          notEnoughData: t("aiNotEnoughData"),
+          readMore: t("aiReadMore"),
+          readLess: t("aiReadLess"),
+        }}
+      />
 
       {/* Compass + political radar */}
       {politicos.length >= 2 && (

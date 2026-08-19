@@ -1,7 +1,9 @@
 import { getTrait } from "@/lib/traits";
+import { Info } from "lucide-react";
 
 export interface TraitLabels {
   name: string;
+  description: string;
   low: string;
   high: string;
 }
@@ -32,7 +34,15 @@ export function TraitBar({
   return (
     <div>
       <div className="mb-1.5 flex items-baseline justify-between">
-        <span className="text-sm font-medium">{labels.name}</span>
+        <span className="flex items-center gap-1.5 text-sm font-medium">
+          {labels.name}
+          <span
+            title={labels.description}
+            className="flex cursor-help text-muted hover:text-fg transition-colors"
+          >
+            <Info className="h-3.5 w-3.5" />
+          </span>
+        </span>
         <span className="text-xs text-muted">
           {percentile !== undefined && (
             <span

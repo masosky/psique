@@ -222,7 +222,12 @@ const RULES: Rule[] = [
     ["selfEmo", "neuroticism"],
     (p) => p.selfEmo <= 35 && p.neuroticism >= 55,
   ),
-  R("lector-estratega", "curiosidad", ["otherEmo", "mach"], (p) => p.otherEmo >= 65 && p.mach >= 60),
+  R(
+    "lector-estratega",
+    "curiosidad",
+    ["otherEmo", "mach"],
+    (p) => p.otherEmo >= 65 && p.mach >= 60,
+  ),
   R(
     "corazon-sin-radar",
     "curiosidad",
@@ -253,7 +258,12 @@ const RULES: Rule[] = [
 
   // ——— self-esteem and locus ———
   R("critico-interno", "riesgo", ["selfesteem"], (p) => p.selfesteem <= 30),
-  R("ego-blindado", "curiosidad", ["selfesteem", "narc"], (p) => p.selfesteem >= 70 && p.narc >= 65),
+  R(
+    "ego-blindado",
+    "curiosidad",
+    ["selfesteem", "narc"],
+    (p) => p.selfesteem >= 70 && p.narc >= 65,
+  ),
   R(
     "timon-propio",
     "fortaleza",
@@ -381,4 +391,34 @@ export function locusLevel(p: Profile): { score: number; tier: string } | null {
   if (p.locus === undefined) return null;
   const score = Math.round(p.locus);
   return { score, tier: tierOf(score) };
+}
+
+// Big Five (OCEAN) archetype based on the most dominant trait (furthest from 50).
+// Keys: `archetypes.bigfive.<key>.{name,description}`
+export function bigFiveArchetype(p: Profile): { key: string; dominant: string } | null {
+  const ids = ["openness", "conscientiousness", "extraversion", "agreeableness", "neuroticism"];
+  if (ids.some((t) => p[t] === undefined)) return null;
+
+  let maxDev = -1;
+  let dominant = "";
+  let isHigh = true;
+
+  for (const t of ids) {
+    const dev = Math.abs(p[t] - 50);
+    if (dev > maxDev) {
+      maxDev = dev;
+      dominant = t;
+      isHigh = p[t] >= 50;
+    }
+  }
+
+  const keys: Record<string, { high: string; low: string }> = {
+    openness: { high: "visionario", low: "pragmatico" },
+    conscientiousness: { high: "organizador", low: "improvisador" },
+    extraversion: { high: "sociable", low: "reservado" },
+    agreeableness: { high: "conciliador", low: "competitivo" },
+    neuroticism: { high: "vigilante", low: "placido" },
+  };
+
+  return { key: keys[dominant][isHigh ? "high" : "low"], dominant };
 }
