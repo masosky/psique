@@ -208,6 +208,65 @@ const RULES: Rule[] = [
     (p) => p.univers >= 70 && p.econ >= 65,
   ),
   R("cuidado-sin-limites", "riesgo", ["care", "asert"], (p) => p.care >= 70 && p.asert <= 40),
+
+  // ——— inteligencia emocional ———
+  R(
+    "termostato",
+    "fortaleza",
+    ["regEmo", "neuroticism"],
+    (p) => p.regEmo >= 70 && p.neuroticism <= 40,
+  ),
+  R(
+    "piloto-a-ciegas",
+    "riesgo",
+    ["selfEmo", "neuroticism"],
+    (p) => p.selfEmo <= 35 && p.neuroticism >= 55,
+  ),
+  R("lector-estratega", "curiosidad", ["otherEmo", "mach"], (p) => p.otherEmo >= 65 && p.mach >= 60),
+  R(
+    "corazon-sin-radar",
+    "curiosidad",
+    ["care", "otherEmo"],
+    (p) => p.care >= 65 && p.otherEmo <= 40,
+  ),
+
+  // ——— estilos de humor ———
+  R(
+    "pegamento-social",
+    "fortaleza",
+    ["humorAfil", "extraversion"],
+    (p) => p.humorAfil >= 70 && p.extraversion >= 60,
+  ),
+  R(
+    "escudo-de-risa",
+    "fortaleza",
+    ["humorSelf", "neuroticism"],
+    (p) => p.humorSelf >= 65 && p.neuroticism >= 60,
+  ),
+  R("filo-que-corta", "riesgo", ["humorAgr", "psyc"], (p) => p.humorAgr >= 65 && p.psyc >= 60),
+  R(
+    "payaso-triste",
+    "riesgo",
+    ["humorDest", "selfesteem"],
+    (p) => p.humorDest >= 65 && p.selfesteem <= 40,
+  ),
+
+  // ——— autoestima y locus ———
+  R("critico-interno", "riesgo", ["selfesteem"], (p) => p.selfesteem <= 30),
+  R("ego-blindado", "curiosidad", ["selfesteem", "narc"], (p) => p.selfesteem >= 70 && p.narc >= 65),
+  R(
+    "timon-propio",
+    "fortaleza",
+    ["locus", "conscientiousness"],
+    (p) => p.locus >= 70 && p.conscientiousness >= 65,
+  ),
+  R("espectador", "riesgo", ["locus", "asert"], (p) => p.locus <= 30 && p.asert <= 40),
+  R(
+    "motor-exigente",
+    "curiosidad",
+    ["locus", "selfesteem"],
+    (p) => p.locus >= 65 && p.selfesteem <= 40,
+  ),
 ];
 
 export const INSIGHT_COUNT = RULES.length;
@@ -306,5 +365,20 @@ export function pusilanimeIndex(p: Profile): { score: number; tier: string } | n
   const { asert, complac, confl } = p;
   if (asert === undefined || complac === undefined || confl === undefined) return null;
   const score = Math.round((100 - asert + complac + confl) / 3);
+  return { score, tier: tierOf(score) };
+}
+
+// Nivel de autoestima (Rosenberg). Claves: `archetypes.autoestima.<tier>`.
+export function selfEsteemLevel(p: Profile): { score: number; tier: string } | null {
+  if (p.selfesteem === undefined) return null;
+  const score = Math.round(p.selfesteem);
+  return { score, tier: tierOf(score) };
+}
+
+// Locus de control: 0 externo (el azar decide) → 100 interno (yo decido).
+// Claves: `archetypes.locus.<tier>`.
+export function locusLevel(p: Profile): { score: number; tier: string } | null {
+  if (p.locus === undefined) return null;
+  const score = Math.round(p.locus);
   return { score, tier: tierOf(score) };
 }

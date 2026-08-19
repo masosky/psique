@@ -32,4 +32,8 @@ export interface TestDefinition {
   minutes: number; // duración estimada
   sources: TestSource[];
   items: TestItem[];
+  // Transformación opcional sobre las puntuaciones ya normalizadas (0-100).
+  // La usa `valores` para ipsatizar (centrar en la media de la persona), que
+  // es la corrección del PVQ: convierte acuerdo absoluto en prioridad relativa.
+  postprocess?: (scores: Record<string, number>) => Record<string, number>;
 }

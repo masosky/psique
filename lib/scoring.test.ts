@@ -51,6 +51,29 @@ describe("scoreTest", () => {
   });
 });
 
+describe("ipsatización de valores", () => {
+  const valores = TESTS.find((t) => t.slug === "valores")!;
+
+  it("la aquiescencia no infla el perfil: responder 5 a todo deja cada valor en 50", () => {
+    const answers = Object.fromEntries(valores.items.map((i) => [i.id, 5]));
+    const scores = scoreTest(valores, answers);
+    for (const trait of valores.traits) expect(scores[trait]).toBe(50);
+  });
+
+  it("una prioridad clara queda por encima de 50 y el resto por debajo", () => {
+    // Máximo acuerdo con universalismo (un1, un2), neutral en el resto.
+    const answers = Object.fromEntries(
+      valores.items.map((i) => [i.id, i.id.startsWith("un") ? 5 : 3]),
+    );
+    const scores = scoreTest(valores, answers);
+    expect(scores.univers).toBeGreaterThan(50);
+    for (const trait of valores.traits.filter((t) => t !== "univers")) {
+      expect(scores[trait], trait).toBeLessThan(50);
+      expect(scores.univers).toBeGreaterThan(scores[trait]);
+    }
+  });
+});
+
 describe("catálogo de tests", () => {
   it("todos los rasgos usados existen en el registro", () => {
     for (const test of TESTS) {

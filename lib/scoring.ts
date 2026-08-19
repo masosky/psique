@@ -47,5 +47,5 @@ export function scoreTest(test: TestDefinition, answers: Answers): Scores {
     const mean = values.reduce((a, b) => a + b, 0) / values.length;
     scores[trait] = clamp(((mean - LIKERT_MIN) / (LIKERT_MAX - LIKERT_MIN)) * 100);
   }
-  return scores;
+  return test.postprocess ? test.postprocess(scores) : scores;
 }

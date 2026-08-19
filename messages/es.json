@@ -106,7 +106,9 @@
     "percentileTooltip": "Por encima del {percentile}% de la comunidad",
     "attachmentLabel": "Estilo de apego",
     "moralLabel": "Perfil moral",
-    "moralTop": "Tu fundamento dominante: {trait}"
+    "moralTop": "Tu fundamento dominante: {trait}",
+    "esteemLabel": "Autoestima · {score}/100",
+    "locusLabel": "Locus de control · {score}/100"
   },
   "compass": {
     "axisX": "Eje X",
@@ -141,7 +143,9 @@
     "caracter": "Carácter",
     "moral": "Fundamentos morales",
     "valores": "Valores",
-    "vinculos": "Vínculos"
+    "vinculos": "Vínculos",
+    "habilidades": "Habilidades emocionales",
+    "humor": "Sentido del humor"
   },
   "traits": {
     "econ": {
@@ -395,6 +399,76 @@
       "low": "Cercano",
       "high": "Distante",
       "description": "Incomodidad con la dependencia y la cercanía emocional."
+    },
+    "selfEmo": {
+      "name": "Percepción emocional propia",
+      "short": "Autopercepción",
+      "low": "Brumosa",
+      "high": "Nítida",
+      "description": "Saber qué sientes y por qué mientras lo sientes, no tres días después."
+    },
+    "otherEmo": {
+      "name": "Percepción emocional ajena",
+      "short": "Leer a otros",
+      "low": "Opaca",
+      "high": "Fina",
+      "description": "Leer el estado emocional de otros a partir de gestos, tonos y silencios."
+    },
+    "useEmo": {
+      "name": "Uso de las emociones",
+      "short": "Uso emocional",
+      "low": "A la deriva",
+      "high": "Motor",
+      "description": "Poner las emociones a trabajar: motivarte, priorizar, convertir nervios en foco."
+    },
+    "regEmo": {
+      "name": "Regulación emocional",
+      "short": "Regulación",
+      "low": "Reactiva",
+      "high": "Templada",
+      "description": "Bajar el volumen de una emoción cuando no ayuda, sin negarla."
+    },
+    "humorAfil": {
+      "name": "Humor afiliativo",
+      "short": "Afiliativo",
+      "low": "Sobrio",
+      "high": "Chispeante",
+      "description": "Humor para unir: chistes que incluyen, bromas que hacen grupo."
+    },
+    "humorSelf": {
+      "name": "Humor de automejora",
+      "short": "Automejora",
+      "low": "Sin escudo",
+      "high": "Amortiguado",
+      "description": "Humor como amortiguador propio: reírte del lío para no hundirte en él."
+    },
+    "humorAgr": {
+      "name": "Humor agresivo",
+      "short": "Agresivo",
+      "low": "Inofensivo",
+      "high": "Mordaz",
+      "description": "Humor a costa de otros: sarcasmo, pullas y burla con diana."
+    },
+    "humorDest": {
+      "name": "Humor autodestructivo",
+      "short": "Autoparódico",
+      "low": "Entero",
+      "high": "A mi costa",
+      "description": "Humor a costa de ti: hacerte de menos para caer bien o encajar."
+    },
+    "selfesteem": {
+      "name": "Autoestima",
+      "short": "Autoestima",
+      "low": "Crítico interno",
+      "high": "Base sólida",
+      "description": "La valoración global que haces de ti: cuánto te respetas y te gustas."
+    },
+    "locus": {
+      "name": "Locus de control",
+      "short": "Locus",
+      "low": "Externo",
+      "high": "Interno",
+      "description": "A qué atribuyes lo que te pasa: a tu esfuerzo (interno) o al azar y el sistema (externo)."
     }
   },
   "tests": {
@@ -454,7 +528,7 @@
         "a1": "Me preocupo genuinamente por los problemas de los demás.",
         "a2": "Me cuesta perdonar.",
         "a3": "La gente diría que soy una persona fácil de tratar.",
-        "a4": "Si alguien me la juega, se la devuelvo.",
+        "a4": "Sospecho que la gente suele tener segundas intenciones.",
         "n1": "Me preocupo por cosas que probablemente nunca pasarán.",
         "n2": "Mantengo la calma bajo presión.",
         "n3": "Mi estado de ánimo cambia con facilidad.",
@@ -549,7 +623,7 @@
     "valores": {
       "title": "Tus valores",
       "tagline": "Los 10 valores universales de Schwartz: qué te mueve de verdad.",
-      "description": "Schwartz identificó diez valores presentes en todas las culturas, organizados en un círculo con tensiones internas: no puedes maximizar seguridad y estimulación a la vez, ni poder y universalismo. Verás cuáles te dominan y qué renuncias implican.",
+      "description": "Schwartz identificó diez valores presentes en todas las culturas, organizados en un círculo con tensiones internas: no puedes maximizar seguridad y estimulación a la vez, ni poder y universalismo. Verás cuáles te dominan y qué renuncias implican. Las puntuaciones son relativas a tu propia media (50): muestran qué priorizas tú, no cuánto asientes en general.",
       "sources": {
         "0": "La teoría original de los diez valores universales y su estructura circular.",
         "1": "El cuestionario PVQ, formato en el que se inspira este test.",
@@ -622,6 +696,104 @@
         "h8": "Si puedo saltarme una norma sin consecuencias, me la salto.",
         "h9": "La gente que hace trampas para ganar me repugna.",
         "h10": "Fingiría interés por alguien si eso me conviniera."
+      }
+    },
+    "inteligencia-emocional": {
+      "title": "Test de inteligencia emocional",
+      "tagline": "¿Las emociones te pilotan o las pilotas?",
+      "description": "Cuatro habilidades distintas: notar lo que sientes, leer lo que sienten otros, usar la emoción como combustible y bajarle el volumen cuando toca. Basado en el modelo de Salovey y Mayer y en la estructura de la escala WLEIS. No mide lo buena persona que eres: mide destreza.",
+      "sources": {
+        "0": "El modelo original: la inteligencia emocional como conjunto de habilidades, no como rasgo",
+        "1": "Las 4 dimensiones (propia, ajena, uso, regulación) y la escala de referencia (WLEIS)",
+        "2": "Metaanálisis: la IE predice desempeño más allá de la personalidad y el CI"
+      },
+      "items": {
+        "ie1": "Casi siempre sé por qué me siento como me siento.",
+        "ie2": "Distingo bien si lo que tengo es tristeza, frustración o simple cansancio.",
+        "ie3": "A veces me doy cuenta tarde de que algo me había afectado.",
+        "ie4": "Cuando me enfado, identifico rápido qué lo ha provocado.",
+        "ie5": "Noto cómo se siente la gente aunque no diga nada.",
+        "ie6": "Mis amigos dicen que se me da bien entender lo que les pasa.",
+        "ie7": "Me sorprendo a menudo cuando alguien me cuenta que está mal: no lo había visto venir.",
+        "ie8": "Capto rápido el ambiente de una habitación al entrar.",
+        "ie9": "Uso mi buen humor para impulsarme cuando tengo tareas difíciles.",
+        "ie10": "Sé motivarme para seguir cuando algo se pone cuesta arriba.",
+        "ie11": "Cuando estoy de bajón, me cuesta muchísimo ponerme con nada.",
+        "ie12": "Convierto los nervios en energía para actuar.",
+        "ie13": "Cuando algo me altera, recupero la calma en poco tiempo.",
+        "ie14": "Controlo mi mal genio incluso en situaciones muy tensas.",
+        "ie15": "Cuando me enfado, digo cosas de las que luego me arrepiento.",
+        "ie16": "Una preocupación puede secuestrarme el día entero."
+      }
+    },
+    "humor": {
+      "title": "Test de sentido del humor",
+      "tagline": "Dime de qué te ríes y te diré quién eres",
+      "description": "Los cuatro estilos de humor de Martin: el que une (afiliativo), el que te sostiene (automejora), el que corta (agresivo) y el que te pone a ti de diana (autodestructivo). Los dos primeros van con bienestar; los dos últimos pasan factura.",
+      "sources": {
+        "0": "El instrumento original: el Humor Styles Questionnaire y sus 4 estilos",
+        "1": "Metaanálisis: qué estilos van con bienestar y cuáles con malestar",
+        "2": "Metaanálisis: cómo encajan los estilos de humor con los Big Five"
+      },
+      "items": {
+        "hu1": "Hago reír a la gente con facilidad.",
+        "hu2": "El humor es mi manera de acercarme a la gente.",
+        "hu3": "Rara vez cuento chistes o hago bromas en grupo.",
+        "hu4": "Bromear con mis amigos es de mis cosas favoritas.",
+        "hu5": "El humor me ayuda a no hundirme cuando las cosas van mal.",
+        "hu6": "Si estoy de bajón, suelo encontrarle el lado absurdo para animarme.",
+        "hu7": "Cuando tengo un problema, pierdo por completo el sentido del humor.",
+        "hu8": "Me río de mis propios líos, y eso les quita peso.",
+        "hu9": "Si alguien merece una pulla, no me la guardo.",
+        "hu10": "Mi humor a veces tiene más filo del que la gente espera.",
+        "hu11": "No me sumo a las burlas aunque todo el grupo esté riéndose de alguien.",
+        "hu12": "A veces suelto una broma sabiendo que a alguien le va a escocer.",
+        "hu13": "Dejo que se rían de mí más de la cuenta si eso hace gracia al grupo.",
+        "hu14": "Me río de mis defectos delante de otros para caer bien.",
+        "hu15": "Escondo cómo me siento de verdad detrás de las bromas.",
+        "hu16": "No necesito ponerme en ridículo para que el grupo me acepte."
+      }
+    },
+    "autoestima": {
+      "title": "Test de autoestima",
+      "tagline": "¿Cómo te llevas contigo?",
+      "description": "La escala de Rosenberg: diez frases, medio siglo de uso y la foto rápida más fiable de cómo te valoras. La autoestima baja no es un rasgo fijo: es un estado que se trabaja, y este test te dice desde dónde partes.",
+      "sources": {
+        "0": "La escala original de 10 ítems, el instrumento breve más usado de la psicología",
+        "1": "Metaanálisis longitudinal: la autoestima baja precede a la depresión, no al revés",
+        "2": "Cómo evoluciona la autoestima a lo largo de la vida (sube hasta los ~60)"
+      },
+      "items": {
+        "ae1": "En general, me gusta la persona que soy.",
+        "ae2": "A veces pienso que no valgo para nada.",
+        "ae3": "Siento que tengo bastantes cualidades.",
+        "ae4": "Puedo hacer las cosas tan bien como la mayoría de la gente.",
+        "ae5": "Siento que no tengo demasiado de lo que presumir.",
+        "ae6": "A veces me siento inútil de verdad.",
+        "ae7": "Siento que valgo, al menos, tanto como cualquier otra persona.",
+        "ae8": "Me gustaría tenerme más respeto.",
+        "ae9": "Tiendo a sentir que, en el fondo, soy un fracaso.",
+        "ae10": "Tengo una actitud positiva hacia mí."
+      }
+    },
+    "locus": {
+      "title": "Test de locus de control",
+      "tagline": "¿Quién conduce tu vida: tú o el azar?",
+      "description": "El clásico de Rotter: ¿atribuyes lo que te pasa a tu esfuerzo o a la suerte, los contactos y el sistema? El locus interno predice desde el sueldo hasta la salud — aunque llevado al extremo se convierte en culparte hasta de la lluvia.",
+      "sources": {
+        "0": "El constructo original: expectativas internas vs externas de control del refuerzo",
+        "1": "Metaanálisis laboral: el locus interno va con más satisfacción y mejor desempeño",
+        "2": "Metaanálisis transcultural: la relación locus-ansiedad-depresión por países"
+      },
+      "items": {
+        "lc1": "Lo que consigo depende sobre todo de mi esfuerzo.",
+        "lc2": "Gran parte de mi vida la deciden factores que no controlo.",
+        "lc3": "Cuando algo me sale mal, reviso qué pude hacer yo diferente.",
+        "lc4": "Tener éxito es, más que nada, cuestión de suerte y contactos.",
+        "lc5": "Mi futuro lo construyo yo con mis decisiones.",
+        "lc6": "Da igual lo que haga: lo que tenga que pasar, pasará.",
+        "lc7": "Si me preparo a fondo, los resultados acaban llegando.",
+        "lc8": "Los planes rara vez salen porque el mundo es impredecible."
       }
     }
   },
@@ -813,6 +985,58 @@
     "cuidado-sin-limites": {
       "title": "Cuidas de todos menos de ti",
       "body": "Cuidado moral muy alto con asertividad baja: absorbes el malestar ajeno y no pones freno. El desgaste por empatía no es un mito, y este es el perfil exacto."
+    },
+    "termostato": {
+      "title": "Termostato interno",
+      "body": "Regulación emocional alta sobre una base tranquila: no es que no sientas, es que recuperas el mando rápido. Esa combinación amortigua casi cualquier semana mala."
+    },
+    "piloto-a-ciegas": {
+      "title": "Pilotar a ciegas",
+      "body": "Mucha turbulencia emocional y poca visibilidad de lo que sientes: te enteras cuando ya ha explotado. Ponerle nombre a lo que notas —¿rabia?, ¿cansancio?, ¿miedo?— es medio arreglo."
+    },
+    "lector-estratega": {
+      "title": "Lector con agenda",
+      "body": "Lees a la gente con precisión y además calculas: persuasión de nivel experto. La frontera entre carisma y manipulación es solo para qué lo usas."
+    },
+    "corazon-sin-radar": {
+      "title": "Corazón sin radar",
+      "body": "Te importa la gente de verdad, pero no siempre lees cómo está: intención impecable, puntería regular. Preguntar «¿y tú cómo estás con esto?» compensa el radar."
+    },
+    "pegamento-social": {
+      "title": "Pegamento social",
+      "body": "Humor afiliativo alto y energía social: eres la razón de que el grupo se junte. Ese rol sostiene amistades durante décadas — y también cansa; permítete no ser el show a veces."
+    },
+    "escudo-de-risa": {
+      "title": "Escudo de risa",
+      "body": "Tu sistema nervioso se dispara fácil, pero tu humor de automejora lo amortigua: reírte del lío es tu regulación emocional casera. Es de las estrategias con mejor evidencia — sigue usándola."
+    },
+    "filo-que-corta": {
+      "title": "Filo que corta",
+      "body": "Humor agresivo con dureza emocional detrás: tus bromas tienen víctimas y lo sabes. Gracioso hoy, factura social mañana — la gente recuerda quién la hizo sentir pequeña."
+    },
+    "payaso-triste": {
+      "title": "El payaso triste",
+      "body": "Te ríes de ti para que el grupo te acepte, y tu autoestima empieza a creérselo. La autocrítica en tono de broma sigue siendo autocrítica: el público se ríe, tú tomas nota."
+    },
+    "critico-interno": {
+      "title": "El crítico no descansa",
+      "body": "Autoestima muy baja: la voz que te evalúa es más dura contigo que con nadie. No es un rasgo de personalidad, es un frente abierto — y es de lo que mejor responde cuando se trabaja."
+    },
+    "ego-blindado": {
+      "title": "Ego con armadura",
+      "body": "Autoestima alta Y hambre de admiración: seguridad genuina con apetito de escenario. Funciona hasta que alguien no aplaude; ahí se ve de qué está hecha la base."
+    },
+    "timon-propio": {
+      "title": "Manos en el timón",
+      "body": "Crees que tu vida depende de ti y además ejecutas: lo más parecido que existe a una garantía. El riesgo residual: culparte también de lo que de verdad no era tuyo."
+    },
+    "espectador": {
+      "title": "Espectador de tu propia vida",
+      "body": "Crees que casi nada depende de ti y además no lo pides: la profecía autocumplida perfecta. Empieza microscópico: una cosa esta semana que dependa solo de ti, y mírala pasar."
+    },
+    "motor-exigente": {
+      "title": "Motor sin amortiguador",
+      "body": "Crees que todo depende de ti pero no te crees capaz: responsabilidad máxima, confianza mínima. Es el perfil que más se exige y menos se perdona — revisa el reparto de culpas."
     }
   },
   "archetypes": {
@@ -933,6 +1157,50 @@
       "libertaria": {
         "name": "Moral libertaria",
         "description": "La libertad por encima del resto de fundamentos."
+      }
+    },
+    "autoestima": {
+      "t1": {
+        "name": "Crítico implacable",
+        "description": "La voz interna va a degüello. Prioridad número uno: bajarle el sueldo."
+      },
+      "t2": {
+        "name": "Cimientos en obras",
+        "description": "Te sostienes, pero cuesta más de lo que debería."
+      },
+      "t3": {
+        "name": "Estable con grietas",
+        "description": "Días buenos y días de juicio sumarísimo."
+      },
+      "t4": {
+        "name": "Base sólida",
+        "description": "Te tratas como tratarías a alguien que te importa."
+      },
+      "t5": {
+        "name": "Roca madre",
+        "description": "Autoestima a prueba de rachas. Vigila solo que no se vuelva sordera."
+      }
+    },
+    "locus": {
+      "t1": {
+        "name": "Hoja al viento",
+        "description": "Sientes que deciden otros: el azar, el sistema, los demás."
+      },
+      "t2": {
+        "name": "Más vela que timón",
+        "description": "Crees que tu empuje cuenta poco; sueles esperar a ver qué pasa."
+      },
+      "t3": {
+        "name": "Empate con el destino",
+        "description": "Mitad esfuerzo, mitad suerte: depende del día."
+      },
+      "t4": {
+        "name": "Mano en el timón",
+        "description": "Lo que te pasa lleva tu firma, y actúas en consecuencia."
+      },
+      "t5": {
+        "name": "Al timón de todo",
+        "description": "Todo depende de ti: lo bueno y también lo que nunca fue tuyo. Reparte mejor."
       }
     }
   },

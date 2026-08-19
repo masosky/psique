@@ -9,9 +9,11 @@ import {
   attachmentStyle,
   darkLevel,
   lockedInsightCount,
+  locusLevel,
   moralProfile,
   politicalArchetype,
   pusilanimeIndex,
+  selfEsteemLevel,
 } from "@/lib/insights";
 import { Compass } from "@/components/charts/Compass";
 import { RadarBlock } from "@/components/charts/RadarBlock";
@@ -31,6 +33,8 @@ const CATEGORY_COLOR: Record<TraitCategory, string> = {
   vinculos: "#fb7185",
   oscuro: "#f87171",
   caracter: "#fbbf24",
+  habilidades: "#2dd4bf",
+  humor: "#fb923c",
 };
 
 export default async function PerfilPage({
@@ -91,6 +95,8 @@ export default async function PerfilPage({
   const pusi = pusilanimeIndex(profile);
   const apegoStyle = attachmentStyle(profile);
   const moral = moralProfile(profile);
+  const esteem = selfEsteemLevel(profile);
+  const locusL = locusLevel(profile);
   const locked = lockedInsightCount(profile);
   const nuevoTest = nuevo ? TESTS.find((x) => x.slug === nuevo) : undefined;
 
@@ -195,6 +201,24 @@ export default async function PerfilPage({
             <p className="mt-2 text-xs text-muted">
               {t("moralTop", { trait: tr(`${moral.top}.name`) })}
             </p>
+          </div>
+        )}
+        {esteem && (
+          <div className="rounded-xl border border-sky/30 bg-card p-5">
+            <p className="mb-1 text-xs tracking-wider text-sky uppercase">
+              {t("esteemLabel", { score: esteem.score })}
+            </p>
+            <p className="font-display text-2xl">{ta(`autoestima.${esteem.tier}.name`)}</p>
+            <p className="mt-1 text-sm text-muted">{ta(`autoestima.${esteem.tier}.description`)}</p>
+          </div>
+        )}
+        {locusL && (
+          <div className="rounded-xl border border-good/30 bg-card p-5">
+            <p className="mb-1 text-xs tracking-wider text-good uppercase">
+              {t("locusLabel", { score: locusL.score })}
+            </p>
+            <p className="font-display text-2xl">{ta(`locus.${locusL.tier}.name`)}</p>
+            <p className="mt-1 text-sm text-muted">{ta(`locus.${locusL.tier}.description`)}</p>
           </div>
         )}
       </section>

@@ -8,7 +8,7 @@
 import "dotenv/config";
 import { PrismaClient } from "../lib/generated/prisma/client";
 import { PrismaPg } from "@prisma/adapter-pg";
-import { TRAIT_IDS } from "../lib/traits";
+import { TRAIT_IDS, TRAITS } from "../lib/traits";
 import { TESTS } from "../lib/tests";
 
 const adapter = new PrismaPg({ connectionString: process.env.DATABASE_URL! });
@@ -93,7 +93,38 @@ const LOADINGS: Record<string, Partial<Record<Factor, number>>> = {
   // algo de dureza emocional
   attachAnx: { anx: 0.8 },
   attachAvo: { extra: -0.4, dark: 0.35, anx: 0.2 },
+
+  // inteligencia emocional: la regulación es casi el inverso de la ansiedad;
+  // leer a otros va con energía social y contra la dureza
+  selfEmo: { anx: -0.3, disc: 0.15 },
+  otherEmo: { extra: 0.3, dark: -0.3, anx: 0.15 },
+  useEmo: { disc: 0.4, anx: -0.35, extra: 0.25 },
+  regEmo: { anx: -0.7, disc: 0.25 },
+
+  // estilos de humor (Martin): afiliativo ↔ extraversión, agresivo ↔ tríada,
+  // autodestructivo ↔ ansiedad
+  humorAfil: { extra: 0.7 },
+  humorSelf: { anx: -0.45, extra: 0.3 },
+  humorAgr: { dark: 0.65, extra: 0.15 },
+  humorDest: { anx: 0.5, dark: 0.2, extra: 0.15 },
+
+  // autoestima ↔ estabilidad emocional es de las correlaciones más robustas
+  // de la literatura; locus interno va con disciplina y calma
+  selfesteem: { anx: -0.7, extra: 0.3, disc: 0.2 },
+  locus: { anx: -0.35, disc: 0.4 },
 };
+
+// Los valores de Schwartz se ipsatizan en el scoring real (centrados en la
+// media de la persona), así que la población sintética debe tener la misma
+// forma o los percentiles quedarían sesgados.
+const VALORES_IDS = TRAIT_IDS.filter((t) => TRAITS[t].category === "valores");
+
+function ipsatizeValores(profile: Record<string, number>): void {
+  const mean = VALORES_IDS.reduce((a, t) => a + profile[t], 0) / VALORES_IDS.length;
+  for (const t of VALORES_IDS) {
+    profile[t] = clamp(50 + profile[t] - mean);
+  }
+}
 
 function generateProfile(): Record<string, number> {
   const z = { cons: randn(), dark: randn(), anx: randn(), extra: randn(), disc: randn() };
@@ -107,6 +138,7 @@ function generateProfile(): Record<string, number> {
     // 16 puntos de desviación por factor + ruido propio del rasgo.
     profile[trait] = clamp(50 + value * 16 + randn() * 9);
   }
+  ipsatizeValores(profile);
   return profile;
 }
 

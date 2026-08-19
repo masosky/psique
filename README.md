@@ -3,7 +3,7 @@
 Autoconocimiento cuantificado. Cada test rellena un perfil de rasgos que ya no se
 vacía; el perfil devuelve insights, percentiles y correlaciones contra la comunidad.
 
-**8 tests · 36 rasgos · 131 preguntas · 47 insights · 23 referencias científicas · es/en**
+**12 tests · 46 rasgos · 181 preguntas · 60 insights · 35 referencias científicas · es/en**
 
 ## Arranque
 

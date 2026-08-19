@@ -11,7 +11,15 @@
 // ---------------------------------------------------------------------------
 
 export type TraitCategory =
-  "politica" | "personalidad" | "oscuro" | "caracter" | "moral" | "valores" | "vinculos";
+  | "politica"
+  | "personalidad"
+  | "oscuro"
+  | "caracter"
+  | "moral"
+  | "valores"
+  | "vinculos"
+  | "habilidades"
+  | "humor";
 
 export interface TraitDef {
   id: string;
@@ -80,6 +88,24 @@ export const TRAITS: Record<string, TraitDef> = {
   // apego adulto: cómo funcionas en las relaciones cercanas
   attachAnx: def("attachAnx", "vinculos", false),
   attachAvo: def("attachAvo", "vinculos", false),
+
+  // inteligencia emocional (modelo de habilidades de Salovey-Mayer / WLEIS):
+  // percibir lo propio, leer lo ajeno, usar la emoción, regularla
+  selfEmo: def("selfEmo", "habilidades", false),
+  otherEmo: def("otherEmo", "habilidades", false),
+  useEmo: def("useEmo", "habilidades", false),
+  regEmo: def("regEmo", "habilidades", false),
+
+  // estilos de humor (Martin): dos sanos, dos con factura
+  humorAfil: def("humorAfil", "humor", false),
+  humorSelf: def("humorSelf", "humor", false),
+  humorAgr: def("humorAgr", "humor", false),
+  humorDest: def("humorDest", "humor", false),
+
+  // autoconcepto y agencia
+  selfesteem: def("selfesteem", "caracter", false),
+  // bipolar: externo (el azar decide) ↔ interno (yo decido); el 50 es mixto
+  locus: def("locus", "caracter", true),
 };
 
 export const TRAIT_IDS = Object.keys(TRAITS);
@@ -87,9 +113,11 @@ export const TRAIT_IDS = Object.keys(TRAITS);
 export const CATEGORIES: TraitCategory[] = [
   "politica",
   "personalidad",
+  "habilidades",
   "moral",
   "valores",
   "vinculos",
+  "humor",
   "oscuro",
   "caracter",
 ];
@@ -102,6 +130,8 @@ export const CATEGORY_EMOJI: Record<TraitCategory, string> = {
   moral: "⚖️",
   valores: "💎",
   vinculos: "💘",
+  habilidades: "🧘",
+  humor: "🤡",
 };
 
 export function getTrait(id: string): TraitDef {

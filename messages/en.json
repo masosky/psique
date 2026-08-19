@@ -106,7 +106,9 @@
     "percentileTooltip": "Above {percentile}% of the community",
     "attachmentLabel": "Attachment style",
     "moralLabel": "Moral profile",
-    "moralTop": "Your dominant foundation: {trait}"
+    "moralTop": "Your dominant foundation: {trait}",
+    "esteemLabel": "Self-esteem · {score}/100",
+    "locusLabel": "Locus of control · {score}/100"
   },
   "compass": {
     "axisX": "X axis",
@@ -141,7 +143,9 @@
     "caracter": "Character",
     "moral": "Moral foundations",
     "valores": "Values",
-    "vinculos": "Attachment"
+    "vinculos": "Attachment",
+    "habilidades": "Emotional skills",
+    "humor": "Sense of humour"
   },
   "traits": {
     "econ": {
@@ -395,6 +399,76 @@
       "low": "Close",
       "high": "Distant",
       "description": "Discomfort with dependence and emotional closeness."
+    },
+    "selfEmo": {
+      "name": "Emotional self-awareness",
+      "short": "Self-awareness",
+      "low": "Hazy",
+      "high": "Sharp",
+      "description": "Knowing what you feel and why while you feel it, not three days later."
+    },
+    "otherEmo": {
+      "name": "Reading others",
+      "short": "Reading others",
+      "low": "Opaque",
+      "high": "Fine-tuned",
+      "description": "Reading other people's emotional state from gestures, tones and silences."
+    },
+    "useEmo": {
+      "name": "Using emotions",
+      "short": "Using emotions",
+      "low": "Adrift",
+      "high": "Fuel",
+      "description": "Putting emotions to work: motivating yourself, prioritising, turning nerves into focus."
+    },
+    "regEmo": {
+      "name": "Emotion regulation",
+      "short": "Regulation",
+      "low": "Reactive",
+      "high": "Steady",
+      "description": "Turning an emotion's volume down when it isn't helping, without denying it."
+    },
+    "humorAfil": {
+      "name": "Affiliative humour",
+      "short": "Affiliative",
+      "low": "Straight-faced",
+      "high": "Sparkling",
+      "description": "Humour that bonds: jokes that include people and build the group."
+    },
+    "humorSelf": {
+      "name": "Self-enhancing humour",
+      "short": "Self-enhancing",
+      "low": "Unshielded",
+      "high": "Cushioned",
+      "description": "Humour as your own shock absorber: laughing at the mess so it does not sink you."
+    },
+    "humorAgr": {
+      "name": "Aggressive humour",
+      "short": "Aggressive",
+      "low": "Harmless",
+      "high": "Biting",
+      "description": "Humour at other people’s expense: sarcasm, digs and targeted mockery."
+    },
+    "humorDest": {
+      "name": "Self-defeating humour",
+      "short": "Self-deprecating",
+      "low": "Intact",
+      "high": "At my expense",
+      "description": "Humour at your own expense: putting yourself down to be liked or fit in."
+    },
+    "selfesteem": {
+      "name": "Self-esteem",
+      "short": "Self-esteem",
+      "low": "Inner critic",
+      "high": "Solid ground",
+      "description": "Your overall evaluation of yourself: how much you respect and like who you are."
+    },
+    "locus": {
+      "name": "Locus of control",
+      "short": "Locus",
+      "low": "External",
+      "high": "Internal",
+      "description": "What you attribute your outcomes to: your effort (internal) or chance and the system (external)."
     }
   },
   "tests": {
@@ -454,7 +528,7 @@
         "a1": "I genuinely care about other people's problems.",
         "a2": "I find it hard to forgive.",
         "a3": "People would say I'm easy to get along with.",
-        "a4": "If someone crosses me, I pay them back.",
+        "a4": "I suspect people usually have hidden motives.",
         "n1": "I worry about things that will probably never happen.",
         "n2": "I stay calm under pressure.",
         "n3": "My mood changes easily.",
@@ -549,7 +623,7 @@
     "valores": {
       "title": "Your values",
       "tagline": "Schwartz's 10 universal values: what actually drives you.",
-      "description": "Schwartz identified ten values present in every culture, arranged in a circle with built-in tensions: you cannot maximise security and stimulation at once, nor power and universalism. You will see which ones dominate and what trade-offs they imply.",
+      "description": "Schwartz identified ten values present in every culture, arranged in a circle of built-in tensions: you can't maximise security and stimulation at once, nor power and universalism. You'll see which ones drive you and what trade-offs they imply. Scores are relative to your own average (50): they show what YOU prioritise, not how much you agree in general.",
       "sources": {
         "0": "The original theory of the ten universal values and their circular structure.",
         "1": "The PVQ questionnaire, the format this test is modelled on.",
@@ -622,6 +696,104 @@
         "h8": "If I can break a rule with no consequences, I break it.",
         "h9": "People who cheat to win disgust me.",
         "h10": "I would fake interest in someone if it suited me."
+      }
+    },
+    "inteligencia-emocional": {
+      "title": "Emotional intelligence test",
+      "tagline": "Do your emotions fly you, or do you fly them?",
+      "description": "Four distinct skills: noticing what you feel, reading what others feel, using emotion as fuel, and turning the volume down when needed. Based on the Salovey–Mayer model and the structure of the WLEIS scale. It doesn't measure how nice you are: it measures skill.",
+      "sources": {
+        "0": "The original model: emotional intelligence as a set of skills, not a trait",
+        "1": "The 4 dimensions (own, others, use, regulation) and the reference scale (WLEIS)",
+        "2": "Meta-analysis: EI predicts performance beyond personality and IQ"
+      },
+      "items": {
+        "ie1": "I almost always know why I feel the way I do.",
+        "ie2": "I can tell whether what I'm feeling is sadness, frustration or plain tiredness.",
+        "ie3": "Sometimes I only realise afterwards that something had got to me.",
+        "ie4": "When I get angry, I quickly identify what set it off.",
+        "ie5": "I notice how people are feeling even when they say nothing.",
+        "ie6": "My friends say I'm good at understanding what's going on with them.",
+        "ie7": "I'm often surprised when someone tells me they're struggling: I hadn't seen it coming.",
+        "ie8": "I quickly pick up the mood of a room when I walk in.",
+        "ie9": "I use my good moods to push through difficult tasks.",
+        "ie10": "I know how to motivate myself to keep going when things get tough.",
+        "ie11": "When I'm feeling low, I find it really hard to get started on anything.",
+        "ie12": "I turn nerves into energy to act.",
+        "ie13": "When something rattles me, I get my calm back quickly.",
+        "ie14": "I keep my temper in check even in very tense situations.",
+        "ie15": "When I'm angry, I say things I later regret.",
+        "ie16": "A single worry can hijack my whole day."
+      }
+    },
+    "humor": {
+      "title": "Sense of humour test",
+      "tagline": "Tell me what you laugh at and I'll tell you who you are",
+      "description": "Martin's four humour styles: the one that bonds (affiliative), the one that carries you (self-enhancing), the one that cuts (aggressive) and the one that makes you the target (self-defeating). The first two track with wellbeing; the last two send invoices.",
+      "sources": {
+        "0": "The original instrument: the Humor Styles Questionnaire and its 4 styles",
+        "1": "Meta-analysis: which styles track with wellbeing and which with distress",
+        "2": "Meta-analysis: how humour styles map onto the Big Five"
+      },
+      "items": {
+        "hu1": "I make people laugh easily.",
+        "hu2": "Humour is how I get closer to people.",
+        "hu3": "I rarely tell jokes or fool around in a group.",
+        "hu4": "Joking around with my friends is one of my favourite things.",
+        "hu5": "Humour keeps me from sinking when things go badly.",
+        "hu6": "When I'm down, I usually find the absurd side of it to cheer myself up.",
+        "hu7": "When I have a problem, I completely lose my sense of humour.",
+        "hu8": "I laugh at my own messes, and it takes the weight off them.",
+        "hu9": "If someone deserves a dig, I don't hold it in.",
+        "hu10": "My humour sometimes has more edge than people expect.",
+        "hu11": "I don't join in mocking someone even when the whole group is laughing.",
+        "hu12": "Sometimes I crack a joke knowing it will sting someone.",
+        "hu13": "I let people laugh at my expense more than I should if it amuses the group.",
+        "hu14": "I make fun of my own flaws in front of others to be liked.",
+        "hu15": "I hide how I really feel behind jokes.",
+        "hu16": "I don't need to make a fool of myself for the group to accept me."
+      }
+    },
+    "autoestima": {
+      "title": "Self-esteem test",
+      "tagline": "How do you get on with yourself?",
+      "description": "The Rosenberg scale: ten statements, half a century of use, and the most reliable quick snapshot of how you value yourself. Low self-esteem isn't a fixed trait: it's a state you can work on — this test tells you your starting point.",
+      "sources": {
+        "0": "The original 10-item scale, the most widely used short instrument in psychology",
+        "1": "Longitudinal meta-analysis: low self-esteem precedes depression, not the other way round",
+        "2": "How self-esteem develops across the lifespan (it rises until about 60)"
+      },
+      "items": {
+        "ae1": "On the whole, I like the person I am.",
+        "ae2": "At times I think I'm no good at all.",
+        "ae3": "I feel I have a good number of qualities.",
+        "ae4": "I can do things as well as most people.",
+        "ae5": "I feel I don't have much to be proud of.",
+        "ae6": "Sometimes I feel genuinely useless.",
+        "ae7": "I feel I'm worth at least as much as anyone else.",
+        "ae8": "I wish I had more respect for myself.",
+        "ae9": "Deep down, I'm often inclined to feel I'm a failure.",
+        "ae10": "I have a positive attitude towards myself."
+      }
+    },
+    "locus": {
+      "title": "Locus of control test",
+      "tagline": "Who's driving your life: you or chance?",
+      "description": "Rotter's classic: do you attribute what happens to you to your own effort, or to luck, connections and the system? An internal locus predicts everything from salary to health — though taken to the extreme it becomes blaming yourself for the weather.",
+      "sources": {
+        "0": "The original construct: internal vs external expectancies of reinforcement control",
+        "1": "Workplace meta-analysis: internal locus tracks with satisfaction and performance",
+        "2": "Cross-cultural meta-analysis: the locus–anxiety–depression link across countries"
+      },
+      "items": {
+        "lc1": "What I achieve depends mostly on my own effort.",
+        "lc2": "A large part of my life is decided by things I don't control.",
+        "lc3": "When something goes wrong for me, I look at what I could have done differently.",
+        "lc4": "Success is, more than anything, a matter of luck and connections.",
+        "lc5": "I build my future through my own decisions.",
+        "lc6": "Whatever I do, what's meant to happen will happen.",
+        "lc7": "If I prepare thoroughly, the results eventually come.",
+        "lc8": "Plans rarely work out because the world is unpredictable."
       }
     }
   },
@@ -813,6 +985,58 @@
     "cuidado-sin-limites": {
       "title": "You look after everyone but yourself",
       "body": "Very high moral care with low assertiveness: you absorb other people's distress and never call a halt. Empathy burnout is not a myth, and this is the exact profile."
+    },
+    "termostato": {
+      "title": "Internal thermostat",
+      "body": "High emotion regulation on a calm baseline: it's not that you don't feel things, it's that you get the controls back fast. That combination cushions almost any bad week."
+    },
+    "piloto-a-ciegas": {
+      "title": "Flying blind",
+      "body": "Plenty of emotional turbulence and little visibility into what you feel: you find out once it has already blown up. Naming what you notice — anger? tiredness? fear? — is half the fix."
+    },
+    "lector-estratega": {
+      "title": "A reader with an agenda",
+      "body": "You read people accurately and you calculate: expert-level persuasion. The line between charisma and manipulation is only what you use it for."
+    },
+    "corazon-sin-radar": {
+      "title": "Heart without radar",
+      "body": "You genuinely care about people but don't always read how they're doing: impeccable intentions, patchy aim. Asking 'and how are you doing with all this?' makes up for the radar."
+    },
+    "pegamento-social": {
+      "title": "Social glue",
+      "body": "High affiliative humour plus social energy: you're the reason the group gets together. That role keeps friendships alive for decades — and it's tiring; allow yourself not to be the show sometimes."
+    },
+    "escudo-de-risa": {
+      "title": "Laughter as armour",
+      "body": "Your nervous system spikes easily, but your self-enhancing humour cushions it: laughing at the mess is your home-made emotion regulation. It's one of the best-evidenced coping strategies — keep using it."
+    },
+    "filo-que-corta": {
+      "title": "An edge that cuts",
+      "body": "Aggressive humour with emotional hardness behind it: your jokes have casualties and you know it. Funny today, social invoice tomorrow — people remember who made them feel small."
+    },
+    "payaso-triste": {
+      "title": "The sad clown",
+      "body": "You mock yourself so the group accepts you, and your self-esteem is starting to believe it. Self-criticism delivered as a joke is still self-criticism: the audience laughs, you take notes."
+    },
+    "critico-interno": {
+      "title": "The critic never rests",
+      "body": "Very low self-esteem: the voice that grades you is harder on you than on anyone else. It isn't a personality trait, it's an open front — and it's one of the things that responds best to being worked on."
+    },
+    "ego-blindado": {
+      "title": "Armoured ego",
+      "body": "High self-esteem AND a hunger for admiration: genuine confidence with an appetite for the stage. It works until someone doesn't clap; that's when you see what the foundation is made of."
+    },
+    "timon-propio": {
+      "title": "Hands on the tiller",
+      "body": "You believe your life depends on you, and you follow through: the closest thing there is to a guarantee. The residual risk: also blaming yourself for what genuinely wasn't yours."
+    },
+    "espectador": {
+      "title": "Spectator of your own life",
+      "body": "You believe almost nothing depends on you, and you don't ask for it either: the perfect self-fulfilling prophecy. Start microscopic: one thing this week that depends only on you, and watch it happen."
+    },
+    "motor-exigente": {
+      "title": "Engine without suspension",
+      "body": "You believe everything depends on you but don't believe you're up to it: maximum responsibility, minimum confidence. This profile demands the most of itself and forgives itself the least — audit how you hand out blame."
     }
   },
   "archetypes": {
@@ -933,6 +1157,50 @@
       "libertaria": {
         "name": "Libertarian morality",
         "description": "Liberty above the other foundations."
+      }
+    },
+    "autoestima": {
+      "t1": {
+        "name": "Relentless critic",
+        "description": "The inner voice goes for the throat. Priority one: cut its salary."
+      },
+      "t2": {
+        "name": "Foundations under repair",
+        "description": "You hold yourself up, but it costs more than it should."
+      },
+      "t3": {
+        "name": "Steady with cracks",
+        "description": "Good days, and days of summary judgement."
+      },
+      "t4": {
+        "name": "Solid ground",
+        "description": "You treat yourself like someone you actually care about."
+      },
+      "t5": {
+        "name": "Bedrock",
+        "description": "Streak-proof self-esteem. Just watch it doesn't turn into deafness."
+      }
+    },
+    "locus": {
+      "t1": {
+        "name": "Leaf in the wind",
+        "description": "It feels like others decide: chance, the system, everyone else."
+      },
+      "t2": {
+        "name": "More sail than rudder",
+        "description": "You think your push counts for little; you tend to wait and see."
+      },
+      "t3": {
+        "name": "Tied with fate",
+        "description": "Half effort, half luck: depends on the day."
+      },
+      "t4": {
+        "name": "Hand on the tiller",
+        "description": "What happens to you carries your signature, and you act on it."
+      },
+      "t5": {
+        "name": "At the helm of everything",
+        "description": "Everything depends on you — the good, and what was never yours. Share the blame better."
       }
     }
   },
