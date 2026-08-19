@@ -4,21 +4,47 @@ import { TESTS } from "@/lib/tests";
 import { TRAIT_IDS } from "@/lib/traits";
 import { INSIGHT_COUNT } from "@/lib/insights";
 import { auth } from "@/lib/auth";
+import { jsonLd, SITE_NAME, SITE_URL } from "@/lib/seo";
 
 export default async function Home({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   setRequestLocale(locale);
 
-  const [session, t, tt, ts] = await Promise.all([
+  const [session, t, tt, ts, tm] = await Promise.all([
     auth(),
     getTranslations("home"),
     getTranslations("tests"),
     getTranslations("studies"),
+    getTranslations("meta"),
   ]);
   const totalItems = TESTS.reduce((a, x) => a + x.items.length, 0);
 
+  // Structured data for Google: the site plus the app itself (free web app).
+  const structuredData = jsonLd({
+    "@graph": [
+      {
+        "@type": "WebSite",
+        name: SITE_NAME,
+        url: `${SITE_URL}/${locale}`,
+        description: tm("description"),
+        inLanguage: locale,
+      },
+      {
+        "@type": "WebApplication",
+        name: SITE_NAME,
+        url: `${SITE_URL}/${locale}`,
+        applicationCategory: "LifestyleApplication",
+        operatingSystem: "Web",
+        offers: { "@type": "Offer", price: "0", priceCurrency: "EUR" },
+        description: tm("description"),
+        inLanguage: locale,
+      },
+    ],
+  });
+
   return (
     <div>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: structuredData }} />
       {/* Hero */}
       <section className="py-20 text-center sm:py-28">
         <p className="mb-4 text-sm tracking-widest text-accent uppercase">{t("eyebrow")}</p>
@@ -87,7 +113,7 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
         </div>
       </section>
 
-      {/* Cómo funciona */}
+      {/* How it works */}
       <section className="py-12">
         <h2 className="font-display mb-8 text-3xl">{t("howHeading")}</h2>
         <div className="grid gap-4 sm:grid-cols-3">
@@ -101,7 +127,7 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
         </div>
       </section>
 
-      {/* Credibilidad */}
+      {/* Credibility */}
       <section className="py-12">
         <div className="rounded-xl border border-line bg-card p-8 text-center">
           <h2 className="font-display mb-3 text-2xl">{ts("homeTitle")}</h2>

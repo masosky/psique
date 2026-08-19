@@ -1,18 +1,22 @@
 @import "tailwindcss";
 
+/* "Espejo" theme: deep navy ink, trust-blue accent, amber details.
+   ⚠ The canonical values live in lib/theme.ts — the root layout injects them
+   as CSS variables on <html>, which OVERRIDE the defaults below. This block
+   exists because Tailwind v4 needs it at build time to generate utilities;
+   keep it mirrored when you change lib/theme.ts. */
 @theme {
-  /* Tema "espejo": tinta profunda, acento violeta, detalles ámbar */
-  --color-ink: #0a0d16;
-  --color-surface: #10141f;
-  --color-card: #151a28;
-  --color-card2: #1b2133;
-  --color-line: #262e44;
-  --color-fg: #e9ebf5;
-  --color-muted: #9099b0;
-  --color-accent: #a78bfa;
-  --color-accent-strong: #8b5cf6;
+  --color-ink: #070d19;
+  --color-surface: #0c1424;
+  --color-card: #101a2e;
+  --color-card2: #162238;
+  --color-line: #22304a;
+  --color-fg: #e8edf7;
+  --color-muted: #8da0bd;
+  --color-accent: #60a5fa;
+  --color-accent-strong: #2563eb;
   --color-amber: #fbbf24;
-  --color-sky: #38bdf8;
+  --color-sky: #22d3ee;
   --color-good: #34d399;
   --color-bad: #f87171;
 
@@ -29,13 +33,18 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* Sutileza de fondo: viñeta radial violeta arriba */
+/* Background subtlety: radial accent vignette at the top. Derived from the
+   theme variables so a rebrand in lib/theme.ts repaints it too. */
 .bg-hero {
   background:
-    radial-gradient(ellipse 80% 50% at 50% -10%, rgba(139, 92, 246, 0.18), transparent),
+    radial-gradient(
+      ellipse 80% 50% at 50% -10%,
+      color-mix(in srgb, var(--color-accent-strong) 16%, transparent),
+      transparent
+    ),
     var(--color-ink);
 }
 
 ::selection {
-  background: rgba(167, 139, 250, 0.35);
+  background: color-mix(in srgb, var(--color-accent) 35%, transparent);
 }

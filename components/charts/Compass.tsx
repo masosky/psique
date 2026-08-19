@@ -2,17 +2,20 @@
 
 import { useState } from "react";
 import { useTranslations } from "next-intl";
+import { COMPASS_SCALE } from "@/lib/theme";
 
 const AXES = ["econ", "auth", "cult", "glob", "eco", "rel"] as const;
 type Axis = (typeof AXES)[number];
 
-// Color por la 3ª dimensión: ámbar (bajo) → violeta (alto). Así la brújula es
-// 3D de verdad sin necesidad de WebGL ni rotar nada.
+// Color encodes the 3rd dimension: low → warm, high → brand blue. That makes
+// the compass genuinely 3D without WebGL or rotating anything.
+const hexRgb = (hex: string) => [1, 3, 5].map((i) => parseInt(hex.slice(i, i + 2), 16));
+const SCALE_FROM = hexRgb(COMPASS_SCALE.from);
+const SCALE_TO = hexRgb(COMPASS_SCALE.to);
+
 function depthColor(v: number, alpha: number) {
   const t = Math.min(1, Math.max(0, v / 100));
-  const r = Math.round(251 + (167 - 251) * t);
-  const g = Math.round(191 + (139 - 191) * t);
-  const b = Math.round(36 + (250 - 36) * t);
+  const [r, g, b] = SCALE_FROM.map((f, i) => Math.round(f + (SCALE_TO[i] - f) * t));
   return `rgba(${r},${g},${b},${alpha})`;
 }
 
@@ -127,7 +130,12 @@ export function Compass({
 
       <div className="mt-3 flex flex-wrap items-center justify-between gap-2 text-[11px] text-muted">
         <span className="flex items-center gap-1.5">
-          <span className="h-2 w-10 rounded-full bg-gradient-to-r from-[#fbbf24] to-[#a78bfa]" />
+          <span
+            className="h-2 w-10 rounded-full"
+            style={{
+              background: `linear-gradient(to right, ${COMPASS_SCALE.from}, ${COMPASS_SCALE.to})`,
+            }}
+          />
           {tr(`${zAxis}.short`)}: {tr(`${zAxis}.low`)} → {tr(`${zAxis}.high`)}
         </span>
         <span>{showCloud ? t("community", { count: cloud.length }) : t("cloudUnavailable")}</span>

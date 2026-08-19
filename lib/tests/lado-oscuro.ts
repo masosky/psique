@@ -1,9 +1,9 @@
 import type { TestDefinition } from "./types";
 
-// Tríada oscura (maquiavelismo, narcisismo, psicopatía), 15 ítems, inspirado
-// en el formato del Short Dark Triad con redacción propia. Tono con humor,
-// pero la estructura de medida es seria. No es un diagnóstico.
-// Enunciados en messages/{locale}.json → tests.lado-oscuro.items
+// Dark triad (Machiavellianism, narcissism, psychopathy), 15 items, inspired
+// by the Short Dark Triad format with our own wording. Playful tone, but the
+// measurement structure is serious. Not a diagnosis.
+// Statements in messages/{locale}.json → tests.lado-oscuro.items
 export const ladoOscuro: TestDefinition = {
   slug: "lado-oscuro",
   version: 1,

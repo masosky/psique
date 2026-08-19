@@ -1,22 +1,22 @@
 // ---------------------------------------------------------------------------
-// Motor de insights: reglas declarativas sobre el vector de rasgos.
+// Insights engine: declarative rules over the trait vector.
 //
-// Cada regla exige que ciertos rasgos estén medidos (`needs`) y se dispara con
-// una condición sobre el perfil. Así los insights se van desbloqueando a
-// medida que el usuario completa tests — el gancho central del producto.
+// Each rule requires certain traits to be measured (`needs`) and fires on a
+// condition over the profile. Insights thus unlock as the user completes
+// tests — the product's central hook.
 //
-// Las reglas son puras: devuelven ids. Los textos viven en
-// messages/{locale}.json bajo `insights.<id>.{title,body}`.
+// Rules are pure: they return ids. The copy lives in
+// messages/{locale}.json under `insights.<id>.{title,body}`.
 // ---------------------------------------------------------------------------
 
-export type Profile = Record<string, number>; // traitId -> 0..100 (solo los medidos)
+export type Profile = Record<string, number>; // traitId -> 0..100 (measured traits only)
 
 export type InsightKind = "fortaleza" | "riesgo" | "curiosidad";
 
 export interface Insight {
   id: string;
   kind: InsightKind;
-  traits: string[]; // rasgos implicados (para pintar chips en la UI)
+  traits: string[]; // traits involved (to render chips in the UI)
 }
 
 interface Rule extends Insight {
@@ -32,7 +32,7 @@ const R = (
 ): Rule => ({ id, kind, needs, when, traits: needs });
 
 const RULES: Rule[] = [
-  // ------------------------------------------------------------- fortalezas
+  // ------------------------------------------------------------- strengths
   R("ejecutor", "fortaleza", ["conscientiousness"], (p) => p.conscientiousness >= 70),
   R("roca", "fortaleza", ["neuroticism"], (p) => p.neuroticism <= 30),
   R("explorador", "fortaleza", ["openness"], (p) => p.openness >= 70),
@@ -57,7 +57,7 @@ const RULES: Rule[] = [
     (p) => p.openness >= 60 && p.conscientiousness >= 60,
   ),
 
-  // ---------------------------------------------------------------- riesgos
+  // ------------------------------------------------------------------ risks
   R("procrastinador", "riesgo", ["conscientiousness"], (p) => p.conscientiousness <= 35),
   R("rumiante", "riesgo", ["neuroticism"], (p) => p.neuroticism >= 70),
   R(
@@ -83,7 +83,7 @@ const RULES: Rule[] = [
   R("frio", "riesgo", ["psyc"], (p) => p.psyc >= 65),
   R("confort-blindado", "riesgo", ["openness"], (p) => p.openness <= 30),
 
-  // ------------------------------------------------------------ curiosidades
+  // ------------------------------------------------------------ curiosities
   R("libro-abierto", "curiosidad", ["openness", "cult"], (p) => p.openness >= 60 && p.cult <= 40),
   R("contracorriente", "curiosidad", ["openness", "cult"], (p) => p.openness >= 60 && p.cult >= 60),
   R(
@@ -123,7 +123,7 @@ const RULES: Rule[] = [
     (p) => p.extraversion <= 35 && p.openness >= 60,
   ),
 
-  // ------------------------------------------- moral, valores y vínculos
+  // ------------------------------------------- morality, values, and bonds
   R("moral-binding", "curiosidad", ["loyalty", "authority", "purity", "care"], (p) => {
     const binding = (p.loyalty + p.authority + p.purity) / 3;
     return binding >= 60 && binding > p.care;
@@ -209,7 +209,7 @@ const RULES: Rule[] = [
   ),
   R("cuidado-sin-limites", "riesgo", ["care", "asert"], (p) => p.care >= 70 && p.asert <= 40),
 
-  // ——— inteligencia emocional ———
+  // ——— emotional intelligence ———
   R(
     "termostato",
     "fortaleza",
@@ -230,7 +230,7 @@ const RULES: Rule[] = [
     (p) => p.care >= 65 && p.otherEmo <= 40,
   ),
 
-  // ——— estilos de humor ———
+  // ——— humor styles ———
   R(
     "pegamento-social",
     "fortaleza",
@@ -251,7 +251,7 @@ const RULES: Rule[] = [
     (p) => p.humorDest >= 65 && p.selfesteem <= 40,
   ),
 
-  // ——— autoestima y locus ———
+  // ——— self-esteem and locus ———
   R("critico-interno", "riesgo", ["selfesteem"], (p) => p.selfesteem <= 30),
   R("ego-blindado", "curiosidad", ["selfesteem", "narc"], (p) => p.selfesteem >= 70 && p.narc >= 65),
   R(
@@ -273,8 +273,8 @@ export const INSIGHT_COUNT = RULES.length;
 
 export const INSIGHT_IDS = RULES.map((r) => r.id);
 
-// Reglas aún no evaluables porque falta medir algún rasgo. Sirve para el
-// gancho de "haz X test para desbloquear N insights".
+// Rules not yet evaluable because some trait is still unmeasured. Powers the
+// "take test X to unlock N insights" hook.
 export function lockedInsightCount(profile: Profile): number {
   return RULES.filter((r) => r.needs.some((t) => profile[t] === undefined)).length;
 }
@@ -286,18 +286,18 @@ export function getInsights(profile: Profile): Insight[] {
 }
 
 // ---------------------------------------------------------------------------
-// Etiquetas agregadas por categoría. Devuelven la CLAVE del arquetipo; el
-// nombre y la descripción se traducen en la página.
+// Aggregate labels per category. They return the archetype KEY; the name and
+// description get translated on the page.
 // ---------------------------------------------------------------------------
 
-// Arquetipo político sobre la matriz econ × auth, matizado por cult.
-// Claves: `archetypes.political.<key>` (+ sufijo `-trad` cuando aplica).
+// Political archetype over the econ × auth matrix, nuanced by cult.
+// Keys: `archetypes.political.<key>` (+ `-trad` suffix when it applies).
 export function politicalArchetype(p: Profile): { key: string; traditional: boolean } | null {
   const { econ, auth, cult } = p;
   if (econ === undefined || auth === undefined) return null;
 
-  const e = econ < 40 ? 0 : econ >= 60 ? 2 : 1; // 0 izq, 1 centro, 2 der
-  const a = auth < 40 ? 0 : auth >= 60 ? 2 : 1; // 0 lib, 1 centro, 2 aut
+  const e = econ < 40 ? 0 : econ >= 60 ? 2 : 1; // 0 left, 1 center, 2 right
+  const a = auth < 40 ? 0 : auth >= 60 ? 2 : 1; // 0 lib, 1 center, 2 auth
 
   const keys = [
     ["libertario-izq", "socialdemocrata", "socialismo-orden"],
@@ -305,8 +305,8 @@ export function politicalArchetype(p: Profile): { key: string; traditional: bool
     ["liberal-clasico", "liberal", "conservador-orden"],
   ];
 
-  // El matiz tradicional solo aporta cuando no está ya implícito en el
-  // cuadrante (derecha económica o autoritarismo).
+  // The traditional nuance only adds signal when it isn't already implied by
+  // the quadrant (economic right or authoritarianism).
   const traditional = (cult ?? 50) >= 60 && e !== 2 && a !== 2;
   return { key: keys[e][a], traditional };
 }
@@ -314,8 +314,8 @@ export function politicalArchetype(p: Profile): { key: string; traditional: bool
 const tierOf = (score: number): string =>
   score < 25 ? "t1" : score < 45 ? "t2" : score < 60 ? "t3" : score < 75 ? "t4" : "t5";
 
-// «Nivel de villano»: media de la tríada oscura.
-// Claves: `archetypes.dark.<tier>.{name,description}`.
+// "Villain level": mean of the dark triad.
+// Keys: `archetypes.dark.<tier>.{name,description}`.
 export function darkLevel(p: Profile): { score: number; tier: string } | null {
   const { mach, narc, psyc } = p;
   if (mach === undefined || narc === undefined || psyc === undefined) return null;
@@ -323,8 +323,8 @@ export function darkLevel(p: Profile): { score: number; tier: string } | null {
   return { score, tier: tierOf(score) };
 }
 
-// Estilo de apego: los 4 cuadrantes del plano ansiedad × evitación.
-// Claves: `archetypes.attachment.<key>.{name,description}`.
+// Attachment style: the 4 quadrants of the anxiety × avoidance plane.
+// Keys: `archetypes.attachment.<key>.{name,description}`.
 export function attachmentStyle(p: Profile): { key: string; anx: number; avo: number } | null {
   const { attachAnx: anx, attachAvo: avo } = p;
   if (anx === undefined || avo === undefined) return null;
@@ -334,9 +334,9 @@ export function attachmentStyle(p: Profile): { key: string; anx: number; avo: nu
   return { key, anx: Math.round(anx), avo: Math.round(avo) };
 }
 
-// Perfil moral: qué fundamento pesa más y el balance individualizante
-// (cuidado + justicia) frente al vinculante (lealtad + autoridad + pureza).
-// Claves: `archetypes.moral.<key>.{name,description}`.
+// Moral profile: which foundation weighs most, and the individualizing
+// balance (care + fairness) versus the binding one (loyalty + authority +
+// purity). Keys: `archetypes.moral.<key>.{name,description}`.
 export function moralProfile(
   p: Profile,
 ): { key: string; top: string; individual: number; binding: number } | null {
@@ -359,8 +359,8 @@ export function moralProfile(
   return { key, top, individual, binding };
 }
 
-// Índice de pusilanimidad: baja asertividad + complacencia + evitación.
-// Claves: `archetypes.pusilanime.<tier>.{name,description}`.
+// Pusillanimity index: low assertiveness + people-pleasing + avoidance.
+// Keys: `archetypes.pusilanime.<tier>.{name,description}`.
 export function pusilanimeIndex(p: Profile): { score: number; tier: string } | null {
   const { asert, complac, confl } = p;
   if (asert === undefined || complac === undefined || confl === undefined) return null;
@@ -368,15 +368,15 @@ export function pusilanimeIndex(p: Profile): { score: number; tier: string } | n
   return { score, tier: tierOf(score) };
 }
 
-// Nivel de autoestima (Rosenberg). Claves: `archetypes.autoestima.<tier>`.
+// Self-esteem level (Rosenberg). Keys: `archetypes.autoestima.<tier>`.
 export function selfEsteemLevel(p: Profile): { score: number; tier: string } | null {
   if (p.selfesteem === undefined) return null;
   const score = Math.round(p.selfesteem);
   return { score, tier: tierOf(score) };
 }
 
-// Locus de control: 0 externo (el azar decide) → 100 interno (yo decido).
-// Claves: `archetypes.locus.<tier>`.
+// Locus of control: 0 external (chance decides) → 100 internal (I decide).
+// Keys: `archetypes.locus.<tier>`.
 export function locusLevel(p: Profile): { score: number; tier: string } | null {
   if (p.locus === undefined) return null;
   const score = Math.round(p.locus);

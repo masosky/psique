@@ -1,10 +1,11 @@
 import type { TestDefinition } from "./types";
 
-// Inteligencia emocional como conjunto de HABILIDADES (Salovey-Mayer), con la
-// estructura de 4 dimensiones de la escala WLEIS: percibir lo que sientes,
-// leer lo que sienten otros, usar la emoción como combustible y regularla.
-// No mide "ser buena persona": mide destreza con el propio sistema emocional.
-// Enunciados en messages/{locale}.json → tests.inteligencia-emocional.items
+// Emotional intelligence as a set of ABILITIES (Salovey-Mayer), with the
+// 4-dimension structure of the WLEIS scale: perceiving what you feel,
+// reading what others feel, using emotion as fuel, and regulating it.
+// It doesn't measure "being a good person": it measures skill with your own
+// emotional system.
+// Statements in messages/{locale}.json → tests.inteligencia-emocional.items
 export const inteligenciaEmocional: TestDefinition = {
   slug: "inteligencia-emocional",
   version: 1,
@@ -30,22 +31,22 @@ export const inteligenciaEmocional: TestDefinition = {
     },
   ],
   items: [
-    // percepción propia
+    // perceiving one's own emotions
     { id: "ie1", loadings: { selfEmo: 1 } },
     { id: "ie2", loadings: { selfEmo: 1 } },
     { id: "ie3", loadings: { selfEmo: -1 } },
     { id: "ie4", loadings: { selfEmo: 1 } },
-    // percepción ajena
+    // perceiving others' emotions
     { id: "ie5", loadings: { otherEmo: 1 } },
     { id: "ie6", loadings: { otherEmo: 1 } },
     { id: "ie7", loadings: { otherEmo: -1 } },
     { id: "ie8", loadings: { otherEmo: 1 } },
-    // uso de la emoción
+    // use of emotion
     { id: "ie9", loadings: { useEmo: 1 } },
     { id: "ie10", loadings: { useEmo: 1 } },
     { id: "ie11", loadings: { useEmo: -1 } },
     { id: "ie12", loadings: { useEmo: 1 } },
-    // regulación
+    // regulation
     { id: "ie13", loadings: { regEmo: 1 } },
     { id: "ie14", loadings: { regEmo: 1 } },
     { id: "ie15", loadings: { regEmo: -1 } },

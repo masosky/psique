@@ -47,7 +47,9 @@ model User {
   name          String?
   email         String?   @unique
   emailVerified DateTime? @map("email_verified")
-  passwordHash  String?   @map("password_hash")
+  // Identity is delegated to Firebase Auth (email/password, Google); this
+  // links our row to the Firebase user. No password hashes stored here.
+  firebaseUid   String?   @unique @map("firebase_uid")
   image         String?
   createdAt     DateTime  @default(now()) @map("created_at")
 

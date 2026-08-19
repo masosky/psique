@@ -1,8 +1,9 @@
 {
   "meta": {
-    "title": "Espejo — Know yourself for real",
+    "title": "Psique — Know yourself for real",
     "description": "Personality tests, a multidimensional political spectrum, the dark triad and more. Every test fills your profile; your profile gives you insights and correlations.",
-    "disclaimer": "Espejo is a self-knowledge and entertainment tool. No result is a clinical diagnosis or professional advice."
+    "disclaimer": "Psique is a self-knowledge and entertainment tool. No result is a clinical diagnosis or professional advice.",
+    "tagline": "Know yourself for real."
   },
   "nav": {
     "tests": "Tests",
@@ -38,13 +39,13 @@
   },
   "auth": {
     "loginTitle": "Log in",
-    "loginSubtitle": "Your mirror was waiting for you.",
+    "loginSubtitle": "Your psyche was waiting for you.",
     "signupTitle": "Create account",
     "signupSubtitle": "Free. Your answers are yours: no tests, no mirror.",
     "name": "Name (optional)",
     "email": "Email",
     "password": "Password",
-    "passwordHint": "Password (min. 8 characters)",
+    "passwordHint": "Password (at least 6 characters)",
     "loginButton": "Log in",
     "loginLoading": "Logging in…",
     "signupButton": "Create account",
@@ -56,8 +57,24 @@
     "hasAccount": "Already have an account?",
     "hasAccountLink": "Log in",
     "errInvalidEmail": "Invalid email",
-    "errWeakPassword": "Password must be at least 8 characters",
-    "errEmailTaken": "An account with that email already exists"
+    "errWeakPassword": "Password must be at least 6 characters",
+    "errEmailTaken": "An account with that email already exists",
+    "googleButton": "Continue with Google",
+    "or": "or",
+    "forgotPassword": "Forgot your password?",
+    "backToLogin": "← Back to sign in",
+    "resetTitle": "Reset password",
+    "resetSubtitle": "We'll email you a link to set a new one. No drama.",
+    "resetButton": "Send link",
+    "resetLoading": "Sending…",
+    "resetSentTitle": "Link sent",
+    "resetSentBody": "If {email} has an account, the reset link is on its way. Check your spam folder too.",
+    "resetFailed": "We couldn't send the link. Please try again.",
+    "errTooManyRequests": "Too many attempts. Wait a moment and try again.",
+    "errPopupClosed": "You closed the Google window.",
+    "errNetwork": "Connection problem. Check your network.",
+    "errProviderDisabled": "That sign-in method is not enabled.",
+    "errGoogle": "We couldn't sign you in with Google. Please try again."
   },
   "testsPage": {
     "title": "Tests",
@@ -84,7 +101,7 @@
   },
   "profile": {
     "title": "My profile",
-    "titleNamed": "{name}'s mirror",
+    "titleNamed": "{name}'s psyche",
     "emptyTitle": "Your mirror is blank",
     "emptyBody": "Take your first test and start filling it. Five minutes gets you a political compass.",
     "emptyCta": "Start",
@@ -1206,10 +1223,10 @@
   },
   "studies": {
     "title": "The research behind it",
-    "subtitle": "Every Espejo test draws on instruments published in peer-reviewed journals. They are all here, with a link to the original paper and to Google Scholar in case the DOI sits behind a paywall.",
+    "subtitle": "Every Psique test draws on instruments published in peer-reviewed journals. They are all here, with a link to the original paper and to Google Scholar in case the DOI sits behind a paywall.",
     "count": "{studies} references · {tests} tests",
     "caveatTitle": "Honesty first:",
-    "caveatBody": "Espejo is not a validated adaptation of these instruments. The items are rewritten in everyday language and shortened, the comparison sample is not representative of any population, and results are not a diagnosis. What is real: the trait structure and the relationships between traits come from this literature, not from thin air.",
+    "caveatBody": "Psique is not a validated adaptation of these instruments. The items are rewritten in everyday language and shortened, the comparison sample is not representative of any population, and results are not a diagnosis. What is real: the trait structure and the relationships between traits come from this literature, not from thin air.",
     "goToTest": "See the test →",
     "doi": "DOI",
     "source": "Source",

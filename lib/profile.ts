@@ -1,7 +1,7 @@
 import { prisma } from "@/lib/prisma";
 import type { Profile } from "@/lib/insights";
 
-// Vector de rasgos del usuario tal y como está ahora mismo.
+// The user's trait vector as it stands right now.
 export async function loadProfile(userId: string): Promise<Profile> {
   const rows = await prisma.traitScore.findMany({
     where: { userId },

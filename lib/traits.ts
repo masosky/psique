@@ -1,13 +1,13 @@
 // ---------------------------------------------------------------------------
-// Registro central de rasgos.
+// Central trait registry.
 //
-// Todo lo que Espejo mide es un rasgo en este espacio común, puntuado 0-100.
-// Cada test carga sobre un subconjunto de rasgos; el perfil del usuario es su
-// vector de TraitScore.
+// Everything Psique measures is a trait in this shared space, scored 0-100.
+// Each test loads onto a subset of traits; the user's profile is their
+// TraitScore vector.
 //
-// Aquí solo vive la ESTRUCTURA (id, categoría, polaridad). Los textos —nombre,
-// etiquetas de polos, descripción— están en messages/{es,en}.json bajo
-// `traits.<id>`, para que todo sea traducible.
+// Only the STRUCTURE lives here (id, category, polarity). The copy — name,
+// pole labels, description — lives in messages/{es,en}.json under
+// `traits.<id>`, so everything stays translatable.
 // ---------------------------------------------------------------------------
 
 export type TraitCategory =
@@ -24,8 +24,8 @@ export type TraitCategory =
 export interface TraitDef {
   id: string;
   category: TraitCategory;
-  // Bipolar: el 50 es un centro con significado (política, asertividad).
-  // Unipolar: la escala va de "nada" a "mucho" (narcisismo, apertura).
+  // Bipolar: 50 is a meaningful center (politics, assertiveness).
+  // Unipolar: the scale runs from "none" to "a lot" (narcissism, openness).
   bipolar: boolean;
 }
 
@@ -36,7 +36,7 @@ const def = (id: string, category: TraitCategory, bipolar: boolean): TraitDef =>
 });
 
 export const TRAITS: Record<string, TraitDef> = {
-  // política — los 6 ejes
+  // politics — the 6 axes
   econ: def("econ", "politica", true),
   auth: def("auth", "politica", true),
   cult: def("cult", "politica", true),
@@ -44,28 +44,28 @@ export const TRAITS: Record<string, TraitDef> = {
   eco: def("eco", "politica", true),
   rel: def("rel", "politica", true),
 
-  // personalidad — OCEAN
+  // personality — OCEAN
   openness: def("openness", "personalidad", false),
   conscientiousness: def("conscientiousness", "personalidad", false),
   extraversion: def("extraversion", "personalidad", false),
   agreeableness: def("agreeableness", "personalidad", false),
   neuroticism: def("neuroticism", "personalidad", false),
 
-  // tríada oscura
+  // dark triad
   mach: def("mach", "oscuro", false),
   narc: def("narc", "oscuro", false),
   psyc: def("psyc", "oscuro", false),
 
-  // carácter
+  // character
   asert: def("asert", "caracter", true),
   complac: def("complac", "caracter", false),
   confl: def("confl", "caracter", false),
 
-  // honestidad-humildad: el 6º factor de HEXACO, el que le falta al Big Five
-  // y el que mejor predice comportamiento poco ético.
+  // honesty-humility: HEXACO's 6th factor, the one the Big Five is missing
+  // and the best predictor of unethical behavior.
   honesty: def("honesty", "personalidad", false),
 
-  // fundamentos morales (Haidt): sobre qué construyes tu moral
+  // moral foundations (Haidt): what you build your morality on
   care: def("care", "moral", false),
   fairness: def("fairness", "moral", false),
   loyalty: def("loyalty", "moral", false),
@@ -73,7 +73,7 @@ export const TRAITS: Record<string, TraitDef> = {
   purity: def("purity", "moral", false),
   liberty: def("liberty", "moral", false),
 
-  // valores básicos (Schwartz): qué te mueve
+  // basic values (Schwartz): what drives you
   selfdir: def("selfdir", "valores", false),
   stimul: def("stimul", "valores", false),
   hedon: def("hedon", "valores", false),
@@ -85,26 +85,26 @@ export const TRAITS: Record<string, TraitDef> = {
   benev: def("benev", "valores", false),
   univers: def("univers", "valores", false),
 
-  // apego adulto: cómo funcionas en las relaciones cercanas
+  // adult attachment: how you operate in close relationships
   attachAnx: def("attachAnx", "vinculos", false),
   attachAvo: def("attachAvo", "vinculos", false),
 
-  // inteligencia emocional (modelo de habilidades de Salovey-Mayer / WLEIS):
-  // percibir lo propio, leer lo ajeno, usar la emoción, regularla
+  // emotional intelligence (Salovey-Mayer ability model / WLEIS):
+  // perceive your own, read others', use emotion, regulate it
   selfEmo: def("selfEmo", "habilidades", false),
   otherEmo: def("otherEmo", "habilidades", false),
   useEmo: def("useEmo", "habilidades", false),
   regEmo: def("regEmo", "habilidades", false),
 
-  // estilos de humor (Martin): dos sanos, dos con factura
+  // humor styles (Martin): two healthy, two that take a toll
   humorAfil: def("humorAfil", "humor", false),
   humorSelf: def("humorSelf", "humor", false),
   humorAgr: def("humorAgr", "humor", false),
   humorDest: def("humorDest", "humor", false),
 
-  // autoconcepto y agencia
+  // self-concept and agency
   selfesteem: def("selfesteem", "caracter", false),
-  // bipolar: externo (el azar decide) ↔ interno (yo decido); el 50 es mixto
+  // bipolar: external (chance decides) ↔ internal (I decide); 50 is mixed
   locus: def("locus", "caracter", true),
 };
 

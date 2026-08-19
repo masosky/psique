@@ -1,8 +1,8 @@
 import { prisma } from "@/lib/prisma";
 
 // ---------------------------------------------------------------------------
-// Estadística sobre la población (usuarios reales + seeds de calibración).
-// Todo en SQL: Postgres trae corr() y percentiles de serie.
+// Population statistics (real users + calibration seeds).
+// All in SQL: Postgres ships corr() and percentiles out of the box.
 // ---------------------------------------------------------------------------
 
 export interface TraitCorrelation {
@@ -12,8 +12,8 @@ export interface TraitCorrelation {
   n: number;
 }
 
-// Percentil (0-100) del usuario en cada rasgo de su perfil, en una sola query.
-// Usa midrank: (inferiores + empates/2) / n.
+// The user's percentile (0-100) on each trait of their profile, in one query.
+// Uses midrank: (below + ties/2) / n.
 export async function percentilesFor(
   profile: Record<string, number>,
 ): Promise<Record<string, number>> {
@@ -40,8 +40,8 @@ export async function percentilesFor(
   return out;
 }
 
-// Correlaciones de Pearson entre pares de rasgos en toda la comunidad.
-// Solo pares con muestra suficiente y efecto no trivial.
+// Pearson correlations between trait pairs across the whole community.
+// Only pairs with a large enough sample and a non-trivial effect.
 export async function communityCorrelations(limit = 14): Promise<TraitCorrelation[]> {
   const rows = await prisma.$queryRaw<{ a: string; b: string; r: number | null; n: number }[]>`
     SELECT t1.trait                        AS a,
@@ -66,8 +66,8 @@ export async function populationCount(): Promise<number> {
   return rows[0]?.n ?? 0;
 }
 
-// Muestra de la población en 3 ejes políticos, para pintar la nube de puntos
-// alrededor del usuario en la brújula 2D/3D.
+// Population sample on 3 political axes, to render the point cloud around
+// the user in the 2D/3D compass.
 export async function politicalCloud(
   sample = 220,
 ): Promise<{ econ: number; auth: number; cult: number }[]> {

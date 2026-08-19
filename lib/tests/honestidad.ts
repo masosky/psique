@@ -1,9 +1,9 @@
 import type { TestDefinition } from "./types";
 
-// Honestidad-Humildad: el sexto factor de HEXACO, el que el Big Five no
-// captura. Es el mejor predictor de conducta poco ética (más que amabilidad)
-// y correlaciona negativo con toda la tríada oscura. 10 ítems.
-// Enunciados en messages/{locale}.json → tests.honestidad.items
+// Honesty-Humility: HEXACO's sixth factor, the one the Big Five doesn't
+// capture. It's the best predictor of unethical conduct (better than
+// agreeableness) and correlates negatively with the whole dark triad. 10 items.
+// Statements in messages/{locale}.json → tests.honestidad.items
 export const honestidad: TestDefinition = {
   slug: "honestidad",
   version: 1,

@@ -1,9 +1,10 @@
 import type { TestDefinition } from "./types";
 
-// Locus de control (Rotter): ¿atribuyes lo que te pasa a tu esfuerzo (interno)
-// o a la suerte, los contactos y el sistema (externo)? Bipolar: 0 = externo,
-// 100 = interno. Formato Likert en lugar de la elección forzada original.
-// Enunciados en messages/{locale}.json → tests.locus.items
+// Locus of control (Rotter): do you attribute what happens to you to your
+// effort (internal) or to luck, connections, and the system (external)?
+// Bipolar: 0 = external, 100 = internal. Likert format instead of the
+// original forced choice.
+// Statements in messages/{locale}.json → tests.locus.items
 export const locus: TestDefinition = {
   slug: "locus",
   version: 1,

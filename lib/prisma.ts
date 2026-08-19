@@ -1,8 +1,8 @@
 import { PrismaClient } from "@/lib/generated/prisma/client";
 import { PrismaPg } from "@prisma/adapter-pg";
 
-// Prisma 7: sin engine de Rust; el cliente habla con Postgres a través del
-// driver adapter de pg.
+// Prisma 7: no Rust engine; the client talks to Postgres through the pg
+// driver adapter.
 const prismaClientSingleton = () => {
   const adapter = new PrismaPg({ connectionString: process.env.DATABASE_URL! });
   return new PrismaClient({ adapter });

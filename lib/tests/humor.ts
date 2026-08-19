@@ -1,9 +1,9 @@
 import type { TestDefinition } from "./types";
 
-// Estilos de humor de Martin (HSQ): dos adaptativos (afiliativo, automejora)
-// y dos con factura (agresivo, autodestructivo). De qué te ríes y a costa de
-// quién dice mucho más de ti que cuánto te ríes.
-// Enunciados en messages/{locale}.json → tests.humor.items
+// Martin's humor styles (HSQ): two adaptive (affiliative, self-enhancing)
+// and two that take a toll (aggressive, self-defeating). What you laugh at,
+// and at whose expense, says far more about you than how much you laugh.
+// Statements in messages/{locale}.json → tests.humor.items
 export const humor: TestDefinition = {
   slug: "humor",
   version: 1,
@@ -29,22 +29,22 @@ export const humor: TestDefinition = {
     },
   ],
   items: [
-    // afiliativo: humor que une
+    // affiliative: humor that bonds
     { id: "hu1", loadings: { humorAfil: 1 } },
     { id: "hu2", loadings: { humorAfil: 1 } },
     { id: "hu3", loadings: { humorAfil: -1 } },
     { id: "hu4", loadings: { humorAfil: 1 } },
-    // automejora: humor que te sostiene
+    // self-enhancing: humor that holds you up
     { id: "hu5", loadings: { humorSelf: 1 } },
     { id: "hu6", loadings: { humorSelf: 1 } },
     { id: "hu7", loadings: { humorSelf: -1 } },
     { id: "hu8", loadings: { humorSelf: 1 } },
-    // agresivo: humor que corta
+    // aggressive: humor that cuts
     { id: "hu9", loadings: { humorAgr: 1 } },
     { id: "hu10", loadings: { humorAgr: 1 } },
     { id: "hu11", loadings: { humorAgr: -1 } },
     { id: "hu12", loadings: { humorAgr: 1 } },
-    // autodestructivo: tú de diana para gustar
+    // self-defeating: making yourself the target to be liked
     { id: "hu13", loadings: { humorDest: 1 } },
     { id: "hu14", loadings: { humorDest: 1 } },
     { id: "hu15", loadings: { humorDest: 1 } },

@@ -1,9 +1,9 @@
 import type { TestDefinition } from "./types";
 
-// Autoestima global: adaptación de la escala de Rosenberg (1965), el
-// instrumento breve más usado de la historia de la psicología. 10 ítems,
-// 5 directos y 5 invertidos, un solo rasgo.
-// Enunciados en messages/{locale}.json → tests.autoestima.items
+// Global self-esteem: adaptation of the Rosenberg scale (1965), the most
+// widely used short instrument in the history of psychology. 10 items,
+// 5 direct and 5 reversed, a single trait.
+// Statements in messages/{locale}.json → tests.autoestima.items
 export const autoestima: TestDefinition = {
   slug: "autoestima",
   version: 1,

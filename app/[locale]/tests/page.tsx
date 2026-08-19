@@ -4,11 +4,17 @@ import { auth } from "@/lib/auth";
 import { prisma } from "@/lib/prisma";
 import { TESTS } from "@/lib/tests";
 import { TRAIT_IDS } from "@/lib/traits";
+import { localeAlternates } from "@/lib/seo";
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "testsPage" });
-  return { title: t("title") };
+  return {
+    title: t("title"),
+    description: t("subtitleAnon"),
+    alternates: localeAlternates(locale, "/tests"),
+    openGraph: { title: t("title"), description: t("subtitleAnon"), url: `/${locale}/tests` },
+  };
 }
 
 export default async function TestsPage({ params }: { params: Promise<{ locale: string }> }) {

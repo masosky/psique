@@ -1,8 +1,9 @@
 {
   "meta": {
-    "title": "Espejo — Conócete de verdad",
+    "title": "Psique — Conócete de verdad",
     "description": "Tests de personalidad, espectro político multidimensional, tríada oscura y más. Cada test llena tu perfil; tu perfil te devuelve insights y correlaciones.",
-    "disclaimer": "Espejo es una herramienta de autoconocimiento y entretenimiento. Ningún resultado es un diagnóstico clínico ni consejo profesional."
+    "disclaimer": "Psique es una herramienta de autoconocimiento y entretenimiento. Ningún resultado es un diagnóstico clínico ni consejo profesional.",
+    "tagline": "Conócete de verdad."
   },
   "nav": {
     "tests": "Tests",
@@ -38,13 +39,13 @@
   },
   "auth": {
     "loginTitle": "Entrar",
-    "loginSubtitle": "Tu espejo te estaba esperando.",
+    "loginSubtitle": "Tu psique te estaba esperando.",
     "signupTitle": "Crear cuenta",
     "signupSubtitle": "Gratis. Tus respuestas son tuyas: sin tests no hay espejo.",
     "name": "Nombre (opcional)",
     "email": "Email",
     "password": "Contraseña",
-    "passwordHint": "Contraseña (mín. 8 caracteres)",
+    "passwordHint": "Contraseña (mínimo 6 caracteres)",
     "loginButton": "Entrar",
     "loginLoading": "Entrando…",
     "signupButton": "Crear cuenta",
@@ -56,8 +57,24 @@
     "hasAccount": "¿Ya tienes cuenta?",
     "hasAccountLink": "Entra",
     "errInvalidEmail": "Email inválido",
-    "errWeakPassword": "La contraseña debe tener al menos 8 caracteres",
-    "errEmailTaken": "Ya existe una cuenta con ese email"
+    "errWeakPassword": "La contraseña debe tener al menos 6 caracteres",
+    "errEmailTaken": "Ya existe una cuenta con ese email",
+    "googleButton": "Continuar con Google",
+    "or": "o",
+    "forgotPassword": "¿Olvidaste tu contraseña?",
+    "backToLogin": "← Volver a iniciar sesión",
+    "resetTitle": "Recuperar contraseña",
+    "resetSubtitle": "Te enviamos un enlace para crear una nueva. Sin dramas.",
+    "resetButton": "Enviar enlace",
+    "resetLoading": "Enviando…",
+    "resetSentTitle": "Enlace enviado",
+    "resetSentBody": "Si {email} tiene cuenta, ahí está el enlace para restablecer la contraseña. Mira también el spam.",
+    "resetFailed": "No hemos podido enviar el enlace. Inténtalo de nuevo.",
+    "errTooManyRequests": "Demasiados intentos. Espera un momento y vuelve a probar.",
+    "errPopupClosed": "Has cerrado la ventana de Google.",
+    "errNetwork": "Problema de conexión. Comprueba tu red.",
+    "errProviderDisabled": "Ese método de acceso no está habilitado.",
+    "errGoogle": "No hemos podido entrar con Google. Inténtalo de nuevo."
   },
   "testsPage": {
     "title": "Tests",
@@ -84,7 +101,7 @@
   },
   "profile": {
     "title": "Mi perfil",
-    "titleNamed": "El espejo de {name}",
+    "titleNamed": "La psique de {name}",
     "emptyTitle": "Tu espejo está en blanco",
     "emptyBody": "Haz tu primer test y empieza a llenarlo. Con 5 minutos ya tienes brújula política.",
     "emptyCta": "Empezar",
@@ -1206,10 +1223,10 @@
   },
   "studies": {
     "title": "Los estudios detrás",
-    "subtitle": "Cada test de Espejo se apoya en instrumentos publicados en revistas con revisión por pares. Aquí están todos, con enlace al artículo original y a Google Scholar por si el DOI está tras un muro de pago.",
+    "subtitle": "Cada test de Psique se apoya en instrumentos publicados en revistas con revisión por pares. Aquí están todos, con enlace al artículo original y a Google Scholar por si el DOI está tras un muro de pago.",
     "count": "{studies} referencias · {tests} tests",
     "caveatTitle": "Honestidad por delante:",
-    "caveatBody": "Espejo no es una adaptación validada de estos instrumentos. Los ítems están reescritos en lenguaje cotidiano y acortados, la muestra de comparación no es representativa de ninguna población, y los resultados no son un diagnóstico. Lo que sí es real: la estructura de rasgos y las relaciones entre ellos vienen de esta literatura, no de la nada.",
+    "caveatBody": "Psique no es una adaptación validada de estos instrumentos. Los ítems están reescritos en lenguaje cotidiano y acortados, la muestra de comparación no es representativa de ninguna población, y los resultados no son un diagnóstico. Lo que sí es real: la estructura de rasgos y las relaciones entre ellos vienen de esta literatura, no de la nada.",
     "goToTest": "Ver el test →",
     "doi": "DOI",
     "source": "Fuente",

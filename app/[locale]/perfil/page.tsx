@@ -15,6 +15,7 @@ import {
   pusilanimeIndex,
   selfEsteemLevel,
 } from "@/lib/insights";
+import { CATEGORY_COLOR } from "@/lib/theme";
 import { Compass } from "@/components/charts/Compass";
 import { RadarBlock } from "@/components/charts/RadarBlock";
 import { TraitBar } from "@/components/charts/TraitBar";
@@ -22,20 +23,9 @@ import { TraitBar } from "@/components/charts/TraitBar";
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "profile" });
-  return { title: t("title") };
+  // Personal, session-bound page: keep it out of search indexes.
+  return { title: t("title"), robots: { index: false, follow: false } };
 }
-
-const CATEGORY_COLOR: Record<TraitCategory, string> = {
-  politica: "#38bdf8",
-  personalidad: "#a78bfa",
-  moral: "#34d399",
-  valores: "#f0abfc",
-  vinculos: "#fb7185",
-  oscuro: "#f87171",
-  caracter: "#fbbf24",
-  habilidades: "#2dd4bf",
-  humor: "#fb923c",
-};
 
 export default async function PerfilPage({
   params,
@@ -48,8 +38,8 @@ export default async function PerfilPage({
   setRequestLocale(locale);
 
   const session = await auth();
-  // `redirect` de next-intl no está tipado como `never`, así que el guard es
-  // explícito para que TS estreche `session` en el resto de la página.
+  // next-intl's `redirect` isn't typed as `never`, so the guard is explicit
+  // so TS narrows `session` for the rest of the page.
   if (!session?.user?.id) {
     redirect({ href: "/login?next=%2Fperfil", locale });
     return null;
@@ -100,9 +90,9 @@ export default async function PerfilPage({
   const locked = lockedInsightCount(profile);
   const nuevoTest = nuevo ? TESTS.find((x) => x.slug === nuevo) : undefined;
 
-  // Orden del registro, no alfabético: en el radar importa que los ejes
-  // adyacentes sean los teóricamente adyacentes (círculo de Schwartz, OCEAN,
-  // los 6 ejes políticos en su orden canónico).
+  // Registry order, not alphabetical: on the radar it matters that adjacent
+  // axes are the theoretically adjacent ones (Schwartz's circle, OCEAN, the
+  // 6 political axes in their canonical order).
   const measuredSet = new Set(measured);
   const byCategory = (cat: TraitCategory) =>
     TRAIT_IDS.filter((x) => TRAITS[x].category === cat && measuredSet.has(x));
@@ -114,7 +104,7 @@ export default async function PerfilPage({
     high: tr(`${id}.high`),
   });
 
-  // El arquetipo político puede llevar el matiz "tradicional".
+  // The political archetype may carry the "traditional" nuance.
   const politicoName = politico
     ? politico.traditional
       ? ta("traditionalSuffix", { name: ta(`political.${politico.key}.name`) })
@@ -155,7 +145,7 @@ export default async function PerfilPage({
         </Link>
       </header>
 
-      {/* Titulares */}
+      {/* Headlines */}
       <section className="mb-10 grid gap-4 sm:grid-cols-3">
         {politico && (
           <div className="rounded-xl border border-sky/30 bg-card p-5">
@@ -223,7 +213,7 @@ export default async function PerfilPage({
         )}
       </section>
 
-      {/* Brújula + radar político */}
+      {/* Compass + political radar */}
       {politicos.length >= 2 && (
         <section className="mb-10 grid gap-4 lg:grid-cols-2">
           <div className="rounded-xl border border-line bg-card p-6">
@@ -237,16 +227,16 @@ export default async function PerfilPage({
             </h2>
             <p className="mb-2 text-xs text-muted">{t("axesSubtitle")}</p>
             <RadarBlock
-              color="#38bdf8"
+              color={CATEGORY_COLOR.politica}
               data={politicos.map((x) => ({ axis: tr(`${x}.short`), value: profile[x] }))}
             />
           </div>
         </section>
       )}
 
-      {/* Un bloque por categoría: radar cuando hay suficientes ejes (≥4) para
-          que la forma diga algo, y barras con percentil siempre. Al añadir un
-          test nuevo, su categoría aparece aquí sin tocar nada. */}
+      {/* One block per category: a radar when there are enough axes (≥4) for
+          the shape to say something, and percentile bars always. When a new
+          test is added, its category shows up here without touching anything. */}
       <section className="mb-10">
         <h2 className="font-display mb-1 text-2xl">{t("allTraitsTitle")}</h2>
         <p className="mb-6 text-sm text-muted">{t("allTraitsSubtitle")}</p>
@@ -294,7 +284,7 @@ export default async function PerfilPage({
         </div>
       </section>
 
-      {/* Qué falta */}
+      {/* What's missing */}
       {locked > 0 && (
         <section className="rounded-xl border border-accent/30 bg-accent/5 p-6">
           <h2 className="font-display mb-2 text-xl">{t("lockedTitle", { count: locked })}</h2>

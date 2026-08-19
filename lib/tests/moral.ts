@@ -1,10 +1,10 @@
 import type { TestDefinition } from "./types";
 
-// Teoría de los Fundamentos Morales (Haidt & Graham): 6 bases sobre las que la
-// gente construye su moral. Es el mejor predictor psicológico de la ideología
-// política que existe, así que cruza con el espectro político de forma brutal.
-// 18 ítems, 3 por fundamento.
-// Enunciados en messages/{locale}.json → tests.moral.items
+// Moral Foundations Theory (Haidt & Graham): 6 bases people build their
+// morality on. It's the best psychological predictor of political ideology
+// there is, so it cross-references brutally well with the political spectrum.
+// 18 items, 3 per foundation.
+// Statements in messages/{locale}.json → tests.moral.items
 export const moral: TestDefinition = {
   slug: "moral",
   version: 1,

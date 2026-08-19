@@ -1,20 +1,26 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/routing";
 import { TESTS } from "@/lib/tests";
+import { localeAlternates } from "@/lib/seo";
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "studies" });
-  return { title: t("title"), description: t("subtitle") };
+  return {
+    title: t("title"),
+    description: t("subtitle"),
+    alternates: localeAlternates(locale, "/estudios"),
+    openGraph: { title: t("title"), description: t("subtitle"), url: `/${locale}/estudios` },
+  };
 }
 
-// Búsqueda en Google Scholar por la cita, como alternativa al DOI (algunos
-// DOI llevan a un paywall; Scholar suele encontrar una versión accesible).
+// Google Scholar search by citation, as an alternative to the DOI (some
+// DOIs lead to a paywall; Scholar usually finds an accessible version).
 const scholar = (citation: string) =>
   `https://scholar.google.com/scholar?q=${encodeURIComponent(citation)}`;
 
-// Catálogo público de todo lo que hay detrás de los tests. Es la página que
-// contesta a «¿esto es serio o es un horóscopo?».
+// Public catalog of everything behind the tests. It's the page that answers
+// "is this serious or is it a horoscope?".
 export default async function EstudiosPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   setRequestLocale(locale);

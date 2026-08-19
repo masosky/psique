@@ -19,49 +19,49 @@ const mini: TestDefinition = {
 };
 
 describe("scoreTest", () => {
-  it("neutral (todo 3) da 50", () => {
+  it("neutral (all 3s) yields 50", () => {
     expect(scoreTest(mini, { i1: 3, i2: 3 })).toEqual({ openness: 50 });
   });
 
-  it("máximo acuerdo con ítem directo e inverso se compensan", () => {
-    // i1=5 sube, i2=5 (invertido -> 1) baja: media (5+1)/2 = 3 -> 50
+  it("max agreement with a direct and a reversed item cancels out", () => {
+    // i1=5 pushes up, i2=5 (reversed -> 1) pushes down: mean (5+1)/2 = 3 -> 50
     expect(scoreTest(mini, { i1: 5, i2: 5 })).toEqual({ openness: 50 });
   });
 
-  it("perfil extremo alto da 100", () => {
+  it("extreme high profile yields 100", () => {
     expect(scoreTest(mini, { i1: 5, i2: 1 })).toEqual({ openness: 100 });
   });
 
-  it("perfil extremo bajo da 0", () => {
+  it("extreme low profile yields 0", () => {
     expect(scoreTest(mini, { i1: 1, i2: 5 })).toEqual({ openness: 0 });
   });
 
-  it("rechaza respuestas incompletas", () => {
+  it("rejects incomplete answers", () => {
     expect(() => scoreTest(mini, { i1: 3 })).toThrow(ScoringError);
   });
 
-  it("rechaza valores fuera de rango o no enteros", () => {
+  it("rejects out-of-range or non-integer values", () => {
     expect(() => scoreTest(mini, { i1: 0, i2: 3 })).toThrow(ScoringError);
     expect(() => scoreTest(mini, { i1: 6, i2: 3 })).toThrow(ScoringError);
     expect(() => scoreTest(mini, { i1: 2.5, i2: 3 })).toThrow(ScoringError);
   });
 
-  it("rechaza ítems desconocidos", () => {
+  it("rejects unknown items", () => {
     expect(() => scoreTest(mini, { i1: 3, i2: 3, hack: 3 })).toThrow(ScoringError);
   });
 });
 
-describe("ipsatización de valores", () => {
+describe("values ipsatization", () => {
   const valores = TESTS.find((t) => t.slug === "valores")!;
 
-  it("la aquiescencia no infla el perfil: responder 5 a todo deja cada valor en 50", () => {
+  it("acquiescence does not inflate the profile: answering 5 to everything leaves every value at 50", () => {
     const answers = Object.fromEntries(valores.items.map((i) => [i.id, 5]));
     const scores = scoreTest(valores, answers);
     for (const trait of valores.traits) expect(scores[trait]).toBe(50);
   });
 
-  it("una prioridad clara queda por encima de 50 y el resto por debajo", () => {
-    // Máximo acuerdo con universalismo (un1, un2), neutral en el resto.
+  it("a clear priority lands above 50 and the rest below", () => {
+    // Max agreement with universalism (un1, un2), neutral on the rest.
     const answers = Object.fromEntries(
       valores.items.map((i) => [i.id, i.id.startsWith("un") ? 5 : 3]),
     );
@@ -74,8 +74,8 @@ describe("ipsatización de valores", () => {
   });
 });
 
-describe("catálogo de tests", () => {
-  it("todos los rasgos usados existen en el registro", () => {
+describe("test catalog", () => {
+  it("every trait used exists in the registry", () => {
     for (const test of TESTS) {
       for (const t of test.traits) expect(TRAITS[t], `${test.slug}: ${t}`).toBeDefined();
       for (const item of test.items) {
@@ -86,14 +86,14 @@ describe("catálogo de tests", () => {
     }
   });
 
-  it("todos los ítems tienen id único dentro de su test", () => {
+  it("every item id is unique within its test", () => {
     for (const test of TESTS) {
       const ids = test.items.map((i) => i.id);
       expect(new Set(ids).size, test.slug).toBe(ids.length);
     }
   });
 
-  it("cada rasgo declarado tiene al menos un ítem, y puntuar todo-3 da 50", () => {
+  it("every declared trait has at least one item, and scoring all-3s yields 50", () => {
     for (const test of TESTS) {
       const answers: Answers = Object.fromEntries(test.items.map((i) => [i.id, 3]));
       const scores = scoreTest(test, answers);
@@ -103,10 +103,10 @@ describe("catálogo de tests", () => {
     }
   });
 
-  it("cada rasgo tiene ítems en ambas direcciones (control de aquiescencia)", () => {
-    // Excepción: el test de valores replica el formato PVQ de Schwartz, que no
-    // usa ítems invertidos (el instrumento original corrige centrando por
-    // persona, no invirtiendo).
+  it("every trait has items in both directions (acquiescence control)", () => {
+    // Exception: the values test replicates Schwartz's PVQ format, which has
+    // no reversed items (the original instrument corrects by centering per
+    // person, not by reversing).
     for (const test of TESTS.filter((t) => t.slug !== "valores")) {
       for (const trait of test.traits) {
         const dirs = new Set(

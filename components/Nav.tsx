@@ -2,6 +2,7 @@ import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/routing";
 import { auth, signOut } from "@/lib/auth";
 import { LocaleSwitcher } from "@/components/LocaleSwitcher";
+import { BRAND_WORDMARK, MARK } from "@/lib/brand";
 
 export async function Nav() {
   const session = await auth();
@@ -11,8 +12,13 @@ export async function Nav() {
     <nav className="sticky top-0 z-40 border-b border-line/70 bg-ink/80 backdrop-blur">
       <div className="mx-auto flex h-14 w-full max-w-5xl items-center gap-6 px-4">
         <Link href="/" className="flex items-center gap-2">
-          <span className="text-xl">🪞</span>
-          <span className="font-display text-xl italic tracking-tight">espejo</span>
+          <svg viewBox={MARK.viewBox} className="h-6 w-6 fill-accent" aria-hidden>
+            {MARK.wings.map((d) => (
+              <path key={d} d={d} />
+            ))}
+            <ellipse cx={MARK.body.cx} cy={MARK.body.cy} rx={MARK.body.rx} ry={MARK.body.ry} />
+          </svg>
+          <span className="font-display text-xl italic tracking-tight">{BRAND_WORDMARK}</span>
         </Link>
 
         <div className="flex items-center gap-4 text-sm text-muted">

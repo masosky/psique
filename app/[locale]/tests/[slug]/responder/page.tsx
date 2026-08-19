@@ -13,7 +13,8 @@ export async function generateMetadata({
   const { locale, slug } = await params;
   if (!getTest(slug)) return {};
   const t = await getTranslations({ locale, namespace: "tests" });
-  return { title: t(`${slug}.title`) };
+  // The runner is auth-gated; the public, indexable page is the test sheet.
+  return { title: t(`${slug}.title`), robots: { index: false, follow: false } };
 }
 
 export default async function AnswerTestPage({

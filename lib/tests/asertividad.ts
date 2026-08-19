@@ -1,8 +1,8 @@
 import type { TestDefinition } from "./types";
 
-// «Test de pusilánime»: asertividad, complacencia (people pleasing) y
-// evitación del conflicto. 12 ítems.
-// Enunciados en messages/{locale}.json → tests.asertividad.items
+// The "pushover test": assertiveness, people-pleasing, and conflict
+// avoidance. 12 items.
+// Statements in messages/{locale}.json → tests.asertividad.items
 export const asertividad: TestDefinition = {
   slug: "asertividad",
   version: 1,

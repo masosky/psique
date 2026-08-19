@@ -4,10 +4,10 @@ import { prisma } from "@/lib/prisma";
 import { getTest } from "@/lib/tests";
 import { scoreTest, ScoringError, type Answers } from "@/lib/scoring";
 
-// Envío de un test completo: puntúa, guarda el intento y actualiza el perfil
-// (upsert de TraitScore por rasgo) en una transacción.
+// Submission of a completed test: scores it, stores the attempt, and updates
+// the profile (TraitScore upsert per trait) in one transaction.
 export async function POST(req: Request) {
-  // Errores como códigos estables, no frases: el cliente decide el idioma.
+  // Errors as stable codes, not sentences: the client decides the language.
   const session = await auth();
   if (!session?.user?.id) {
     return NextResponse.json({ error: "unauthorized" }, { status: 401 });

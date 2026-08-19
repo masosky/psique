@@ -5,7 +5,7 @@ import { TESTS } from "@/lib/tests";
 import { TRAIT_IDS, CATEGORIES } from "@/lib/traits";
 import { INSIGHT_IDS } from "@/lib/insights";
 
-// Aplana un objeto de mensajes a un set de rutas "a.b.c".
+// Flattens a messages object into a set of "a.b.c" paths.
 function keyPaths(obj: unknown, prefix = ""): string[] {
   if (typeof obj !== "object" || obj === null) return [prefix];
   return Object.entries(obj).flatMap(([k, v]) => keyPaths(v, prefix ? `${prefix}.${k}` : k));
@@ -14,7 +14,7 @@ function keyPaths(obj: unknown, prefix = ""): string[] {
 const esKeys = keyPaths(es);
 const enKeys = keyPaths(en);
 
-// Acceso por ruta, para comprobar que una clave concreta existe.
+// Path-based access, to check that a specific key exists.
 function has(messages: object, path: string): boolean {
   return (
     path
@@ -26,8 +26,8 @@ function has(messages: object, path: string): boolean {
   );
 }
 
-describe("mensajes es/en", () => {
-  it("tienen exactamente las mismas claves", () => {
+describe("es/en messages", () => {
+  it("have exactly the same keys", () => {
     expect(
       enKeys.filter((k) => !esKeys.includes(k)),
       "sobran en en.json",
@@ -38,7 +38,7 @@ describe("mensajes es/en", () => {
     ).toEqual([]);
   });
 
-  it("no tienen valores vacíos", () => {
+  it("have no empty values", () => {
     for (const [locale, msgs] of [
       ["es", es],
       ["en", en],
@@ -54,13 +54,13 @@ describe("mensajes es/en", () => {
   });
 });
 
-describe("cobertura de contenido", () => {
+describe("content coverage", () => {
   const locales = [
     ["es", es],
     ["en", en],
   ] as const;
 
-  it("cada rasgo tiene name/short/low/high/description", () => {
+  it("every trait has name/short/low/high/description", () => {
     for (const [locale, msgs] of locales) {
       for (const trait of TRAIT_IDS) {
         for (const field of ["name", "short", "low", "high", "description"]) {
@@ -72,7 +72,7 @@ describe("cobertura de contenido", () => {
     }
   });
 
-  it("cada test tiene título, tagline, descripción y todos sus enunciados", () => {
+  it("every test has title, tagline, description, and all its statements", () => {
     for (const [locale, msgs] of locales) {
       for (const test of TESTS) {
         for (const field of ["title", "tagline", "description"]) {
@@ -80,7 +80,7 @@ describe("cobertura de contenido", () => {
             true,
           );
         }
-        // cada fuente debe tener su nota traducida
+        // every source must have a translated note
         for (const source of test.sources) {
           expect(
             has(msgs, `tests.${test.slug}.sources.${source.noteKey}`),
@@ -97,7 +97,7 @@ describe("cobertura de contenido", () => {
     }
   });
 
-  it("cada insight tiene title y body", () => {
+  it("every insight has title and body", () => {
     for (const [locale, msgs] of locales) {
       for (const id of INSIGHT_IDS) {
         expect(has(msgs, `insights.${id}.title`), `${locale}: insights.${id}.title`).toBe(true);
@@ -106,7 +106,7 @@ describe("cobertura de contenido", () => {
     }
   });
 
-  it("cada categoría de rasgos está traducida", () => {
+  it("every trait category is translated", () => {
     for (const [locale, msgs] of locales) {
       for (const cat of CATEGORIES) {
         expect(has(msgs, `categories.${cat}`), `${locale}: categories.${cat}`).toBe(true);
@@ -114,7 +114,7 @@ describe("cobertura de contenido", () => {
     }
   });
 
-  it("los 9 arquetipos políticos y los 5 tiers de cada índice están traducidos", () => {
+  it("the 9 political archetypes and the 5 tiers of each index are translated", () => {
     const political = [
       "libertario-izq",
       "socialdemocrata",

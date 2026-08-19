@@ -1,8 +1,8 @@
 import type { TestDefinition } from "./types";
 
-// Big Five (OCEAN), 20 ítems (4 por rasgo), inspirado en el formato IPIP de
-// dominio público. Mitad de ítems invertidos.
-// Enunciados en messages/{locale}.json → tests.big-five.items
+// Big Five (OCEAN), 20 items (4 per trait), inspired by the public-domain
+// IPIP format. Half the items are reversed.
+// Statements in messages/{locale}.json → tests.big-five.items
 export const bigFive: TestDefinition = {
   slug: "big-five",
   version: 1,

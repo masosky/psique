@@ -1,15 +1,16 @@
 import type { TestDefinition } from "./types";
 import { clamp } from "@/lib/utils";
 
-// Valores básicos de Schwartz: 10 valores universales que se organizan en un
-// círculo con tensiones (apertura al cambio vs conservación, autotrascendencia
-// vs autopromoción). Formato PVQ adaptado. 20 ítems, 2 por valor.
-// Enunciados en messages/{locale}.json → tests.valores.items
+// Schwartz's basic values: 10 universal values arranged in a circle with
+// tensions (openness to change vs conservation, self-transcendence vs
+// self-enhancement). Adapted PVQ format. 20 items, 2 per value.
+// Statements in messages/{locale}.json → tests.valores.items
 //
-// El PVQ no lleva ítems invertidos; la corrección estándar de Schwartz es
-// ipsatizar: centrar cada valor en la media de la persona. Así "estar de
-// acuerdo con todo" (aquiescencia) no infla el perfil — puntúa qué PRIORIZAS,
-// no cuánto asientes. 50 = tu propia media; >50 = por encima de ella.
+// The PVQ carries no reversed items; Schwartz's standard correction is to
+// ipsatize: center each value on the person's mean. That way "agreeing with
+// everything" (acquiescence) doesn't inflate the profile — it scores what
+// you PRIORITIZE, not how much you nod along. 50 = your own mean; >50 =
+// above it.
 const ipsatize = (scores: Record<string, number>): Record<string, number> => {
   const vals = Object.values(scores);
   const mean = vals.reduce((a, b) => a + b, 0) / vals.length;

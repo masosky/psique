@@ -14,10 +14,10 @@ import { locus } from "./locus";
 
 export type { TestDefinition, TestItem, TestSource } from "./types";
 
-// Orden = orden recomendado en el catálogo. El político es el mejor gancho;
-// autoestima va pronto porque es corta y personal; el humor airea la mitad;
-// los de carácter (oscuro, asertividad, honestidad) cierran con los cruces
-// más jugosos ya desbloqueables.
+// Order = recommended order in the catalog. The political one is the best
+// hook; self-esteem comes early because it's short and personal; humor airs
+// out the middle; the character ones (dark triad, assertiveness, honesty)
+// close with the juiciest cross-test insights already unlockable.
 export const TESTS: TestDefinition[] = [
   espectroPolitico,
   bigFive,

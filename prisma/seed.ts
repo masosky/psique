@@ -205,7 +205,7 @@ async function main() {
   const users = Array.from({ length: N_USERS }, (_, i) => ({
     id: `seed_${String(i).padStart(4, "0")}`,
     name: `${NOMBRES[Math.floor(rand() * NOMBRES.length)]} ${APELLIDOS[Math.floor(rand() * APELLIDOS.length)]}`,
-    email: `seed-${i}@espejo.local`,
+    email: `seed-${i}@psique.local`,
     isSeed: true,
   }));
   await prisma.user.createMany({ data: users });

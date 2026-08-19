@@ -1,10 +1,10 @@
 import type { TestDefinition } from "@/lib/tests/types";
 import { clamp } from "@/lib/utils";
 
-// Respuestas de un intento: itemId -> valor Likert 1..5.
+// Answers of one attempt: itemId -> Likert value 1..5.
 export type Answers = Record<string, number>;
 
-// Puntuaciones resultantes: traitId -> 0..100.
+// Resulting scores: traitId -> 0..100.
 export type Scores = Record<string, number>;
 
 export const LIKERT_MIN = 1;
@@ -13,15 +13,15 @@ export const LIKERT_MAX = 5;
 export class ScoringError extends Error {}
 
 /**
- * Puntúa un test completo.
+ * Scores a complete test.
  *
- * Para cada rasgo que mide el test: toma sus ítems, invierte los de carga
- * negativa (v -> 6 - v), promedia y normaliza la media 1..5 a 0..100.
- * Con ítems equilibrados en ambas direcciones, responder "3" a todo deja el
- * rasgo en 50 (el centro).
+ * For each trait the test measures: take its items, reverse the
+ * negatively-loaded ones (v -> 6 - v), average, and normalize the 1..5 mean
+ * to 0..100. With items balanced in both directions, answering "3" to
+ * everything leaves the trait at 50 (the center).
  */
 export function scoreTest(test: TestDefinition, answers: Answers): Scores {
-  // Validación: todos los ítems respondidos, valores Likert válidos, sin extras.
+  // Validation: every item answered, valid Likert values, no extras.
   for (const item of test.items) {
     const v = answers[item.id];
     if (v === undefined) throw new ScoringError(`Falta la respuesta al ítem ${item.id}`);

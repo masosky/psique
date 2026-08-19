@@ -9,7 +9,8 @@ import { TRAITS } from "@/lib/traits";
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "nav" });
-  return { title: t("insights") };
+  // Personal, session-bound page: keep it out of search indexes.
+  return { title: t("insights"), robots: { index: false, follow: false } };
 }
 
 const KIND_META: Record<InsightKind, { emoji: string; border: string; text: string }> = {
@@ -23,7 +24,7 @@ export default async function InsightsPage({ params }: { params: Promise<{ local
   setRequestLocale(locale);
 
   const session = await auth();
-  // `redirect` de next-intl no está tipado como `never`; guard explícito.
+  // next-intl's `redirect` isn't typed as `never`; explicit guard.
   if (!session?.user?.id) {
     redirect({ href: "/login?next=%2Finsights", locale });
     return null;
@@ -62,7 +63,7 @@ export default async function InsightsPage({ params }: { params: Promise<{ local
   const locked = lockedInsightCount(profile);
   const population = popCount.toLocaleString(locale);
 
-  // Lo más distintivo del usuario: rasgos con percentil más extremo.
+  // The user's most distinctive side: traits with the most extreme percentile.
   const extremes = Object.entries(percentiles)
     .map(([trait, p]) => ({ trait, p, dist: Math.abs(p - 50) }))
     .sort((a, b) => b.dist - a.dist)
@@ -75,7 +76,7 @@ export default async function InsightsPage({ params }: { params: Promise<{ local
         <p className="mt-2 text-muted">{t("subtitle", { active: insights.length, locked })}</p>
       </header>
 
-      {/* Lo más raro de ti */}
+      {/* Your rarest side */}
       {extremes.length > 0 && (
         <section className="mb-12 rounded-xl border border-line bg-card p-6">
           <h2 className="font-display mb-1 text-xl">{t("extremesTitle")}</h2>
@@ -100,7 +101,7 @@ export default async function InsightsPage({ params }: { params: Promise<{ local
         </section>
       )}
 
-      {/* Insights por tipo */}
+      {/* Insights by kind */}
       {(Object.keys(KIND_META) as InsightKind[]).map((kind) => {
         const list = insights.filter((i) => i.kind === kind);
         if (list.length === 0) return null;
@@ -134,7 +135,7 @@ export default async function InsightsPage({ params }: { params: Promise<{ local
         );
       })}
 
-      {/* Correlaciones de la comunidad */}
+      {/* Community correlations */}
       {correlations.length > 0 && (
         <section className="mb-12">
           <h2 className="font-display mb-1 text-2xl">{t("correlationsTitle")}</h2>
@@ -154,9 +155,9 @@ export default async function InsightsPage({ params }: { params: Promise<{ local
                   const pos = c.r > 0;
                   return (
                     <tr key={`${c.a}-${c.b}`} className="border-b border-line/50 last:border-0">
-                      {/* nombre completo, no `short`: el eje político
-                          «Autoridad» y el fundamento moral «Autoridad» se
-                          confunden si se abrevian */}
+                      {/* full name, not `short`: the political axis
+                          "Authority" and the moral foundation "Authority"
+                          blur together when abbreviated */}
                       <td className="px-5 py-3">{TRAITS[c.a] ? tr(`${c.a}.name`) : c.a}</td>
                       <td className="px-5 py-3">{TRAITS[c.b] ? tr(`${c.b}.name`) : c.b}</td>
                       <td className="px-5 py-3">

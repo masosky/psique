@@ -1,10 +1,10 @@
 import type { TestDefinition } from "./types";
 
-// Apego adulto (ECR-S): dos dimensiones continuas, ansiedad y evitación. Los
-// cuatro "estilos" populares (seguro, ansioso, evitativo, desorganizado) son
-// los cuadrantes de este plano — así que aquí se miden bien, no por etiqueta.
-// 12 ítems, 6 por dimensión.
-// Enunciados en messages/{locale}.json → tests.apego.items
+// Adult attachment (ECR-S): two continuous dimensions, anxiety and avoidance.
+// The four popular "styles" (secure, anxious, avoidant, disorganized) are the
+// quadrants of this plane — so here they're measured properly, not by label.
+// 12 items, 6 per dimension.
+// Statements in messages/{locale}.json → tests.apego.items
 export const apego: TestDefinition = {
   slug: "apego",
   version: 1,
@@ -30,7 +30,7 @@ export const apego: TestDefinition = {
     },
   ],
   items: [
-    // ansiedad de apego
+    // attachment anxiety
     { id: "an1", loadings: { attachAnx: 1 } },
     { id: "an2", loadings: { attachAnx: 1 } },
     { id: "an3", loadings: { attachAnx: 1 } },
@@ -38,7 +38,7 @@ export const apego: TestDefinition = {
     { id: "an5", loadings: { attachAnx: -1 } },
     { id: "an6", loadings: { attachAnx: -1 } },
 
-    // evitación de la intimidad
+    // intimacy avoidance
     { id: "av1", loadings: { attachAvo: 1 } },
     { id: "av2", loadings: { attachAvo: 1 } },
     { id: "av3", loadings: { attachAvo: 1 } },

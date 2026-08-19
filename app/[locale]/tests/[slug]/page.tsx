@@ -5,6 +5,7 @@ import { auth } from "@/lib/auth";
 import { prisma } from "@/lib/prisma";
 import { getTest, TESTS } from "@/lib/tests";
 import { TestSources } from "@/components/TestSources";
+import { jsonLd, localeAlternates, SITE_NAME, SITE_URL } from "@/lib/seo";
 
 export function generateStaticParams() {
   return routing.locales.flatMap((locale) => TESTS.map((t) => ({ locale, slug: t.slug })));
@@ -18,12 +19,21 @@ export async function generateMetadata({
   const { locale, slug } = await params;
   if (!getTest(slug)) return {};
   const t = await getTranslations({ locale, namespace: "tests" });
-  return { title: t(`${slug}.title`), description: t(`${slug}.tagline`) };
+  return {
+    title: t(`${slug}.title`),
+    description: t(`${slug}.tagline`),
+    alternates: localeAlternates(locale, `/tests/${slug}`),
+    openGraph: {
+      title: t(`${slug}.title`),
+      description: t(`${slug}.tagline`),
+      url: `/${locale}/tests/${slug}`,
+    },
+  };
 }
 
-// Ficha del test: qué mide, cuánto dura y en qué se basa. Es pública (no
-// requiere cuenta) para que sea indexable y compartible; el login se pide al
-// pulsar «empezar».
+// Test sheet: what it measures, how long it takes, and what it's based on.
+// It's public (no account required) so it's indexable and shareable; login
+// is asked for on pressing "start".
 export default async function TestDetailPage({
   params,
 }: {
@@ -54,8 +64,34 @@ export default async function TestDetailPage({
     ? `/tests/${slug}/responder`
     : `/login?next=${encodeURIComponent(`/tests/${slug}/responder`)}`;
 
+  // Structured data: the test as a schema.org Quiz plus its breadcrumb trail.
+  const pageUrl = `${SITE_URL}/${locale}/tests/${slug}`;
+  const structuredData = jsonLd({
+    "@graph": [
+      {
+        "@type": "Quiz",
+        name: tt(`${slug}.title`),
+        description: tt(`${slug}.description`),
+        url: pageUrl,
+        inLanguage: locale,
+        isAccessibleForFree: true,
+        timeRequired: `PT${test.minutes}M`,
+        provider: { "@type": "Organization", name: SITE_NAME, url: SITE_URL },
+      },
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: SITE_NAME, item: `${SITE_URL}/${locale}` },
+          { "@type": "ListItem", position: 2, name: t("title"), item: `${SITE_URL}/${locale}/tests` },
+          { "@type": "ListItem", position: 3, name: tt(`${slug}.title`), item: pageUrl },
+        ],
+      },
+    ],
+  });
+
   return (
     <div className="mx-auto max-w-2xl py-14">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: structuredData }} />
       <Link href="/tests" className="text-sm text-muted transition hover:text-fg">
         ← {t("title")}
       </Link>
@@ -84,7 +120,7 @@ export default async function TestDetailPage({
         )}
       </div>
 
-      {/* Qué mide */}
+      {/* What it measures */}
       <section className="mb-8 rounded-xl border border-line bg-card p-6">
         <h3 className="font-display mb-4 text-lg">
           {tc(test.category)} · {test.traits.length}

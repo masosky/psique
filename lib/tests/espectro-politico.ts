@@ -1,8 +1,8 @@
 import type { TestDefinition } from "./types";
 
-// 24 ítems, 4 por eje. Cada eje tiene ítems en ambas direcciones para
-// compensar el sesgo de aquiescencia (tender a decir "de acuerdo" a todo).
-// Enunciados en messages/{locale}.json → tests.espectro-politico.items
+// 24 items, 4 per axis. Each axis has items in both directions to offset
+// acquiescence bias (the tendency to answer "agree" to everything).
+// Statements in messages/{locale}.json → tests.espectro-politico.items
 export const espectroPolitico: TestDefinition = {
   slug: "espectro-politico",
   version: 1,
@@ -28,37 +28,37 @@ export const espectroPolitico: TestDefinition = {
     },
   ],
   items: [
-    // económico (0 = igualdad, 100 = mercado)
+    // economic (0 = equality, 100 = market)
     { id: "econ1", loadings: { econ: 1 } },
     { id: "econ2", loadings: { econ: -1 } },
     { id: "econ3", loadings: { econ: -1 } },
     { id: "econ4", loadings: { econ: 1 } },
 
-    // autoridad (0 = libertario, 100 = autoritario)
+    // authority (0 = libertarian, 100 = authoritarian)
     { id: "auth1", loadings: { auth: 1 } },
     { id: "auth2", loadings: { auth: -1 } },
     { id: "auth3", loadings: { auth: 1 } },
     { id: "auth4", loadings: { auth: -1 } },
 
-    // cultural (0 = progresista, 100 = tradicional)
+    // cultural (0 = progressive, 100 = traditional)
     { id: "cult1", loadings: { cult: 1 } },
     { id: "cult2", loadings: { cult: 1 } },
     { id: "cult3", loadings: { cult: -1 } },
     { id: "cult4", loadings: { cult: -1 } },
 
-    // territorial (0 = globalista, 100 = nacionalista)
+    // territorial (0 = globalist, 100 = nationalist)
     { id: "glob1", loadings: { glob: 1 } },
     { id: "glob2", loadings: { glob: -1 } },
     { id: "glob3", loadings: { glob: -1 } },
     { id: "glob4", loadings: { glob: 1 } },
 
-    // ecológico (0 = ecologista, 100 = productivista)
+    // ecological (0 = environmentalist, 100 = productivist)
     { id: "eco1", loadings: { eco: -1 } },
     { id: "eco2", loadings: { eco: 1 } },
     { id: "eco3", loadings: { eco: -1 } },
     { id: "eco4", loadings: { eco: 1 } },
 
-    // religioso (0 = laico, 100 = religioso)
+    // religious (0 = secular, 100 = religious)
     { id: "rel1", loadings: { rel: 1 } },
     { id: "rel2", loadings: { rel: -1 } },
     { id: "rel3", loadings: { rel: 1 } },
