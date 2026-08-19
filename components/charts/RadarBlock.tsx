@@ -8,6 +8,7 @@ import {
   RadarChart,
   ResponsiveContainer,
 } from "recharts";
+import { THEME } from "@/lib/theme";
 
 export function RadarBlock({
   data,
@@ -21,8 +22,8 @@ export function RadarBlock({
   return (
     <ResponsiveContainer width="100%" height={height}>
       <RadarChart data={data} outerRadius="72%">
-        <PolarGrid stroke="#262e44" />
-        <PolarAngleAxis dataKey="axis" tick={{ fill: "#9099b0", fontSize: 11 }} />
+        <PolarGrid stroke={THEME.line} />
+        <PolarAngleAxis dataKey="axis" tick={{ fill: THEME.muted, fontSize: 11 }} />
         <PolarRadiusAxis domain={[0, 100]} tick={false} axisLine={false} />
         <Radar
           dataKey="value"

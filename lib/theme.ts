@@ -51,6 +51,18 @@ export const CATEGORY_COLOR: Record<TraitCategory, string> = {
 // Political compass third-axis scale: low → warm amber, high → brand blue.
 export const COMPASS_SCALE = { from: THEME.amber, to: THEME.accent } as const;
 
+// Line-chart series palette. Category colors can't be reused here: a chart
+// often plots several traits from the SAME category, which would draw them in
+// one indistinguishable color. These are ordered for maximum separation.
+export const SERIES_COLORS = [
+  THEME.accent, // blue
+  THEME.amber, // amber
+  "#2dd4bf", // teal
+  "#f472b6", // pink
+  THEME.good, // green
+  "#fb923c", // orange
+] as const;
+
 // CSS custom properties injected on <html> by the root layout. Names must
 // match the tokens declared in globals.css @theme.
 export function themeCssVars(): Record<string, string> {

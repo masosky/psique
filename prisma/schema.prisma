@@ -58,6 +58,14 @@ model User {
   // con WHERE is_seed = false cuando haya usuarios reales de sobra.
   isSeed Boolean @default(false) @map("is_seed")
 
+  // Public share link (/r/<shareId>). Null until the user opts in, and cleared
+  // when they opt out — revoking the link for good.
+  shareId String? @unique @map("share_id")
+  // Politics and religion are GDPR special-category data, so the political
+  // archetype is only ever shown on the public page under separate, explicit
+  // consent. Off unless the user ticks it.
+  sharePolitics Boolean @default(false) @map("share_politics")
+
   accounts     Account[]
   sessions     Session[]
   testAttempts TestAttempt[]

@@ -31,6 +31,11 @@ export async function Nav() {
           <Link href="/insights" className="transition hover:text-fg">
             {t("insights")}
           </Link>
+          {session?.user && (
+            <Link href="/evolucion" className="hidden transition hover:text-fg sm:inline">
+              {t("evolution")}
+            </Link>
+          )}
           <Link href="/estudios" className="hidden transition hover:text-fg sm:inline">
             {t("studies")}
           </Link>
@@ -40,9 +45,9 @@ export async function Nav() {
           <LocaleSwitcher />
           {session?.user ? (
             <>
-              <span className="hidden text-muted sm:inline">
+              <Link href="/cuenta" className="hidden text-muted transition hover:text-fg sm:inline">
                 {session.user.name ?? session.user.email}
-              </span>
+              </Link>
               <form
                 action={async () => {
                   "use server";
