@@ -21,6 +21,7 @@ import { CATEGORY_COLOR } from "@/lib/theme";
 import { Compass } from "@/components/charts/Compass";
 import { RadarBlock } from "@/components/charts/RadarBlock";
 import { TraitBar } from "@/components/charts/TraitBar";
+import { ShareCardModal } from "@/components/ShareCardModal";
 import { FileText } from "lucide-react";
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
@@ -144,12 +145,42 @@ export default async function PerfilPage({
             })}
           </p>
         </div>
-        <Link
-          href="/insights"
-          className="rounded-lg bg-accent-strong px-5 py-2.5 text-sm font-medium text-white transition hover:bg-accent"
-        >
-          {t("ctaInsights")}
-        </Link>
+        <div className="flex flex-wrap items-center gap-3">
+          <ShareCardModal
+            userName={user.name ?? null}
+            archetype={bigFive ? ta(`bigfive.${bigFive.key}.name`) : (politicoName ?? null)}
+            archetypeDesc={
+              bigFive
+                ? ta(`bigfive.${bigFive.key}.description`)
+                : politico
+                  ? ta(`political.${politico.key}.description`)
+                  : null
+            }
+            dominantTrait={
+              bigFive
+                ? {
+                    name: tr(`${bigFive.dominant}.name`),
+                    score: profile[bigFive.dominant],
+                    percentile: percentiles[bigFive.dominant],
+                  }
+                : null
+            }
+            topTraits={measured
+              .map((x) => ({
+                name: tr(`${x}.name`),
+                score: profile[x],
+                percentile: percentiles[x],
+              }))
+              .sort((a, b) => b.score - a.score)}
+            measuredCount={measured.length}
+          />
+          <Link
+            href="/insights"
+            className="rounded-lg bg-accent-strong px-5 py-2.5 text-sm font-medium text-white transition hover:bg-accent"
+          >
+            {t("ctaInsights")}
+          </Link>
+        </div>
       </header>
 
       <section className="mb-10 flex flex-wrap items-center justify-between gap-4 rounded-xl border border-line bg-card p-6 shadow-sm">
