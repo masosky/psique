@@ -76,7 +76,7 @@ model VerificationToken {
 }
 
 // ---------------------------------------------------------------------------
-// Espejo: tests y perfil de rasgos
+// Psique: tests and trait profile
 //
 // Los tests (preguntas, cargas por rasgo, textos) viven en código en
 // lib/tests/*.ts — versionados en git, tipados, sin CMS. La base de datos solo

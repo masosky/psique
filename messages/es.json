@@ -16,7 +16,7 @@
     "studies": "Estudios"
   },
   "home": {
-    "eyebrow": "El espejo que no te hace la pelota",
+    "eyebrow": "El test que no te hace la pelota",
     "title": "Conócete",
     "titleEmphasis": "de verdad",
     "subtitle": "Tu espectro político en 6 dimensiones. Tu personalidad científica. Tu villano interior. Tu nivel de pusilanimidad. Cada test llena tu perfil — y tu perfil te cuenta lo que te espera: lo bueno, lo malo y lo raro.",
@@ -41,7 +41,7 @@
     "loginTitle": "Entrar",
     "loginSubtitle": "Tu psique te estaba esperando.",
     "signupTitle": "Crear cuenta",
-    "signupSubtitle": "Gratis. Tus respuestas son tuyas: sin tests no hay espejo.",
+    "signupSubtitle": "Gratis. Tus respuestas son tuyas: sin tests no hay perfil.",
     "name": "Nombre (opcional)",
     "email": "Email",
     "password": "Contraseña",
@@ -74,7 +74,11 @@
     "errPopupClosed": "Has cerrado la ventana de Google.",
     "errNetwork": "Problema de conexión. Comprueba tu red.",
     "errProviderDisabled": "Ese método de acceso no está habilitado.",
-    "errGoogle": "No hemos podido entrar con Google. Inténtalo de nuevo."
+    "errGoogle": "No hemos podido entrar con Google. Inténtalo de nuevo.",
+    "errPopupBlocked": "Tu navegador ha bloqueado la ventana de Google. Permite las ventanas emergentes y vuelve a intentarlo.",
+    "errAccountExists": "Ya tienes una cuenta con ese email creada con otro método. Entra con tu contraseña.",
+    "errUnauthorizedDomain": "Este dominio no está autorizado para iniciar sesión. Si eres quien lo administra, añádelo en Firebase → Authentication → Settings → Authorized domains.",
+    "errSession": "Tu identidad es correcta, pero no hemos podido crear la sesión. Vuelve a intentarlo en un momento."
   },
   "testsPage": {
     "title": "Tests",
@@ -102,7 +106,7 @@
   "profile": {
     "title": "Mi perfil",
     "titleNamed": "La psique de {name}",
-    "emptyTitle": "Tu espejo está en blanco",
+    "emptyTitle": "Tu perfil está en blanco",
     "emptyBody": "Haz tu primer test y empieza a llenarlo. Con 5 minutos ya tienes brújula política.",
     "emptyCta": "Empezar",
     "subtitle": "{measured} de {total} rasgos medidos · comparado con {population} perfiles",

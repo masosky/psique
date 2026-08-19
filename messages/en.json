@@ -16,7 +16,7 @@
     "studies": "Studies"
   },
   "home": {
-    "eyebrow": "The mirror that won't flatter you",
+    "eyebrow": "The test that won't flatter you",
     "title": "Know yourself",
     "titleEmphasis": "for real",
     "subtitle": "Your political spectrum across 6 dimensions. Your personality, scientifically. Your inner villain. Your pushover level. Every test fills your profile — and your profile tells you what's coming: the good, the bad and the weird.",
@@ -41,7 +41,7 @@
     "loginTitle": "Log in",
     "loginSubtitle": "Your psyche was waiting for you.",
     "signupTitle": "Create account",
-    "signupSubtitle": "Free. Your answers are yours: no tests, no mirror.",
+    "signupSubtitle": "Free. Your answers are yours: no tests, no profile.",
     "name": "Name (optional)",
     "email": "Email",
     "password": "Password",
@@ -74,7 +74,11 @@
     "errPopupClosed": "You closed the Google window.",
     "errNetwork": "Connection problem. Check your network.",
     "errProviderDisabled": "That sign-in method is not enabled.",
-    "errGoogle": "We couldn't sign you in with Google. Please try again."
+    "errGoogle": "We couldn't sign you in with Google. Please try again.",
+    "errPopupBlocked": "Your browser blocked the Google window. Allow pop-ups and try again.",
+    "errAccountExists": "You already have an account with that email created another way. Sign in with your password.",
+    "errUnauthorizedDomain": "This domain is not authorised for sign-in. If you administer it, add it under Firebase → Authentication → Settings → Authorized domains.",
+    "errSession": "Your identity checks out, but we couldn't create the session. Please try again in a moment."
   },
   "testsPage": {
     "title": "Tests",
@@ -102,7 +106,7 @@
   "profile": {
     "title": "My profile",
     "titleNamed": "{name}'s psyche",
-    "emptyTitle": "Your mirror is blank",
+    "emptyTitle": "Your profile is blank",
     "emptyBody": "Take your first test and start filling it. Five minutes gets you a political compass.",
     "emptyCta": "Start",
     "subtitle": "{measured} of {total} traits measured · compared against {population} profiles",

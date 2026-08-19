@@ -3,7 +3,7 @@
 import { signInWithPopup } from "firebase/auth";
 import { signIn } from "next-auth/react";
 import { useTranslations } from "next-intl";
-import { authErrorKey, firebaseAuth, googleProvider } from "@/lib/firebase";
+import { authErrorKey, firebaseAuth, googleProvider, isSilentAuthError } from "@/lib/firebase";
 
 // Google sign-in: Firebase popup for identity, then the ID token is exchanged
 // for a NextAuth session. Used on both the login and signup pages — with
@@ -32,18 +32,20 @@ export function GoogleButton({
         redirect: false,
       });
       if (res?.error) {
-        onError(t("badCredentials"));
+        // Google already vouched for this identity, so this is our server
+        // failing to create the session — never a credentials problem.
+        onError(t("errSession"));
         return;
       }
       // Full reload so the server components pick up the new session.
       window.location.href = next;
     } catch (e) {
-      const key = authErrorKey(e);
       // Closing the popup is a deliberate cancel, not an error worth showing.
-      if (key === "errPopupClosed") {
+      if (isSilentAuthError(e)) {
         onError("");
         return;
       }
+      const key = authErrorKey(e);
       onError(key ? t(key) : t("errGoogle"));
     }
   }

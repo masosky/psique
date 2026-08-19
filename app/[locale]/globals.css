@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-/* "Espejo" theme: deep navy ink, trust-blue accent, amber details.
+/* "Psique" theme: deep navy ink, trust-blue accent, amber details.
    ⚠ The canonical values live in lib/theme.ts — the root layout injects them
    as CSS variables on <html>, which OVERRIDE the defaults below. This block
    exists because Tailwind v4 needs it at build time to generate utilities;

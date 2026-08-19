@@ -2,7 +2,7 @@
   "version": "0.0.1",
   "configurations": [
     {
-      "name": "espejo",
+      "name": "psique",
       "runtimeExecutable": "npx",
       "runtimeArgs": ["next", "dev"],
       "port": 3000

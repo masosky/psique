@@ -37,7 +37,9 @@ function RegisterForm() {
         redirect: false,
       });
       if (res?.error) {
-        setError(t("signupFailed"));
+        // The Firebase account exists at this point; only the session
+        // exchange failed.
+        setError(t("errSession"));
         setLoading(false);
         return;
       }

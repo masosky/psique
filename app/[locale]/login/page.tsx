@@ -31,7 +31,9 @@ function LoginForm() {
         redirect: false,
       });
       if (res?.error) {
-        setError(t("badCredentials"));
+        // Firebase already validated the password above; reaching here means
+        // our session exchange failed, not that the credentials were wrong.
+        setError(t("errSession"));
         setLoading(false);
         return;
       }

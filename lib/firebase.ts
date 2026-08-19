@@ -27,12 +27,31 @@ export const AUTH_ERROR_KEYS: Record<string, string> = {
   "auth/wrong-password": "badCredentials",
   "auth/user-not-found": "badCredentials",
   "auth/too-many-requests": "errTooManyRequests",
-  "auth/popup-closed-by-user": "errPopupClosed",
   "auth/network-request-failed": "errNetwork",
   "auth/operation-not-allowed": "errProviderDisabled",
+  "auth/popup-blocked": "errPopupBlocked",
+  "auth/account-exists-with-different-credential": "errAccountExists",
+  // Deployment mistake, not a user mistake: the domain is missing from
+  // Firebase console → Authentication → Settings → Authorized domains.
+  "auth/unauthorized-domain": "errUnauthorizedDomain",
 };
 
+// Codes that mean "the user changed their mind" — no error should be shown.
+const SILENT_CODES = new Set([
+  "auth/popup-closed-by-user",
+  "auth/cancelled-popup-request",
+  "auth/user-cancelled",
+]);
+
+const codeOf = (e: unknown): string | undefined => (e as { code?: string })?.code;
+
+export const isSilentAuthError = (e: unknown): boolean => SILENT_CODES.has(codeOf(e) ?? "");
+
 export function authErrorKey(e: unknown): string | undefined {
-  const code = (e as { code?: string })?.code;
-  return code ? AUTH_ERROR_KEYS[code] : undefined;
+  const code = codeOf(e);
+  const key = code ? AUTH_ERROR_KEYS[code] : undefined;
+  // Without this, an unmapped code shows a generic message and leaves no
+  // trace of what actually failed.
+  if (!key && code) console.error(`Unhandled Firebase auth error: ${code}`, e);
+  return key;
 }
