@@ -32,13 +32,13 @@ export default async function AnalisisPage({ params }: { params: Promise<{ local
 
   return (
     <div className="py-12">
-      <header className="mb-8">
-        <h1 className="font-display text-4xl flex items-center gap-3">
-          <span className="text-accent">✨</span> Análisis & Psicólogo IA
+      <header className="mb-8 border-b border-line pb-6">
+        <h1 className="font-display text-3xl tracking-tight">
+          Informes & Diagnóstico Psicométrico
         </h1>
-        <p className="mt-2 text-sm text-muted">
-          Genera diagnósticos temáticos profundos basados en todos los tests de tu perfil o realiza
-          consultas psicológicas personalizadas.
+        <p className="mt-1.5 text-xs text-muted">
+          Síntesis clínica y narrativa estructurada a partir de todas las dimensiones evaluadas en
+          tu perfil.
         </p>
       </header>
 

@@ -31,11 +31,8 @@ export async function Nav() {
           <Link href="/insights" className="transition hover:text-fg">
             {t("insights")}
           </Link>
-          <Link
-            href="/analisis"
-            className="flex items-center gap-1 text-accent transition hover:text-accent-strong font-medium"
-          >
-            <span>✨</span> {t("aiAnalysis")}
+          <Link href="/analisis" className="transition hover:text-fg">
+            {t("aiAnalysis")}
           </Link>
           {session?.user && (
             <Link href="/evolucion" className="hidden transition hover:text-fg sm:inline">

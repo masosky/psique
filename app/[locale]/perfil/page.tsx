@@ -21,6 +21,7 @@ import { CATEGORY_COLOR } from "@/lib/theme";
 import { Compass } from "@/components/charts/Compass";
 import { RadarBlock } from "@/components/charts/RadarBlock";
 import { TraitBar } from "@/components/charts/TraitBar";
+import { FileText } from "lucide-react";
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
@@ -151,16 +152,17 @@ export default async function PerfilPage({
         </Link>
       </header>
 
-      <section className="mb-10 flex flex-wrap items-center justify-between gap-4 rounded-2xl border border-accent/40 bg-accent/10 p-6 shadow-sm">
+      <section className="mb-10 flex flex-wrap items-center justify-between gap-4 rounded-xl border border-line bg-card p-6 shadow-sm">
         <div>
-          <h2 className="font-display flex items-center gap-2 text-xl text-accent">
-            <span>✨</span> {t("aiTitle")}
+          <h2 className="font-display flex items-center gap-2 text-xl text-fg">
+            <FileText className="h-5 w-5 text-accent" />
+            {t("aiTitle")}
           </h2>
           <p className="mt-1 text-sm text-muted">{t("aiSubtitle")}</p>
         </div>
         <Link
           href="/analisis"
-          className="flex items-center gap-2 rounded-xl bg-accent-strong px-5 py-2.5 text-sm font-medium text-white transition hover:bg-accent shadow"
+          className="flex items-center gap-2 rounded-lg border border-line bg-card2/70 px-4 py-2 text-xs font-medium text-fg transition hover:border-accent hover:text-accent"
         >
           <span>{t("aiGenerate")}</span>
           <span aria-hidden="true">→</span>
