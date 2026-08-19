@@ -1,0 +1,116 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../lib/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+// ---------------------------------------------------------------------------
+// Auth (NextAuth v5 + Prisma adapter, credentials con passwordHash — misma
+// estructura que somelye)
+// ---------------------------------------------------------------------------
+
+model Account {
+  id                String  @id @default(cuid())
+  userId            String  @map("user_id")
+  type              String
+  provider          String
+  providerAccountId String  @map("provider_account_id")
+  refresh_token     String? @db.Text
+  access_token      String? @db.Text
+  expires_at        Int?
+  token_type        String?
+  scope             String?
+  id_token          String? @db.Text
+  session_state     String?
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([provider, providerAccountId])
+  @@map("accounts")
+}
+
+model Session {
+  id           String   @id @default(cuid())
+  sessionToken String   @unique @map("session_token")
+  userId       String   @map("user_id")
+  expires      DateTime
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@map("sessions")
+}
+
+model User {
+  id            String    @id @default(cuid())
+  name          String?
+  email         String?   @unique
+  emailVerified DateTime? @map("email_verified")
+  passwordHash  String?   @map("password_hash")
+  image         String?
+  createdAt     DateTime  @default(now()) @map("created_at")
+
+  // Población sintética de calibración (sembrada en prisma/seed.ts). Permite que
+  // percentiles y correlaciones muestren algo desde el día 1; se puede excluir
+  // con WHERE is_seed = false cuando haya usuarios reales de sobra.
+  isSeed Boolean @default(false) @map("is_seed")
+
+  accounts     Account[]
+  sessions     Session[]
+  testAttempts TestAttempt[]
+  traitScores  TraitScore[]
+
+  @@map("users")
+}
+
+model VerificationToken {
+  identifier String
+  token      String
+  expires    DateTime
+
+  @@unique([identifier, token])
+  @@map("verification_tokens")
+}
+
+// ---------------------------------------------------------------------------
+// Espejo: tests y perfil de rasgos
+//
+// Los tests (preguntas, cargas por rasgo, textos) viven en código en
+// lib/tests/*.ts — versionados en git, tipados, sin CMS. La base de datos solo
+// guarda intentos y el perfil resultante.
+// ---------------------------------------------------------------------------
+
+// Un envío de un test completo. Guarda las respuestas crudas para poder
+// re-puntuar si cambia la versión del test.
+model TestAttempt {
+  id        String   @id @default(cuid())
+  userId    String   @map("user_id")
+  testSlug  String   @map("test_slug")
+  version   Int // versión del TestDefinition con la que se puntuó
+  answers   Json // { [itemId]: 1..5 }
+  scores    Json // { [traitId]: 0..100 } resultado de este intento
+  createdAt DateTime @default(now()) @map("created_at")
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId, testSlug])
+  @@map("test_attempts")
+}
+
+// El perfil: snapshot actual de cada rasgo del usuario (0-100). Repetir un test
+// sobreescribe estas filas; el histórico queda en TestAttempt.
+model TraitScore {
+  id        String   @id @default(cuid())
+  userId    String   @map("user_id")
+  trait     String // id del rasgo en lib/traits.ts (ej. "econ", "openness")
+  score     Float // 0-100 normalizado
+  attemptId String?  @map("attempt_id") // intento que lo produjo (null en seeds)
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, trait])
+  @@index([trait])
+  @@map("trait_scores")
+}

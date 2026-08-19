@@ -1,0 +1,953 @@
+{
+  "meta": {
+    "title": "Espejo — Know yourself for real",
+    "description": "Personality tests, a multidimensional political spectrum, the dark triad and more. Every test fills your profile; your profile gives you insights and correlations.",
+    "disclaimer": "Espejo is a self-knowledge and entertainment tool. No result is a clinical diagnosis or professional advice."
+  },
+  "nav": {
+    "tests": "Tests",
+    "profile": "Profile",
+    "insights": "Insights",
+    "login": "Log in",
+    "signup": "Sign up",
+    "logout": "Log out",
+    "language": "Language",
+    "studies": "Studies"
+  },
+  "home": {
+    "eyebrow": "The mirror that won't flatter you",
+    "title": "Know yourself",
+    "titleEmphasis": "for real",
+    "subtitle": "Your political spectrum across 6 dimensions. Your personality, scientifically. Your inner villain. Your pushover level. Every test fills your profile — and your profile tells you what's coming: the good, the bad and the weird.",
+    "ctaProfile": "Go to my profile",
+    "ctaSignup": "Create free account",
+    "ctaTests": "See the tests",
+    "statTests": "tests",
+    "statTraits": "traits measured",
+    "statInsights": "insights to unlock",
+    "statQuestions": "questions",
+    "testsHeading": "The tests",
+    "testMeta": "{items} questions · {minutes} min · measures {traits} traits",
+    "howHeading": "How it works",
+    "how1Title": "Take tests",
+    "how1Body": "Short, direct, no trick questions. Each one measures specific traits from a shared space of {traits} dimensions.",
+    "how2Title": "Your profile fills up",
+    "how2Body": "Political compass in 2D and 3D, personality radar, villain level… Your profile grows with every test.",
+    "how3Title": "Find out what it means",
+    "how3Body": "Strengths, risks and oddities of your particular mix of traits, and how you compare to the rest of the community."
+  },
+  "auth": {
+    "loginTitle": "Log in",
+    "loginSubtitle": "Your mirror was waiting for you.",
+    "signupTitle": "Create account",
+    "signupSubtitle": "Free. Your answers are yours: no tests, no mirror.",
+    "name": "Name (optional)",
+    "email": "Email",
+    "password": "Password",
+    "passwordHint": "Password (min. 8 characters)",
+    "loginButton": "Log in",
+    "loginLoading": "Logging in…",
+    "signupButton": "Create account",
+    "signupLoading": "Creating…",
+    "badCredentials": "Wrong email or password",
+    "signupFailed": "Could not create the account",
+    "noAccount": "No account yet?",
+    "noAccountLink": "Create one free",
+    "hasAccount": "Already have an account?",
+    "hasAccountLink": "Log in",
+    "errInvalidEmail": "Invalid email",
+    "errWeakPassword": "Password must be at least 8 characters",
+    "errEmailTaken": "An account with that email already exists"
+  },
+  "testsPage": {
+    "title": "Tests",
+    "subtitleAuthed": "You've measured {measured} of {total} traits. Every test you finish unlocks new insights.",
+    "subtitleAnon": "Create an account so your results fill your profile.",
+    "completed": "Completed ✓",
+    "meta": "{items} questions · {minutes} min",
+    "start": "Start",
+    "repeat": "Retake",
+    "sourcesTitle": "Where this comes from",
+    "sourcesIntro": "This test draws on published, peer-reviewed instruments. It is not a certified adaptation: the items are rewritten in everyday language."
+  },
+  "runner": {
+    "progress": "{current} / {total}",
+    "opt1": "Strongly disagree",
+    "opt2": "Disagree",
+    "opt3": "Neutral",
+    "opt4": "Agree",
+    "opt5": "Strongly agree",
+    "previous": "← Previous",
+    "keyboardHint": "Answer with keys 1-5",
+    "submitting": "Computing your profile…",
+    "submitError": "Could not save the test"
+  },
+  "profile": {
+    "title": "My profile",
+    "titleNamed": "{name}'s mirror",
+    "emptyTitle": "Your mirror is blank",
+    "emptyBody": "Take your first test and start filling it. Five minutes gets you a political compass.",
+    "emptyCta": "Start",
+    "subtitle": "{measured} of {total} traits measured · compared against {population} profiles",
+    "justCompleted": "{test} completed ✓",
+    "justCompletedBody": "Your profile now includes {count} new traits.",
+    "ctaInsights": "See my insights →",
+    "archetypeLabel": "Political archetype",
+    "darkLabel": "Villain level · {score}/100",
+    "pusiLabel": "Pushover level · {score}/100",
+    "compassTitle": "Political compass",
+    "compassSubtitle": "Two axes on the plane, a third one in colour. Swap any of the three.",
+    "axesTitle": "All {count} axes",
+    "axesSubtitle": "Your politics in full: the further from centre, the stronger the stance.",
+    "allTraitsTitle": "All your traits",
+    "allTraitsSubtitle": "«P» = percentile: what share of the community you're above.",
+    "lockedTitle": "You have {count} insights left to unlock",
+    "lockedBody": "Every test you complete activates new rules — many of them cross traits from different tests.",
+    "percentileTooltip": "Above {percentile}% of the community",
+    "attachmentLabel": "Attachment style",
+    "moralLabel": "Moral profile",
+    "moralTop": "Your dominant foundation: {trait}"
+  },
+  "compass": {
+    "axisX": "X axis",
+    "axisY": "Y axis",
+    "color": "Colour",
+    "community": "{count} people from the community",
+    "cloudUnavailable": "Cloud available for economy / authority / culture"
+  },
+  "insightsPage": {
+    "title": "Your insights",
+    "subtitle": "{active} active · {locked} locked behind tests you haven't taken",
+    "emptyTitle": "Nothing to analyse yet",
+    "emptyBody": "Insights come from crossing your traits. Take a test and come back.",
+    "emptyCta": "Take a test",
+    "extremesTitle": "What sets you furthest from average",
+    "extremesSubtitle": "Across {population} community profiles.",
+    "extremesBody": "More {pole} than {percent}% of people",
+    "fortaleza": "What works in your favour",
+    "riesgo": "What will cost you",
+    "curiosidad": "Oddities in your mix",
+    "correlationsTitle": "🔗 Community correlations",
+    "correlationsSubtitle": "Which traits travel together across {population} profiles. r runs from -1 (opposites) to +1 (hand in hand).",
+    "colTrait": "Trait",
+    "colRelation": "Relation",
+    "lockedBody": "There are {count} insights waiting for you to measure more traits.",
+    "lockedCta": "Complete my profile"
+  },
+  "categories": {
+    "politica": "Political spectrum",
+    "personalidad": "Personality",
+    "oscuro": "Dark side",
+    "caracter": "Character",
+    "moral": "Moral foundations",
+    "valores": "Values",
+    "vinculos": "Attachment"
+  },
+  "traits": {
+    "econ": {
+      "name": "Economic axis",
+      "short": "Economic",
+      "low": "Equality",
+      "high": "Market",
+      "description": "How much you favour redistribution and public intervention (0) versus free markets and low intervention (100)."
+    },
+    "auth": {
+      "name": "Authority axis",
+      "short": "Authority",
+      "low": "Libertarian",
+      "high": "Authoritarian",
+      "description": "How much you value individual freedom (0) versus order and state authority (100)."
+    },
+    "cult": {
+      "name": "Cultural axis",
+      "short": "Cultural",
+      "low": "Progressive",
+      "high": "Traditional",
+      "description": "Your stance on social change: embrace it (0) or protect established ways of life (100)."
+    },
+    "glob": {
+      "name": "Territorial axis",
+      "short": "Territorial",
+      "low": "Globalist",
+      "high": "Nationalist",
+      "description": "International cooperation and global identity (0) versus sovereignty and national interest (100)."
+    },
+    "eco": {
+      "name": "Ecological axis",
+      "short": "Ecological",
+      "low": "Environmentalist",
+      "high": "Productivist",
+      "description": "Environment first even at an economic cost (0) versus growth first (100)."
+    },
+    "rel": {
+      "name": "Religious axis",
+      "short": "Religious",
+      "low": "Secular",
+      "high": "Religious",
+      "description": "Strict separation of religion and public life (0) versus a public role for faith (100)."
+    },
+    "openness": {
+      "name": "Openness",
+      "short": "Openness",
+      "low": "Conventional",
+      "high": "Explorer",
+      "description": "Intellectual curiosity, imagination and taste for the new versus a preference for the familiar."
+    },
+    "conscientiousness": {
+      "name": "Conscientiousness",
+      "short": "Conscientiousness",
+      "low": "Spontaneous",
+      "high": "Disciplined",
+      "description": "Self-discipline, order and goal orientation versus improvisation."
+    },
+    "extraversion": {
+      "name": "Extraversion",
+      "short": "Extraversion",
+      "low": "Introvert",
+      "high": "Extravert",
+      "description": "How much energy you gain (or lose) from social contact."
+    },
+    "agreeableness": {
+      "name": "Agreeableness",
+      "short": "Agreeableness",
+      "low": "Competitive",
+      "high": "Cooperative",
+      "description": "Empathy, trust in others and a tendency to cooperate rather than compete."
+    },
+    "neuroticism": {
+      "name": "Neuroticism",
+      "short": "Neuroticism",
+      "low": "Stable",
+      "high": "Reactive",
+      "description": "How intensely you experience negative emotions: worry, mood swings, stress."
+    },
+    "mach": {
+      "name": "Machiavellianism",
+      "short": "Machiavellianism",
+      "low": "Transparent",
+      "high": "Strategist",
+      "description": "A tendency towards strategic manipulation and instrumental cynicism."
+    },
+    "narc": {
+      "name": "Narcissism",
+      "short": "Narcissism",
+      "low": "Understated",
+      "high": "Grandiose",
+      "description": "Need for admiration and a sense of being special."
+    },
+    "psyc": {
+      "name": "Psychopathy",
+      "short": "Psychopathy",
+      "low": "Empathetic",
+      "high": "Cold",
+      "description": "Emotional coldness, impulsivity and low guilt. (A trait, not a diagnosis.)"
+    },
+    "asert": {
+      "name": "Assertiveness",
+      "short": "Assertiveness",
+      "low": "Pushover",
+      "high": "Assertive",
+      "description": "Your ability to stand your ground and say what you think even when it's awkward."
+    },
+    "complac": {
+      "name": "People pleasing",
+      "short": "People pleasing",
+      "low": "Independent",
+      "high": "Pleaser",
+      "description": "How much you need others' approval and avoid letting people down."
+    },
+    "confl": {
+      "name": "Conflict avoidance",
+      "short": "Avoidance",
+      "low": "Confrontational",
+      "high": "Avoidant",
+      "description": "A tendency to dodge arguments even when the topic matters to you."
+    },
+    "honesty": {
+      "name": "Honesty-Humility",
+      "short": "Honesty",
+      "low": "Opportunist",
+      "high": "Principled",
+      "description": "The sixth HEXACO factor: sincerity, not exploiting others, and not feeling entitled to more."
+    },
+    "care": {
+      "name": "Care",
+      "short": "Care",
+      "low": "Hard-nosed",
+      "high": "Compassionate",
+      "description": "Sensitivity to the suffering of others: morality built on not doing harm."
+    },
+    "fairness": {
+      "name": "Fairness",
+      "short": "Fairness",
+      "low": "Flexible",
+      "high": "Equitable",
+      "description": "Reciprocity, rights and fair treatment as a moral basis."
+    },
+    "loyalty": {
+      "name": "Loyalty",
+      "short": "Loyalty",
+      "low": "Individualist",
+      "high": "Loyal",
+      "description": "Faithfulness to your own group: family, team, country."
+    },
+    "authority": {
+      "name": "Authority",
+      "short": "Authority",
+      "low": "Egalitarian",
+      "high": "Hierarchical",
+      "description": "Respect for hierarchy, tradition and legitimate order."
+    },
+    "purity": {
+      "name": "Purity",
+      "short": "Purity",
+      "low": "Relativist",
+      "high": "Sanctifying",
+      "description": "Notions of the sacred, of decency and of moral contamination."
+    },
+    "liberty": {
+      "name": "Liberty",
+      "short": "Liberty",
+      "low": "Collectivist",
+      "high": "Anti-domination",
+      "description": "A gut rejection of domination and of being told how to live."
+    },
+    "selfdir": {
+      "name": "Self-direction",
+      "short": "Self-direction",
+      "low": "Guided",
+      "high": "Autonomous",
+      "description": "Thinking and acting on your own: independence and freedom of judgement."
+    },
+    "stimul": {
+      "name": "Stimulation",
+      "short": "Stimulation",
+      "low": "Routine",
+      "high": "Adventurous",
+      "description": "A need for novelty, excitement and challenge."
+    },
+    "hedon": {
+      "name": "Hedonism",
+      "short": "Hedonism",
+      "low": "Austere",
+      "high": "Hedonistic",
+      "description": "Pleasure and sensory enjoyment as a value in itself."
+    },
+    "achieve": {
+      "name": "Achievement",
+      "short": "Achievement",
+      "low": "Unpressured",
+      "high": "Ambitious",
+      "description": "Personal success through demonstrating competence by social standards."
+    },
+    "power": {
+      "name": "Power",
+      "short": "Power",
+      "low": "Modest",
+      "high": "Dominant",
+      "description": "Status, prestige and control over people and resources."
+    },
+    "security": {
+      "name": "Security",
+      "short": "Security",
+      "low": "Risk-taking",
+      "high": "Cautious",
+      "description": "Stability and harmony, both personal and societal."
+    },
+    "conform": {
+      "name": "Conformity",
+      "short": "Conformity",
+      "low": "Rebellious",
+      "high": "Conforming",
+      "description": "Restraining yourself so as not to upset or violate social expectations."
+    },
+    "tradition": {
+      "name": "Tradition",
+      "short": "Tradition",
+      "low": "Innovator",
+      "high": "Traditional",
+      "description": "Respect for and commitment to inherited customs."
+    },
+    "benev": {
+      "name": "Benevolence",
+      "short": "Benevolence",
+      "low": "Reserved",
+      "high": "Devoted",
+      "description": "Caring for the wellbeing of those close to you."
+    },
+    "univers": {
+      "name": "Universalism",
+      "short": "Universalism",
+      "low": "Close circle",
+      "high": "Universalist",
+      "description": "Understanding and protecting the welfare of all people and of nature."
+    },
+    "attachAnx": {
+      "name": "Attachment anxiety",
+      "short": "Anxiety",
+      "low": "Settled",
+      "high": "Anxious",
+      "description": "Fear of abandonment and a need for reassurance in close relationships."
+    },
+    "attachAvo": {
+      "name": "Intimacy avoidance",
+      "short": "Avoidance",
+      "low": "Close",
+      "high": "Distant",
+      "description": "Discomfort with dependence and emotional closeness."
+    }
+  },
+  "tests": {
+    "espectro-politico": {
+      "title": "Political spectrum",
+      "tagline": "Forget left vs right: place yourself on 6 axes at once.",
+      "description": "The classic left-right axis falls short. This test places you across 6 independent dimensions: economy, authority, culture, territory, ecology and religion. You'll see your classic compass, your full radar and your political archetype.",
+      "items": {
+        "econ1": "Essential services like healthcare or energy work better in private hands.",
+        "econ2": "The state should guarantee a minimum income for everyone.",
+        "econ3": "I'd raise taxes on large fortunes even if some of them left the country.",
+        "econ4": "The less the government regulates the economy, the better for everyone.",
+        "auth1": "In a serious crisis I'd rather have a firm-handed government, even if it curbs freedoms.",
+        "auth2": "I'd rather have more privacy even if it makes police work harder.",
+        "auth3": "Obedience and respect for authority are values we should bring back.",
+        "auth4": "People should be free to live however they want as long as they harm no one else.",
+        "cult1": "The social changes of recent decades have gone too fast.",
+        "cult2": "My country's traditions are worth protecting even if they slow certain changes.",
+        "cult3": "The «traditional» family is neither better nor worse than other kinds of family.",
+        "cult4": "I think it's healthy to look critically at my country's historical figures.",
+        "glob1": "My country should put its own interests first even if that harms other countries.",
+        "glob2": "Important decisions should increasingly be taken by international bodies.",
+        "glob3": "Immigration enriches a country more than it complicates it.",
+        "glob4": "Buying domestic products is almost a civic duty.",
+        "eco1": "Stopping climate change justifies making petrol and flights more expensive.",
+        "eco2": "Economic growth matters more than climate targets.",
+        "eco3": "I'd sacrifice personal comfort to reduce my environmental impact.",
+        "eco4": "Today's environmental movement exaggerates the real risks.",
+        "rel1": "Religion should carry more weight in public life.",
+        "rel2": "Public education must be strictly secular.",
+        "rel3": "Religious values are a good moral compass for a society.",
+        "rel4": "You can be a fully ethical person without any religion."
+      },
+      "sources": {
+        "0": "Empirical basis for ideology being several independent axes, not one.",
+        "1": "Dual-process model: two distinct motivations behind conservatism.",
+        "2": "The historical origin of measuring politics on two axes instead of one."
+      }
+    },
+    "big-five": {
+      "title": "Big Five personality",
+      "tagline": "The personality model with the most scientific backing.",
+      "description": "Measures the big five traits (OCEAN): Openness, Conscientiousness, Extraversion, Agreeableness and Neuroticism. It's the standard model in personality psychology and the basis of most of your insights.",
+      "items": {
+        "o1": "I have a very active imagination.",
+        "o2": "Very abstract or philosophical conversations bore me.",
+        "o3": "I enjoy trying new things even when they might go wrong.",
+        "o4": "Between the familiar and the experimental, I almost always pick the familiar.",
+        "c1": "I follow through on what I plan.",
+        "c2": "I tend to leave things until the last minute.",
+        "c3": "I like order: everything in its place.",
+        "c4": "I lose or forget things constantly.",
+        "e1": "At parties I'm usually one of the ones getting things going.",
+        "e2": "I'd rather stay in the background when there are lots of people around.",
+        "e3": "Talking to strangers energises me.",
+        "e4": "After a lot of socialising I need time alone to recharge.",
+        "a1": "I genuinely care about other people's problems.",
+        "a2": "I find it hard to forgive.",
+        "a3": "People would say I'm easy to get along with.",
+        "a4": "If someone crosses me, I pay them back.",
+        "n1": "I worry about things that will probably never happen.",
+        "n2": "I stay calm under pressure.",
+        "n3": "My mood changes easily.",
+        "n4": "Almost nothing keeps me up at night."
+      },
+      "sources": {
+        "0": "The paper that established the markers for the five factors.",
+        "1": "Public-domain item bank the format is adapted from.",
+        "2": "Modern version of the inventory, with revised facets."
+      }
+    },
+    "lado-oscuro": {
+      "title": "Evil test",
+      "tagline": "How much villain is in there? The dark triad, measured seriously.",
+      "description": "Measures the three «dark triad» traits: Machiavellianism (strategic manipulation), narcissism (grandiosity) and psychopathy (coldness and impulsivity). Everyone scores something — the question is how much.",
+      "items": {
+        "m1": "It's not manipulation: it's knowing how to frame things.",
+        "m2": "Telling people everything about yourself is a strategic mistake.",
+        "m3": "I flatter people when it suits me to get something.",
+        "m4": "I'd rather others didn't know what I really want.",
+        "m5": "I say what I think even if it gives away my intentions.",
+        "na1": "Honestly, I have qualities most people don't.",
+        "na2": "I like being the centre of attention.",
+        "na3": "I deserve more recognition than I get.",
+        "na4": "I insist on getting the respect I'm due.",
+        "na5": "I see myself as a fairly average person.",
+        "p1": "When someone does me wrong, payback comes fast and with interest.",
+        "p2": "People who end up in trouble usually brought it on themselves.",
+        "p3": "I can say something cruel if the moment calls for it.",
+        "p4": "I'm drawn to genuinely risky situations.",
+        "p5": "When I hurt someone, my conscience nags at me for a long time."
+      },
+      "sources": {
+        "0": "The paper that defined the dark triad as a construct.",
+        "1": "Validated short form (SD3), the basis for this test format."
+      }
+    },
+    "asertividad": {
+      "title": "Pushover test",
+      "tagline": "Do you stand your ground, or apologise for existing?",
+      "description": "Measures three things we tend to lump together: assertiveness (saying what you think), people pleasing (needing approval) and conflict avoidance (dodging the row). You can be very assertive and still avoid conflict — here you'll see it.",
+      "items": {
+        "as1": "If something doesn't sit right with me, I say so even if it's awkward.",
+        "as2": "I'd send back a badly cooked dish at a restaurant without a second thought.",
+        "as3": "I find it hard to ask for a raise or put my rates up.",
+        "as4": "When I get interrupted repeatedly, I call it out.",
+        "co1": "I agree to plans I don't fancy so as not to look bad.",
+        "co2": "I need almost everyone to like me.",
+        "co3": "I apologise even when it isn't my fault.",
+        "co4": "I can let someone down without feeling terrible if I have my reasons.",
+        "cf1": "I avoid arguing even when the topic really matters to me.",
+        "cf2": "I'd rather give in than have a row.",
+        "cf3": "A big argument doesn't ruin my day.",
+        "cf4": "I change the subject when a conversation gets tense."
+      },
+      "sources": {
+        "0": "The classic assertive behaviour schedule.",
+        "1": "Styles of handling interpersonal conflict.",
+        "2": "Need for approval and sociotropy."
+      }
+    },
+    "moral": {
+      "title": "Moral foundations",
+      "tagline": "What your morality is built on — and why you clash with people who build on something else.",
+      "description": "Haidt's theory holds that human morality rests on six foundations: care, fairness, loyalty, authority, purity and liberty. Almost nobody weighs them equally, and that is where most political arguments are born. It is the best psychological predictor of ideology there is.",
+      "sources": {
+        "0": "The study showing that progressives and conservatives draw on different foundations.",
+        "1": "Validation of the questionnaire and the full map of the moral domain.",
+        "2": "Adds the liberty foundation, missing from the original version."
+      },
+      "items": {
+        "ca1": "The suffering of a vulnerable person genuinely churns me up.",
+        "ca2": "Cruelty to animals strikes me as one of the worst things there is.",
+        "ca3": "Sometimes you just have to be tough: compassion gets in the way.",
+        "fa1": "Someone being treated unfairly angers me even when it does not affect me.",
+        "fa2": "Everyone should play by the same rules, no exceptions.",
+        "fa3": "If the outcome is good, I do not much mind whether the process was entirely fair.",
+        "lo1": "Betraying your own group is one of the ugliest things a person can do.",
+        "lo2": "I feel proud when my country or my people succeed at something.",
+        "lo3": "My principles come before whatever group I happen to belong to.",
+        "au1": "You should respect legitimate authority even when you dislike the person.",
+        "au2": "Respect for elders and hierarchy holds a society together.",
+        "au3": "Authority should always be questioned, on principle.",
+        "pu1": "Some things are disgusting even when they harm no one.",
+        "pu2": "Some things should be treated as sacred, no argument.",
+        "pu3": "If nobody is harmed, there is nothing morally wrong with it.",
+        "li1": "Nobody has the right to tell me how to live my life.",
+        "li2": "The powerful always end up imposing on ordinary people.",
+        "li3": "Sometimes it is right to give up some freedom for the common good."
+      }
+    },
+    "valores": {
+      "title": "Your values",
+      "tagline": "Schwartz's 10 universal values: what actually drives you.",
+      "description": "Schwartz identified ten values present in every culture, arranged in a circle with built-in tensions: you cannot maximise security and stimulation at once, nor power and universalism. You will see which ones dominate and what trade-offs they imply.",
+      "sources": {
+        "0": "The original theory of the ten universal values and their circular structure.",
+        "1": "The PVQ questionnaire, the format this test is modelled on.",
+        "2": "The version used in the European Social Survey since 2002."
+      },
+      "items": {
+        "sd1": "It matters to me to decide for myself what I do.",
+        "sd2": "I like being original and doing things my own way.",
+        "st1": "I seek adventure and risk: I want an exciting life.",
+        "st2": "I need to be doing new things all the time.",
+        "he1": "Enjoying life and treating myself matters to me.",
+        "he2": "I take any chance to have a good time.",
+        "ac1": "It matters to me to prove what I am worth.",
+        "ac2": "I want to be very successful and have it recognised.",
+        "po1": "I care about being respected and about people doing what I say.",
+        "po2": "I want money and expensive things.",
+        "se1": "It matters to live somewhere safe and to avoid danger.",
+        "se2": "The state guaranteeing my safety against threats is a priority.",
+        "cf1": "I believe you should always do the proper thing and not draw attention.",
+        "cf2": "I avoid doing things others might consider improper.",
+        "tr1": "The customs handed down to me matter to me.",
+        "tr2": "Humility and modesty are virtues I value.",
+        "be1": "It matters to help the people around me and look after my own.",
+        "be2": "Being loyal to my friends comes before almost anything.",
+        "un1": "Everyone should have the same opportunities in life.",
+        "un2": "Looking after nature and the environment genuinely matters to me."
+      }
+    },
+    "apego": {
+      "title": "Attachment style",
+      "tagline": "How you work in close relationships — and why the same patterns keep repeating.",
+      "description": "Adult attachment is not four boxes, it is two dimensions: how much you fear abandonment (anxiety) and how uncomfortable intimacy makes you (avoidance). The famous styles — secure, anxious, avoidant, fearful — are the quadrants of that plane. Here we measure it properly.",
+      "sources": {
+        "0": "The original ECR questionnaire, the basis of nearly all later research.",
+        "1": "The validated short form this test is modelled on.",
+        "2": "Psychometric revision confirming the two continuous dimensions."
+      },
+      "items": {
+        "an1": "I worry that the person I love will stop loving me.",
+        "an2": "I need a fair amount of reassurance that I am loved.",
+        "an3": "If someone takes a while to reply, I start turning it over in my head.",
+        "an4": "I am afraid of being abandoned.",
+        "an5": "I feel settled about the amount of affection I receive.",
+        "an6": "I rarely worry about how solid my relationships are.",
+        "av1": "I would rather not depend on anyone emotionally.",
+        "av2": "It makes me uncomfortable when someone wants too much closeness.",
+        "av3": "I find it hard to fully open up to my partner or closest friends.",
+        "av4": "I talk easily about my feelings with people close to me.",
+        "av5": "I find it easy to ask for comfort when I need it.",
+        "av6": "I feel comfortable depending on the people I love."
+      }
+    },
+    "honestidad": {
+      "title": "Honesty-Humility",
+      "tagline": "The sixth factor the Big Five misses — and the best predictor of whether you would cheat.",
+      "description": "HEXACO adds a sixth factor to the big five: Honesty-Humility. It predicts unethical behaviour better than agreeableness and is the exact mirror image of the dark triad. Sincerity, not exploiting others, not feeling entitled to more.",
+      "sources": {
+        "0": "The paper that established the six-factor model.",
+        "1": "The brief 60-item version, the reference format.",
+        "2": "Official inventory site, with country norms."
+      },
+      "items": {
+        "h1": "If I knew I would not get caught, I would take money to look the other way.",
+        "h2": "If I thought it would work, I would use flattery to get a promotion.",
+        "h3": "I would hand back a wallet full of cash with everything still in it.",
+        "h4": "I deserve better treatment than most people.",
+        "h5": "I would be embarrassed to show off about my achievements.",
+        "h6": "Having lots of money and luxury is one of the things I care most about.",
+        "h7": "I would rather lose an opportunity than win it by underhand means.",
+        "h8": "If I can break a rule with no consequences, I break it.",
+        "h9": "People who cheat to win disgust me.",
+        "h10": "I would fake interest in someone if it suited me."
+      }
+    }
+  },
+  "insights": {
+    "ejecutor": {
+      "title": "Execution machine",
+      "body": "Your conscientiousness is very high. It's the trait that best predicts academic and work performance: you finish what you start, and people notice."
+    },
+    "roca": {
+      "title": "Bombproof nervous system",
+      "body": "Your emotional stability is an unfair advantage: where others ruminate, you sleep. Watch out: it can make you underestimate other people's stress."
+    },
+    "explorador": {
+      "title": "Exploring mind",
+      "body": "High openness: ideas, aesthetics, curiosity. You're one of those people who connect worlds that weren't touching."
+    },
+    "amable-con-limites": {
+      "title": "Kind without being a doormat",
+      "body": "An uncommon combination: you care about people but don't need their approval. It's the profile of a good, close-up leader."
+    },
+    "voz-propia": {
+      "title": "A voice of your own",
+      "body": "You say what you think and stand your ground. Negotiating, setting limits and asking for what you're worth cost you less than most."
+    },
+    "pegamento": {
+      "title": "Social glue",
+      "body": "Extraversion and warmth at once: you're one of the people who make a group exist. Plans happen because you push them."
+    },
+    "manos-limpias": {
+      "title": "Clean hands",
+      "body": "You score extremely low on manipulation and coldness. People can trust you — and over time that reputation compounds like interest."
+    },
+    "creativo-que-entrega": {
+      "title": "Creativity that ships",
+      "body": "Ideas and discipline at once: the scarcest and best-paid combination. Most people have one of the two."
+    },
+    "procrastinador": {
+      "title": "Chronic procrastination",
+      "body": "Low conscientiousness: your enemy isn't ability, it's the last minute. External systems (public deadlines, commitments to others) pay off better than willpower."
+    },
+    "rumiante": {
+      "title": "Rumination",
+      "body": "High neuroticism: your mind amplifies threats and replays scenes. It isn't weakness — but without mental hygiene (exercise, sleep, writing) it charges you interest."
+    },
+    "mal-negociador": {
+      "title": "Negotiating will cost you",
+      "body": "Very agreeable and not very assertive: the profile that accepts the first salary offered and underearns for years. Prepare negotiations in writing and with numbers: it offsets the bias."
+    },
+    "galeria": {
+      "title": "Playing to the gallery",
+      "body": "High people pleasing: you say yes so as not to disappoint, and then you disappoint yourself. Every «yes» to what you don't want is a «no» to something you did."
+    },
+    "conflicto-podrido": {
+      "title": "Conflicts left to rot",
+      "body": "You dodge the row but take it home: conflict doesn't disappear, it ferments. A 10-minute uncomfortable conversation is usually cheaper than three weeks of rumination."
+    },
+    "reputacion": {
+      "title": "Reputation at stake",
+      "body": "Strategic and not very cooperative: short term you win rounds; long term people compare notes. Repeated markets punish this profile."
+    },
+    "aplauso": {
+      "title": "Hunger for applause",
+      "body": "High narcissism: you perform better with an audience, but criticism hurts more than you admit, and you can mistake attention for affection."
+    },
+    "frio": {
+      "title": "A little too cold",
+      "body": "You score high on emotional hardness. Useful in a crisis, expensive in relationships: bridges you burn fast take years to rebuild."
+    },
+    "confort-blindado": {
+      "title": "Armoured comfort zone",
+      "body": "Low openness: the familiar works for you, but the world changes its foundations every decade. Schedule novelty in small doses — a book, a trip, a tool — before you need it."
+    },
+    "libro-abierto": {
+      "title": "Straight out of the textbook",
+      "body": "High openness and cultural progressivism: it's the most replicated correlation between personality and politics (r≈0.4). Your profile follows it to the letter."
+    },
+    "contracorriente": {
+      "title": "Against the current",
+      "body": "High openness with traditional values: statistically rare. You tend to explore new ideas… only to end up defending the old ones with better arguments."
+    },
+    "orden-total": {
+      "title": "Order, inside and out",
+      "body": "Personal discipline and a preference for social order usually go together — your profile is the textbook case."
+    },
+    "artista-ansioso": {
+      "title": "Anxious creativity",
+      "body": "Openness + neuroticism: the classic artist profile. The same sensitivity that makes you suffer is what makes you see what others don't."
+    },
+    "izquierda-tradicional": {
+      "title": "Traditional left",
+      "body": "Economic redistribution with traditional values: the classic working-class vote. Almost no party represents this quadrant today — which is why you struggle to find a political home."
+    },
+    "liberal-clasico": {
+      "title": "Textbook classical liberal",
+      "body": "Free markets and free lives: total coherence between your economic and authority axes. The state, the further away the better — for everything."
+    },
+    "libertario-izq": {
+      "title": "Left-libertarian",
+      "body": "Economic equality without a strong state: the anarchist tradition. You distrust the boss and the minister in equal measure."
+    },
+    "eco-mercado": {
+      "title": "Free-market environmentalist",
+      "body": "Pro-market and pro-climate at once: a rare bird. Your favourite solution probably starts with «put a price on carbon»."
+    },
+    "batallas-elegidas": {
+      "title": "You pick your battles",
+      "body": "You know how to stand firm but you loathe the row: that's not a contradiction, it's economics. You save assertiveness for when it really counts."
+    },
+    "estratega-que-gusta": {
+      "title": "A strategist who needs to be liked",
+      "body": "You calculate your moves… and at the same time you need people to like you. That internal tension explains more of your decisions than you think."
+    },
+    "fe-progresista": {
+      "title": "Progressive faith",
+      "body": "High religiosity with progressive culture: a rare and fascinating combination. Your moral compass comes from faith; your conclusions, from the 21st century."
+    },
+    "montana-rusa": {
+      "title": "Social rollercoaster",
+      "body": "Very sociable and very reactive: the epic nights and the next-day slumps are two sides of the same coin."
+    },
+    "ermitano-curioso": {
+      "title": "Explorer of interiors",
+      "body": "Introverted and highly open: you travel more inwards than outwards. Books, ideas and your own projects give you what parties give others."
+    },
+    "moral-binding": {
+      "title": "Group morality",
+      "body": "Loyalty, authority and purity weigh more with you than individual care. It is the classic conservative moral signature: the group, order and the sacred before the particular case."
+    },
+    "moral-individual": {
+      "title": "Individual morality",
+      "body": "You build your morality almost entirely on care and fairness. The textbook progressive signature — and it explains why arguments from loyalty, authority or purity sound like excuses to you."
+    },
+    "libertad-primero": {
+      "title": "Do not tell me how to live",
+      "body": "Liberty is your dominant moral foundation and authority means nothing to you. A pure libertarian profile: it is not that you are left or right, it is that you cannot stand being ordered about."
+    },
+    "brujula-firme": {
+      "title": "Steady compass",
+      "body": "High honesty and low Machiavellianism: you do not play dirty even when you could. It is the trait that best predicts ethical conduct — costly in the short run, and the best-paying bet in the long one."
+    },
+    "tentacion": {
+      "title": "Temptation on the horizon",
+      "body": "Unscrupulous with an appetite for status: precisely the combination research links to bending rules when nobody is watching. Put the brakes on yourself, because the situation will not."
+    },
+    "apego-seguro": {
+      "title": "Secure attachment",
+      "body": "Low anxiety and low avoidance: you get close without fear and separate without drama. It is the style of roughly half of people and the best predictor of long, stable relationships."
+    },
+    "apego-ansioso": {
+      "title": "Anxious attachment",
+      "body": "You get very close and fear abandonment. You tend to read silences as danger signals and to seek reassurance. Simply knowing the alarm system runs hot already changes how you read it."
+    },
+    "apego-evitativo": {
+      "title": "Avoidant attachment",
+      "body": "You prefer independence to intimacy and switch off your need for others. It works fine until someone genuinely matters: then distance stops protecting you."
+    },
+    "apego-temeroso": {
+      "title": "Fearful attachment",
+      "body": "You want closeness and fear it at once: the most exhausting of the four patterns, because both systems pull in opposite directions. It is also the one that benefits most from therapy."
+    },
+    "ansiedad-y-complacencia": {
+      "title": "Fear dressed up as kindness",
+      "body": "Attachment anxiety and people pleasing travel together in you: you say yes so they will not leave. The price is a relationship resting on a version of you that is not you."
+    },
+    "motor-logro": {
+      "title": "Achievement engine",
+      "body": "Ambition and discipline in alignment: you want to prove your worth and you have the habits to do it. It is the high-performance profile; the risk is not knowing when to stop."
+    },
+    "hedonista-explorador": {
+      "title": "Life in exploration mode",
+      "body": "Pleasure and novelty over security: you collect experiences, not stability. Brilliant at thirty; worth revisiting at fifty."
+    },
+    "ancla-seguridad": {
+      "title": "Anchor down",
+      "body": "High security and conformity with little thirst for novelty: you value things being predictable. It gives you a solid base, and makes it harder than most to take advantage of change."
+    },
+    "universalista": {
+      "title": "Wide moral circle",
+      "body": "High universalism and benevolence: your concern does not stop at your own. It is the profile of someone who ends up in collective causes — and who burns out without limits."
+    },
+    "poder-sin-frenos": {
+      "title": "Power without counterweight",
+      "body": "High status, low benevolence and middling honesty. It is the value triad research links to decisions that benefit oneself at the group's expense."
+    },
+    "valores-vs-politica": {
+      "title": "Internal tension",
+      "body": "You place high value on equal opportunity yet defend market economics. Not incoherent — whole traditions live there — but a tension you will eventually have to resolve."
+    },
+    "cuidado-sin-limites": {
+      "title": "You look after everyone but yourself",
+      "body": "Very high moral care with low assertiveness: you absorb other people's distress and never call a halt. Empathy burnout is not a myth, and this is the exact profile."
+    }
+  },
+  "archetypes": {
+    "traditionalSuffix": "Traditional {name}",
+    "political": {
+      "libertario-izq": {
+        "name": "Left-libertarian",
+        "description": "Equality without a strong state."
+      },
+      "socialdemocrata": {
+        "name": "Social democrat",
+        "description": "Redistribution within the system."
+      },
+      "socialismo-orden": {
+        "name": "Order socialist",
+        "description": "Economic equality with a strong state."
+      },
+      "centrista-libertario": {
+        "name": "Libertarian centrist",
+        "description": "Moderate on economics, jealous of freedom."
+      },
+      "centrista": {
+        "name": "Centrist",
+        "description": "Balance in almost everything — or strategic indecision."
+      },
+      "centrista-orden": {
+        "name": "Order centrist",
+        "description": "Moderate on economics, firm on authority."
+      },
+      "liberal-clasico": {
+        "name": "Classical liberal",
+        "description": "Free markets and free lives."
+      },
+      "liberal": {
+        "name": "Liberal",
+        "description": "Market first, pragmatic about the rest."
+      },
+      "conservador-orden": {
+        "name": "Order conservative",
+        "description": "Market, authority and hierarchy."
+      }
+    },
+    "dark": {
+      "t1": {
+        "name": "Pure soul",
+        "description": "Your inner villain died of boredom."
+      },
+      "t2": {
+        "name": "Household rogue",
+        "description": "Small-time mischief: nothing that wouldn't expire."
+      },
+      "t3": {
+        "name": "Grey strategist",
+        "description": "You know how to play dirty. You choose not to… mostly."
+      },
+      "t4": {
+        "name": "Antihero",
+        "description": "Charisma, calculation and few regrets. Careful out there."
+      },
+      "t5": {
+        "name": "Movie villain",
+        "description": "All you need is the closing monologue and a white cat."
+      }
+    },
+    "pusilanime": {
+      "t1": {
+        "name": "Steamroller",
+        "description": "A pushover you are decidedly not."
+      },
+      "t2": {
+        "name": "Firm and polite",
+        "description": "You stand your ground without flipping the table. Healthy balance."
+      },
+      "t3": {
+        "name": "Chronic diplomat",
+        "description": "You give in more than you'd like to admit."
+      },
+      "t4": {
+        "name": "Functional pushover",
+        "description": "You say «yes» with your mouth and «no» with your soul."
+      },
+      "t5": {
+        "name": "Doormat with wifi",
+        "description": "Even the intercom talks down to you. Time for a rescue plan."
+      }
+    },
+    "attachment": {
+      "seguro": {
+        "name": "Secure",
+        "description": "You get close without fear and separate without drama."
+      },
+      "ansioso": {
+        "name": "Anxious-preoccupied",
+        "description": "You want closeness and fear losing it."
+      },
+      "evitativo": {
+        "name": "Dismissive-avoidant",
+        "description": "Independence before intimacy."
+      },
+      "temeroso": {
+        "name": "Fearful-avoidant",
+        "description": "You want closeness and fear it at once."
+      }
+    },
+    "moral": {
+      "individualizante": {
+        "name": "Individualising morality",
+        "description": "Care and fairness above all."
+      },
+      "vinculante": {
+        "name": "Binding morality",
+        "description": "Group, order and the sacred as bedrock."
+      },
+      "equilibrada": {
+        "name": "Balanced morality",
+        "description": "You draw on all six foundations fairly evenly."
+      },
+      "libertaria": {
+        "name": "Libertarian morality",
+        "description": "Liberty above the other foundations."
+      }
+    }
+  },
+  "studies": {
+    "title": "The research behind it",
+    "subtitle": "Every Espejo test draws on instruments published in peer-reviewed journals. They are all here, with a link to the original paper and to Google Scholar in case the DOI sits behind a paywall.",
+    "count": "{studies} references · {tests} tests",
+    "caveatTitle": "Honesty first:",
+    "caveatBody": "Espejo is not a validated adaptation of these instruments. The items are rewritten in everyday language and shortened, the comparison sample is not representative of any population, and results are not a diagnosis. What is real: the trait structure and the relationships between traits come from this literature, not from thin air.",
+    "goToTest": "See the test →",
+    "doi": "DOI",
+    "source": "Source",
+    "scholar": "Scholar",
+    "homeTitle": "This is not a horoscope",
+    "homeBody": "All 8 tests draw on published, peer-reviewed instruments: Goldberg, Schwartz, Haidt, Paulhus, Ashton & Lee… Every test links its sources, and here they all are in one place.",
+    "homeCta": "See the research"
+  }
+}

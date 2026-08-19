@@ -1,0 +1,21 @@
+services:
+  db:
+    image: postgres:16
+    container_name: personality-db
+    environment:
+      POSTGRES_USER: personality
+      POSTGRES_DB: personality_db
+      POSTGRES_PASSWORD: personality123
+    ports:
+      # 5433 en el host para poder convivir con la db de somelye (5432)
+      - "5433:5432"
+    volumes:
+      - personality-db-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U personality -d personality_db"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  personality-db-data:

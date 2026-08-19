@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+@theme {
+  /* Tema "espejo": tinta profunda, acento violeta, detalles ámbar */
+  --color-ink: #0a0d16;
+  --color-surface: #10141f;
+  --color-card: #151a28;
+  --color-card2: #1b2133;
+  --color-line: #262e44;
+  --color-fg: #e9ebf5;
+  --color-muted: #9099b0;
+  --color-accent: #a78bfa;
+  --color-accent-strong: #8b5cf6;
+  --color-amber: #fbbf24;
+  --color-sky: #38bdf8;
+  --color-good: #34d399;
+  --color-bad: #f87171;
+
+  --font-display: Georgia, "Times New Roman", serif;
+}
+
+html {
+  color-scheme: dark;
+}
+
+body {
+  background: var(--color-ink);
+  color: var(--color-fg);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Sutileza de fondo: viñeta radial violeta arriba */
+.bg-hero {
+  background:
+    radial-gradient(ellipse 80% 50% at 50% -10%, rgba(139, 92, 246, 0.18), transparent),
+    var(--color-ink);
+}
+
+::selection {
+  background: rgba(167, 139, 250, 0.35);
+}
