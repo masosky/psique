@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import { useLocale, useTranslations } from "next-intl";
-import { SITE_URL } from "@/lib/seo";
 
 // Share opt-in. Politics is a separate tick on purpose: ideology is
 // special-category data and needs its own explicit consent.
@@ -23,7 +22,10 @@ export function ShareSettings({
   const [copied, setCopied] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
-  const url = shareId ? `${SITE_URL}/${locale}/r/${shareId}` : null;
+  // Built from the browser's own origin rather than a configured base URL:
+  // whatever host the user is actually on is the host their link must use.
+  const origin = typeof window === "undefined" ? "" : window.location.origin;
+  const url = shareId ? `${origin}/${locale}/r/${shareId}` : null;
 
   async function save(next: { enabled: boolean; politics: boolean }) {
     setSaving(true);

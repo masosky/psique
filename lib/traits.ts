@@ -136,6 +136,6 @@ export const CATEGORY_EMOJI: Record<TraitCategory, string> = {
 
 export function getTrait(id: string): TraitDef {
   const t = TRAITS[id];
-  if (!t) throw new Error(`Rasgo desconocido: ${id}`);
+  if (!t) throw new Error(`Unknown trait: ${id}`);
   return t;
 }

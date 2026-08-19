@@ -4,7 +4,7 @@ Quantified self-knowledge. Every test fills a trait profile that never resets;
 the profile pays you back with insights, percentiles and correlations against
 the community.
 
-**12 tests · 46 traits · 181 questions · 60 insights · 35 scientific references · es/en**
+**12 tests · 46 traits · 181 questions · 60 insights · 35 scientific references · 9 languages**
 
 ## Getting started
 

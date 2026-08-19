@@ -1,0 +1,1304 @@
+{
+  "meta": {
+    "title": "Psique — Conosciti davvero",
+    "description": "Test di personalità, spettro politico multidimensionale, triade oscura e altro. Ogni test riempie il tuo profilo; il tuo profilo ti restituisce insight e correlazioni.",
+    "disclaimer": "Psique è uno strumento di autoconoscenza e intrattenimento. Nessun risultato è una diagnosi clinica né un consiglio professionale.",
+    "tagline": "Conosciti davvero."
+  },
+  "nav": {
+    "tests": "Test",
+    "profile": "Profilo",
+    "insights": "Insight",
+    "login": "Accedi",
+    "signup": "Crea account",
+    "logout": "Esci",
+    "language": "Lingua",
+    "studies": "Studi",
+    "evolution": "Evoluzione",
+    "account": "Account"
+  },
+  "home": {
+    "eyebrow": "Il test che non ti fa complimenti",
+    "title": "Conosciti",
+    "titleEmphasis": "davvero",
+    "subtitle": "Il tuo spettro politico su 6 dimensioni. La tua personalità, scientificamente. Il tuo cattivo interiore. Il tuo livello di pusillanimità. Ogni test riempie il tuo profilo — e il tuo profilo ti racconta cosa ti aspetta: il buono, il brutto e lo strano.",
+    "ctaProfile": "Vai al mio profilo",
+    "ctaSignup": "Crea un account gratis",
+    "ctaTests": "Guarda i test",
+    "statTests": "test",
+    "statTraits": "tratti misurati",
+    "statInsights": "insight da sbloccare",
+    "statQuestions": "domande",
+    "testsHeading": "I test",
+    "testMeta": "{items} domande · {minutes} min · misura {traits} tratti",
+    "howHeading": "Come funziona",
+    "how1Title": "Fai i test",
+    "how1Body": "Corti, diretti e senza domande trabocchetto. Ognuno misura tratti precisi di uno spazio comune di {traits} dimensioni.",
+    "how2Title": "Il tuo profilo si riempie",
+    "how2Body": "Bussola politica in 2D e 3D, radar di personalità, livello da cattivo… Il tuo profilo cresce a ogni test.",
+    "how3Title": "Scopri cosa comporta",
+    "how3Body": "Punti di forza, rischi e stranezze della tua combinazione di tratti, e come stai rispetto al resto della comunità."
+  },
+  "auth": {
+    "loginTitle": "Accedi",
+    "loginSubtitle": "La tua psiche ti stava aspettando.",
+    "signupTitle": "Crea account",
+    "signupSubtitle": "Gratis. Le tue risposte sono tue: senza test non c'è profilo.",
+    "name": "Nome (facoltativo)",
+    "email": "Email",
+    "password": "Password",
+    "passwordHint": "Password (minimo 6 caratteri)",
+    "loginButton": "Accedi",
+    "loginLoading": "Accesso in corso…",
+    "signupButton": "Crea account",
+    "signupLoading": "Creazione…",
+    "badCredentials": "Email o password errate",
+    "signupFailed": "Non è stato possibile creare l'account",
+    "noAccount": "Non hai ancora un account?",
+    "noAccountLink": "Crealo gratis",
+    "hasAccount": "Hai già un account?",
+    "hasAccountLink": "Accedi",
+    "errInvalidEmail": "Email non valida",
+    "errWeakPassword": "La password deve avere almeno 6 caratteri",
+    "errEmailTaken": "Esiste già un account con questa email",
+    "googleButton": "Continua con Google",
+    "or": "o",
+    "forgotPassword": "Password dimenticata?",
+    "backToLogin": "← Torna all'accesso",
+    "resetTitle": "Recupera la password",
+    "resetSubtitle": "Ti mandiamo un link per crearne una nuova. Senza drammi.",
+    "resetButton": "Invia il link",
+    "resetLoading": "Invio…",
+    "resetSentTitle": "Link inviato",
+    "resetSentBody": "Se {email} ha un account, lì trovi il link per reimpostare la password. Controlla anche lo spam.",
+    "resetFailed": "Non siamo riusciti a inviare il link. Riprova.",
+    "errTooManyRequests": "Troppi tentativi. Aspetta un momento e riprova.",
+    "errPopupClosed": "Hai chiuso la finestra di Google.",
+    "errNetwork": "Problema di connessione. Controlla la rete.",
+    "errProviderDisabled": "Questo metodo di accesso non è abilitato.",
+    "errGoogle": "Non siamo riusciti a farti entrare con Google. Riprova.",
+    "errPopupBlocked": "Il tuo browser ha bloccato la finestra di Google. Consenti i popup e riprova.",
+    "errAccountExists": "Hai già un account con questa email, creato in un altro modo. Entra con la tua password.",
+    "errUnauthorizedDomain": "Questo dominio non è autorizzato per l'accesso. Se sei tu ad amministrarlo, aggiungilo in Firebase → Authentication → Settings → Authorized domains.",
+    "errSession": "La tua identità è corretta, ma non siamo riusciti a creare la sessione. Riprova tra un momento."
+  },
+  "testsPage": {
+    "title": "Test",
+    "subtitleAuthed": "Hai misurato {measured} tratti su {total}. Ogni test che completi sblocca nuovi insight.",
+    "subtitleAnon": "Crea un account così i tuoi risultati riempiono il tuo profilo.",
+    "completed": "Completato ✓",
+    "meta": "{items} domande · {minutes} min",
+    "start": "Inizia",
+    "repeat": "Ripeti",
+    "sourcesTitle": "Da dove arriva tutto questo",
+    "sourcesIntro": "Questo test si appoggia a strumenti pubblicati e sottoposti a revisione paritaria. Non è un adattamento certificato: gli item sono riscritti in linguaggio di tutti i giorni."
+  },
+  "runner": {
+    "progress": "{current} / {total}",
+    "opt1": "Fortemente in disaccordo",
+    "opt2": "In disaccordo",
+    "opt3": "Neutrale",
+    "opt4": "D'accordo",
+    "opt5": "Fortemente d'accordo",
+    "previous": "← Precedente",
+    "keyboardHint": "Rispondi con i tasti 1-5",
+    "submitting": "Sto calcolando il tuo profilo…",
+    "submitError": "Non è stato possibile salvare il test"
+  },
+  "profile": {
+    "title": "Il mio profilo",
+    "titleNamed": "La psiche di {name}",
+    "emptyTitle": "Il tuo profilo è vuoto",
+    "emptyBody": "Fai il tuo primo test e comincia a riempirlo. Con 5 minuti hai già la bussola politica.",
+    "emptyCta": "Inizia",
+    "subtitle": "{measured} tratti misurati su {total} · confrontato con {population} profili",
+    "justCompleted": "{test} completato ✓",
+    "justCompletedBody": "Il tuo profilo si è aggiornato con {count} tratti nuovi.",
+    "ctaInsights": "Vedi i miei insight →",
+    "archetypeLabel": "Archetipo politico",
+    "darkLabel": "Livello da cattivo · {score}/100",
+    "pusiLabel": "Pusillanimità · {score}/100",
+    "compassTitle": "Bussola politica",
+    "compassSubtitle": "Due assi sul piano, un terzo nel colore. Cambia uno qualsiasi dei tre.",
+    "axesTitle": "I {count} assi",
+    "axesSubtitle": "La tua politica al completo: più sei lontano dal centro, più la posizione è marcata.",
+    "allTraitsTitle": "Tutti i tuoi tratti",
+    "allTraitsSubtitle": "«P» = percentile: sopra quale percentuale della comunità ti trovi.",
+    "lockedTitle": "Ti restano {count} insight da sbloccare",
+    "lockedBody": "Ogni test che completi attiva regole nuove — molte incrociano tratti di test diversi.",
+    "percentileTooltip": "Sopra il {percentile}% della comunità",
+    "attachmentLabel": "Stile di attaccamento",
+    "moralLabel": "Profilo morale",
+    "moralTop": "Il tuo fondamento dominante: {trait}",
+    "esteemLabel": "Autostima · {score}/100",
+    "locusLabel": "Locus of control · {score}/100"
+  },
+  "compass": {
+    "axisX": "Asse X",
+    "axisY": "Asse Y",
+    "color": "Colore",
+    "community": "{count} persone della comunità",
+    "cloudUnavailable": "Nuvola disponibile per economia / autorità / cultura"
+  },
+  "insightsPage": {
+    "title": "I tuoi insight",
+    "subtitle": "{active} attivi · {locked} bloccati da test che non hai fatto",
+    "emptyTitle": "Ancora niente da analizzare",
+    "emptyBody": "Gli insight nascono incrociando i tuoi tratti. Fai un test e torna qui.",
+    "emptyCta": "Fai un test",
+    "extremesTitle": "Quello che ti allontana di più dalla media",
+    "extremesSubtitle": "Su {population} profili della comunità.",
+    "extremesBody": "Più {pole} del {percent}% delle persone",
+    "fortaleza": "Quello che gioca a tuo favore",
+    "riesgo": "Quello che ti costerà",
+    "curiosidad": "Le stranezze della tua combinazione",
+    "correlationsTitle": "🔗 Correlazioni della comunità",
+    "correlationsSubtitle": "Quali tratti viaggiano insieme in {population} profili. r va da -1 (opposti) a +1 (a braccetto).",
+    "colTrait": "Tratto",
+    "colRelation": "Relazione",
+    "lockedBody": "Ci sono {count} insight che aspettano solo che tu misuri altri tratti.",
+    "lockedCta": "Completa il mio profilo"
+  },
+  "categories": {
+    "politica": "Spettro politico",
+    "personalidad": "Personalità",
+    "oscuro": "Lato oscuro",
+    "caracter": "Carattere",
+    "moral": "Fondamenti morali",
+    "valores": "Valori",
+    "vinculos": "Legami",
+    "habilidades": "Abilità emotive",
+    "humor": "Senso dell'umorismo"
+  },
+  "traits": {
+    "econ": {
+      "name": "Asse economico",
+      "short": "Economico",
+      "low": "Uguaglianza",
+      "high": "Mercato",
+      "description": "Quanto preferisci redistribuzione e intervento pubblico (0) rispetto a libero mercato e intervento minimo (100)."
+    },
+    "auth": {
+      "name": "Asse dell'autorità",
+      "short": "Autorità",
+      "low": "Libertà",
+      "high": "Autorità",
+      "description": "Quanto valore dai alla libertà individuale (0) rispetto all'ordine e all'autorità dello Stato (100)."
+    },
+    "cult": {
+      "name": "Asse culturale",
+      "short": "Culturale",
+      "low": "Progressista",
+      "high": "Tradizionale",
+      "description": "La tua posizione davanti al cambiamento sociale: abbracciarlo (0) o proteggere le forme di vita consolidate (100)."
+    },
+    "glob": {
+      "name": "Asse territoriale",
+      "short": "Territoriale",
+      "low": "Globalista",
+      "high": "Nazionalista",
+      "description": "Cooperazione internazionale e identità globale (0) contro sovranità e interesse nazionale (100)."
+    },
+    "eco": {
+      "name": "Asse ecologico",
+      "short": "Ecologico",
+      "low": "Ecologista",
+      "high": "Produttivista",
+      "description": "Priorità all'ambiente anche a costo economico (0) contro la crescita prima di tutto (100)."
+    },
+    "rel": {
+      "name": "Asse religioso",
+      "short": "Religioso",
+      "low": "Laicità",
+      "high": "Religiosità",
+      "description": "Separazione netta tra religione e vita pubblica (0) contro un ruolo pubblico della fede (100)."
+    },
+    "openness": {
+      "name": "Apertura",
+      "short": "Apertura",
+      "low": "Convenzionale",
+      "high": "Anticonvenzionale",
+      "description": "Curiosità intellettuale, immaginazione e gusto per il nuovo contro la preferenza per ciò che si conosce."
+    },
+    "conscientiousness": {
+      "name": "Coscienziosità",
+      "short": "Coscienziosità",
+      "low": "Improvvisazione",
+      "high": "Disciplina",
+      "description": "Autodisciplina, ordine e orientamento agli obiettivi contro l'improvvisazione."
+    },
+    "extraversion": {
+      "name": "Estroversione",
+      "short": "Estroversione",
+      "low": "Introversione",
+      "high": "Estroversione",
+      "description": "Quanta energia prendi (o perdi) dal contatto sociale."
+    },
+    "agreeableness": {
+      "name": "Gradevolezza",
+      "short": "Gradevolezza",
+      "low": "Competizione",
+      "high": "Cooperazione",
+      "description": "Empatia, fiducia negli altri e tendenza a cooperare invece che a competere."
+    },
+    "neuroticism": {
+      "name": "Nevroticismo",
+      "short": "Nevroticismo",
+      "low": "Stabilità",
+      "high": "Reattività",
+      "description": "L'intensità con cui vivi le emozioni negative: preoccupazione, sbalzi d'umore, stress."
+    },
+    "mach": {
+      "name": "Machiavellismo",
+      "short": "Machiavellismo",
+      "low": "Trasparenza",
+      "high": "Strategia",
+      "description": "Tendenza alla manipolazione strategica e al cinismo strumentale."
+    },
+    "narc": {
+      "name": "Narcisismo",
+      "short": "Narcisismo",
+      "low": "Discrezione",
+      "high": "Grandiosità",
+      "description": "Bisogno di ammirazione e sensazione di essere speciale."
+    },
+    "psyc": {
+      "name": "Psicopatia",
+      "short": "Psicopatia",
+      "low": "Empatia",
+      "high": "Freddezza",
+      "description": "Freddezza emotiva, impulsività e poco senso di colpa. (Un tratto, non una diagnosi.)"
+    },
+    "asert": {
+      "name": "Assertività",
+      "short": "Assertività",
+      "low": "Pusillanimità",
+      "high": "Schiena dritta",
+      "description": "La capacità di difendere ciò che è tuo e di dire quello che pensi anche quando dà fastidio."
+    },
+    "complac": {
+      "name": "Compiacenza",
+      "short": "Compiacenza",
+      "low": "Indipendente",
+      "high": "Compiacente",
+      "description": "Quanto ti serve l'approvazione degli altri e quanto eviti di deludere."
+    },
+    "confl": {
+      "name": "Evitamento del conflitto",
+      "short": "Evitamento",
+      "low": "Frontale",
+      "high": "Sfuggente",
+      "description": "Tendenza a schivare le discussioni anche quando l'argomento ti sta a cuore."
+    },
+    "honesty": {
+      "name": "Onestà-Umiltà",
+      "short": "Onestà",
+      "low": "Opportunismo",
+      "high": "Integrità",
+      "description": "Il sesto fattore di HEXACO: sincerità, non approfittarsi degli altri e non sentirsi in diritto di avere di più."
+    },
+    "care": {
+      "name": "Cura",
+      "short": "Cura",
+      "low": "Durezza",
+      "high": "Compassione",
+      "description": "Sensibilità alla sofferenza altrui: la morale basata sul non fare del male."
+    },
+    "fairness": {
+      "name": "Giustizia",
+      "short": "Giustizia",
+      "low": "Flessibile",
+      "high": "Equanime",
+      "description": "Reciprocità, diritti e trattamento equo come base morale."
+    },
+    "loyalty": {
+      "name": "Lealtà",
+      "short": "Lealtà",
+      "low": "Individualista",
+      "high": "Leale",
+      "description": "Fedeltà al proprio gruppo: famiglia, squadra, paese."
+    },
+    "authority": {
+      "name": "Autorità",
+      "short": "Autorità",
+      "low": "Parità",
+      "high": "Gerarchia",
+      "description": "Rispetto per la gerarchia, la tradizione e l'ordine legittimo."
+    },
+    "purity": {
+      "name": "Purezza",
+      "short": "Purezza",
+      "low": "Relativista",
+      "high": "Sacralizzante",
+      "description": "Nozioni di sacro, di decenza e di contaminazione morale."
+    },
+    "liberty": {
+      "name": "Libertà",
+      "short": "Libertà",
+      "low": "Collettivista",
+      "high": "Antioppressione",
+      "description": "Rifiuto viscerale del dominio e di sentirsi dire come vivere."
+    },
+    "selfdir": {
+      "name": "Autodirezione",
+      "short": "Autodirezione",
+      "low": "Dipendenza",
+      "high": "Autonomia",
+      "description": "Pensare e agire per conto proprio: indipendenza e libertà di giudizio."
+    },
+    "stimul": {
+      "name": "Stimolazione",
+      "short": "Stimolazione",
+      "low": "Routine",
+      "high": "Avventura",
+      "description": "Bisogno di novità, emozione e sfida."
+    },
+    "hedon": {
+      "name": "Edonismo",
+      "short": "Edonismo",
+      "low": "Frugale",
+      "high": "Edonista",
+      "description": "Piacere e godimento sensoriale come valore in sé."
+    },
+    "achieve": {
+      "name": "Successo",
+      "short": "Successo",
+      "low": "Senza pressione",
+      "high": "Ambizione",
+      "description": "Successo personale dimostrando competenza secondo gli standard sociali."
+    },
+    "power": {
+      "name": "Potere",
+      "short": "Potere",
+      "low": "Modestia",
+      "high": "Dominanza",
+      "description": "Status, prestigio e controllo su persone e risorse."
+    },
+    "security": {
+      "name": "Sicurezza",
+      "short": "Sicurezza",
+      "low": "Rischio",
+      "high": "Prudenza",
+      "description": "Stabilità e armonia, sia personale sia della società."
+    },
+    "conform": {
+      "name": "Conformismo",
+      "short": "Conformismo",
+      "low": "Ribelle",
+      "high": "Conformista",
+      "description": "Trattenersi per non disturbare né violare le aspettative sociali."
+    },
+    "tradition": {
+      "name": "Tradizione",
+      "short": "Tradizione",
+      "low": "Innovazione",
+      "high": "Tradizionale",
+      "description": "Rispetto e impegno verso le usanze ereditate."
+    },
+    "benev": {
+      "name": "Benevolenza",
+      "short": "Benevolenza",
+      "low": "Riserbo",
+      "high": "Dedizione",
+      "description": "Prendersi cura del benessere dei tuoi, di chi hai vicino."
+    },
+    "univers": {
+      "name": "Universalismo",
+      "short": "Universalismo",
+      "low": "Cerchia stretta",
+      "high": "Universalista",
+      "description": "Comprensione e protezione del benessere di tutte le persone e della natura."
+    },
+    "attachAnx": {
+      "name": "Ansia da attaccamento",
+      "short": "Ansia",
+      "low": "Calma",
+      "high": "Ansia",
+      "description": "Paura dell'abbandono e bisogno di conferme nelle relazioni strette."
+    },
+    "attachAvo": {
+      "name": "Evitamento dell'intimità",
+      "short": "Evitamento",
+      "low": "Vicinanza",
+      "high": "Distanza",
+      "description": "Disagio con la dipendenza e la vicinanza emotiva."
+    },
+    "selfEmo": {
+      "name": "Percezione delle proprie emozioni",
+      "short": "Autopercezione",
+      "low": "Nebbia",
+      "high": "Nitidezza",
+      "description": "Sapere cosa senti e perché mentre lo senti, non tre giorni dopo."
+    },
+    "otherEmo": {
+      "name": "Percezione delle emozioni altrui",
+      "short": "Leggere gli altri",
+      "low": "Opacità",
+      "high": "Finezza",
+      "description": "Leggere lo stato emotivo degli altri da gesti, toni e silenzi."
+    },
+    "useEmo": {
+      "name": "Uso delle emozioni",
+      "short": "Uso emotivo",
+      "low": "Alla deriva",
+      "high": "Motore",
+      "description": "Mettere le emozioni al lavoro: motivarti, dare priorità, trasformare la tensione in concentrazione."
+    },
+    "regEmo": {
+      "name": "Regolazione emotiva",
+      "short": "Regolazione",
+      "low": "Reattività",
+      "high": "Autocontrollo",
+      "description": "Abbassare il volume di un'emozione quando non aiuta, senza negarla."
+    },
+    "humorAfil": {
+      "name": "Umorismo affiliativo",
+      "short": "Affiliativo",
+      "low": "Sobrietà",
+      "high": "Brio",
+      "description": "Umorismo che unisce: battute che includono, scherzi che fanno gruppo."
+    },
+    "humorSelf": {
+      "name": "Umorismo di auto-potenziamento",
+      "short": "Auto-potenziamento",
+      "low": "Senza scudo",
+      "high": "Cuscinetto",
+      "description": "Umorismo come ammortizzatore personale: ridere del casino per non affondarci dentro."
+    },
+    "humorAgr": {
+      "name": "Umorismo aggressivo",
+      "short": "Aggressivo",
+      "low": "Bonarietà",
+      "high": "Mordacità",
+      "description": "Umorismo a spese degli altri: sarcasmo, frecciatine e prese in giro con un bersaglio."
+    },
+    "humorDest": {
+      "name": "Umorismo autodistruttivo",
+      "short": "Autoparodia",
+      "low": "Amor proprio",
+      "high": "A mie spese",
+      "description": "Umorismo a tue spese: sminuirti per farti benvolere o per stare nel gruppo."
+    },
+    "selfesteem": {
+      "name": "Autostima",
+      "short": "Autostima",
+      "low": "Critico interiore",
+      "high": "Base solida",
+      "description": "La valutazione complessiva che dai di te: quanto ti rispetti e quanto ti piaci."
+    },
+    "locus": {
+      "name": "Locus of control",
+      "short": "Locus",
+      "low": "Esterno",
+      "high": "Interno",
+      "description": "A cosa attribuisci quello che ti succede: al tuo impegno (interno) o al caso e al sistema (esterno)."
+    }
+  },
+  "tests": {
+    "espectro-politico": {
+      "title": "Spettro politico",
+      "tagline": "Dimentica sinistra-destra: collocati su 6 assi insieme.",
+      "description": "Il classico asse sinistra-destra è troppo stretto. Questo test ti colloca su 6 dimensioni indipendenti: economia, autorità, cultura, territorio, ecologia e religione. Vedrai la tua bussola classica, il tuo radar completo e il tuo archetipo politico.",
+      "items": {
+        "econ1": "I servizi essenziali, come la sanità o l'energia, funzionano meglio in mani private.",
+        "econ2": "Lo Stato dovrebbe garantire un reddito minimo a tutti.",
+        "econ3": "Alzerei le tasse ai grandi patrimoni anche se qualcuno lasciasse il paese.",
+        "econ4": "Meno il governo regola l'economia, meglio è per tutti.",
+        "auth1": "In una crisi grave preferisco un governo con il pugno di ferro, anche se taglia qualche libertà.",
+        "auth2": "Preferisco più privacy anche se questo complica il lavoro della polizia.",
+        "auth3": "L'obbedienza e il rispetto per l'autorità sono valori che dovremmo recuperare.",
+        "auth4": "Ognuno dovrebbe poter vivere come vuole, finché non danneggia gli altri.",
+        "cult1": "I cambiamenti sociali degli ultimi decenni sono andati troppo veloci.",
+        "cult2": "Le tradizioni del mio paese meritano di essere protette anche se frenano certi cambiamenti.",
+        "cult3": "La famiglia «di una volta» non è né migliore né peggiore di altre forme di famiglia.",
+        "cult4": "Mi sembra sano rileggere con occhio critico le figure storiche del mio paese.",
+        "glob1": "Il mio paese dovrebbe mettere davanti i propri interessi anche se questo danneggia altri paesi.",
+        "glob2": "Le decisioni importanti dovrebbero essere prese sempre più in sedi internazionali.",
+        "glob3": "L'immigrazione arricchisce un paese più di quanto lo complichi.",
+        "glob4": "Comprare prodotti nazionali è quasi un dovere civico.",
+        "eco1": "Frenare il cambiamento climatico giustifica il rincaro della benzina e dei voli.",
+        "eco2": "La crescita economica conta più degli obiettivi climatici.",
+        "eco3": "Sacrificherei comodità personale per ridurre il mio impatto ambientale.",
+        "eco4": "L'ambientalismo di oggi esagera i rischi reali.",
+        "rel1": "La religione dovrebbe avere più peso nella vita pubblica.",
+        "rel2": "L'istruzione pubblica deve essere rigorosamente laica.",
+        "rel3": "I valori religiosi sono una buona bussola morale per una società.",
+        "rel4": "Si può essere una persona pienamente etica senza nessuna religione."
+      },
+      "sources": {
+        "0": "Base empirica del fatto che l'ideologia non è un asse solo, ma diversi assi indipendenti.",
+        "1": "Modello a doppio processo: due motivazioni distinte dietro il conservatorismo.",
+        "2": "L'origine storica del misurare la politica su due assi invece che su uno."
+      }
+    },
+    "big-five": {
+      "title": "Personalità Big Five",
+      "tagline": "Il modello di personalità con più sostegno scientifico.",
+      "description": "Misura i cinque grandi tratti (OCEAN): Apertura, Coscienziosità, Estroversione, Gradevolezza e Nevroticismo. È il modello standard della psicologia della personalità e la base della maggior parte dei tuoi insight.",
+      "items": {
+        "o1": "Ho un'immaginazione molto attiva.",
+        "o2": "Le conversazioni molto astratte o filosofiche mi annoiano.",
+        "o3": "Mi piace provare cose nuove anche se possono andare male.",
+        "o4": "Tra il collaudato e lo sperimentale scelgo quasi sempre il collaudato.",
+        "c1": "Porto a termine quello che pianifico.",
+        "c2": "Tendo a rimandare le cose all'ultimo momento.",
+        "c3": "Mi piace l'ordine: ogni cosa al suo posto.",
+        "c4": "Perdo o dimentico cose in continuazione.",
+        "e1": "Alle feste sono di solito tra le persone che animano l'ambiente.",
+        "e2": "Quando c'è tanta gente preferisco restare in secondo piano.",
+        "e3": "Parlare con sconosciuti mi dà energia.",
+        "e4": "Dopo aver socializzato molto ho bisogno di stare per conto mio per ricaricarmi.",
+        "a1": "Mi importa davvero dei problemi degli altri.",
+        "a2": "Faccio fatica a perdonare.",
+        "a3": "La gente direbbe che sono una persona con cui è facile andare d'accordo.",
+        "a4": "Sospetto che la gente abbia spesso secondi fini.",
+        "n1": "Mi preoccupo per cose che probabilmente non succederanno mai.",
+        "n2": "Mantengo la calma sotto pressione.",
+        "n3": "Il mio umore cambia con facilità.",
+        "n4": "Quasi niente mi toglie il sonno."
+      },
+      "sources": {
+        "0": "L'articolo che ha fissato i marcatori dei cinque fattori.",
+        "1": "Banca di item di pubblico dominio da cui è adattato il formato.",
+        "2": "Versione moderna dell'inventario, con le sfaccettature riviste."
+      }
+    },
+    "lado-oscuro": {
+      "title": "Test della cattiveria",
+      "tagline": "Quanta cattiveria ti porti dentro? La triade oscura, misurata sul serio.",
+      "description": "Misura i tre tratti della «triade oscura»: machiavellismo (manipolazione strategica), narcisismo (grandiosità) e psicopatia (freddezza e impulsività). Tutti ottengono un punteggio — la domanda è quanto alto.",
+      "items": {
+        "m1": "Non è manipolare: è saper presentare le cose.",
+        "m2": "Raccontare tutto di sé agli altri è un errore strategico.",
+        "m3": "Faccio complimenti alle persone quando mi conviene ottenere qualcosa.",
+        "m4": "Preferisco che gli altri non sappiano cosa voglio davvero.",
+        "m5": "Dico quello che penso anche se questo rivela le mie intenzioni.",
+        "na1": "Sinceramente, ho qualità che la maggior parte delle persone non ha.",
+        "na2": "Mi piace essere al centro dell'attenzione.",
+        "na3": "Merito più riconoscimenti di quelli che ricevo.",
+        "na4": "Insisto per ricevere il rispetto che mi spetta.",
+        "na5": "Mi considero una persona nella media.",
+        "p1": "Quando mi fanno un torto, la restituzione arriva veloce e con gli interessi.",
+        "p2": "Chi finisce nei guai di solito se l'è cercata.",
+        "p3": "So dire qualcosa di crudele se il momento lo richiede.",
+        "p4": "Mi attirano le situazioni con un rischio vero.",
+        "p5": "Quando faccio del male a qualcuno, il rimorso mi resta addosso a lungo."
+      },
+      "sources": {
+        "0": "L'articolo che ha definito la triade oscura come costrutto.",
+        "1": "Versione breve validata (SD3), base del formato di questo test."
+      }
+    },
+    "asertividad": {
+      "title": "Test del pusillanime",
+      "tagline": "Difendi ciò che è tuo o chiedi scusa per esistere?",
+      "description": "Misura tre cose diverse che tendiamo a mescolare: assertività (dire quello che pensi), compiacenza (aver bisogno di approvazione) ed evitamento del conflitto (schivare la lite). Si può essere molto assertivi e comunque evitare i conflitti — qui lo vedrai.",
+      "items": {
+        "as1": "Se qualcosa non mi sembra giusto, lo dico anche se crea imbarazzo.",
+        "as2": "Rimanderei indietro un piatto fatto male al ristorante senza pensarci troppo.",
+        "as3": "Faccio fatica a chiedere un aumento o ad alzare le mie tariffe.",
+        "as4": "Quando mi interrompono di continuo, lo faccio notare.",
+        "co1": "Accetto programmi che non mi vanno pur di non fare brutta figura.",
+        "co2": "Ho bisogno di piacere a quasi tutti.",
+        "co3": "Chiedo scusa anche quando non è colpa mia.",
+        "co4": "Posso deludere qualcuno senza sentirmi malissimo, se ho le mie ragioni.",
+        "cf1": "Evito di discutere anche quando l'argomento mi sta davvero a cuore.",
+        "cf2": "Preferisco cedere piuttosto che litigare.",
+        "cf3": "Una discussione accesa non mi rovina la giornata.",
+        "cf4": "Cambio argomento quando la conversazione si fa tesa."
+      },
+      "sources": {
+        "0": "La scala classica del comportamento assertivo.",
+        "1": "Stili di gestione del conflitto interpersonale.",
+        "2": "Bisogno di approvazione e sociotropia."
+      }
+    },
+    "moral": {
+      "title": "Fondamenti morali",
+      "tagline": "Su quali fondamenta costruisci la tua morale — e perché ti scontri con chi non condivide le tue.",
+      "description": "La teoria di Haidt dice che la morale umana poggia su sei basi: cura, giustizia, lealtà, autorità, purezza e libertà. Quasi nessuno le pesa allo stesso modo, ed è lì che nasce la maggior parte delle discussioni politiche. È il miglior predittore psicologico dell'ideologia che esista.",
+      "sources": {
+        "0": "Lo studio che ha mostrato che progressisti e conservatori usano fondamenti diversi.",
+        "1": "Validazione del questionario e mappa completa del dominio morale.",
+        "2": "Aggiunge il fondamento della libertà, assente nella versione originale."
+      },
+      "items": {
+        "ca1": "La sofferenza di una persona fragile mi smuove dentro.",
+        "ca2": "La crudeltà sugli animali mi sembra tra le cose peggiori che esistano.",
+        "ca3": "A volte bisogna essere duri e basta: la compassione è d'intralcio.",
+        "fa1": "Che qualcuno venga trattato ingiustamente mi indigna anche se non mi riguarda.",
+        "fa2": "Tutti dovrebbero giocare con le stesse regole, senza eccezioni.",
+        "fa3": "Se il risultato è buono, non mi importa se il processo sia stato del tutto giusto.",
+        "lo1": "Tradire il proprio gruppo è tra le cose più brutte che si possano fare.",
+        "lo2": "Provo orgoglio quando qualcosa del mio paese o della mia gente ha successo.",
+        "lo3": "I miei principi vengono prima del gruppo a cui appartengo.",
+        "au1": "Bisogna rispettare chi ha un'autorità legittima anche se non ti sta simpatico.",
+        "au2": "Il rispetto per gli anziani e per la gerarchia tiene in piedi una società.",
+        "au3": "L'autorità va sempre messa in discussione, per principio.",
+        "pu1": "Ci sono cose disgustose anche se non fanno male a nessuno.",
+        "pu2": "Alcune cose dovrebbero essere trattate come sacre, senza discussione.",
+        "pu3": "Se nessuno ci rimette, non c'è niente di moralmente sbagliato.",
+        "li1": "Nessuno ha il diritto di dirmi come vivere la mia vita.",
+        "li2": "I potenti finiscono sempre per imporsi sulla gente comune.",
+        "li3": "A volte conviene cedere un po' di libertà per il bene comune."
+      }
+    },
+    "valores": {
+      "title": "I tuoi valori",
+      "tagline": "I 10 valori universali di Schwartz: cosa ti muove davvero.",
+      "description": "Schwartz ha individuato dieci valori presenti in tutte le culture, organizzati in un cerchio con tensioni interne: non puoi massimizzare sicurezza e stimolazione insieme, né potere e universalismo. Vedrai quali ti dominano e a cosa ti fanno rinunciare. I punteggi sono relativi alla tua media (50): mostrano a cosa dai la priorità tu, non quanto sei d'accordo in generale.",
+      "sources": {
+        "0": "La teoria originale dei dieci valori universali e della loro struttura circolare.",
+        "1": "Il questionario PVQ, formato a cui si ispira questo test.",
+        "2": "Versione usata nell'Indagine Sociale Europea dal 2002."
+      },
+      "items": {
+        "sd1": "Per me è importante decidere per conto mio quello che faccio.",
+        "sd2": "Mi piace essere originale e fare le cose a modo mio.",
+        "st1": "Cerco avventura e rischio: voglio una vita emozionante.",
+        "st2": "Ho bisogno di fare cose nuove in continuazione.",
+        "he1": "Godermi la vita e togliermi qualche sfizio è importante per me.",
+        "he2": "Approfitto di ogni occasione per divertirmi.",
+        "ac1": "Per me è importante dimostrare quanto valgo.",
+        "ac2": "Voglio avere molto successo e che mi venga riconosciuto.",
+        "po1": "Mi importa che mi rispettino e che la gente faccia quello che dico.",
+        "po2": "Voglio avere soldi e cose costose.",
+        "se1": "È importante vivere in un ambiente sicuro ed evitare i pericoli.",
+        "se2": "Che lo Stato garantisca la mia sicurezza contro le minacce è una priorità.",
+        "cf1": "Penso che si debba sempre fare quello che si deve e non farsi notare.",
+        "cf2": "Evito di fare cose che altri potrebbero considerare sconvenienti.",
+        "tr1": "Le usanze che mi sono state trasmesse sono importanti per me.",
+        "tr2": "L'umiltà e la modestia sono virtù a cui tengo.",
+        "be1": "È importante aiutare le persone che ho intorno e prendermi cura dei miei.",
+        "be2": "Essere leale con i miei amici viene prima di quasi tutto.",
+        "un1": "Tutti dovrebbero avere le stesse opportunità nella vita.",
+        "un2": "Prendermi cura della natura e dell'ambiente mi sta davvero a cuore."
+      }
+    },
+    "apego": {
+      "title": "Stile di attaccamento",
+      "tagline": "Come funzioni nelle relazioni strette — e perché si ripetono sempre gli stessi schemi.",
+      "description": "L'attaccamento adulto non sono quattro caselle, sono due dimensioni: quanta paura hai dell'abbandono (ansia) e quanto ti mette a disagio l'intimità (evitamento). Gli stili famosi —sicuro, ansioso, evitante, timoroso— sono i quadranti di quel piano. Qui li misuriamo per bene.",
+      "sources": {
+        "0": "Il questionario ECR originale, base di quasi tutta la ricerca successiva.",
+        "1": "La versione breve validata, a cui si ispira questo test.",
+        "2": "Revisione psicometrica che ha confermato le due dimensioni continue."
+      },
+      "items": {
+        "an1": "Mi preoccupa che la persona che amo smetta di amarmi.",
+        "an2": "Ho bisogno di parecchi segnali che mi vogliono bene.",
+        "an3": "Se ci mettono a rispondermi, comincio a rimuginare.",
+        "an4": "Ho paura che mi abbandonino.",
+        "an5": "Vivo con serenità l'affetto che ricevo.",
+        "an6": "Raramente mi preoccupa la solidità delle mie relazioni.",
+        "av1": "Preferisco non dipendere emotivamente da nessuno.",
+        "av2": "Mi mette a disagio chi vuole troppa vicinanza.",
+        "av3": "Faccio fatica ad aprirmi del tutto con il mio partner o con gli amici più stretti.",
+        "av4": "Parlo con facilità di quello che sento con le persone a cui tengo.",
+        "av5": "Mi viene facile chiedere conforto quando ne ho bisogno.",
+        "av6": "Dipendere dalle persone che amo non mi pesa."
+      }
+    },
+    "honestidad": {
+      "title": "Onestà-Umiltà",
+      "tagline": "Il sesto fattore che ai Big Five sfugge — e quello che predice meglio se baresti.",
+      "description": "HEXACO aggiunge ai cinque grandi un sesto fattore: Onestà-Umiltà. Predice la condotta poco etica meglio della gradevolezza ed è l'esatto rovescio della triade oscura. Sincerità, non approfittarsi, non sentirsi in diritto di avere di più.",
+      "sources": {
+        "0": "L'articolo che ha stabilito il modello a sei fattori.",
+        "1": "La versione breve da 60 item, formato di riferimento.",
+        "2": "Sito ufficiale dell'inventario, con le norme per paese."
+      },
+      "items": {
+        "h1": "Se sapessi che nessuno se ne accorge, accetterei dei soldi per chiudere un occhio.",
+        "h2": "Se pensassi che funziona, userei l'adulazione per ottenere una promozione.",
+        "h3": "Restituirei un portafoglio pieno di soldi con tutto dentro.",
+        "h4": "Merito un trattamento migliore della maggior parte delle persone.",
+        "h5": "Mi vergognerei a vantarmi dei miei successi.",
+        "h6": "Avere molti soldi e lusso è tra le cose che mi interessano di più.",
+        "h7": "Preferisco perdere un'occasione piuttosto che ottenerla con mezzi scorretti.",
+        "h8": "Se posso saltare una regola senza conseguenze, la salto.",
+        "h9": "Chi bara per vincere mi disgusta.",
+        "h10": "Fingerei interesse per qualcuno se mi convenisse."
+      }
+    },
+    "inteligencia-emocional": {
+      "title": "Test di intelligenza emotiva",
+      "tagline": "Le emozioni pilotano te o le piloti tu?",
+      "description": "Quattro abilità distinte: notare quello che senti, leggere quello che sentono gli altri, usare l'emozione come carburante e abbassarne il volume quando serve. Basato sul modello di Salovey e Mayer e sulla struttura della scala WLEIS. Non misura quanto sei una brava persona: misura la destrezza.",
+      "sources": {
+        "0": "Il modello originale: l'intelligenza emotiva come insieme di abilità, non come tratto",
+        "1": "Le 4 dimensioni (proprie, altrui, uso, regolazione) e la scala di riferimento (WLEIS)",
+        "2": "Metanalisi: l'IE predice la prestazione al di là della personalità e del QI"
+      },
+      "items": {
+        "ie1": "Quasi sempre so perché mi sento come mi sento.",
+        "ie2": "Distinguo bene se quello che provo è tristezza, frustrazione o semplice stanchezza.",
+        "ie3": "A volte mi accorgo tardi che qualcosa mi aveva toccato.",
+        "ie4": "Quando mi arrabbio, capisco subito cosa l'ha scatenato.",
+        "ie5": "Sento come sta la gente anche se non dice niente.",
+        "ie6": "I miei amici dicono che capisco al volo quello che gli succede.",
+        "ie7": "Mi capita spesso di stupirmi quando qualcuno mi dice che sta male: non l'avevo visto arrivare.",
+        "ie8": "Capisco al volo l'aria che tira in una stanza appena entro.",
+        "ie9": "Uso il buonumore per darmi la spinta quando ho compiti difficili.",
+        "ie10": "So darmi la carica per andare avanti quando qualcosa si mette in salita.",
+        "ie11": "Quando sono giù, faccio una fatica enorme a mettermi a fare qualsiasi cosa.",
+        "ie12": "Trasformo la tensione in energia per agire.",
+        "ie13": "Quando qualcosa mi altera, ritrovo la calma in poco tempo.",
+        "ie14": "Tengo a bada il nervoso anche in situazioni molto tese.",
+        "ie15": "Quando mi arrabbio, dico cose di cui poi mi pento.",
+        "ie16": "Una preoccupazione può sequestrarmi l'intera giornata."
+      }
+    },
+    "humor": {
+      "title": "Test sul senso dell'umorismo",
+      "tagline": "Dimmi di cosa ridi e ti dirò chi sei",
+      "description": "I quattro stili di umorismo di Martin: quello che unisce (affiliativo), quello che ti sostiene (auto-potenziamento), quello che taglia (aggressivo) e quello che mette te nel mirino (autodistruttivo). I primi due vanno con il benessere; gli ultimi due presentano il conto.",
+      "sources": {
+        "0": "Lo strumento originale: l'Humor Styles Questionnaire e i suoi 4 stili",
+        "1": "Metanalisi: quali stili vanno con il benessere e quali con il malessere",
+        "2": "Metanalisi: come si incastrano gli stili di umorismo con i Big Five"
+      },
+      "items": {
+        "hu1": "Faccio ridere la gente con facilità.",
+        "hu2": "L'umorismo è il mio modo di avvicinarmi alle persone.",
+        "hu3": "Raramente racconto barzellette o faccio battute in gruppo.",
+        "hu4": "Scherzare con i miei amici è tra le cose che preferisco.",
+        "hu5": "L'umorismo mi aiuta a non affondare quando le cose vanno male.",
+        "hu6": "Quando sono giù, di solito ne trovo il lato assurdo per tirarmi su.",
+        "hu7": "Quando ho un problema, perdo completamente il senso dell'umorismo.",
+        "hu8": "Rido dei miei guai, e questo gli toglie peso.",
+        "hu9": "Se qualcuno si merita una frecciatina, non me la tengo.",
+        "hu10": "Il mio umorismo a volte taglia più di quanto la gente si aspetti.",
+        "hu11": "Non mi unisco alle prese in giro, nemmeno quando tutto il gruppo ride di qualcuno.",
+        "hu12": "A volte lancio una battuta sapendo che a qualcuno brucerà.",
+        "hu13": "Lascio che ridano di me più del dovuto, se questo diverte il gruppo.",
+        "hu14": "Rido dei miei difetti davanti agli altri per farmi benvolere.",
+        "hu15": "Nascondo dietro le battute come sto davvero.",
+        "hu16": "Non ho bisogno di mettermi in ridicolo perché il gruppo mi accetti."
+      }
+    },
+    "autoestima": {
+      "title": "Test di autostima",
+      "tagline": "Come vai d'accordo con te?",
+      "description": "La scala di Rosenberg: dieci frasi, mezzo secolo di utilizzo e la fotografia rapida più affidabile di come ti valuti. L'autostima bassa non è un tratto fisso: è uno stato su cui si lavora, e questo test ti dice da dove parti.",
+      "sources": {
+        "0": "La scala originale da 10 item, lo strumento breve più usato della psicologia",
+        "1": "Metanalisi longitudinale: la bassa autostima precede la depressione, non il contrario",
+        "2": "Come evolve l'autostima nel corso della vita (sale fino ai ~60 anni)"
+      },
+      "items": {
+        "ae1": "Nel complesso, mi piace la persona che sono.",
+        "ae2": "A volte penso di non valere niente.",
+        "ae3": "Sento di avere un buon numero di belle qualità.",
+        "ae4": "So fare le cose bene come la maggior parte delle persone.",
+        "ae5": "Sento di non avere molto di cui vantarmi.",
+        "ae6": "Qualche volta mi sento davvero inutile.",
+        "ae7": "Sento di valere almeno quanto chiunque altro.",
+        "ae8": "Vorrei portarmi più rispetto.",
+        "ae9": "Tutto considerato, tendo a sentire di essere un fallimento.",
+        "ae10": "Ho un atteggiamento positivo nei miei confronti."
+      }
+    },
+    "locus": {
+      "title": "Test sul locus of control",
+      "tagline": "Chi guida la tua vita: tu o il caso?",
+      "description": "Il classico di Rotter: attribuisci quello che ti succede al tuo impegno o alla fortuna, alle conoscenze e al sistema? Il locus interno predice dallo stipendio alla salute — anche se, portato all'estremo, diventa incolparti perfino della pioggia.",
+      "sources": {
+        "0": "Il costrutto originale: aspettative interne vs esterne di controllo del rinforzo",
+        "1": "Metanalisi sul lavoro: il locus interno va con più soddisfazione e prestazioni migliori",
+        "2": "Metanalisi transculturale: la relazione locus-ansia-depressione paese per paese"
+      },
+      "items": {
+        "lc1": "Quello che ottengo dipende soprattutto dal mio impegno.",
+        "lc2": "Gran parte della mia vita la decidono fattori che non controllo.",
+        "lc3": "Quando qualcosa mi va male, mi chiedo cosa avrei potuto fare diversamente.",
+        "lc4": "Avere successo è, più che altro, questione di fortuna e conoscenze.",
+        "lc5": "Il mio futuro lo costruisco io con le mie decisioni.",
+        "lc6": "Qualunque cosa faccia: quel che deve succedere, succede.",
+        "lc7": "Se mi preparo a fondo, i risultati prima o poi arrivano.",
+        "lc8": "I piani riescono di rado, perché il mondo è imprevedibile."
+      }
+    }
+  },
+  "insights": {
+    "ejecutor": {
+      "title": "Macchina da risultati",
+      "body": "La tua coscienziosità è molto alta. È il tratto che predice meglio il rendimento scolastico e lavorativo: finisci quello che inizi, e la gente se ne accorge."
+    },
+    "roca": {
+      "title": "Sistema nervoso a prova di bomba",
+      "body": "La tua stabilità emotiva è un vantaggio ingiusto: dove gli altri rimuginano, tu dormi. Attenzione: può farti sottovalutare lo stress degli altri."
+    },
+    "explorador": {
+      "title": "Mente esploratrice",
+      "body": "Apertura alta: idee, estetica, curiosità. Sei tra le persone che collegano mondi che non si toccavano."
+    },
+    "amable-con-limites": {
+      "title": "Gentile senza fare da zerbino",
+      "body": "Combinazione poco comune: ti importa delle persone ma non ti serve la loro approvazione. È il profilo di chi guida standoti accanto."
+    },
+    "voz-propia": {
+      "title": "Voce propria",
+      "body": "Dici quello che pensi e difendi ciò che è tuo. Negoziare, mettere limiti e chiedere quanto vali ti costa meno che alla maggior parte delle persone."
+    },
+    "pegamento": {
+      "title": "Collante sociale",
+      "body": "Estroversione e calore insieme: sei tra le persone che fanno esistere un gruppo. I programmi si fanno perché li spingi tu."
+    },
+    "manos-limpias": {
+      "title": "Mani pulite",
+      "body": "Hai punteggi bassissimi in manipolazione e freddezza. La gente può fidarsi di te — e a lungo andare quella reputazione capitalizza come l'interesse composto."
+    },
+    "creativo-que-entrega": {
+      "title": "Creatività che consegna",
+      "body": "Idee e disciplina insieme: la combinazione più rara e più pagata. La maggior parte delle persone ne ha solo una delle due."
+    },
+    "procrastinador": {
+      "title": "Procrastinazione cronica",
+      "body": "Coscienziosità bassa: il tuo nemico non è la capacità, è l'ultimo momento. I sistemi esterni (scadenze pubbliche, impegni presi con altri) rendono più della forza di volontà."
+    },
+    "rumiante": {
+      "title": "Ruminazione",
+      "body": "Nevroticismo alto: la tua mente amplifica le minacce e ripete le scene. Non è debolezza — ma senza igiene mentale (sport, sonno, scrivere) ti chiede gli interessi."
+    },
+    "mal-negociador": {
+      "title": "Negoziare ti costerà",
+      "body": "Molta gradevolezza e poca assertività: è il profilo di chi accetta il primo stipendio che gli offrono e guadagna meno del dovuto per anni. Prepara le trattative per iscritto e con i numeri: compensa il bias."
+    },
+    "galeria": {
+      "title": "Vivi per la platea",
+      "body": "Compiacenza alta: dici di sì per non deludere e poi deludi te. Ogni «sì» a quello che non vuoi è un «no» a qualcosa che volevi."
+    },
+    "conflicto-podrido": {
+      "title": "Conflitti che marciscono",
+      "body": "Eviti la lite ma te la porti a casa: il conflitto non sparisce, fermenta. Una conversazione scomoda di 10 minuti di solito costa meno di tre settimane di ruminazione."
+    },
+    "reputacion": {
+      "title": "Reputazione in gioco",
+      "body": "Molta strategia e poca cooperazione: nel breve vinci le partite; nel lungo la gente si confronta. I mercati ripetuti puniscono questo profilo."
+    },
+    "aplauso": {
+      "title": "Fame di applausi",
+      "body": "Narcisismo alto: rendi meglio con il pubblico, ma la critica ti fa più male di quanto ammetti, e puoi confondere l'attenzione con l'affetto."
+    },
+    "frio": {
+      "title": "Freddezza di troppo",
+      "body": "Hai un punteggio alto in durezza emotiva. Utile nelle crisi, cara nelle relazioni: i ponti che bruci in fretta ci mettono anni a ricostruirsi."
+    },
+    "confort-blindado": {
+      "title": "Zona di comfort blindata",
+      "body": "Apertura bassa: quello che conosci funziona, ma il mondo cambia le fondamenta ogni decennio. Programma la novità a piccole dosi — un libro, un viaggio, uno strumento — prima di averne bisogno."
+    },
+    "libro-abierto": {
+      "title": "Da manuale",
+      "body": "Apertura alta e progressismo culturale: è la correlazione più replicata tra personalità e politica (r≈0,4). Il tuo profilo la rispetta alla lettera."
+    },
+    "contracorriente": {
+      "title": "Controcorrente",
+      "body": "Apertura alta con valori tradizionali: statisticamente raro. Di solito esplori idee nuove… per finire a difendere quelle vecchie con argomenti migliori."
+    },
+    "orden-total": {
+      "title": "L'ordine, dentro e fuori",
+      "body": "Disciplina personale e preferenza per l'ordine sociale di solito vanno a braccetto — il tuo profilo è l'esempio da manuale."
+    },
+    "artista-ansioso": {
+      "title": "Creatività ansiosa",
+      "body": "Apertura + nevroticismo: il profilo classico dell'artista. La stessa sensibilità che ti fa soffrire è quella che ti fa vedere ciò che gli altri non vedono."
+    },
+    "izquierda-tradicional": {
+      "title": "Sinistra tradizionale",
+      "body": "Redistribuzione economica con valori tradizionali: il voto operaio classico. Oggi quasi nessun partito rappresenta questo quadrante — per questo fai fatica a trovare casa politica."
+    },
+    "liberal-clasico": {
+      "title": "Liberale da manuale",
+      "body": "Mercato libero e vita libera: coerenza totale tra il tuo asse economico e quello dell'autorità. Lo Stato, più lontano sta meglio è — per tutto."
+    },
+    "libertario-izq": {
+      "title": "Libertarismo di sinistra",
+      "body": "Uguaglianza economica senza un'autorità statale forte: la tradizione anarchica. Diffidi del padrone e del ministro in parti uguali."
+    },
+    "eco-mercado": {
+      "title": "Ambientalismo di mercato",
+      "body": "Pro-mercato e pro-clima allo stesso tempo: mosca bianca. La tua soluzione preferita probabilmente comincia con «mettere un prezzo al carbonio»."
+    },
+    "batallas-elegidas": {
+      "title": "Scegli le tue battaglie",
+      "body": "Sai piantarti ma detesti la lite: non è una contraddizione, è economia. Tieni da parte l'assertività per quando conta davvero."
+    },
+    "estratega-que-gusta": {
+      "title": "Stratega con bisogno di piacere",
+      "body": "Calcoli le tue mosse… e insieme hai bisogno di piacere. Quella tensione interna spiega più tue decisioni di quante credi."
+    },
+    "fe-progresista": {
+      "title": "Fede progressista",
+      "body": "Religiosità alta con cultura progressista: combinazione minoritaria e affascinante. La tua bussola morale viene dalla fede; le tue conclusioni, dal XXI secolo."
+    },
+    "montana-rusa": {
+      "title": "Montagne russe sociali",
+      "body": "Molta socialità e molta reattività: le serate epiche e i cali del giorno dopo sono le due facce della stessa medaglia."
+    },
+    "ermitano-curioso": {
+      "title": "Viaggi in interni",
+      "body": "Introversione e apertura alta: viaggi più dentro che fuori. Libri, idee e progetti tuoi ti danno quello che ad altri dà la festa."
+    },
+    "moral-binding": {
+      "title": "Morale di gruppo",
+      "body": "Lealtà, autorità e purezza pesano in te più della cura individuale. È la firma morale conservatrice classica: il gruppo, l'ordine e il sacro prima del caso particolare."
+    },
+    "moral-individual": {
+      "title": "Morale dell'individuo",
+      "body": "Costruisci la tua morale quasi solo su cura e giustizia. È la firma progressista da manuale — e spiega perché gli argomenti di lealtà, autorità o purezza ti suonano come scuse."
+    },
+    "libertad-primero": {
+      "title": "Non dirmi come vivere",
+      "body": "La libertà è il tuo fondamento morale dominante e l'autorità non ti dice niente. Profilo libertario puro: non è che sei di sinistra o di destra, è che non sopporti che ti comandino."
+    },
+    "brujula-firme": {
+      "title": "Bussola ferma",
+      "body": "Onestà alta e machiavellismo basso: non giochi sporco nemmeno quando potresti. È il tratto che predice meglio la condotta etica, quello che si paga più caro nel breve e rende di più nel lungo."
+    },
+    "tentacion": {
+      "title": "Tentazione all'orizzonte",
+      "body": "Pochi scrupoli e fame di status: esattamente la combinazione che la ricerca associa allo scavalcare le regole quando nessuno guarda. Mettiti i freni da te, perché il contesto non lo farà."
+    },
+    "apego-seguro": {
+      "title": "Attaccamento sicuro",
+      "body": "Ansia bassa ed evitamento basso: ti avvicini senza paura e ti separi senza drammi. È lo stile di circa metà delle persone e quello che predice meglio relazioni lunghe e stabili."
+    },
+    "apego-ansioso": {
+      "title": "Attaccamento ansioso",
+      "body": "Ti avvicini molto e temi l'abbandono. Tendi a leggere i silenzi come segnali di pericolo e a chiedere conferme. Sapere che il sistema d'allarme è tarato alto cambia già come lo interpreti."
+    },
+    "apego-evitativo": {
+      "title": "Attaccamento evitante",
+      "body": "Preferisci l'indipendenza all'intimità e disattivi il bisogno degli altri. Funziona bene finché qualcuno non ti importa davvero: allora la distanza smette di proteggerti."
+    },
+    "apego-temeroso": {
+      "title": "Attaccamento timoroso",
+      "body": "Vuoi vicinanza e insieme la temi: lo schema più sfiancante dei quattro, perché i due sistemi tirano in direzioni opposte. È anche quello che trae più beneficio dalla terapia."
+    },
+    "ansiedad-y-complacencia": {
+      "title": "Paura travestita da gentilezza",
+      "body": "Ansia da attaccamento e compiacenza vanno insieme in te: dici di sì perché non se ne vadano. Il prezzo è che la relazione si regge su una versione di te che non sei tu."
+    },
+    "motor-logro": {
+      "title": "Motore del successo",
+      "body": "Ambizione e disciplina allineate: vuoi dimostrare quanto vali e per di più hai l'abitudine per riuscirci. È il profilo dell'alto rendimento; il rischio è non sapere quando fermarsi."
+    },
+    "hedonista-explorador": {
+      "title": "Vita in modalità esplorazione",
+      "body": "Piacere e novità prima della sicurezza: collezioni esperienze, non stabilità. Brillante a trent'anni; conviene rivederlo a cinquanta."
+    },
+    "ancla-seguridad": {
+      "title": "Ancora gettata",
+      "body": "Sicurezza e conformismo alti con poca sete di novità: ti piace che le cose siano prevedibili. Ti dà una base solida, e ti rende più difficile che ad altri approfittare dei cambiamenti."
+    },
+    "universalista": {
+      "title": "Cerchio morale ampio",
+      "body": "Universalismo e benevolenza alti: la tua preoccupazione non si ferma ai tuoi. È il profilo di chi finisce dentro cause collettive — e di chi si brucia se non mette limiti."
+    },
+    "poder-sin-frenos": {
+      "title": "Potere senza contrappesi",
+      "body": "Status alto, benevolenza bassa e onestà appena sufficiente. È la triade di valori che la ricerca associa a decisioni che avvantaggiano sé stessi a spese del gruppo."
+    },
+    "valores-vs-politica": {
+      "title": "Tensione interna",
+      "body": "Dai molto valore alle pari opportunità ma difendi posizioni economiche di mercato. Non è incoerente —ci stanno tradizioni intere— ma è una tensione che prima o poi ti tocca risolvere."
+    },
+    "cuidado-sin-limites": {
+      "title": "Ti prendi cura di tutti tranne che di te",
+      "body": "Cura morale altissima con assertività bassa: assorbi il malessere altrui e non metti freni. Il logoramento da empatia non è un mito, ed è esattamente questo il profilo."
+    },
+    "termostato": {
+      "title": "Termostato interno",
+      "body": "Regolazione emotiva alta su una base tranquilla: non è che non senti, è che riprendi i comandi in fretta. Quella combinazione ammortizza quasi qualsiasi settimana storta."
+    },
+    "piloto-a-ciegas": {
+      "title": "Volare alla cieca",
+      "body": "Molta turbolenza emotiva e poca visibilità su quello che senti: te ne accorgi quando è già esploso. Dare un nome a quello che noti —rabbia?, stanchezza?, paura?— è mezzo rimedio."
+    },
+    "lector-estratega": {
+      "title": "Leggere con secondi fini",
+      "body": "Leggi le persone con precisione e per di più calcoli: persuasione di livello esperto. Il confine tra carisma e manipolazione sta solo in che uso ne fai."
+    },
+    "corazon-sin-radar": {
+      "title": "Cuore senza radar",
+      "body": "Ti importa davvero delle persone, ma non sempre leggi come stanno: intenzione impeccabile, mira così così. Chiedere «e tu come stai con questa cosa?» compensa il radar."
+    },
+    "pegamento-social": {
+      "title": "Collante sociale",
+      "body": "Umorismo affiliativo alto ed energia sociale: sei il motivo per cui il gruppo si ritrova. Quel ruolo tiene in piedi amicizie per decenni — e stanca anche; ogni tanto concediti di non essere lo spettacolo."
+    },
+    "escudo-de-risa": {
+      "title": "Scudo di risate",
+      "body": "Il tuo sistema nervoso si accende facilmente, ma il tuo umorismo di auto-potenziamento lo ammortizza: ridere del casino è la tua regolazione emotiva fatta in casa. È tra le strategie con le prove migliori — continua a usarla."
+    },
+    "filo-que-corta": {
+      "title": "Una lama che taglia",
+      "body": "Umorismo aggressivo con dietro la durezza emotiva: le tue battute fanno vittime e lo sai. Divertente oggi, conto sociale domani — la gente ricorda chi l'ha fatta sentire piccola."
+    },
+    "payaso-triste": {
+      "title": "Il pagliaccio triste",
+      "body": "Ridi di te perché il gruppo ti accetti, e la tua autostima comincia a crederci. L'autocritica in tono di battuta resta autocritica: il pubblico ride, tu prendi nota."
+    },
+    "critico-interno": {
+      "title": "Il critico non riposa mai",
+      "body": "Autostima molto bassa: la voce che ti giudica è più dura con te che con chiunque altro. Non è un tratto di personalità, è un fronte aperto — ed è tra le cose che rispondono meglio quando ci si lavora."
+    },
+    "ego-blindado": {
+      "title": "Ego con l'armatura",
+      "body": "Autostima alta E fame di ammirazione: sicurezza genuina con appetito da palcoscenico. Funziona finché qualcuno non applaude; lì si vede di cosa è fatta la base."
+    },
+    "timon-propio": {
+      "title": "Mani sul timone",
+      "body": "Credi che la tua vita dipenda da te e per di più agisci: la cosa più simile a una garanzia che esista. Il rischio residuo: incolparti anche di quello che davvero non era tuo."
+    },
+    "espectador": {
+      "title": "Dagli spalti della tua vita",
+      "body": "Credi che quasi niente dipenda da te e per di più non lo chiedi: la profezia che si autoavvera perfetta. Comincia microscopico: una cosa questa settimana che dipenda solo da te, e guardala succedere."
+    },
+    "motor-exigente": {
+      "title": "Motore senza ammortizzatori",
+      "body": "Credi che tutto dipenda da te ma non ti senti all'altezza: responsabilità massima, fiducia minima. È il profilo che pretende di più da sé e si perdona di meno — rivedi come distribuisci le colpe."
+    }
+  },
+  "archetypes": {
+    "traditionalSuffix": "{name} tradizionale",
+    "political": {
+      "libertario-izq": {
+        "name": "Libertarismo di sinistra",
+        "description": "Uguaglianza senza uno Stato forte."
+      },
+      "socialdemocrata": {
+        "name": "Socialdemocrazia",
+        "description": "Redistribuzione dentro il sistema."
+      },
+      "socialismo-orden": {
+        "name": "Socialismo dell'ordine",
+        "description": "Uguaglianza economica con uno Stato forte."
+      },
+      "centrista-libertario": {
+        "name": "Centrismo libertario",
+        "description": "In economia moderazione, sulla libertà nessuna concessione."
+      },
+      "centrista": {
+        "name": "Centrismo",
+        "description": "Equilibrio in quasi tutto — o indecisione strategica."
+      },
+      "centrista-orden": {
+        "name": "Centrismo dell'ordine",
+        "description": "In economia moderazione, sull'autorità fermezza."
+      },
+      "liberal-clasico": {
+        "name": "Liberalismo classico",
+        "description": "Mercato libero e vita libera."
+      },
+      "liberal": {
+        "name": "Liberalismo",
+        "description": "Prima il mercato, con pragmatismo sul resto."
+      },
+      "conservador-orden": {
+        "name": "Conservatorismo dell'ordine",
+        "description": "Mercato, autorità e gerarchia."
+      }
+    },
+    "dark": {
+      "t1": {
+        "name": "Anima candida",
+        "description": "Il tuo cattivo interiore è morto di noia."
+      },
+      "t2": {
+        "name": "Canaglia da salotto",
+        "description": "Cattiverie di piccolo cabotaggio: niente che non vada in prescrizione."
+      },
+      "t3": {
+        "name": "Stratega in grigio",
+        "description": "Sai giocare sporco. Scegli di non farlo… quasi sempre."
+      },
+      "t4": {
+        "name": "Antieroe",
+        "description": "Carisma, calcolo e pochi rimorsi. Occhio là fuori."
+      },
+      "t5": {
+        "name": "Cattivo da film",
+        "description": "Ti mancano solo il monologo finale e un gatto bianco."
+      }
+    },
+    "pusilanime": {
+      "t1": {
+        "name": "Rullo compressore",
+        "description": "Pusillanime, nel senso proprio del termine… non lo sei."
+      },
+      "t2": {
+        "name": "Fermezza gentile",
+        "description": "Difendi ciò che è tuo senza ribaltare il tavolo. Equilibrio sano."
+      },
+      "t3": {
+        "name": "Diplomazia cronica",
+        "description": "Cedi più di quanto ti piacerebbe ammettere."
+      },
+      "t4": {
+        "name": "Pusillanime funzionale",
+        "description": "Dici «sì» con la bocca e «no» con l'anima."
+      },
+      "t5": {
+        "name": "Zerbino con il wifi",
+        "description": "Perfino il citofono ti alza la voce. Serve un piano d'urto."
+      }
+    },
+    "attachment": {
+      "seguro": {
+        "name": "Sicuro",
+        "description": "Ti avvicini senza paura e ti separi senza drammi."
+      },
+      "ansioso": {
+        "name": "Ansioso-preoccupato",
+        "description": "Vuoi vicinanza e temi di perderla."
+      },
+      "evitativo": {
+        "name": "Evitante-distanziante",
+        "description": "Prima l'indipendenza, poi l'intimità."
+      },
+      "temeroso": {
+        "name": "Timoroso-evitante",
+        "description": "Vuoi vicinanza e insieme la temi."
+      }
+    },
+    "moral": {
+      "individualizante": {
+        "name": "Morale individualizzante",
+        "description": "Cura e giustizia sopra ogni cosa."
+      },
+      "vinculante": {
+        "name": "Morale vincolante",
+        "description": "Gruppo, ordine e sacro come fondamenta."
+      },
+      "equilibrada": {
+        "name": "Morale equilibrata",
+        "description": "Usi i sei fondamenti in modo simile."
+      },
+      "libertaria": {
+        "name": "Morale libertaria",
+        "description": "La libertà sopra tutti gli altri fondamenti."
+      }
+    },
+    "autoestima": {
+      "t1": {
+        "name": "Critico implacabile",
+        "description": "La voce interna punta alla giugulare. Priorità numero uno: tagliarle lo stipendio."
+      },
+      "t2": {
+        "name": "Fondamenta in cantiere",
+        "description": "Ti reggi in piedi, ma costa più di quanto dovrebbe."
+      },
+      "t3": {
+        "name": "Stabile con crepe",
+        "description": "Giorni buoni e giorni di processo per direttissima."
+      },
+      "t4": {
+        "name": "Base solida",
+        "description": "Ti tratti come tratteresti qualcuno a cui tieni."
+      },
+      "t5": {
+        "name": "Roccia madre",
+        "description": "Autostima a prova di periodacci. Controlla solo che non diventi sordità."
+      }
+    },
+    "locus": {
+      "t1": {
+        "name": "Foglia al vento",
+        "description": "Senti che decidono altri: il caso, il sistema, gli altri."
+      },
+      "t2": {
+        "name": "Più vela che timone",
+        "description": "Pensi che la tua spinta conti poco; di solito aspetti di vedere che succede."
+      },
+      "t3": {
+        "name": "Pareggio con il destino",
+        "description": "Metà impegno, metà fortuna: dipende dal giorno."
+      },
+      "t4": {
+        "name": "Mano sul timone",
+        "description": "Quello che ti succede porta la tua firma, e agisci di conseguenza."
+      },
+      "t5": {
+        "name": "Al timone di tutto",
+        "description": "Tutto dipende da te: il buono e anche quello che non è mai stato tuo. Distribuisci meglio."
+      }
+    }
+  },
+  "studies": {
+    "title": "Gli studi dietro",
+    "subtitle": "Ogni test di Psique si appoggia a strumenti pubblicati su riviste con revisione paritaria. Qui ci sono tutti, con il link all'articolo originale e a Google Scholar nel caso il DOI stia dietro un muro di pagamento.",
+    "count": "{studies} riferimenti · {tests} test",
+    "caveatTitle": "Onestà prima di tutto:",
+    "caveatBody": "Psique non è un adattamento validato di questi strumenti. Gli item sono riscritti in linguaggio di tutti i giorni e accorciati, il campione di confronto non è rappresentativo di nessuna popolazione, e i risultati non sono una diagnosi. Quello che invece è reale: la struttura dei tratti e le relazioni tra di loro vengono da questa letteratura, non dal nulla.",
+    "goToTest": "Vedi il test →",
+    "doi": "DOI",
+    "source": "Fonte",
+    "scholar": "Scholar",
+    "homeTitle": "Questo non è un oroscopo",
+    "homeBody": "Gli 8 test si appoggiano a strumenti pubblicati e sottoposti a revisione paritaria: Goldberg, Schwartz, Haidt, Paulhus, Ashton & Lee… Ogni test collega le sue fonti, e qui ci sono tutte insieme.",
+    "homeCta": "Vedi gli studi"
+  },
+  "evolution": {
+    "title": "La tua evoluzione",
+    "subtitle": "{traits} tratti misurati più di una volta da {since}.",
+    "emptyTitle": "Ancora nessuna evoluzione da mostrare",
+    "emptyBody": "Salviamo ogni tentativo con la sua data, così appena ripeti un test vedrai qui i tuoi spostamenti. Lascia passare qualche mese: è allora che le cose cambiano davvero.",
+    "emptyCta": "Vedi i test",
+    "chartTitle": "I {count} tratti che si sono mossi di più",
+    "chartSubtitle": "Ogni punto è un test che hai fatto quel giorno.",
+    "changesTitle": "Cosa è cambiato",
+    "changesSubtitle": "Confrontato con la prima volta che l'hai misurato.",
+    "changesNone": "Per ora è tutto stabile: nessun tratto si è mosso più di 5 punti.",
+    "measurements": "{count} misurazioni",
+    "stable": "stabile",
+    "fromTo": "Da {from} a {to} — ti stai spostando verso {pole}."
+  },
+  "share": {
+    "title": "Questo è il suo profilo",
+    "titleNamed": "Il profilo di {name}",
+    "subtitle": "Basato su {traits} tratti misurati con strumenti pubblicati.",
+    "metaTitle": "Un profilo su Psique",
+    "metaTitleNamed": "Il profilo di {name} su Psique",
+    "metaDescription": "Spettro politico su 6 assi, personalità, lato oscuro e altro. Fatti il tuo, gratis.",
+    "labelPolitical": "Archetipo politico",
+    "labelEsteem": "Autostima · {score}/100",
+    "labelEsteemShort": "Autostima",
+    "labelAttachment": "Stile di attaccamento",
+    "labelDark": "Livello da cattivo · {score}/100",
+    "labelDarkShort": "Livello da cattivo",
+    "labelPusilanime": "Pusillanimità · {score}/100",
+    "labelMoral": "Profilo morale",
+    "labelLocus": "Locus of control · {score}/100",
+    "moralTop": "Il suo fondamento dominante: {trait}",
+    "ctaTitle": "E tu cosa sei?",
+    "ctaBody": "12 test, 46 tratti e 60 insight che si incrociano tra loro. Gratis e con le fonti in bella vista.",
+    "ctaButton": "Fatti il tuo profilo su {brand}"
+  },
+  "account": {
+    "title": "Il tuo account",
+    "shareTitle": "Condividi il tuo profilo",
+    "shareBody": "Genera un link pubblico con i tuoi archetipi — non con le tue risposte. Puoi revocarlo quando vuoi e il link smette di funzionare all'istante.",
+    "shareEnable": "Attiva il mio link pubblico",
+    "sharePolitics": "Includi anche il mio archetipo politico",
+    "sharePoliticsHint": "La tua ideologia è un dato particolarmente protetto, quindi va a parte ed è sempre disattivata di default.",
+    "sharePoliticsMissing": "Devi fare il test dello spettro politico prima di poterlo condividere.",
+    "copy": "Copia",
+    "copied": "Copiato!",
+    "saveError": "Non siamo riusciti a salvare la modifica. Riprova.",
+    "dataTitle": "I tuoi dati",
+    "dataBody": "Tutto quello che conserviamo di te: il tuo profilo, ogni tentativo e le risposte grezze.",
+    "exportButton": "Scarica i miei dati (JSON)",
+    "deleteTitle": "Cancella l'account",
+    "deleteBody": "Si cancella tutto: profilo, tentativi e risposte. È immediato e non si torna indietro.",
+    "deleteButton": "Voglio cancellare il mio account",
+    "deleteConfirm": "Scrivi {keyword} per confermare.",
+    "deleteKeyword": "ELIMINA",
+    "deleteFinal": "Cancella definitivamente",
+    "deleteLoading": "Cancellazione…",
+    "deleteError": "Non siamo riusciti a cancellare l'account. Rientra e riprova.",
+    "cancel": "Annulla"
+  }
+}

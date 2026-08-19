@@ -1,0 +1,1304 @@
+{
+  "meta": {
+    "title": "Psique — Lerne dich wirklich kennen",
+    "description": "Persönlichkeitstests, ein mehrdimensionales politisches Spektrum, die dunkle Triade und mehr. Jeder Test füllt dein Profil; dein Profil liefert dir Insights und Korrelationen.",
+    "disclaimer": "Psique ist ein Werkzeug zur Selbsterkenntnis und zur Unterhaltung. Kein Ergebnis ist eine klinische Diagnose oder eine professionelle Beratung.",
+    "tagline": "Lerne dich wirklich kennen."
+  },
+  "nav": {
+    "tests": "Tests",
+    "profile": "Profil",
+    "insights": "Insights",
+    "login": "Anmelden",
+    "signup": "Konto erstellen",
+    "logout": "Abmelden",
+    "language": "Sprache",
+    "studies": "Studien",
+    "evolution": "Entwicklung",
+    "account": "Konto"
+  },
+  "home": {
+    "eyebrow": "Der Test, der dir nicht nach dem Mund redet",
+    "title": "Lerne dich",
+    "titleEmphasis": "wirklich kennen",
+    "subtitle": "Dein politisches Spektrum in 6 Dimensionen. Deine Persönlichkeit, wissenschaftlich. Dein innerer Bösewicht. Dein Duckmäuser-Level. Jeder Test füllt dein Profil — und dein Profil sagt dir, was auf dich zukommt: das Gute, das Schlechte und das Schräge.",
+    "ctaProfile": "Zu meinem Profil",
+    "ctaSignup": "Kostenlos Konto erstellen",
+    "ctaTests": "Die Tests ansehen",
+    "statTests": "Tests",
+    "statTraits": "gemessene Merkmale",
+    "statInsights": "Insights zum Freischalten",
+    "statQuestions": "Fragen",
+    "testsHeading": "Die Tests",
+    "testMeta": "{items} Fragen · {minutes} Min. · misst {traits} Merkmale",
+    "howHeading": "So funktioniert es",
+    "how1Title": "Mach Tests",
+    "how1Body": "Kurz, direkt und ohne Fangfragen. Jeder misst konkrete Merkmale aus einem gemeinsamen Raum von {traits} Dimensionen.",
+    "how2Title": "Dein Profil füllt sich",
+    "how2Body": "Politischer Kompass in 2D und 3D, Persönlichkeitsradar, Bösewicht-Level… Dein Profil wächst mit jedem Test.",
+    "how3Title": "Finde heraus, was das bedeutet",
+    "how3Body": "Stärken, Risiken und Kuriositäten deiner Merkmalsmischung — und wie du im Vergleich zum Rest der Community dastehst."
+  },
+  "auth": {
+    "loginTitle": "Anmelden",
+    "loginSubtitle": "Deine Psyche hat auf dich gewartet.",
+    "signupTitle": "Konto erstellen",
+    "signupSubtitle": "Kostenlos. Deine Antworten gehören dir: keine Tests, kein Profil.",
+    "name": "Name (optional)",
+    "email": "E-Mail",
+    "password": "Passwort",
+    "passwordHint": "Passwort (mindestens 6 Zeichen)",
+    "loginButton": "Anmelden",
+    "loginLoading": "Anmeldung läuft…",
+    "signupButton": "Konto erstellen",
+    "signupLoading": "Wird erstellt…",
+    "badCredentials": "E-Mail oder Passwort falsch",
+    "signupFailed": "Das Konto konnte nicht erstellt werden",
+    "noAccount": "Noch kein Konto?",
+    "noAccountLink": "Kostenlos erstellen",
+    "hasAccount": "Du hast schon ein Konto?",
+    "hasAccountLink": "Anmelden",
+    "errInvalidEmail": "Ungültige E-Mail",
+    "errWeakPassword": "Das Passwort muss mindestens 6 Zeichen haben",
+    "errEmailTaken": "Mit dieser E-Mail existiert bereits ein Konto",
+    "googleButton": "Weiter mit Google",
+    "or": "oder",
+    "forgotPassword": "Passwort vergessen?",
+    "backToLogin": "← Zurück zur Anmeldung",
+    "resetTitle": "Passwort zurücksetzen",
+    "resetSubtitle": "Wir schicken dir einen Link für ein neues. Ohne Drama.",
+    "resetButton": "Link senden",
+    "resetLoading": "Wird gesendet…",
+    "resetSentTitle": "Link gesendet",
+    "resetSentBody": "Falls {email} ein Konto hat, ist der Link zum Zurücksetzen unterwegs. Schau auch im Spam nach.",
+    "resetFailed": "Wir konnten den Link nicht senden. Versuch es noch einmal.",
+    "errTooManyRequests": "Zu viele Versuche. Warte einen Moment und probier es erneut.",
+    "errPopupClosed": "Du hast das Google-Fenster geschlossen.",
+    "errNetwork": "Verbindungsproblem. Prüf dein Netzwerk.",
+    "errProviderDisabled": "Diese Anmeldemethode ist nicht aktiviert.",
+    "errGoogle": "Die Anmeldung mit Google hat nicht geklappt. Versuch es noch einmal.",
+    "errPopupBlocked": "Dein Browser hat das Google-Fenster blockiert. Erlaube Pop-ups und versuch es erneut.",
+    "errAccountExists": "Du hast mit dieser E-Mail bereits ein Konto, das auf anderem Weg erstellt wurde. Melde dich mit deinem Passwort an.",
+    "errUnauthorizedDomain": "Diese Domain ist nicht für die Anmeldung freigegeben. Wenn du sie verwaltest, füge sie unter Firebase → Authentication → Settings → Authorized domains hinzu.",
+    "errSession": "Deine Identität stimmt, aber wir konnten die Sitzung nicht erstellen. Versuch es gleich noch einmal."
+  },
+  "testsPage": {
+    "title": "Tests",
+    "subtitleAuthed": "Du hast {measured} von {total} Merkmalen gemessen. Jeder Test, den du abschließt, schaltet neue Insights frei.",
+    "subtitleAnon": "Erstelle ein Konto, damit deine Ergebnisse dein Profil füllen.",
+    "completed": "Abgeschlossen ✓",
+    "meta": "{items} Fragen · {minutes} Min.",
+    "start": "Starten",
+    "repeat": "Wiederholen",
+    "sourcesTitle": "Woher das kommt",
+    "sourcesIntro": "Dieser Test stützt sich auf veröffentlichte, peer-reviewte Instrumente. Er ist keine zertifizierte Adaption: Die Items sind in Alltagssprache neu formuliert."
+  },
+  "runner": {
+    "progress": "{current} / {total}",
+    "opt1": "Stimme gar nicht zu",
+    "opt2": "Stimme eher nicht zu",
+    "opt3": "Neutral",
+    "opt4": "Stimme eher zu",
+    "opt5": "Stimme voll zu",
+    "previous": "← Zurück",
+    "keyboardHint": "Antworte mit den Tasten 1-5",
+    "submitting": "Dein Profil wird berechnet…",
+    "submitError": "Der Test konnte nicht gespeichert werden"
+  },
+  "profile": {
+    "title": "Mein Profil",
+    "titleNamed": "Die Psyche von {name}",
+    "emptyTitle": "Dein Profil ist noch leer",
+    "emptyBody": "Mach deinen ersten Test und fang an, es zu füllen. Fünf Minuten reichen schon für den politischen Kompass.",
+    "emptyCta": "Starten",
+    "subtitle": "{measured} von {total} Merkmalen gemessen · verglichen mit {population} Profilen",
+    "justCompleted": "{test} abgeschlossen ✓",
+    "justCompletedBody": "Dein Profil ist um {count} neue Merkmale gewachsen.",
+    "ctaInsights": "Meine Insights ansehen →",
+    "archetypeLabel": "Politischer Archetyp",
+    "darkLabel": "Bösewicht-Level · {score}/100",
+    "pusiLabel": "Duckmäuser-Level · {score}/100",
+    "compassTitle": "Politischer Kompass",
+    "compassSubtitle": "Zwei Achsen in der Fläche, eine dritte in Farbe. Tausch jede der drei aus.",
+    "axesTitle": "Die {count} Achsen",
+    "axesSubtitle": "Deine Politik in voller Breite: je weiter vom Zentrum, desto klarer die Position.",
+    "allTraitsTitle": "Alle deine Merkmale",
+    "allTraitsSubtitle": "«P» = Perzentil: über welchem Anteil der Community du liegst.",
+    "lockedTitle": "Dir fehlen noch {count} Insights zum Freischalten",
+    "lockedBody": "Jeder Test, den du abschließt, aktiviert neue Regeln — viele davon kombinieren Merkmale aus verschiedenen Tests.",
+    "percentileTooltip": "Über {percentile}% der Community",
+    "attachmentLabel": "Bindungsstil",
+    "moralLabel": "Moralprofil",
+    "moralTop": "Dein dominantes Fundament: {trait}",
+    "esteemLabel": "Selbstwert · {score}/100",
+    "locusLabel": "Kontrollüberzeugung · {score}/100"
+  },
+  "compass": {
+    "axisX": "X-Achse",
+    "axisY": "Y-Achse",
+    "color": "Farbe",
+    "community": "{count} Personen aus der Community",
+    "cloudUnavailable": "Punktwolke verfügbar für Wirtschaft / Autorität / Kultur"
+  },
+  "insightsPage": {
+    "title": "Deine Insights",
+    "subtitle": "{active} aktiv · {locked} gesperrt durch Tests, die du noch nicht gemacht hast",
+    "emptyTitle": "Noch nichts zu analysieren",
+    "emptyBody": "Insights entstehen aus der Kombination deiner Merkmale. Mach einen Test und komm wieder.",
+    "emptyCta": "Test machen",
+    "extremesTitle": "Was dich am weitesten vom Durchschnitt trennt",
+    "extremesSubtitle": "Auf Basis von {population} Profilen aus der Community.",
+    "extremesBody": "Mehr {pole} als {percent}% der Leute",
+    "fortaleza": "Was für dich spielt",
+    "riesgo": "Was dich Kraft kosten wird",
+    "curiosidad": "Kuriositäten deiner Mischung",
+    "correlationsTitle": "🔗 Korrelationen der Community",
+    "correlationsSubtitle": "Welche Merkmale in {population} Profilen zusammen auftreten. r reicht von -1 (gegensätzlich) bis +1 (Hand in Hand).",
+    "colTrait": "Merkmal",
+    "colRelation": "Beziehung",
+    "lockedBody": "Es warten {count} Insights darauf, dass du mehr Merkmale misst.",
+    "lockedCta": "Mein Profil vervollständigen"
+  },
+  "categories": {
+    "politica": "Politisches Spektrum",
+    "personalidad": "Persönlichkeit",
+    "oscuro": "Dunkle Seite",
+    "caracter": "Charakter",
+    "moral": "Moralische Fundamente",
+    "valores": "Werte",
+    "vinculos": "Bindung",
+    "habilidades": "Emotionale Fähigkeiten",
+    "humor": "Humor"
+  },
+  "traits": {
+    "econ": {
+      "name": "Wirtschaftsachse",
+      "short": "Wirtschaft",
+      "low": "Gleichheit",
+      "high": "Markt",
+      "description": "Wie stark du Umverteilung und staatliches Eingreifen (0) gegenüber freiem Markt und wenig Eingriffen (100) bevorzugst."
+    },
+    "auth": {
+      "name": "Autoritätsachse",
+      "short": "Autorität",
+      "low": "Libertär",
+      "high": "Autoritär",
+      "description": "Wie hoch du individuelle Freiheit (0) gegenüber Ordnung und staatlicher Autorität (100) gewichtest."
+    },
+    "cult": {
+      "name": "Kulturachse",
+      "short": "Kultur",
+      "low": "Progressiv",
+      "high": "Traditionell",
+      "description": "Deine Haltung zum gesellschaftlichen Wandel: ihn annehmen (0) oder etablierte Lebensformen schützen (100)."
+    },
+    "glob": {
+      "name": "Territorialachse",
+      "short": "Territorial",
+      "low": "Globalistisch",
+      "high": "Nationalistisch",
+      "description": "Internationale Zusammenarbeit und globale Identität (0) gegenüber Souveränität und nationalem Interesse (100)."
+    },
+    "eco": {
+      "name": "Ökologieachse",
+      "short": "Ökologie",
+      "low": "Ökologisch",
+      "high": "Produktivistisch",
+      "description": "Umwelt zuerst, auch um einen wirtschaftlichen Preis (0), gegenüber Wachstum zuerst (100)."
+    },
+    "rel": {
+      "name": "Religionsachse",
+      "short": "Religion",
+      "low": "Laizistisch",
+      "high": "Religiös",
+      "description": "Strikte Trennung von Religion und öffentlichem Leben (0) gegenüber einer öffentlichen Rolle des Glaubens (100)."
+    },
+    "openness": {
+      "name": "Offenheit",
+      "short": "Offenheit",
+      "low": "Konventionell",
+      "high": "Entdeckungsfreudig",
+      "description": "Intellektuelle Neugier, Fantasie und Lust auf Neues gegenüber der Vorliebe für Vertrautes."
+    },
+    "conscientiousness": {
+      "name": "Gewissenhaftigkeit",
+      "short": "Gewissenhaftigkeit",
+      "low": "Spontan",
+      "high": "Diszipliniert",
+      "description": "Selbstdisziplin, Ordnung und Zielorientierung gegenüber Improvisation."
+    },
+    "extraversion": {
+      "name": "Extraversion",
+      "short": "Extraversion",
+      "low": "Introvertiert",
+      "high": "Extravertiert",
+      "description": "Wie viel Energie dir sozialer Kontakt gibt (oder nimmt)."
+    },
+    "agreeableness": {
+      "name": "Verträglichkeit",
+      "short": "Verträglichkeit",
+      "low": "Wettbewerbsorientiert",
+      "high": "Kooperativ",
+      "description": "Empathie, Vertrauen in andere und die Neigung, zu kooperieren statt zu konkurrieren."
+    },
+    "neuroticism": {
+      "name": "Neurotizismus",
+      "short": "Neurotizismus",
+      "low": "Stabil",
+      "high": "Reaktiv",
+      "description": "Wie intensiv du negative Emotionen erlebst: Sorgen, Stimmungsschwankungen, Stress."
+    },
+    "mach": {
+      "name": "Machiavellismus",
+      "short": "Machiavellismus",
+      "low": "Transparent",
+      "high": "Berechnend",
+      "description": "Neigung zu strategischer Manipulation und instrumentellem Zynismus."
+    },
+    "narc": {
+      "name": "Narzissmus",
+      "short": "Narzissmus",
+      "low": "Unauffällig",
+      "high": "Grandios",
+      "description": "Bedürfnis nach Bewunderung und das Gefühl, etwas Besonderes zu sein."
+    },
+    "psyc": {
+      "name": "Psychopathie",
+      "short": "Psychopathie",
+      "low": "Empathisch",
+      "high": "Kalt",
+      "description": "Emotionale Kälte, Impulsivität und wenig Schuldgefühl. (Ein Merkmal, keine Diagnose.)"
+    },
+    "asert": {
+      "name": "Durchsetzungsvermögen",
+      "short": "Durchsetzung",
+      "low": "Duckmäuserisch",
+      "high": "Durchsetzungsstark",
+      "description": "Wie gut du für dich einstehst und sagst, was du denkst — auch wenn es unangenehm wird."
+    },
+    "complac": {
+      "name": "Gefallenwollen",
+      "short": "Gefallenwollen",
+      "low": "Unabhängig",
+      "high": "Gefällig",
+      "description": "Wie sehr du die Zustimmung anderer brauchst und es vermeidest, jemanden zu enttäuschen."
+    },
+    "confl": {
+      "name": "Konfliktvermeidung",
+      "short": "Vermeidung",
+      "low": "Konfrontativ",
+      "high": "Vermeidend",
+      "description": "Die Neigung, Diskussionen aus dem Weg zu gehen, auch wenn dir das Thema wichtig ist."
+    },
+    "honesty": {
+      "name": "Ehrlichkeit-Bescheidenheit",
+      "short": "Ehrlichkeit",
+      "low": "Opportunistisch",
+      "high": "Integer",
+      "description": "Der sechste Faktor aus HEXACO: Aufrichtigkeit, andere nicht ausnutzen und sich nicht für etwas Besseres halten."
+    },
+    "care": {
+      "name": "Fürsorge",
+      "short": "Fürsorge",
+      "low": "Hart",
+      "high": "Mitfühlend",
+      "description": "Empfindsamkeit für das Leid anderer: die Moral, die auf Nicht-Schaden gebaut ist."
+    },
+    "fairness": {
+      "name": "Gerechtigkeit",
+      "short": "Gerechtigkeit",
+      "low": "Flexibel",
+      "high": "Fair",
+      "description": "Gegenseitigkeit, Rechte und faire Behandlung als moralische Grundlage."
+    },
+    "loyalty": {
+      "name": "Loyalität",
+      "short": "Loyalität",
+      "low": "Individualistisch",
+      "high": "Loyal",
+      "description": "Treue zur eigenen Gruppe: Familie, Team, Land."
+    },
+    "authority": {
+      "name": "Autorität",
+      "short": "Autorität",
+      "low": "Egalitär",
+      "high": "Hierarchisch",
+      "description": "Respekt vor Hierarchie, Tradition und legitimer Ordnung."
+    },
+    "purity": {
+      "name": "Reinheit",
+      "short": "Reinheit",
+      "low": "Relativistisch",
+      "high": "Sakralisierend",
+      "description": "Vorstellungen vom Heiligen, vom Anstand und von moralischer Verunreinigung."
+    },
+    "liberty": {
+      "name": "Freiheit",
+      "short": "Freiheit",
+      "low": "Kollektivistisch",
+      "high": "Herrschaftskritisch",
+      "description": "Ein Bauchgefühl gegen Beherrschung und dagegen, dass dir jemand sagt, wie du zu leben hast."
+    },
+    "selfdir": {
+      "name": "Selbstbestimmung",
+      "short": "Selbstbestimmung",
+      "low": "Geführt",
+      "high": "Autonom",
+      "description": "Selbst denken und selbst handeln: Unabhängigkeit und ein eigenes Urteil."
+    },
+    "stimul": {
+      "name": "Stimulation",
+      "short": "Stimulation",
+      "low": "Gewohnheitstreu",
+      "high": "Abenteuerlustig",
+      "description": "Bedürfnis nach Neuem, Aufregung und Herausforderung."
+    },
+    "hedon": {
+      "name": "Hedonismus",
+      "short": "Hedonismus",
+      "low": "Asketisch",
+      "high": "Hedonistisch",
+      "description": "Genuss und sinnliches Vergnügen als Wert an sich."
+    },
+    "achieve": {
+      "name": "Leistung",
+      "short": "Leistung",
+      "low": "Ohne Druck",
+      "high": "Ehrgeizig",
+      "description": "Persönlicher Erfolg, indem du Kompetenz nach sozialen Maßstäben zeigst."
+    },
+    "power": {
+      "name": "Macht",
+      "short": "Macht",
+      "low": "Bescheiden",
+      "high": "Dominant",
+      "description": "Status, Prestige und Kontrolle über Menschen und Ressourcen."
+    },
+    "security": {
+      "name": "Sicherheit",
+      "short": "Sicherheit",
+      "low": "Risikofreudig",
+      "high": "Vorsichtig",
+      "description": "Stabilität und Harmonie, persönlich wie gesellschaftlich."
+    },
+    "conform": {
+      "name": "Konformität",
+      "short": "Konformität",
+      "low": "Rebellisch",
+      "high": "Angepasst",
+      "description": "Sich zurücknehmen, um nicht anzuecken und soziale Erwartungen nicht zu verletzen."
+    },
+    "tradition": {
+      "name": "Tradition",
+      "short": "Tradition",
+      "low": "Innovativ",
+      "high": "Traditionell",
+      "description": "Respekt vor überlieferten Bräuchen und Verbundenheit mit ihnen."
+    },
+    "benev": {
+      "name": "Wohlwollen",
+      "short": "Wohlwollen",
+      "low": "Zurückhaltend",
+      "high": "Hingebungsvoll",
+      "description": "Für das Wohl der Menschen sorgen, die dir nahestehen."
+    },
+    "univers": {
+      "name": "Universalismus",
+      "short": "Universalismus",
+      "low": "Naher Kreis",
+      "high": "Universalistisch",
+      "description": "Das Wohl aller Menschen und der Natur verstehen und schützen."
+    },
+    "attachAnx": {
+      "name": "Bindungsangst",
+      "short": "Angst",
+      "low": "Gelassen",
+      "high": "Ängstlich",
+      "description": "Angst vor dem Verlassenwerden und das Bedürfnis nach Rückversicherung in engen Beziehungen."
+    },
+    "attachAvo": {
+      "name": "Vermeidung von Nähe",
+      "short": "Vermeidung",
+      "low": "Nah",
+      "high": "Distanziert",
+      "description": "Unbehagen bei Abhängigkeit und emotionaler Nähe."
+    },
+    "selfEmo": {
+      "name": "Eigene Emotionen wahrnehmen",
+      "short": "Selbstwahrnehmung",
+      "low": "Diffus",
+      "high": "Klar",
+      "description": "Wissen, was du fühlst und warum — während du es fühlst, nicht drei Tage später."
+    },
+    "otherEmo": {
+      "name": "Andere lesen",
+      "short": "Andere lesen",
+      "low": "Grob",
+      "high": "Feinfühlig",
+      "description": "Den emotionalen Zustand anderer an Gesten, Tonfall und Schweigen ablesen."
+    },
+    "useEmo": {
+      "name": "Emotionen nutzen",
+      "short": "Emotionsnutzung",
+      "low": "Orientierungslos",
+      "high": "Antrieb",
+      "description": "Emotionen arbeiten lassen: dich motivieren, Prioritäten setzen, Nervosität in Fokus verwandeln."
+    },
+    "regEmo": {
+      "name": "Emotionsregulation",
+      "short": "Regulation",
+      "low": "Reaktiv",
+      "high": "Ausgeglichen",
+      "description": "Die Lautstärke einer Emotion herunterdrehen, wenn sie nicht hilft — ohne sie zu leugnen."
+    },
+    "humorAfil": {
+      "name": "Verbindender Humor",
+      "short": "Verbindend",
+      "low": "Nüchtern",
+      "high": "Sprühend",
+      "description": "Humor, der verbindet: Witze, die einschließen, und Sprüche, die eine Gruppe zusammenschweißen."
+    },
+    "humorSelf": {
+      "name": "Selbststärkender Humor",
+      "short": "Selbststärkend",
+      "low": "Ohne Schutzschild",
+      "high": "Abgefedert",
+      "description": "Humor als eigener Stoßdämpfer: über den Schlamassel lachen, statt darin zu versinken."
+    },
+    "humorAgr": {
+      "name": "Aggressiver Humor",
+      "short": "Aggressiv",
+      "low": "Harmlos",
+      "high": "Bissig",
+      "description": "Humor auf Kosten anderer: Sarkasmus, Sticheleien und Spott mit Zielscheibe."
+    },
+    "humorDest": {
+      "name": "Selbstabwertender Humor",
+      "short": "Selbstabwertend",
+      "low": "Unversehrt",
+      "high": "Auf meine Kosten",
+      "description": "Humor auf deine Kosten: dich kleinmachen, um gemocht zu werden oder dazuzugehören."
+    },
+    "selfesteem": {
+      "name": "Selbstwert",
+      "short": "Selbstwert",
+      "low": "Innere Kritik",
+      "high": "Fester Boden",
+      "description": "Die Gesamtbewertung, die du von dir hast: wie sehr du dich respektierst und magst."
+    },
+    "locus": {
+      "name": "Kontrollüberzeugung",
+      "short": "Kontrolle",
+      "low": "Extern",
+      "high": "Intern",
+      "description": "Worauf du zurückführst, was dir passiert: auf deine Anstrengung (intern) oder auf Zufall und System (extern)."
+    }
+  },
+  "tests": {
+    "espectro-politico": {
+      "title": "Politisches Spektrum",
+      "tagline": "Vergiss links gegen rechts: verorte dich auf 6 Achsen gleichzeitig.",
+      "description": "Die klassische Links-rechts-Achse greift zu kurz. Dieser Test verortet dich in 6 unabhängigen Dimensionen: Wirtschaft, Autorität, Kultur, Territorium, Ökologie und Religion. Du siehst deinen klassischen Kompass, dein vollständiges Radar und deinen politischen Archetyp.",
+      "items": {
+        "econ1": "Wesentliche Leistungen wie Gesundheit oder Energie funktionieren in privater Hand besser.",
+        "econ2": "Der Staat sollte allen ein Mindesteinkommen garantieren.",
+        "econ3": "Ich würde große Vermögen höher besteuern, auch wenn einige davon das Land verlassen.",
+        "econ4": "Je weniger der Staat die Wirtschaft reguliert, desto besser für alle.",
+        "auth1": "In einer schweren Krise ist mir eine Regierung mit harter Hand lieber, auch wenn sie Freiheiten beschneidet.",
+        "auth2": "Mir ist mehr Privatsphäre lieber, auch wenn das die Arbeit der Polizei erschwert.",
+        "auth3": "Gehorsam und Respekt vor Autorität sind Werte, die wir zurückholen sollten.",
+        "auth4": "Jede Person sollte leben dürfen, wie sie will, solange sie niemandem schadet.",
+        "cult1": "Der gesellschaftliche Wandel der letzten Jahrzehnte ging viel zu schnell.",
+        "cult2": "Die Traditionen meines Landes sind es wert, geschützt zu werden, auch wenn sie manchen Wandel bremsen.",
+        "cult3": "Die «klassische» Familie ist weder besser noch schlechter als andere Familienformen.",
+        "cult4": "Ich finde es gesund, die historischen Figuren meines Landes kritisch zu betrachten.",
+        "glob1": "Mein Land sollte seine eigenen Interessen an erste Stelle setzen, auch wenn das anderen Ländern schadet.",
+        "glob2": "Wichtige Entscheidungen sollten immer stärker in internationalen Organisationen fallen.",
+        "glob3": "Einwanderung bereichert ein Land mehr, als sie es verkompliziert.",
+        "glob4": "Heimische Produkte zu kaufen ist fast schon Bürgerpflicht.",
+        "eco1": "Den Klimawandel zu bremsen rechtfertigt teureres Benzin und teurere Flüge.",
+        "eco2": "Wirtschaftswachstum ist wichtiger als Klimaziele.",
+        "eco3": "Ich würde persönlichen Komfort opfern, um meinen ökologischen Fußabdruck zu verkleinern.",
+        "eco4": "Die heutige Umweltbewegung übertreibt die tatsächlichen Risiken.",
+        "rel1": "Religion sollte im öffentlichen Leben mehr Gewicht haben.",
+        "rel2": "Öffentliche Bildung muss strikt weltlich sein.",
+        "rel3": "Religiöse Werte sind ein guter moralischer Kompass für eine Gesellschaft.",
+        "rel4": "Man kann ein zutiefst ethischer Mensch sein, ganz ohne Religion."
+      },
+      "sources": {
+        "0": "Empirische Grundlage dafür, dass Ideologie nicht eine Achse ist, sondern mehrere unabhängige.",
+        "1": "Dual-Process-Modell: zwei verschiedene Motivationen hinter dem Konservatismus.",
+        "2": "Der historische Ursprung davon, Politik auf zwei Achsen statt auf einer zu messen."
+      }
+    },
+    "big-five": {
+      "title": "Persönlichkeit Big Five",
+      "tagline": "Das Persönlichkeitsmodell mit dem stärksten wissenschaftlichen Rückhalt.",
+      "description": "Misst die fünf großen Merkmale (OCEAN): Offenheit, Gewissenhaftigkeit, Extraversion, Verträglichkeit und Neurotizismus. Es ist das Standardmodell der Persönlichkeitspsychologie und die Grundlage der meisten deiner Insights.",
+      "items": {
+        "o1": "Ich habe eine sehr lebhafte Fantasie.",
+        "o2": "Sehr abstrakte oder philosophische Gespräche langweilen mich.",
+        "o3": "Ich probiere gern Neues aus, auch wenn es schiefgehen kann.",
+        "o4": "Zwischen Vertrautem und Experimentellem wähle ich fast immer das Vertraute.",
+        "c1": "Was ich mir vornehme, ziehe ich auch durch.",
+        "c2": "Ich schiebe Dinge meistens bis zur letzten Minute auf.",
+        "c3": "Ich mag Ordnung: alles an seinem Platz.",
+        "c4": "Ich verliere oder vergesse ständig Sachen.",
+        "e1": "Auf Partys gehöre ich meistens zu denen, die Stimmung machen.",
+        "e2": "Wenn viele Leute da sind, halte ich mich lieber im Hintergrund.",
+        "e3": "Mit fremden Menschen zu reden gibt mir Energie.",
+        "e4": "Nach viel Geselligkeit brauche ich Zeit allein, um wieder aufzutanken.",
+        "a1": "Die Probleme anderer gehen mir wirklich nahe.",
+        "a2": "Ich tue mich schwer damit zu verzeihen.",
+        "a3": "Andere würden sagen, ich bin unkompliziert im Umgang.",
+        "a4": "Ich vermute, dass Leute meistens Hintergedanken haben.",
+        "n1": "Ich mache mir Sorgen über Dinge, die wahrscheinlich nie eintreten.",
+        "n2": "Unter Druck bleibe ich ruhig.",
+        "n3": "Meine Stimmung schlägt leicht um.",
+        "n4": "Fast nichts raubt mir den Schlaf."
+      },
+      "sources": {
+        "0": "Der Artikel, der die Marker der fünf Faktoren festgelegt hat.",
+        "1": "Gemeinfreier Itempool, an dessen Format sich dieser Test anlehnt.",
+        "2": "Moderne Fassung des Inventars, mit überarbeiteten Facetten."
+      }
+    },
+    "lado-oscuro": {
+      "title": "Bösewicht-Test",
+      "tagline": "Wie viel Bösewicht steckt in dir? Die dunkle Triade, ernsthaft gemessen.",
+      "description": "Misst die drei Merkmale der «dunklen Triade»: Machiavellismus (strategische Manipulation), Narzissmus (Grandiosität) und Psychopathie (Kälte und Impulsivität). Alle punkten hier ein bisschen — die Frage ist nur, wie viel.",
+      "items": {
+        "m1": "Das ist keine Manipulation: Das ist die Kunst, Dinge richtig zu verpacken.",
+        "m2": "Anderen alles über sich zu erzählen ist ein strategischer Fehler.",
+        "m3": "Ich schmeichle Leuten, wenn es mir hilft, etwas zu bekommen.",
+        "m4": "Mir ist lieber, wenn andere nicht wissen, was ich wirklich will.",
+        "m5": "Ich sage, was ich denke, auch wenn ich damit meine Absichten preisgebe.",
+        "na1": "Ehrlich gesagt habe ich Qualitäten, die die meisten Menschen nicht haben.",
+        "na2": "Ich stehe gern im Mittelpunkt.",
+        "na3": "Ich verdiene mehr Anerkennung, als ich bekomme.",
+        "na4": "Ich bestehe auf dem Respekt, der mir zusteht.",
+        "na5": "Ich halte mich für ziemlich durchschnittlich.",
+        "p1": "Wenn mir jemand übel mitspielt, kommt die Retourkutsche schnell und mit Zinsen.",
+        "p2": "Wer in Schwierigkeiten gerät, hat sie sich meistens selbst eingebrockt.",
+        "p3": "Ich kann etwas Grausames sagen, wenn der Moment danach verlangt.",
+        "p4": "Situationen mit echtem Risiko reizen mich.",
+        "p5": "Wenn ich jemandem wehtue, plagt mich das Gewissen noch lange."
+      },
+      "sources": {
+        "0": "Der Artikel, der die dunkle Triade als Konstrukt definiert hat.",
+        "1": "Validierte Kurzform (SD3), Grundlage für das Format dieses Tests."
+      }
+    },
+    "asertividad": {
+      "title": "Duckmäuser-Test",
+      "tagline": "Stehst du für dich ein — oder entschuldigst du dich fürs Dasein?",
+      "description": "Misst drei Dinge, die wir gern in einen Topf werfen: Durchsetzungsvermögen (sagen, was du denkst), Gefallenwollen (Zustimmung brauchen) und Konfliktvermeidung (dem Streit ausweichen). Man kann sehr durchsetzungsstark sein und Konflikten trotzdem ausweichen — hier siehst du es.",
+      "items": {
+        "as1": "Wenn mir etwas nicht passt, sage ich es, auch wenn es unangenehm wird.",
+        "as2": "Ein schlecht zubereitetes Gericht würde ich im Restaurant ohne langes Zögern zurückgehen lassen.",
+        "as3": "Es fällt mir schwer, eine Gehaltserhöhung zu fordern oder meine Preise anzuheben.",
+        "as4": "Wenn man mich ständig unterbricht, spreche ich es an.",
+        "co1": "Ich sage zu Plänen ja, auf die ich keine Lust habe, nur um nicht schlecht dazustehen.",
+        "co2": "Ich brauche es, dass mich fast alle mögen.",
+        "co3": "Ich entschuldige mich sogar dann, wenn es nicht meine Schuld ist.",
+        "co4": "Ich kann jemanden enttäuschen, ohne mich mies zu fühlen, wenn ich meine Gründe habe.",
+        "cf1": "Ich vermeide Diskussionen, auch wenn mir das Thema wirklich wichtig ist.",
+        "cf2": "Ich gebe lieber nach, als mich zu streiten.",
+        "cf3": "Ein heftiger Streit ruiniert mir nicht den Tag.",
+        "cf4": "Ich wechsle das Thema, sobald ein Gespräch angespannt wird."
+      },
+      "sources": {
+        "0": "Die klassische Skala für durchsetzungsfähiges Verhalten.",
+        "1": "Stile im Umgang mit zwischenmenschlichen Konflikten.",
+        "2": "Bedürfnis nach Zustimmung und Soziotropie."
+      }
+    },
+    "moral": {
+      "title": "Moralische Fundamente",
+      "tagline": "Worauf deine Moral gebaut ist — und warum du mit Leuten aneckst, die auf etwas anderem bauen.",
+      "description": "Haidts Theorie besagt, dass die menschliche Moral auf sechs Fundamenten ruht: Fürsorge, Gerechtigkeit, Loyalität, Autorität, Reinheit und Freiheit. Fast niemand gewichtet sie gleich, und genau daraus entstehen die meisten politischen Streitigkeiten. Es ist der beste psychologische Prädiktor für Ideologie, den es gibt.",
+      "sources": {
+        "0": "Die Studie, die zeigte, dass Progressive und Konservative auf unterschiedliche Fundamente zurückgreifen.",
+        "1": "Validierung des Fragebogens und die vollständige Kartierung des moralischen Bereichs.",
+        "2": "Ergänzt das Fundament Freiheit, das in der ursprünglichen Fassung fehlt."
+      },
+      "items": {
+        "ca1": "Das Leiden eines verletzlichen Menschen geht mir richtig unter die Haut.",
+        "ca2": "Grausamkeit gegenüber Tieren gehört für mich zum Schlimmsten überhaupt.",
+        "ca3": "Manchmal muss man einfach hart sein: Mitgefühl stört da nur.",
+        "fa1": "Wenn jemand ungerecht behandelt wird, empört mich das, auch wenn es mich nicht betrifft.",
+        "fa2": "Für alle sollten dieselben Regeln gelten, ohne Ausnahmen.",
+        "fa3": "Wenn das Ergebnis gut ist, ist mir ziemlich egal, ob der Weg dahin ganz fair war.",
+        "lo1": "Die eigene Gruppe zu verraten ist mit das Übelste, was man tun kann.",
+        "lo2": "Ich bin stolz, wenn mein Land oder meine Leute Erfolg haben.",
+        "lo3": "Meine Prinzipien stehen über der Frage, zu welcher Gruppe ich gerade gehöre.",
+        "au1": "Legitime Autorität sollte man respektieren, auch wenn man die Person nicht mag.",
+        "au2": "Respekt vor Älteren und vor Hierarchie hält eine Gesellschaft zusammen.",
+        "au3": "Autorität muss man immer hinterfragen, aus Prinzip.",
+        "pu1": "Manche Dinge sind widerlich, auch wenn sie niemandem schaden.",
+        "pu2": "Manche Dinge sollte man als heilig behandeln, ohne Diskussion.",
+        "pu3": "Wenn niemand zu Schaden kommt, ist daran moralisch nichts falsch.",
+        "li1": "Niemand hat das Recht, mir zu sagen, wie ich mein Leben zu leben habe.",
+        "li2": "Die Mächtigen setzen sich am Ende immer gegen die normalen Leute durch.",
+        "li3": "Manchmal ist es richtig, ein Stück Freiheit für das Gemeinwohl aufzugeben."
+      }
+    },
+    "valores": {
+      "title": "Deine Werte",
+      "tagline": "Die 10 universellen Werte von Schwartz: was dich wirklich antreibt.",
+      "description": "Schwartz identifizierte zehn Werte, die in allen Kulturen vorkommen, angeordnet in einem Kreis mit eingebauten Spannungen: Du kannst Sicherheit und Stimulation nicht gleichzeitig maximieren, Macht und Universalismus auch nicht. Du siehst, welche dich antreiben und welchen Verzicht das bedeutet. Die Werte sind relativ zu deinem eigenen Durchschnitt (50): Sie zeigen, was DU priorisierst, nicht wie viel du generell zustimmst.",
+      "sources": {
+        "0": "Die ursprüngliche Theorie der zehn universellen Werte und ihrer kreisförmigen Struktur.",
+        "1": "Der PVQ-Fragebogen, an dessen Format sich dieser Test orientiert.",
+        "2": "Die Fassung, die seit 2002 im European Social Survey verwendet wird."
+      },
+      "items": {
+        "sd1": "Es ist mir wichtig, selbst zu entscheiden, was ich tue.",
+        "sd2": "Ich bin gern originell und mache die Dinge auf meine Art.",
+        "st1": "Ich suche Abenteuer und Risiko: Ich will ein aufregendes Leben.",
+        "st2": "Ich brauche es, ständig neue Dinge zu tun.",
+        "he1": "Das Leben zu genießen und mir etwas zu gönnen ist mir wichtig.",
+        "he2": "Ich nutze jede Gelegenheit, um Spaß zu haben.",
+        "ac1": "Es ist mir wichtig zu zeigen, was ich kann.",
+        "ac2": "Ich will sehr erfolgreich sein und dafür anerkannt werden.",
+        "po1": "Mir ist wichtig, dass man mich respektiert und dass Leute tun, was ich sage.",
+        "po2": "Ich will Geld und teure Dinge haben.",
+        "se1": "Es ist wichtig, in einer sicheren Umgebung zu leben und Gefahren zu meiden.",
+        "se2": "Dass der Staat meine Sicherheit vor Bedrohungen garantiert, hat Priorität.",
+        "cf1": "Ich finde, man sollte immer tun, was sich gehört, und nicht auffallen.",
+        "cf2": "Ich vermeide Dinge, die andere für unangemessen halten könnten.",
+        "tr1": "Die Bräuche, die mir weitergegeben wurden, sind mir wichtig.",
+        "tr2": "Demut und Bescheidenheit sind Tugenden, die ich schätze.",
+        "be1": "Es ist wichtig, den Menschen um mich herum zu helfen und für meine Leute zu sorgen.",
+        "be2": "Meinen Freunden gegenüber loyal zu sein steht über fast allem.",
+        "un1": "Alle Menschen sollten die gleichen Chancen im Leben haben.",
+        "un2": "Die Natur und die Umwelt zu schützen ist mir wirklich wichtig."
+      }
+    },
+    "apego": {
+      "title": "Bindungsstil",
+      "tagline": "Wie du in engen Beziehungen funktionierst — und warum sich immer dieselben Muster wiederholen.",
+      "description": "Erwachsenenbindung sind keine vier Schubladen, sondern zwei Dimensionen: wie sehr du das Verlassenwerden fürchtest (Angst) und wie unangenehm dir Nähe ist (Vermeidung). Die berühmten Stile — sicher, ängstlich, vermeidend, ängstlich-vermeidend — sind die Quadranten dieser Fläche. Hier messen wir sie sauber.",
+      "sources": {
+        "0": "Der ursprüngliche ECR-Fragebogen, Grundlage fast der gesamten späteren Forschung.",
+        "1": "Die validierte Kurzform, an der sich dieser Test orientiert.",
+        "2": "Psychometrische Revision, die die zwei kontinuierlichen Dimensionen bestätigt hat."
+      },
+      "items": {
+        "an1": "Ich habe Angst, dass die Person, die ich liebe, aufhört mich zu lieben.",
+        "an2": "Ich brauche ziemlich viele Zeichen dafür, dass ich geliebt werde.",
+        "an3": "Wenn jemand lange braucht, um zu antworten, fange ich an zu grübeln.",
+        "an4": "Ich habe Angst davor, verlassen zu werden.",
+        "an5": "Ich fühle mich ruhig mit der Zuneigung, die ich bekomme.",
+        "an6": "Ich mache mir selten Sorgen darüber, wie stabil meine Beziehungen sind.",
+        "av1": "Ich möchte lieber von niemandem emotional abhängig sein.",
+        "av2": "Es ist mir unangenehm, wenn jemand zu viel Nähe will.",
+        "av3": "Es fällt mir schwer, mich in einer Beziehung oder engen Freundschaften ganz zu öffnen.",
+        "av4": "Ich rede leicht über meine Gefühle mit Menschen, die mir nahestehen.",
+        "av5": "Es fällt mir leicht, um Trost zu bitten, wenn ich ihn brauche.",
+        "av6": "Ich fühle mich wohl damit, von den Menschen abhängig zu sein, die ich liebe."
+      }
+    },
+    "honestidad": {
+      "title": "Ehrlichkeit-Bescheidenheit",
+      "tagline": "Der sechste Faktor, den die Big Five übersehen — und der beste Prädiktor dafür, ob du schummeln würdest.",
+      "description": "HEXACO fügt den fünf großen einen sechsten Faktor hinzu: Ehrlichkeit-Bescheidenheit. Er sagt unethisches Verhalten besser vorher als Verträglichkeit und ist das exakte Spiegelbild der dunklen Triade. Aufrichtigkeit, andere nicht ausnutzen, sich nicht für etwas Besseres halten.",
+      "sources": {
+        "0": "Der Artikel, der das Sechs-Faktoren-Modell etabliert hat.",
+        "1": "Die Kurzfassung mit 60 Items, das Referenzformat.",
+        "2": "Die offizielle Website des Inventars, mit Normwerten nach Land."
+      },
+      "items": {
+        "h1": "Wenn ich wüsste, dass ich nicht erwischt werde, würde ich Geld dafür nehmen, wegzuschauen.",
+        "h2": "Wenn ich glaubte, dass es funktioniert, würde ich mit Schmeichelei eine Beförderung herausholen.",
+        "h3": "Eine Geldbörse voller Bargeld würde ich mit allem drin zurückgeben.",
+        "h4": "Ich verdiene eine bessere Behandlung als die meisten anderen.",
+        "h5": "Es wäre mir peinlich, mit meinen Erfolgen anzugeben.",
+        "h6": "Viel Geld und Luxus zu haben gehört zu dem, was mir am wichtigsten ist.",
+        "h7": "Ich verzichte lieber auf eine Chance, als sie mit unlauteren Mitteln zu bekommen.",
+        "h8": "Wenn ich eine Regel folgenlos brechen kann, breche ich sie.",
+        "h9": "Leute, die zum Gewinnen betrügen, widern mich an.",
+        "h10": "Ich würde Interesse an jemandem vortäuschen, wenn es mir nützt."
+      }
+    },
+    "inteligencia-emocional": {
+      "title": "Test zur emotionalen Intelligenz",
+      "tagline": "Steuern deine Gefühle dich — oder steuerst du sie?",
+      "description": "Vier verschiedene Fähigkeiten: merken, was du fühlst, lesen, was andere fühlen, Emotionen als Treibstoff nutzen und die Lautstärke herunterdrehen, wenn es nötig ist. Basiert auf dem Modell von Salovey und Mayer und auf der Struktur der WLEIS-Skala. Der Test misst nicht, wie nett du bist: Er misst Können.",
+      "sources": {
+        "0": "Das ursprüngliche Modell: emotionale Intelligenz als Bündel von Fähigkeiten, nicht als Eigenschaft",
+        "1": "Die 4 Dimensionen (eigene, fremde, Nutzung, Regulation) und die Referenzskala (WLEIS)",
+        "2": "Metaanalyse: EI sagt Leistung über Persönlichkeit und IQ hinaus vorher"
+      },
+      "items": {
+        "ie1": "Ich weiß fast immer, warum ich mich so fühle, wie ich mich fühle.",
+        "ie2": "Ich erkenne gut, ob das gerade Traurigkeit, Frust oder einfach Müdigkeit ist.",
+        "ie3": "Manchmal merke ich erst spät, dass mich etwas getroffen hat.",
+        "ie4": "Wenn ich wütend werde, erkenne ich schnell, was der Auslöser war.",
+        "ie5": "Ich merke, wie es Leuten geht, auch wenn sie nichts sagen.",
+        "ie6": "Meine Freunde sagen, ich verstehe gut, was in ihnen vorgeht.",
+        "ie7": "Ich bin oft überrascht, wenn mir jemand erzählt, dass es gerade schlecht läuft: Ich hatte nichts gemerkt.",
+        "ie8": "Ich erfasse schnell die Stimmung in einem Raum, wenn ich hereinkomme.",
+        "ie9": "Ich nutze meine gute Laune als Schwung für schwierige Aufgaben.",
+        "ie10": "Ich kann mich motivieren weiterzumachen, wenn etwas anstrengend wird.",
+        "ie11": "Wenn ich niedergeschlagen bin, fällt es mir extrem schwer, überhaupt anzufangen.",
+        "ie12": "Ich verwandle Nervosität in Energie zum Handeln.",
+        "ie13": "Wenn mich etwas aufwühlt, finde ich schnell wieder zur Ruhe.",
+        "ie14": "Ich habe mein Temperament auch in sehr angespannten Situationen im Griff.",
+        "ie15": "Wenn ich wütend bin, sage ich Dinge, die ich später bereue.",
+        "ie16": "Eine einzige Sorge kann mir den ganzen Tag kapern."
+      }
+    },
+    "humor": {
+      "title": "Humor-Test",
+      "tagline": "Sag mir, worüber du lachst, und ich sage dir, wer du bist",
+      "description": "Die vier Humorstile von Martin: der, der verbindet (verbindend), der, der dich trägt (selbststärkend), der, der schneidet (aggressiv), und der, der dich selbst zur Zielscheibe macht (selbstabwertend). Die ersten beiden gehen mit Wohlbefinden einher; die letzten beiden schicken irgendwann die Rechnung.",
+      "sources": {
+        "0": "Das ursprüngliche Instrument: der Humor Styles Questionnaire und seine 4 Stile",
+        "1": "Metaanalyse: welche Stile mit Wohlbefinden einhergehen und welche mit Leidensdruck",
+        "2": "Metaanalyse: wie sich die Humorstile in die Big Five einfügen"
+      },
+      "items": {
+        "hu1": "Ich bringe Leute leicht zum Lachen.",
+        "hu2": "Humor ist meine Art, Menschen näherzukommen.",
+        "hu3": "Ich erzähle selten Witze oder albere in der Gruppe herum.",
+        "hu4": "Mit meinen Freunden herumzualbern gehört zu meinen Lieblingsbeschäftigungen.",
+        "hu5": "Humor hilft mir, nicht abzurutschen, wenn es schlecht läuft.",
+        "hu6": "Wenn ich niedergeschlagen bin, finde ich meist die absurde Seite daran, um mich aufzumuntern.",
+        "hu7": "Wenn ich ein Problem habe, verliere ich meinen Humor komplett.",
+        "hu8": "Ich lache über meine eigenen Pannen, und das nimmt ihnen das Gewicht.",
+        "hu9": "Wenn jemand eine Spitze verdient hat, verkneife ich sie mir nicht.",
+        "hu10": "Mein Humor hat manchmal mehr Schärfe, als die Leute erwarten.",
+        "hu11": "Ich mache beim Spott nicht mit, auch wenn die ganze Gruppe über jemanden lacht.",
+        "hu12": "Manchmal reiße ich einen Witz, obwohl ich weiß, dass er jemanden trifft.",
+        "hu13": "Ich lasse mehr über mich lachen, als mir guttut, wenn die Gruppe das lustig findet.",
+        "hu14": "Ich mache mich vor anderen über meine Schwächen lustig, um gemocht zu werden.",
+        "hu15": "Ich verstecke hinter Witzen, wie es mir wirklich geht.",
+        "hu16": "Ich muss mich nicht zum Affen machen, damit die Gruppe mich akzeptiert."
+      }
+    },
+    "autoestima": {
+      "title": "Selbstwert-Test",
+      "tagline": "Wie kommst du mit dir selbst klar?",
+      "description": "Die Rosenberg-Skala: zehn Sätze, ein halbes Jahrhundert im Einsatz und die zuverlässigste Momentaufnahme davon, wie du dich selbst bewertest. Ein niedriger Selbstwert ist kein festes Merkmal: Er ist ein Zustand, an dem man arbeiten kann — und dieser Test sagt dir, wo du startest.",
+      "sources": {
+        "0": "Die ursprüngliche Skala mit 10 Items, das meistgenutzte Kurzinstrument der Psychologie",
+        "1": "Längsschnitt-Metaanalyse: niedriger Selbstwert geht der Depression voraus, nicht umgekehrt",
+        "2": "Wie sich der Selbstwert über das Leben entwickelt (er steigt bis etwa 60)"
+      },
+      "items": {
+        "ae1": "Alles in allem mag ich die Person, die ich bin.",
+        "ae2": "Manchmal denke ich, dass ich zu gar nichts tauge.",
+        "ae3": "Ich finde, ich habe eine ganze Reihe guter Eigenschaften.",
+        "ae4": "Ich kann Dinge genauso gut wie die meisten anderen Menschen.",
+        "ae5": "Ich habe das Gefühl, dass es nicht viel gibt, worauf ich stolz sein kann.",
+        "ae6": "Manchmal fühle ich mich richtiggehend nutzlos.",
+        "ae7": "Ich fühle, dass ich mindestens genauso viel wert bin wie jeder andere Mensch.",
+        "ae8": "Ich wünschte, ich könnte mehr Achtung vor mir selbst haben.",
+        "ae9": "Im Grunde neige ich zu dem Gefühl, gescheitert zu sein.",
+        "ae10": "Ich habe eine positive Einstellung zu mir selbst."
+      }
+    },
+    "locus": {
+      "title": "Test zur Kontrollüberzeugung",
+      "tagline": "Wer steuert dein Leben: du oder der Zufall?",
+      "description": "Der Klassiker von Rotter: Führst du das, was dir passiert, auf deine eigene Anstrengung zurück oder auf Glück, Beziehungen und das System? Eine interne Kontrollüberzeugung sagt vieles vorher, vom Gehalt bis zur Gesundheit — auf die Spitze getrieben heißt sie allerdings, dir sogar den Regen anzukreiden.",
+      "sources": {
+        "0": "Das ursprüngliche Konstrukt: interne vs. externe Erwartungen über die Kontrolle von Verstärkung",
+        "1": "Metaanalyse zur Arbeitswelt: interne Kontrollüberzeugung geht mit mehr Zufriedenheit und besserer Leistung einher",
+        "2": "Transkulturelle Metaanalyse: der Zusammenhang von Kontrollüberzeugung, Angst und Depression über Länder hinweg"
+      },
+      "items": {
+        "lc1": "Was ich erreiche, hängt vor allem von meiner eigenen Anstrengung ab.",
+        "lc2": "Ein großer Teil meines Lebens wird von Dingen entschieden, die ich nicht kontrolliere.",
+        "lc3": "Wenn etwas schiefgeht, schaue ich, was ich selbst anders hätte machen können.",
+        "lc4": "Erfolg ist vor allem eine Frage von Glück und Beziehungen.",
+        "lc5": "Meine Zukunft baue ich mit meinen eigenen Entscheidungen.",
+        "lc6": "Egal was ich tue: Was passieren soll, passiert sowieso.",
+        "lc7": "Wenn ich mich gründlich vorbereite, kommen die Ergebnisse irgendwann.",
+        "lc8": "Pläne gehen selten auf, weil die Welt unberechenbar ist."
+      }
+    }
+  },
+  "insights": {
+    "ejecutor": {
+      "title": "Umsetzungsmaschine",
+      "body": "Deine Gewissenhaftigkeit ist sehr hoch. Es ist das Merkmal, das schulische und berufliche Leistung am besten vorhersagt: Du beendest, was du anfängst, und andere merken das."
+    },
+    "roca": {
+      "title": "Nervensystem aus Beton",
+      "body": "Deine emotionale Stabilität ist ein unfairer Vorteil: Wo andere grübeln, schläfst du. Achtung: Sie kann dazu führen, dass du den Stress der anderen unterschätzt."
+    },
+    "explorador": {
+      "title": "Forschender Verstand",
+      "body": "Hohe Offenheit: Ideen, Ästhetik, Neugier. Du gehörst zu den Menschen, die Welten verbinden, die vorher nichts miteinander zu tun hatten."
+    },
+    "amable-con-limites": {
+      "title": "Freundlich, aber kein Fußabtreter",
+      "body": "Eine seltene Kombination: Menschen sind dir wichtig, aber du brauchst ihre Zustimmung nicht. Das ist das Profil guter, nahbarer Führung."
+    },
+    "voz-propia": {
+      "title": "Eine eigene Stimme",
+      "body": "Du sagst, was du denkst, und stehst für dich ein. Verhandeln, Grenzen setzen und einfordern, was du wert bist, fällt dir leichter als den meisten."
+    },
+    "pegamento": {
+      "title": "Sozialer Klebstoff",
+      "body": "Extraversion und Wärme zugleich: Du gehörst zu den Menschen, durch die eine Gruppe überhaupt existiert. Pläne werden Wirklichkeit, weil du sie anschiebst."
+    },
+    "manos-limpias": {
+      "title": "Saubere Hände",
+      "body": "Du punktest extrem niedrig bei Manipulation und Kälte. Auf dich kann man sich verlassen — und auf lange Sicht verzinst sich dieser Ruf wie ein Sparbuch."
+    },
+    "creativo-que-entrega": {
+      "title": "Kreativität, die liefert",
+      "body": "Ideen und Disziplin zugleich: die seltenste und bestbezahlte Kombination. Die meisten haben nur eins von beidem."
+    },
+    "procrastinador": {
+      "title": "Chronische Aufschieberei",
+      "body": "Niedrige Gewissenhaftigkeit: Dein Gegner ist nicht dein Können, sondern die letzte Minute. Externe Systeme (öffentliche Deadlines, Zusagen an andere) bringen dir mehr als Willenskraft."
+    },
+    "rumiante": {
+      "title": "Grübelschleife",
+      "body": "Hoher Neurotizismus: Dein Kopf verstärkt Bedrohungen und spielt Szenen in Dauerschleife. Das ist keine Schwäche — aber ohne mentale Hygiene (Bewegung, Schlaf, Schreiben) stellt es dir Zinsen in Rechnung."
+    },
+    "mal-negociador": {
+      "title": "Verhandeln wird dich Geld kosten",
+      "body": "Sehr verträglich und wenig durchsetzungsstark: das Profil, das das erste Gehaltsangebot annimmt und jahrelang zu wenig verdient. Bereite Verhandlungen schriftlich und mit Zahlen vor: Das gleicht den Bias aus."
+    },
+    "galeria": {
+      "title": "Du lebst fürs Publikum",
+      "body": "Hohes Gefallenwollen: Du sagst ja, um niemanden zu enttäuschen, und enttäuschst am Ende dich selbst. Jedes «Ja» zu dem, was du nicht willst, ist ein «Nein» zu etwas, das du wolltest."
+    },
+    "conflicto-podrido": {
+      "title": "Konflikte, die vor sich hin gären",
+      "body": "Du weichst dem Streit aus, nimmst ihn aber mit nach Hause: Der Konflikt verschwindet nicht, er gärt. Ein unangenehmes Zehn-Minuten-Gespräch ist meistens billiger als drei Wochen Grübeln."
+    },
+    "reputacion": {
+      "title": "Dein Ruf steht auf dem Spiel",
+      "body": "Berechnend und wenig kooperativ: Kurzfristig gewinnst du Runden; langfristig gleichen die Leute ihre Notizen ab. Wiederholte Spiele bestrafen dieses Profil."
+    },
+    "aplauso": {
+      "title": "Hunger nach Applaus",
+      "body": "Hoher Narzissmus: Mit Publikum läufst du zur Höchstform auf, aber Kritik trifft dich härter, als du zugibst, und du kannst Aufmerksamkeit mit Zuneigung verwechseln."
+    },
+    "frio": {
+      "title": "Eine Spur zu kalt",
+      "body": "Du punktest hoch bei emotionaler Härte. In Krisen nützlich, in Beziehungen teuer: Brücken, die schnell brennen, brauchen Jahre zum Wiederaufbau."
+    },
+    "confort-blindado": {
+      "title": "Gepanzerte Komfortzone",
+      "body": "Niedrige Offenheit: Das Vertraute funktioniert für dich, aber die Welt wechselt jedes Jahrzehnt das Fundament. Plane Neues in kleinen Dosen ein — ein Buch, eine Reise, ein Werkzeug — bevor du es brauchst."
+    },
+    "libro-abierto": {
+      "title": "Wie aus dem Lehrbuch",
+      "body": "Hohe Offenheit und kultureller Progressivismus: die am besten replizierte Korrelation zwischen Persönlichkeit und Politik (r≈0,4). Dein Profil erfüllt sie bis aufs Komma."
+    },
+    "contracorriente": {
+      "title": "Gegen den Strom",
+      "body": "Hohe Offenheit mit traditionellen Werten: statistisch selten. Du erkundest gern neue Ideen… nur um am Ende die alten mit besseren Argumenten zu verteidigen."
+    },
+    "orden-total": {
+      "title": "Ordnung, innen wie außen",
+      "body": "Persönliche Disziplin und eine Vorliebe für soziale Ordnung gehen meistens zusammen — dein Profil ist der Lehrbuchfall."
+    },
+    "artista-ansioso": {
+      "title": "Ängstliche Kreativität",
+      "body": "Offenheit + Neurotizismus: das klassische Künstlerprofil. Dieselbe Empfindsamkeit, die dich leiden lässt, lässt dich sehen, was andere übersehen."
+    },
+    "izquierda-tradicional": {
+      "title": "Traditionelle Linke",
+      "body": "Wirtschaftliche Umverteilung mit traditionellen Werten: das klassische Arbeitermilieu. Heute vertritt kaum eine Partei diesen Quadranten — deshalb findest du politisch so schwer ein Zuhause."
+    },
+    "liberal-clasico": {
+      "title": "Liberal wie aus dem Lehrbuch",
+      "body": "Freier Markt und freies Leben: völlige Kohärenz zwischen deiner Wirtschafts- und deiner Autoritätsachse. Der Staat: je weiter weg, desto besser — und zwar bei allem."
+    },
+    "libertario-izq": {
+      "title": "Linkslibertär",
+      "body": "Wirtschaftliche Gleichheit ohne starken Staat: die anarchistische Tradition. Du misstraust dem Chef und dem Minister zu gleichen Teilen."
+    },
+    "eco-mercado": {
+      "title": "Grün mit Marktvertrauen",
+      "body": "Pro Markt und pro Klima zugleich: ein seltener Vogel. Deine Lieblingslösung fängt vermutlich mit «einen Preis auf CO₂» an."
+    },
+    "batallas-elegidas": {
+      "title": "Du wählst deine Kämpfe",
+      "body": "Du kannst dich hinstellen, verabscheust aber den Streit: kein Widerspruch, sondern Ökonomie. Du hebst dir dein Durchsetzungsvermögen für das auf, was wirklich zählt."
+    },
+    "estratega-que-gusta": {
+      "title": "Taktisch und trotzdem auf Zuneigung angewiesen",
+      "body": "Du planst deine Züge… und brauchst gleichzeitig, dass man dich mag. Diese innere Spannung erklärt mehr deiner Entscheidungen, als du denkst."
+    },
+    "fe-progresista": {
+      "title": "Progressiver Glaube",
+      "body": "Hohe Religiosität mit progressiver Kultur: eine seltene und faszinierende Kombination. Dein moralischer Kompass kommt aus dem Glauben; deine Schlüsse aus dem 21. Jahrhundert."
+    },
+    "montana-rusa": {
+      "title": "Soziale Achterbahn",
+      "body": "Sehr gesellig und sehr reaktiv: Die epischen Nächte und die Tiefs am Tag danach sind zwei Seiten derselben Medaille."
+    },
+    "ermitano-curioso": {
+      "title": "Innenweltforschung",
+      "body": "Introvertiert und sehr offen: Du reist mehr nach innen als nach außen. Bücher, Ideen und eigene Projekte geben dir das, was anderen die Party gibt."
+    },
+    "moral-binding": {
+      "title": "Gruppenmoral",
+      "body": "Loyalität, Autorität und Reinheit wiegen bei dir schwerer als individuelle Fürsorge. Das ist die klassische konservative Moralsignatur: die Gruppe, die Ordnung und das Heilige vor dem Einzelfall."
+    },
+    "moral-individual": {
+      "title": "Individualmoral",
+      "body": "Du baust deine Moral fast ausschließlich auf Fürsorge und Gerechtigkeit. Die progressive Signatur wie aus dem Lehrbuch — und sie erklärt, warum Argumente aus Loyalität, Autorität oder Reinheit für dich nach Ausrede klingen."
+    },
+    "libertad-primero": {
+      "title": "Sag mir nicht, wie ich leben soll",
+      "body": "Freiheit ist dein dominantes moralisches Fundament, und Autorität sagt dir gar nichts. Ein rein libertäres Profil: Es geht nicht um links oder rechts, du erträgst es schlicht nicht, dass man dir Vorschriften macht."
+    },
+    "brujula-firme": {
+      "title": "Fester Kompass",
+      "body": "Hohe Ehrlichkeit und niedriger Machiavellismus: Du spielst nicht schmutzig, nicht einmal wenn du könntest. Es ist das Merkmal, das ethisches Verhalten am besten vorhersagt — kurzfristig teuer, langfristig die beste Anlage."
+    },
+    "tentacion": {
+      "title": "Versuchung am Horizont",
+      "body": "Wenig Skrupel und Hunger nach Status: genau die Kombination, die die Forschung damit verbindet, Regeln zu brechen, wenn niemand hinsieht. Zieh dir selbst die Bremse ein, denn die Situation tut es nicht."
+    },
+    "apego-seguro": {
+      "title": "Sichere Bindung",
+      "body": "Wenig Angst und wenig Vermeidung: Du gehst ohne Furcht auf Menschen zu und trennst dich ohne Drama. Es ist der Stil von rund der Hälfte aller Menschen und der beste Prädiktor für lange, stabile Beziehungen."
+    },
+    "apego-ansioso": {
+      "title": "Ängstliche Bindung",
+      "body": "Du gehst sehr nah heran und fürchtest das Verlassenwerden. Du neigst dazu, Schweigen als Gefahrensignal zu lesen und Rückversicherung zu suchen. Schon zu wissen, dass die Alarmanlage zu empfindlich eingestellt ist, verändert, wie du sie deutest."
+    },
+    "apego-evitativo": {
+      "title": "Vermeidende Bindung",
+      "body": "Du ziehst Unabhängigkeit der Nähe vor und schaltest dein Bedürfnis nach anderen ab. Das funktioniert gut, bis dir jemand wirklich etwas bedeutet: Dann schützt Distanz nicht mehr."
+    },
+    "apego-temeroso": {
+      "title": "Ängstlich-vermeidende Bindung",
+      "body": "Du willst Nähe und fürchtest sie zugleich: das anstrengendste der vier Muster, weil beide Systeme in entgegengesetzte Richtungen ziehen. Es ist auch das Muster, das am meisten von Therapie profitiert."
+    },
+    "ansiedad-y-complacencia": {
+      "title": "Angst, die sich als Freundlichkeit tarnt",
+      "body": "Bindungsangst und Gefallenwollen gehen bei dir zusammen: Du sagst ja, damit niemand geht. Der Preis ist eine Beziehung, die auf einer Version von dir ruht, die nicht du bist."
+    },
+    "motor-logro": {
+      "title": "Leistungsmotor",
+      "body": "Ehrgeiz und Disziplin ziehen an einem Strang: Du willst zeigen, was du kannst, und hast obendrein die Gewohnheiten dafür. Das ist das Hochleistungsprofil; das Risiko ist, nicht zu wissen, wann Schluss ist."
+    },
+    "hedonista-explorador": {
+      "title": "Leben im Erkundungsmodus",
+      "body": "Genuss und Neues vor Sicherheit: Du sammelst Erfahrungen, keine Stabilität. Mit dreißig brillant; mit fünfzig lohnt ein Kassensturz."
+    },
+    "ancla-seguridad": {
+      "title": "Anker geworfen",
+      "body": "Hohe Sicherheit und Konformität bei wenig Durst nach Neuem: Du schätzt es, wenn Dinge planbar sind. Das gibt dir ein festes Fundament — und macht es dir schwerer als anderen, Veränderungen zu nutzen."
+    },
+    "universalista": {
+      "title": "Weiter Moralkreis",
+      "body": "Hoher Universalismus und hohes Wohlwollen: Deine Sorge hört nicht bei den eigenen Leuten auf. Das ist das Profil derer, die in kollektiven Anliegen landen — und die ohne Grenzen ausbrennen."
+    },
+    "poder-sin-frenos": {
+      "title": "Macht ohne Gegengewicht",
+      "body": "Hoher Status, niedriges Wohlwollen und gerade so ausreichende Ehrlichkeit. Es ist die Wertetriade, die die Forschung mit Entscheidungen verbindet, die einem selbst auf Kosten der Gruppe nützen."
+    },
+    "valores-vs-politica": {
+      "title": "Innere Spannung",
+      "body": "Du hältst Chancengleichheit für sehr wichtig und verteidigst gleichzeitig marktwirtschaftliche Positionen. Nicht widersprüchlich — ganze Traditionen leben dort — aber eine Spannung, die du früher oder später auflösen musst."
+    },
+    "cuidado-sin-limites": {
+      "title": "Du sorgst für alle außer für dich",
+      "body": "Sehr hohe moralische Fürsorge bei niedrigem Durchsetzungsvermögen: Du saugst das Leid anderer auf und ziehst nie die Reißleine. Empathie-Burnout ist kein Mythos, und das hier ist genau das Profil."
+    },
+    "termostato": {
+      "title": "Innerer Thermostat",
+      "body": "Hohe Emotionsregulation auf ruhiger Grundlinie: Es ist nicht so, dass du nichts fühlst — du bekommst nur schnell wieder die Kontrolle. Diese Kombination federt fast jede schlechte Woche ab."
+    },
+    "piloto-a-ciegas": {
+      "title": "Blindflug",
+      "body": "Viel emotionale Turbulenz und wenig Sicht auf das, was du fühlst: Du merkst es erst, wenn es schon explodiert ist. Dem, was du spürst, einen Namen zu geben — Wut? Müdigkeit? Angst? — ist die halbe Miete."
+    },
+    "lector-estratega": {
+      "title": "Menschenkenntnis mit Hintergedanken",
+      "body": "Du liest Menschen präzise und kalkulierst dabei: Überzeugungskraft auf Expertenniveau. Die Grenze zwischen Charisma und Manipulation liegt allein darin, wofür du es einsetzt."
+    },
+    "corazon-sin-radar": {
+      "title": "Herz ohne Radar",
+      "body": "Menschen sind dir wirklich wichtig, aber du liest nicht immer, wie es ihnen geht: tadellose Absicht, mäßige Treffsicherheit. Die Frage «und wie geht es dir damit?» ersetzt das fehlende Radar."
+    },
+    "pegamento-social": {
+      "title": "Sozialer Klebstoff",
+      "body": "Hoher verbindender Humor plus soziale Energie: Du bist der Grund, warum die Gruppe zusammenkommt. Diese Rolle hält Freundschaften jahrzehntelang am Leben — und sie ermüdet auch; erlaube dir, manchmal nicht die Show zu sein."
+    },
+    "escudo-de-risa": {
+      "title": "Lachen als Rüstung",
+      "body": "Dein Nervensystem geht schnell hoch, aber dein selbststärkender Humor federt das ab: über den Schlamassel lachen ist deine hausgemachte Emotionsregulation. Es ist eine der am besten belegten Strategien — mach weiter so."
+    },
+    "filo-que-corta": {
+      "title": "Eine Schärfe, die schneidet",
+      "body": "Aggressiver Humor mit emotionaler Härte dahinter: Deine Witze haben Opfer, und du weißt das. Heute lustig, morgen die soziale Rechnung — Leute merken sich, wer sie klein gemacht hat."
+    },
+    "payaso-triste": {
+      "title": "Der traurige Clown",
+      "body": "Du machst dich lächerlich, damit die Gruppe dich akzeptiert, und dein Selbstwert fängt an, es zu glauben. Selbstkritik im Witzformat bleibt Selbstkritik: Das Publikum lacht, du machst dir Notizen."
+    },
+    "critico-interno": {
+      "title": "Die Kritik macht keine Pause",
+      "body": "Sehr niedriger Selbstwert: Die Stimme, die dich bewertet, ist härter zu dir als zu allen anderen. Das ist kein Persönlichkeitsmerkmal, das ist eine offene Baustelle — und eines der Dinge, die am besten darauf reagieren, wenn man daran arbeitet."
+    },
+    "ego-blindado": {
+      "title": "Ego mit Panzerung",
+      "body": "Hoher Selbstwert UND Hunger nach Bewunderung: echte Sicherheit mit Appetit auf Bühne. Das funktioniert, bis jemand nicht klatscht; dann zeigt sich, woraus das Fundament gebaut ist."
+    },
+    "timon-propio": {
+      "title": "Hände am Steuer",
+      "body": "Du glaubst, dass dein Leben von dir abhängt, und lieferst außerdem: das Nächste, was es an einer Garantie gibt. Das Restrisiko: dir auch das anzukreiden, was wirklich nicht deins war."
+    },
+    "espectador": {
+      "title": "Zuschauerrolle im eigenen Leben",
+      "body": "Du glaubst, dass fast nichts von dir abhängt, und forderst auch nichts ein: die perfekte selbsterfüllende Prophezeiung. Fang mikroskopisch an: eine Sache diese Woche, die nur von dir abhängt, und schau ihr beim Gelingen zu."
+    },
+    "motor-exigente": {
+      "title": "Motor ohne Federung",
+      "body": "Du glaubst, dass alles von dir abhängt, traust dir aber nichts zu: maximale Verantwortung, minimales Zutrauen. Dieses Profil fordert sich am meisten ab und verzeiht sich am wenigsten — prüf mal, wie du die Schuld verteilst."
+    }
+  },
+  "archetypes": {
+    "traditionalSuffix": "{name}, traditionell",
+    "political": {
+      "libertario-izq": {
+        "name": "Linkslibertär",
+        "description": "Gleichheit ohne starken Staat."
+      },
+      "socialdemocrata": {
+        "name": "Sozialdemokratisch",
+        "description": "Umverteilung innerhalb des Systems."
+      },
+      "socialismo-orden": {
+        "name": "Ordnungssozialismus",
+        "description": "Wirtschaftliche Gleichheit mit starkem Staat."
+      },
+      "centrista-libertario": {
+        "name": "Libertäre Mitte",
+        "description": "Wirtschaftlich moderat, eifersüchtig auf die Freiheit."
+      },
+      "centrista": {
+        "name": "Mitte",
+        "description": "Ausgewogen in fast allem — oder strategisch unentschieden."
+      },
+      "centrista-orden": {
+        "name": "Ordnungsmitte",
+        "description": "Wirtschaftlich moderat, fest bei der Autorität."
+      },
+      "liberal-clasico": {
+        "name": "Klassisch liberal",
+        "description": "Freier Markt und freies Leben."
+      },
+      "liberal": {
+        "name": "Liberal",
+        "description": "Markt zuerst, pragmatisch beim Rest."
+      },
+      "conservador-orden": {
+        "name": "Ordnungskonservativ",
+        "description": "Markt, Autorität und Hierarchie."
+      }
+    },
+    "dark": {
+      "t1": {
+        "name": "Reine Seele",
+        "description": "Dein innerer Bösewicht ist vor Langeweile gestorben."
+      },
+      "t2": {
+        "name": "Schlitzohr von nebenan",
+        "description": "Bosheiten für den Hausgebrauch: nichts, was nicht verjährt."
+      },
+      "t3": {
+        "name": "Graue Eminenz",
+        "description": "Du weißt, wie man schmutzig spielt. Du lässt es… meistens."
+      },
+      "t4": {
+        "name": "Antiheld-Material",
+        "description": "Charisma, Kalkül und wenig Reue. Pass da draußen auf."
+      },
+      "t5": {
+        "name": "Kinoreife Bosheit",
+        "description": "Dir fehlt nur noch der Schlussmonolog und eine weiße Katze."
+      }
+    },
+    "pusilanime": {
+      "t1": {
+        "name": "Dampfwalze",
+        "description": "Duckmäuserisch — also das bist du wirklich nicht."
+      },
+      "t2": {
+        "name": "Fest und höflich",
+        "description": "Du stehst für dich ein, ohne den Tisch umzuwerfen. Gesunde Balance."
+      },
+      "t3": {
+        "name": "Chronisch diplomatisch",
+        "description": "Du gibst öfter nach, als du zugeben möchtest."
+      },
+      "t4": {
+        "name": "Höflich überrollt",
+        "description": "Du sagst «Ja» mit dem Mund und «Nein» mit der Seele."
+      },
+      "t5": {
+        "name": "Fußmatte mit WLAN",
+        "description": "Sogar die Türsprechanlage wird laut mit dir. Zeit für einen Notfallplan."
+      }
+    },
+    "attachment": {
+      "seguro": {
+        "name": "Sicher",
+        "description": "Du gehst ohne Furcht auf Menschen zu und trennst dich ohne Drama."
+      },
+      "ansioso": {
+        "name": "Ängstlich-verstrickt",
+        "description": "Du willst Nähe und fürchtest, sie zu verlieren."
+      },
+      "evitativo": {
+        "name": "Abweisend-vermeidend",
+        "description": "Unabhängigkeit vor Nähe."
+      },
+      "temeroso": {
+        "name": "Ängstlich-vermeidend",
+        "description": "Du willst Nähe und fürchtest sie zugleich."
+      }
+    },
+    "moral": {
+      "individualizante": {
+        "name": "Individualisierende Moral",
+        "description": "Fürsorge und Gerechtigkeit über allem."
+      },
+      "vinculante": {
+        "name": "Bindende Moral",
+        "description": "Gruppe, Ordnung und das Heilige als Fundament."
+      },
+      "equilibrada": {
+        "name": "Ausgewogene Moral",
+        "description": "Du nutzt alle sechs Fundamente ungefähr gleich stark."
+      },
+      "libertaria": {
+        "name": "Libertäre Moral",
+        "description": "Freiheit über allen anderen Fundamenten."
+      }
+    },
+    "autoestima": {
+      "t1": {
+        "name": "Unerbittliche Selbstkritik",
+        "description": "Die innere Stimme geht an die Kehle. Priorität eins: ihr das Gehalt kürzen."
+      },
+      "t2": {
+        "name": "Fundament in Reparatur",
+        "description": "Du hältst dich aufrecht, aber es kostet mehr, als es sollte."
+      },
+      "t3": {
+        "name": "Stabil mit Rissen",
+        "description": "Gute Tage — und Tage vor dem Schnellgericht."
+      },
+      "t4": {
+        "name": "Fester Boden",
+        "description": "Du behandelst dich wie jemanden, der dir wirklich wichtig ist."
+      },
+      "t5": {
+        "name": "Grundgestein",
+        "description": "Selbstwert, der jede Pechsträhne aushält. Pass nur auf, dass daraus keine Taubheit wird."
+      }
+    },
+    "locus": {
+      "t1": {
+        "name": "Blatt im Wind",
+        "description": "Du hast das Gefühl, andere entscheiden: der Zufall, das System, alle übrigen."
+      },
+      "t2": {
+        "name": "Mehr Segel als Ruder",
+        "description": "Du glaubst, dein Einsatz zählt wenig; meistens wartest du ab."
+      },
+      "t3": {
+        "name": "Unentschieden gegen das Schicksal",
+        "description": "Halb Anstrengung, halb Glück: kommt auf den Tag an."
+      },
+      "t4": {
+        "name": "Hand am Ruder",
+        "description": "Was dir passiert, trägt deine Handschrift, und du handelst danach."
+      },
+      "t5": {
+        "name": "Alles am Steuer",
+        "description": "Alles hängt von dir ab: das Gute und auch das, was nie deins war. Verteil das besser."
+      }
+    }
+  },
+  "studies": {
+    "title": "Die Forschung dahinter",
+    "subtitle": "Jeder Test von Psique stützt sich auf Instrumente, die in Fachzeitschriften mit Peer Review veröffentlicht wurden. Hier sind sie alle, mit Link zum Originalartikel und zu Google Scholar, falls der DOI hinter einer Bezahlschranke liegt.",
+    "count": "{studies} Quellen · {tests} Tests",
+    "caveatTitle": "Ehrlichkeit vorweg:",
+    "caveatBody": "Psique ist keine validierte Adaption dieser Instrumente. Die Items sind in Alltagssprache neu formuliert und gekürzt, die Vergleichsstichprobe ist für keine Population repräsentativ, und die Ergebnisse sind keine Diagnose. Was echt ist: Die Merkmalsstruktur und die Zusammenhänge zwischen den Merkmalen stammen aus dieser Literatur, nicht aus dem Nichts.",
+    "goToTest": "Zum Test →",
+    "doi": "DOI",
+    "source": "Quelle",
+    "scholar": "Scholar",
+    "homeTitle": "Das hier ist kein Horoskop",
+    "homeBody": "Alle 8 Tests stützen sich auf veröffentlichte, peer-reviewte Instrumente: Goldberg, Schwartz, Haidt, Paulhus, Ashton & Lee… Jeder Test verlinkt seine Quellen, und hier sind sie alle zusammen.",
+    "homeCta": "Zur Forschung"
+  },
+  "evolution": {
+    "title": "Deine Entwicklung",
+    "subtitle": "{traits} Merkmale seit {since} mehr als einmal gemessen.",
+    "emptyTitle": "Noch keine Entwicklung zu zeigen",
+    "emptyBody": "Wir speichern jeden Versuch mit Datum, also siehst du hier, wie du dich bewegt hast, sobald du einen Test wiederholst. Lass ein paar Monate vergehen: Dann verändert sich wirklich etwas.",
+    "emptyCta": "Die Tests ansehen",
+    "chartTitle": "Die {count} Merkmale mit der größten Bewegung",
+    "chartSubtitle": "Jeder Punkt ist ein Test, den du an diesem Tag gemacht hast.",
+    "changesTitle": "Was sich verändert hat",
+    "changesSubtitle": "Verglichen mit dem ersten Mal, als du es gemessen hast.",
+    "changesNone": "Bisher bleibt alles stabil: Kein Merkmal hat sich um mehr als 5 Punkte bewegt.",
+    "measurements": "{count} Messungen",
+    "stable": "stabil",
+    "fromTo": "Von {from} auf {to} — du hast dich Richtung {pole} bewegt."
+  },
+  "share": {
+    "title": "Das ist das Profil dieser Person",
+    "titleNamed": "Das Profil von {name}",
+    "subtitle": "Basierend auf {traits} Merkmalen, gemessen mit veröffentlichten Instrumenten.",
+    "metaTitle": "Ein Profil auf Psique",
+    "metaTitleNamed": "Das Profil von {name} auf Psique",
+    "metaDescription": "Politisches Spektrum auf 6 Achsen, Persönlichkeit, dunkle Seite und mehr. Hol dir dein eigenes, kostenlos.",
+    "labelPolitical": "Politischer Archetyp",
+    "labelEsteem": "Selbstwert · {score}/100",
+    "labelEsteemShort": "Selbstwert",
+    "labelAttachment": "Bindungsstil",
+    "labelDark": "Bösewicht-Level · {score}/100",
+    "labelDarkShort": "Bösewicht-Level",
+    "labelPusilanime": "Duckmäuser-Level · {score}/100",
+    "labelMoral": "Moralprofil",
+    "labelLocus": "Kontrollüberzeugung · {score}/100",
+    "moralTop": "Das dominante Fundament dieser Person: {trait}",
+    "ctaTitle": "Und was bist du?",
+    "ctaBody": "12 Tests, 46 Merkmale und 60 Insights, die sich gegenseitig kreuzen. Kostenlos und mit offen liegenden Quellen.",
+    "ctaButton": "Erstell dein Profil auf {brand}"
+  },
+  "account": {
+    "title": "Dein Konto",
+    "shareTitle": "Dein Profil teilen",
+    "shareBody": "Erzeuge einen öffentlichen Link mit deinen Archetypen — nicht mit deinen Antworten. Du kannst ihn jederzeit widerrufen, und der Link funktioniert sofort nicht mehr.",
+    "shareEnable": "Meinen öffentlichen Link aktivieren",
+    "sharePolitics": "Auch meinen politischen Archetyp einschließen",
+    "sharePoliticsHint": "Deine politische Haltung ist ein besonders geschütztes Datum, deshalb bekommt sie ein eigenes Häkchen und ist standardmäßig aus.",
+    "sharePoliticsMissing": "Du musst erst den Test zum politischen Spektrum machen, bevor du ihn teilen kannst.",
+    "copy": "Kopieren",
+    "copied": "Kopiert!",
+    "saveError": "Wir konnten die Änderung nicht speichern. Versuch es noch einmal.",
+    "dataTitle": "Deine Daten",
+    "dataBody": "Alles, was wir von dir speichern: dein Profil, jeden Versuch und die Rohantworten.",
+    "exportButton": "Meine Daten herunterladen (JSON)",
+    "deleteTitle": "Konto löschen",
+    "deleteBody": "Alles wird gelöscht: Profil, Versuche und Antworten. Sofort und ohne Weg zurück.",
+    "deleteButton": "Ich möchte mein Konto löschen",
+    "deleteConfirm": "Tippe {keyword} zur Bestätigung.",
+    "deleteKeyword": "LÖSCHEN",
+    "deleteFinal": "Endgültig löschen",
+    "deleteLoading": "Wird gelöscht…",
+    "deleteError": "Wir konnten das Konto nicht löschen. Melde dich neu an und versuch es erneut.",
+    "cancel": "Abbrechen"
+  }
+}

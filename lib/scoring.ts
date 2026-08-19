@@ -24,14 +24,14 @@ export function scoreTest(test: TestDefinition, answers: Answers): Scores {
   // Validation: every item answered, valid Likert values, no extras.
   for (const item of test.items) {
     const v = answers[item.id];
-    if (v === undefined) throw new ScoringError(`Falta la respuesta al ítem ${item.id}`);
+    if (v === undefined) throw new ScoringError(`Missing answer for item ${item.id}`);
     if (!Number.isInteger(v) || v < LIKERT_MIN || v > LIKERT_MAX) {
-      throw new ScoringError(`Respuesta inválida en ${item.id}: ${v}`);
+      throw new ScoringError(`Invalid answer for ${item.id}: ${v}`);
     }
   }
   const known = new Set(test.items.map((i) => i.id));
   for (const key of Object.keys(answers)) {
-    if (!known.has(key)) throw new ScoringError(`Ítem desconocido: ${key}`);
+    if (!known.has(key)) throw new ScoringError(`Unknown item: ${key}`);
   }
 
   const scores: Scores = {};

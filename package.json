@@ -27,6 +27,7 @@
     "prisma:seed": "npx prisma db seed",
     "prisma:migrate": "npx prisma migrate dev",
     "kill-ports": "lsof -ti:3000 | xargs kill -9",
+    "gitnexus:analyze": "node .gitnexus/run.cjs analyze 2>/dev/null || npx gitnexus analyze",
     "prepare": "husky"
   },
   "dependencies": {

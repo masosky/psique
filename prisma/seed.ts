@@ -198,10 +198,10 @@ const APELLIDOS = [
 ];
 
 async function main() {
-  console.log("Purgando seeds anteriores…");
+  console.log("Purging previous seeds…");
   await prisma.user.deleteMany({ where: { isSeed: true } });
 
-  console.log(`Generando ${N_USERS} perfiles sintéticos…`);
+  console.log(`Generating ${N_USERS} synthetic profiles…`);
   const users = Array.from({ length: N_USERS }, (_, i) => ({
     id: `seed_${String(i).padStart(4, "0")}`,
     name: `${NOMBRES[Math.floor(rand() * NOMBRES.length)]} ${APELLIDOS[Math.floor(rand() * APELLIDOS.length)]}`,
@@ -232,12 +232,12 @@ async function main() {
     }
   }
 
-  console.log(`Insertando ${scores.length} puntuaciones…`);
+  console.log(`Inserting ${scores.length} scores…`);
   for (let i = 0; i < scores.length; i += 2000) {
     await prisma.traitScore.createMany({ data: scores.slice(i, i + 2000) });
   }
 
-  console.log("Seed completado ✔");
+  console.log("Seed complete ✔");
 }
 
 main()

@@ -3,7 +3,18 @@
 import { useLocale, useTranslations } from "next-intl";
 import { usePathname, useRouter, routing, type Locale } from "@/i18n/routing";
 
-const LABEL: Record<Locale, string> = { es: "Español", en: "English" };
+// Each language named in itself — a reader looking for their own language
+// recognises "Deutsch" far faster than "Alemán".
+const LABEL: Record<Locale, string> = {
+  es: "Español",
+  en: "English",
+  ca: "Català",
+  pt: "Português",
+  fr: "Français",
+  it: "Italiano",
+  de: "Deutsch",
+  ru: "Русский",
+};
 
 export function LocaleSwitcher() {
   const locale = useLocale() as Locale;

@@ -1,0 +1,1304 @@
+{
+  "meta": {
+    "title": "Psique — Coneix-te de debò",
+    "description": "Tests de personalitat, espectre polític multidimensional, tríada fosca i molt més. Cada test omple el teu perfil; el teu perfil et retorna insights i correlacions.",
+    "disclaimer": "Psique és una eina d'autoconeixement i entreteniment. Cap resultat no és un diagnòstic clínic ni un consell professional.",
+    "tagline": "Coneix-te de debò."
+  },
+  "nav": {
+    "tests": "Tests",
+    "profile": "Perfil",
+    "insights": "Insights",
+    "login": "Entra",
+    "signup": "Crea un compte",
+    "logout": "Surt",
+    "language": "Idioma",
+    "studies": "Estudis",
+    "evolution": "Evolució",
+    "account": "Compte"
+  },
+  "home": {
+    "eyebrow": "El test que no et fa la gara-gara",
+    "title": "Coneix-te",
+    "titleEmphasis": "de debò",
+    "subtitle": "El teu espectre polític en 6 dimensions. La teva personalitat científica. El teu vilà interior. El teu nivell de pusil·lanimitat. Cada test omple el teu perfil — i el teu perfil t'explica què t'espera: el bo, el dolent i el rar.",
+    "ctaProfile": "Ves al meu perfil",
+    "ctaSignup": "Crea un compte gratis",
+    "ctaTests": "Mira els tests",
+    "statTests": "tests",
+    "statTraits": "trets mesurats",
+    "statInsights": "insights per desbloquejar",
+    "statQuestions": "preguntes",
+    "testsHeading": "Els tests",
+    "testMeta": "{items} preguntes · {minutes} min · mesura {traits} trets",
+    "howHeading": "Com funciona",
+    "how1Title": "Fes tests",
+    "how1Body": "Curts, directes i sense preguntes trampa. Cadascun mesura trets concrets d'un espai comú de {traits} dimensions.",
+    "how2Title": "El teu perfil s'omple",
+    "how2Body": "Brúixola política en 2D i 3D, radar de personalitat, nivell de vilà… El teu perfil creix amb cada test.",
+    "how3Title": "Descobreix què implica",
+    "how3Body": "Fortaleses, riscos i curiositats de la teva combinació de trets, i com et compares amb la resta de la comunitat."
+  },
+  "auth": {
+    "loginTitle": "Entra",
+    "loginSubtitle": "La teva psique t'estava esperant.",
+    "signupTitle": "Crea un compte",
+    "signupSubtitle": "Gratis. Les teves respostes són teves: sense tests no hi ha perfil.",
+    "name": "Nom (opcional)",
+    "email": "Correu electrònic",
+    "password": "Contrasenya",
+    "passwordHint": "Contrasenya (mínim 6 caràcters)",
+    "loginButton": "Entra",
+    "loginLoading": "Entrant…",
+    "signupButton": "Crea el compte",
+    "signupLoading": "Creant…",
+    "badCredentials": "Correu o contrasenya incorrectes",
+    "signupFailed": "No s'ha pogut crear el compte",
+    "noAccount": "Encara no tens compte?",
+    "noAccountLink": "Crea'l gratis",
+    "hasAccount": "Ja tens compte?",
+    "hasAccountLink": "Entra",
+    "errInvalidEmail": "Correu no vàlid",
+    "errWeakPassword": "La contrasenya ha de tenir com a mínim 6 caràcters",
+    "errEmailTaken": "Ja hi ha un compte amb aquest correu",
+    "googleButton": "Continua amb Google",
+    "or": "o",
+    "forgotPassword": "Has oblidat la contrasenya?",
+    "backToLogin": "← Torna a iniciar sessió",
+    "resetTitle": "Recupera la contrasenya",
+    "resetSubtitle": "T'enviem un enllaç per crear-ne una de nova. Sense drames.",
+    "resetButton": "Envia l'enllaç",
+    "resetLoading": "Enviant…",
+    "resetSentTitle": "Enllaç enviat",
+    "resetSentBody": "Si {email} té compte, allà hi trobaràs l'enllaç per restablir la contrasenya. Mira també la safata de correu brossa.",
+    "resetFailed": "No hem pogut enviar l'enllaç. Torna-ho a provar.",
+    "errTooManyRequests": "Massa intents. Espera un moment i torna-ho a provar.",
+    "errPopupClosed": "Has tancat la finestra de Google.",
+    "errNetwork": "Problema de connexió. Comprova la teva xarxa.",
+    "errProviderDisabled": "Aquest mètode d'accés no està habilitat.",
+    "errGoogle": "No hem pogut entrar amb Google. Torna-ho a provar.",
+    "errPopupBlocked": "El teu navegador ha bloquejat la finestra de Google. Permet les finestres emergents i torna-ho a provar.",
+    "errAccountExists": "Ja tens un compte amb aquest correu creat amb un altre mètode. Entra amb la teva contrasenya.",
+    "errUnauthorizedDomain": "Aquest domini no està autoritzat per iniciar sessió. Si ets qui l'administra, afegeix-lo a Firebase → Authentication → Settings → Authorized domains.",
+    "errSession": "La teva identitat és correcta, però no hem pogut crear la sessió. Torna-ho a provar d'aquí a un moment."
+  },
+  "testsPage": {
+    "title": "Tests",
+    "subtitleAuthed": "Has mesurat {measured} trets de {total}. Cada test que completis desbloqueja insights nous.",
+    "subtitleAnon": "Crea un compte perquè els teus resultats omplin el teu perfil.",
+    "completed": "Completat ✓",
+    "meta": "{items} preguntes · {minutes} min",
+    "start": "Comença",
+    "repeat": "Repeteix",
+    "sourcesTitle": "D'on surt tot això",
+    "sourcesIntro": "Aquest test es basa en instruments publicats i revisats per parells. No és una adaptació certificada: els ítems estan reescrits en llenguatge quotidià."
+  },
+  "runner": {
+    "progress": "{current} / {total}",
+    "opt1": "Molt en desacord",
+    "opt2": "En desacord",
+    "opt3": "Neutral",
+    "opt4": "D'acord",
+    "opt5": "Molt d'acord",
+    "previous": "← Anterior",
+    "keyboardHint": "Respon amb les tecles 1-5",
+    "submitting": "Calculant el teu perfil…",
+    "submitError": "No s'ha pogut desar el test"
+  },
+  "profile": {
+    "title": "El meu perfil",
+    "titleNamed": "La psique de {name}",
+    "emptyTitle": "El teu perfil està en blanc",
+    "emptyBody": "Fes el teu primer test i comença a omplir-lo. Amb 5 minuts ja tens brúixola política.",
+    "emptyCta": "Comença",
+    "subtitle": "{measured} de {total} trets mesurats · comparat amb {population} perfils",
+    "justCompleted": "{test} completat ✓",
+    "justCompletedBody": "El teu perfil s'ha actualitzat amb {count} trets nous.",
+    "ctaInsights": "Mira els meus insights →",
+    "archetypeLabel": "Arquetip polític",
+    "darkLabel": "Nivell de vilà · {score}/100",
+    "pusiLabel": "Pusil·lanimitat · {score}/100",
+    "compassTitle": "Brúixola política",
+    "compassSubtitle": "Dos eixos al pla, un tercer en color. Canvia'n qualsevol dels tres.",
+    "axesTitle": "Els {count} eixos",
+    "axesSubtitle": "La teva política completa: com més lluny del centre, més marcada la posició.",
+    "allTraitsTitle": "Tots els teus trets",
+    "allTraitsSubtitle": "«P» = percentil: per damunt de quin percentatge de la comunitat estàs.",
+    "lockedTitle": "Et queden {count} insights per desbloquejar",
+    "lockedBody": "Cada test que completes activa regles noves — moltes creuen trets de tests diferents.",
+    "percentileTooltip": "Per damunt del {percentile}% de la comunitat",
+    "attachmentLabel": "Estil d'aferrament",
+    "moralLabel": "Perfil moral",
+    "moralTop": "El teu fonament dominant: {trait}",
+    "esteemLabel": "Autoestima · {score}/100",
+    "locusLabel": "El teu locus de control · {score}/100"
+  },
+  "compass": {
+    "axisX": "Eix X",
+    "axisY": "Eix Y",
+    "color": "Color",
+    "community": "{count} persones de la comunitat",
+    "cloudUnavailable": "Núvol disponible a economia / autoritat / cultura"
+  },
+  "insightsPage": {
+    "title": "Els teus insights",
+    "subtitle": "{active} actius · {locked} bloquejats per tests que no has fet",
+    "emptyTitle": "Encara no hi ha res per analitzar",
+    "emptyBody": "Els insights surten de creuar els teus trets. Fes un test i torna.",
+    "emptyCta": "Fer un test",
+    "extremesTitle": "El que més et separa de la mitjana",
+    "extremesSubtitle": "Sobre {population} perfils de la comunitat.",
+    "extremesBody": "Més {pole} que el {percent}% de la gent",
+    "fortaleza": "El que juga a favor teu",
+    "riesgo": "El que et costarà",
+    "curiosidad": "Raresses de la teva combinació",
+    "correlationsTitle": "🔗 Correlacions de la comunitat",
+    "correlationsSubtitle": "Quins trets van junts en {population} perfils. La r va de -1 (oposats) a +1 (van de bracet).",
+    "colTrait": "Tret",
+    "colRelation": "Relació",
+    "lockedBody": "Hi ha {count} insights esperant que mesuris més trets.",
+    "lockedCta": "Completar el meu perfil"
+  },
+  "categories": {
+    "politica": "Espectre polític",
+    "personalidad": "Personalitat",
+    "oscuro": "Costat fosc",
+    "caracter": "Caràcter",
+    "moral": "Fonaments morals",
+    "valores": "Valors",
+    "vinculos": "Vincles",
+    "habilidades": "Habilitats emocionals",
+    "humor": "Sentit de l'humor"
+  },
+  "traits": {
+    "econ": {
+      "name": "Eix econòmic",
+      "short": "Econòmic",
+      "low": "Igualtat",
+      "high": "Mercat",
+      "description": "Fins a quin punt prefereixes redistribució i intervenció pública (0) davant de lliure mercat i poca intervenció (100)."
+    },
+    "auth": {
+      "name": "Eix d'autoritat",
+      "short": "Autoritat",
+      "low": "Llibertat",
+      "high": "Autoritat",
+      "description": "Fins a quin punt valores la llibertat individual (0) davant de l'ordre i l'autoritat de l'Estat (100)."
+    },
+    "cult": {
+      "name": "Eix cultural",
+      "short": "Cultural",
+      "low": "Progressista",
+      "high": "Tradicional",
+      "description": "La teva postura davant del canvi social: abraçar-lo (0) o protegir les formes de vida establertes (100)."
+    },
+    "glob": {
+      "name": "Eix territorial",
+      "short": "Territorial",
+      "low": "Globalista",
+      "high": "Nacionalista",
+      "description": "Cooperació internacional i identitat global (0) davant de sobirania i interès nacional (100)."
+    },
+    "eco": {
+      "name": "Eix ecològic",
+      "short": "Ecològic",
+      "low": "Ecologista",
+      "high": "Productivista",
+      "description": "Prioritat al medi ambient encara que costi diners (0) davant de creixement primer (100)."
+    },
+    "rel": {
+      "name": "Eix religiós",
+      "short": "Religiós",
+      "low": "Laïcitat",
+      "high": "Religió",
+      "description": "Separació estricta de religió i vida pública (0) davant d'un paper públic de la fe (100)."
+    },
+    "openness": {
+      "name": "Obertura",
+      "short": "Obertura",
+      "low": "Convencional",
+      "high": "Exploració",
+      "description": "Curiositat intel·lectual, imaginació i gust pel que és nou davant de la preferència pel que ja es coneix."
+    },
+    "conscientiousness": {
+      "name": "Responsabilitat",
+      "short": "Responsabilitat",
+      "low": "Espontaneïtat",
+      "high": "Disciplina",
+      "description": "Autodisciplina, ordre i orientació a objectius davant de la improvisació."
+    },
+    "extraversion": {
+      "name": "Extraversió",
+      "short": "Extraversió",
+      "low": "Introversió",
+      "high": "Extraversió",
+      "description": "Quanta energia treus (o perds) del contacte social."
+    },
+    "agreeableness": {
+      "name": "Amabilitat",
+      "short": "Amabilitat",
+      "low": "Competitivitat",
+      "high": "Cooperació",
+      "description": "Empatia, confiança en els altres i tendència a cooperar més que a competir."
+    },
+    "neuroticism": {
+      "name": "Neuroticisme",
+      "short": "Neuroticisme",
+      "low": "Estable",
+      "high": "A flor de pell",
+      "description": "Amb quina intensitat vius les emocions negatives: preocupació, canvis d'humor, estrès."
+    },
+    "mach": {
+      "name": "Maquiavelisme",
+      "short": "Maquiavelisme",
+      "low": "Transparent",
+      "high": "Estratega",
+      "description": "Tendència a la manipulació estratègica i al cinisme instrumental."
+    },
+    "narc": {
+      "name": "Narcisisme",
+      "short": "Narcisisme",
+      "low": "Discreció",
+      "high": "Grandiositat",
+      "description": "Necessitat d'admiració i sensació de ser algú especial."
+    },
+    "psyc": {
+      "name": "Psicopatia",
+      "short": "Psicopatia",
+      "low": "Empatia",
+      "high": "Fredor",
+      "description": "Fredor emocional, impulsivitat i poca culpa. (Un tret, no un diagnòstic.)"
+    },
+    "asert": {
+      "name": "Assertivitat",
+      "short": "Assertivitat",
+      "low": "Pusil·lanimitat",
+      "high": "Assertivitat",
+      "description": "Capacitat de defensar el que és teu i dir el que penses encara que incomodi."
+    },
+    "complac": {
+      "name": "Complaença",
+      "short": "Complaença",
+      "low": "Independent",
+      "high": "Complaent",
+      "description": "Quanta aprovació dels altres necessites i quant evites decebre ningú."
+    },
+    "confl": {
+      "name": "Evitació del conflicte",
+      "short": "Evitació",
+      "low": "Confrontació",
+      "high": "Evitació",
+      "description": "Tendència a esquivar les discussions encara que el tema t'importi."
+    },
+    "honesty": {
+      "name": "Honestedat-Humilitat",
+      "short": "Honestedat",
+      "low": "Oportunisme",
+      "high": "Integritat",
+      "description": "El sisè factor de l'HEXACO: sinceritat, no aprofitar-se i no sentir-se amb dret a més."
+    },
+    "care": {
+      "name": "Cura",
+      "short": "Cura",
+      "low": "Duresa",
+      "high": "Compassió",
+      "description": "Sensibilitat al patiment aliè: la moral basada a no fer mal."
+    },
+    "fairness": {
+      "name": "Justícia",
+      "short": "Justícia",
+      "low": "Flexibilitat",
+      "high": "Equitat",
+      "description": "Reciprocitat, drets i tracte just com a base moral."
+    },
+    "loyalty": {
+      "name": "Lleialtat",
+      "short": "Lleialtat",
+      "low": "Individualista",
+      "high": "Lleial",
+      "description": "Fidelitat al grup propi: família, equip, país."
+    },
+    "authority": {
+      "name": "Autoritat",
+      "short": "Autoritat",
+      "low": "Igualitarisme",
+      "high": "Jerarquia",
+      "description": "Respecte per la jerarquia, la tradició i l'ordre legítim."
+    },
+    "purity": {
+      "name": "Puresa",
+      "short": "Puresa",
+      "low": "Relativista",
+      "high": "Sacralitzant",
+      "description": "Nocions d'allò sagrat, la decència i la contaminació moral."
+    },
+    "liberty": {
+      "name": "Llibertat",
+      "short": "Llibertat",
+      "low": "Col·lectivista",
+      "high": "Antiopressió",
+      "description": "Rebuig visceral a la dominació i que et diguin com has de viure."
+    },
+    "selfdir": {
+      "name": "Autodirecció",
+      "short": "Autodirecció",
+      "low": "A remolc",
+      "high": "Autonomia",
+      "description": "Pensar i actuar pel teu compte: independència i llibertat de criteri."
+    },
+    "stimul": {
+      "name": "Estimulació",
+      "short": "Estimulació",
+      "low": "Rutina",
+      "high": "Aventura",
+      "description": "Necessitat de novetat, emoció i desafiament."
+    },
+    "hedon": {
+      "name": "Hedonisme",
+      "short": "Hedonisme",
+      "low": "Austeritat",
+      "high": "Hedonisme",
+      "description": "El plaer i el gaudi sensorial com a valor en si mateix."
+    },
+    "achieve": {
+      "name": "Assoliment",
+      "short": "Assoliment",
+      "low": "Sense pressió",
+      "high": "Ambició",
+      "description": "Èxit personal demostrant competència segons els estàndards socials."
+    },
+    "power": {
+      "name": "Poder",
+      "short": "Poder",
+      "low": "Modèstia",
+      "high": "Domini",
+      "description": "Estatus, prestigi i control sobre persones i recursos."
+    },
+    "security": {
+      "name": "Seguretat",
+      "short": "Seguretat",
+      "low": "Risc",
+      "high": "Prudència",
+      "description": "Estabilitat i harmonia, tant personal com de la societat."
+    },
+    "conform": {
+      "name": "Conformitat",
+      "short": "Conformitat",
+      "low": "Rebel",
+      "high": "Conformista",
+      "description": "Contenir-se per no molestar ni trencar les expectatives socials."
+    },
+    "tradition": {
+      "name": "Tradició",
+      "short": "Tradició",
+      "low": "Innovació",
+      "high": "Tradició",
+      "description": "Respecte i compromís amb els costums heretats."
+    },
+    "benev": {
+      "name": "Benevolència",
+      "short": "Benevolència",
+      "low": "Reserva",
+      "high": "Entrega",
+      "description": "Tenir cura del benestar dels teus, dels qui tens a prop."
+    },
+    "univers": {
+      "name": "Universalisme",
+      "short": "Universalisme",
+      "low": "Proximitat",
+      "high": "Universalista",
+      "description": "Comprensió i protecció del benestar de tothom i de la natura."
+    },
+    "attachAnx": {
+      "name": "Ansietat d'aferrament",
+      "short": "Ansietat",
+      "low": "Calma",
+      "high": "Ansietat",
+      "description": "Por a l'abandonament i necessitat de confirmació en les relacions properes."
+    },
+    "attachAvo": {
+      "name": "Evitació de la intimitat",
+      "short": "Evitació",
+      "low": "Intimitat",
+      "high": "Distància",
+      "description": "Incomoditat amb la dependència i la proximitat emocional."
+    },
+    "selfEmo": {
+      "name": "Percepció emocional pròpia",
+      "short": "Autopercepció",
+      "low": "Boirosa",
+      "high": "Nítida",
+      "description": "Saber què sents i per què mentre ho sents, no tres dies més tard."
+    },
+    "otherEmo": {
+      "name": "Percepció emocional aliena",
+      "short": "Llegir els altres",
+      "low": "Opaca",
+      "high": "Fina",
+      "description": "Llegir l'estat emocional dels altres a partir de gestos, tons i silencis."
+    },
+    "useEmo": {
+      "name": "Ús de les emocions",
+      "short": "Ús emocional",
+      "low": "A la deriva",
+      "high": "Motor",
+      "description": "Posar les emocions a treballar: motivar-te, prioritzar, convertir els nervis en concentració."
+    },
+    "regEmo": {
+      "name": "Regulació emocional",
+      "short": "Regulació",
+      "low": "Reactiva",
+      "high": "Serena",
+      "description": "Abaixar el volum d'una emoció quan no ajuda, sense negar-la."
+    },
+    "humorAfil": {
+      "name": "Humor afiliatiu",
+      "short": "Afiliatiu",
+      "low": "Sense bromes",
+      "high": "Espurnejant",
+      "description": "Humor per unir: acudits que inclouen, bromes que fan grup."
+    },
+    "humorSelf": {
+      "name": "Humor d'automillora",
+      "short": "Automillora",
+      "low": "Sense escut",
+      "high": "Amb coixí",
+      "description": "Humor com a amortidor propi: riure't de l'embolic per no enfonsar-t'hi."
+    },
+    "humorAgr": {
+      "name": "Humor agressiu",
+      "short": "Agressiu",
+      "low": "Sense víctimes",
+      "high": "Mordaç",
+      "description": "Humor a costa dels altres: sarcasme, pulles i burla amb diana."
+    },
+    "humorDest": {
+      "name": "Humor autodestructiu",
+      "short": "Autoparòdic",
+      "low": "Dempeus",
+      "high": "A costa meva",
+      "description": "Humor a costa teva: rebaixar-te per caure bé o per encaixar."
+    },
+    "selfesteem": {
+      "name": "Autoestima",
+      "short": "Autoestima",
+      "low": "Crític intern",
+      "high": "Base sòlida",
+      "description": "La valoració global que fas de tu: quant et respectes i t'agrades."
+    },
+    "locus": {
+      "name": "Locus de control",
+      "short": "Locus",
+      "low": "Extern",
+      "high": "Intern",
+      "description": "A què atribueixes el que et passa: al teu esforç (intern) o a l'atzar i el sistema (extern)."
+    }
+  },
+  "tests": {
+    "espectro-politico": {
+      "title": "Espectre polític",
+      "tagline": "Oblida't de l'esquerra-dreta: situa't en 6 eixos alhora.",
+      "description": "El clàssic eix esquerra-dreta es queda curt. Aquest test et situa en 6 dimensions independents: economia, autoritat, cultura, territori, ecologia i religió. Veuràs la teva brúixola clàssica, el teu radar complet i el teu arquetip polític.",
+      "items": {
+        "econ1": "Els serveis essencials, com la sanitat o l'energia, funcionen millor en mans privades.",
+        "econ2": "L'Estat hauria de garantir una renda mínima a tothom.",
+        "econ3": "Apujaria els impostos a les grans fortunes encara que algunes marxessin del país.",
+        "econ4": "Com menys reguli el govern l'economia, millor per a tothom.",
+        "auth1": "En una crisi greu prefereixo un govern de mà dura, encara que retalli llibertats.",
+        "auth2": "Prefereixo més privacitat encara que això compliqui la feina de la policia.",
+        "auth3": "L'obediència i el respecte a l'autoritat són valors que hauríem de recuperar.",
+        "auth4": "Cadascú hauria de poder viure com vulgui mentre no faci mal a ningú.",
+        "cult1": "Els canvis socials de les últimes dècades han anat massa de pressa.",
+        "cult2": "Les tradicions del meu país mereixen ser protegides encara que frenin certs canvis.",
+        "cult3": "La família «de tota la vida» no és ni millor ni pitjor que altres formes de família.",
+        "cult4": "Em sembla sa revisar amb ulls crítics les figures històriques del meu país.",
+        "glob1": "El meu país hauria de prioritzar els seus interessos encara que això perjudiqui altres països.",
+        "glob2": "Les decisions importants s'haurien de prendre cada cop més en organismes internacionals.",
+        "glob3": "La immigració enriqueix un país més del que el complica.",
+        "glob4": "Comprar productes nacionals és gairebé un deure cívic.",
+        "eco1": "Frenar el canvi climàtic justifica encarir la gasolina i els vols.",
+        "eco2": "El creixement econòmic importa més que els objectius climàtics.",
+        "eco3": "Sacrificaria comoditat personal per reduir el meu impacte ambiental.",
+        "eco4": "L'ecologisme actual exagera els riscos reals.",
+        "rel1": "La religió hauria de tenir més pes en la vida pública.",
+        "rel2": "L'educació pública ha de ser estrictament laica.",
+        "rel3": "Els valors religiosos són una bona brúixola moral per a una societat.",
+        "rel4": "Es pot ser una persona plenament ètica sense cap religió."
+      },
+      "sources": {
+        "0": "Base empírica que la ideologia no és un sol eix, sinó uns quants d'independents.",
+        "1": "Model de doble procés: dues motivacions diferents darrere del conservadorisme.",
+        "2": "L'origen històric de mesurar la política en dos eixos en comptes d'un."
+      }
+    },
+    "big-five": {
+      "title": "Personalitat Big Five",
+      "tagline": "El model de personalitat amb més suport científic.",
+      "description": "Mesura els cinc grans trets (OCEAN): Obertura, Responsabilitat, Extraversió, Amabilitat i Neuroticisme. És el model estàndard en psicologia de la personalitat i la base de la majoria dels teus insights.",
+      "items": {
+        "o1": "Tinc una imaginació molt activa.",
+        "o2": "Les converses molt abstractes o filosòfiques m'avorreixen.",
+        "o3": "Gaudeixo provant coses noves encara que puguin sortir malament.",
+        "o4": "Entre el que ja conec i el que és experimental, gairebé sempre trio el que conec.",
+        "c1": "Compleixo el que planifico.",
+        "c2": "Acostumo a deixar les coses per a l'últim moment.",
+        "c3": "M'agrada l'ordre: cada cosa al seu lloc.",
+        "c4": "Perdo o oblido coses constantment.",
+        "e1": "A les festes acostumo a ser de les persones que animen l'ambient.",
+        "e2": "Prefereixo quedar-me en un segon pla quan hi ha molta gent.",
+        "e3": "Parlar amb desconeguts em dona energia.",
+        "e4": "Després de socialitzar molt necessito estar a soles per recarregar.",
+        "a1": "Em preocupo de debò pels problemes dels altres.",
+        "a2": "Em costa perdonar.",
+        "a3": "La gent diria que sóc una persona fàcil de tractar.",
+        "a4": "Sospito que la gent sol tenir segones intencions.",
+        "n1": "Em preocupo per coses que probablement no passaran mai.",
+        "n2": "Mantinc la calma sota pressió.",
+        "n3": "El meu estat d'ànim canvia amb facilitat.",
+        "n4": "Gairebé res no em lleva la son."
+      },
+      "sources": {
+        "0": "L'article que va fixar els marcadors dels cinc factors.",
+        "1": "Banc d'ítems de domini públic del qual s'adapta el format.",
+        "2": "Versió moderna de l'inventari, amb facetes revisades."
+      }
+    },
+    "lado-oscuro": {
+      "title": "Test de maldat",
+      "tagline": "Quant de vilà portes a dins? La tríada fosca, mesurada de debò.",
+      "description": "Mesura els tres trets de la «tríada fosca»: maquiavelisme (manipulació estratègica), narcisisme (grandiositat) i psicopatia (fredor i impulsivitat). Tothom hi puntua alguna cosa — la pregunta és quant.",
+      "items": {
+        "m1": "No és manipular: és saber presentar les coses.",
+        "m2": "Explicar-ho tot sobre tu als altres és un error estratègic.",
+        "m3": "Afalago la gent quan em convé aconseguir alguna cosa.",
+        "m4": "Prefereixo que els altres no sàpiguen què vull de debò.",
+        "m5": "Dic el que penso encara que això reveli les meves intencions.",
+        "na1": "Sincerament, tinc qualitats que la majoria de la gent no té.",
+        "na2": "M'agrada ser el centre d'atenció.",
+        "na3": "Mereixo més reconeixement del que rebo.",
+        "na4": "Insisteixo a rebre el respecte que em correspon.",
+        "na5": "Em considero una persona del tot corrent.",
+        "p1": "Quan me la fan, la torno de seguida i amb interessos.",
+        "p2": "La gent que acaba en embolics normalment se'ls ha buscat.",
+        "p3": "Puc dir alguna cosa cruel si el moment ho demana.",
+        "p4": "M'atrauen les situacions amb risc de debò.",
+        "p5": "Quan faig mal a algú, em rosega la consciència molt de temps."
+      },
+      "sources": {
+        "0": "L'article que va definir la tríada fosca com a constructe.",
+        "1": "Versió curta validada (SD3), base del format d'aquest test."
+      }
+    },
+    "asertividad": {
+      "title": "Test de pusil·lànime",
+      "tagline": "Defenses el que és teu o demanes perdó per existir?",
+      "description": "Mesura tres coses diferents que solem barrejar: assertivitat (dir el que penses), complaença (necessitar aprovació) i evitació del conflicte (esquivar la bronca). Es pot ser molt assertiu i, tot i així, evitar conflictes — aquí ho veuràs.",
+      "items": {
+        "as1": "Si alguna cosa no em sembla bé, ho dic encara que incomodi.",
+        "as2": "Tornaria un plat mal fet en un restaurant sense pensar-m'ho gaire.",
+        "as3": "Em costa demanar un augment de sou o apujar les meves tarifes.",
+        "as4": "Quan m'interrompen una vegada i una altra, ho faig notar.",
+        "co1": "Accepto plans que no em venen de gust per no quedar malament.",
+        "co2": "Necessito caure bé a gairebé tothom.",
+        "co3": "Demano perdó fins i tot quan no és culpa meva.",
+        "co4": "Puc decebre algú sense sentir-me fatal si tinc les meves raons.",
+        "cf1": "Evito discutir encara que el tema m'importi de debò.",
+        "cf2": "Prefereixo cedir abans que tenir una bronca.",
+        "cf3": "Una discussió forta no m'espatlla el dia.",
+        "cf4": "Canvio de tema quan la conversa es tensa."
+      },
+      "sources": {
+        "0": "L'escala clàssica de conducta assertiva.",
+        "1": "Estils de gestió del conflicte interpersonal.",
+        "2": "Necessitat d'aprovació i sociotropia."
+      }
+    },
+    "moral": {
+      "title": "Fonaments morals",
+      "tagline": "Sobre quins fonaments construeixes la teva moral — i per què xoques amb qui no comparteix els teus.",
+      "description": "La teoria de Haidt diu que la moral humana es basa en sis fonaments: cura, justícia, lleialtat, autoritat, puresa i llibertat. Gairebé ningú no els pondera igual, i d'aquí neix la majoria de discussions polítiques. És el millor predictor psicològic de la ideologia que existeix.",
+      "sources": {
+        "0": "L'estudi que va mostrar que progressistes i conservadors fan servir fonaments diferents.",
+        "1": "Validació del qüestionari i del mapa complet del domini moral.",
+        "2": "Hi afegeix el fonament de llibertat, absent en la versió original."
+      },
+      "items": {
+        "ca1": "El patiment d'una persona vulnerable em remou per dins.",
+        "ca2": "La crueltat amb els animals em sembla de les pitjors coses que hi ha.",
+        "ca3": "De vegades cal duresa i punt: la compassió fa nosa.",
+        "fa1": "Que algú rebi un tracte injust m'indigna encara que no m'afecti.",
+        "fa2": "Tothom hauria de jugar amb les mateixes regles, sense excepcions.",
+        "fa3": "Si el resultat és bo, tant me fa si el procés va ser del tot just.",
+        "lo1": "Trair el propi grup és de les coses més lletges que es poden fer.",
+        "lo2": "Sento orgull quan alguna cosa del meu país o de la meva gent triomfa.",
+        "lo3": "Els meus principis van per damunt del grup a què pertanyi.",
+        "au1": "Cal respectar qui té una autoritat legítima encara que no et caigui bé.",
+        "au2": "El respecte a la gent gran i a la jerarquia sosté una societat.",
+        "au3": "L'autoritat s'ha de qüestionar sempre, per principi.",
+        "pu1": "Hi ha coses que fan fàstic encara que no facin mal a ningú.",
+        "pu2": "Algunes coses s'haurien de tractar com a sagrades, sense discussió.",
+        "pu3": "Si ningú no en surt perjudicat, no hi ha res de moralment dolent.",
+        "li1": "Ningú no té dret a dir-me com he de viure la meva vida.",
+        "li2": "Els poderosos sempre acaben imposant-se a la gent normal.",
+        "li3": "De vegades convé cedir llibertat pel bé comú."
+      }
+    },
+    "valores": {
+      "title": "Els teus valors",
+      "tagline": "Els 10 valors universals de Schwartz: què et mou de debò.",
+      "description": "Schwartz va identificar deu valors presents en totes les cultures, organitzats en un cercle ple de tensions internes: no pots maximitzar seguretat i estimulació alhora, ni poder i universalisme. Veuràs quins et dominen i quines renúncies impliquen. Les puntuacions són relatives a la teva pròpia mitjana (50): mostren què prioritzes tu, no quant hi assenteixes en general.",
+      "sources": {
+        "0": "La teoria original dels deu valors universals i la seva estructura circular.",
+        "1": "El qüestionari PVQ, el format en què s'inspira aquest test.",
+        "2": "Versió utilitzada a l'Enquesta Social Europea des del 2002."
+      },
+      "items": {
+        "sd1": "És important per a mi decidir pel meu compte què faig.",
+        "sd2": "M'agrada ser original i fer les coses a la meva manera.",
+        "st1": "Busco l'aventura i el risc: vull una vida emocionant.",
+        "st2": "Necessito fer coses noves contínuament.",
+        "he1": "Gaudir de la vida i donar-me capricis és important per a mi.",
+        "he2": "Aprofito qualsevol ocasió de passar-ho bé.",
+        "ac1": "És important per a mi demostrar el que valc.",
+        "ac2": "Vull tenir molt d'èxit i que se'm reconegui.",
+        "po1": "M'importa que em respectin i que la gent faci el que dic.",
+        "po2": "Vull tenir diners i coses cares.",
+        "se1": "És important viure en un entorn segur i evitar perills.",
+        "se2": "Que l'Estat em garanteixi la seguretat davant de les amenaces és prioritari.",
+        "cf1": "Crec que sempre s'ha de fer el que toca i no cridar l'atenció.",
+        "cf2": "Evito fer coses que altres puguin considerar incorrectes.",
+        "tr1": "Els costums que m'han transmès són importants per a mi.",
+        "tr2": "La humilitat i la modèstia són virtuts que valoro.",
+        "be1": "És important ajudar la gent que m'envolta i tenir cura dels meus.",
+        "be2": "Ser lleial amb els meus amics va per damunt de gairebé tot.",
+        "un1": "Tothom hauria de tenir les mateixes oportunitats a la vida.",
+        "un2": "Tenir cura de la natura i del medi ambient m'importa de debò."
+      }
+    },
+    "apego": {
+      "title": "Estil d'aferrament",
+      "tagline": "Com funciones a les relacions properes — i per què es repeteixen sempre els mateixos patrons.",
+      "description": "L'aferrament adult no són quatre calaixos, són dues dimensions: quanta por tens a l'abandonament (ansietat) i quant t'incomoda la intimitat (evitació). Els estils famosos —segur, ansiós, evitatiu, temorós— són els quadrants d'aquest pla. Aquí els mesurem bé.",
+      "sources": {
+        "0": "El qüestionari ECR original, base de gairebé tota la recerca posterior.",
+        "1": "La versió curta validada, en què s'inspira aquest test.",
+        "2": "Revisió psicomètrica que va confirmar les dues dimensions contínues."
+      },
+      "items": {
+        "an1": "Em preocupa que la persona que estimo deixi d'estimar-me.",
+        "an2": "Necessito bastants mostres que m'estimen.",
+        "an3": "Si triguen a contestar-me, començo a donar-hi voltes.",
+        "an4": "Em fa por que m'abandonin.",
+        "an5": "Em sento en calma amb l'afecte que rebo.",
+        "an6": "Poques vegades em preocupa la solidesa de les meves relacions.",
+        "av1": "Prefereixo no dependre emocionalment de ningú.",
+        "av2": "M'incomoda que algú vulgui massa proximitat.",
+        "av3": "Em costa obrir-me del tot amb la parella o amb els amics íntims.",
+        "av4": "Parlo amb facilitat del que sento amb la gent propera.",
+        "av5": "Em resulta fàcil demanar consol quan ho necessito.",
+        "av6": "Em trobo còmode depenent de les persones que estimo."
+      }
+    },
+    "honestidad": {
+      "title": "Honestedat-Humilitat",
+      "tagline": "El sisè factor que al Big Five se li escapa — i el que millor prediu si faries trampes.",
+      "description": "L'HEXACO afegeix als cinc grans un sisè factor: Honestedat-Humilitat. Prediu la conducta poc ètica millor que l'amabilitat i és el revers exacte de la tríada fosca. Sinceritat, no aprofitar-se i no sentir-se amb dret a més.",
+      "sources": {
+        "0": "L'article que va establir el model de sis factors.",
+        "1": "La versió breu de 60 ítems, format de referència.",
+        "2": "Web oficial de l'inventari, amb barems per país."
+      },
+      "items": {
+        "h1": "Si sabés que no m'enxampen, acceptaria diners per fer els ulls grossos.",
+        "h2": "Si cregués que funcionaria, faria servir els afalacs per aconseguir un ascens.",
+        "h3": "Tornaria una cartera plena de diners amb tot a dins.",
+        "h4": "Mereixo un tracte millor que la majoria de la gent.",
+        "h5": "Em faria vergonya presumir dels meus èxits.",
+        "h6": "Tenir molts diners i luxe és de les coses que més m'importen.",
+        "h7": "Prefereixo perdre una oportunitat abans que aconseguir-la amb males arts.",
+        "h8": "Si puc saltar-me una norma sense conseqüències, me la salto.",
+        "h9": "La gent que fa trampes per guanyar em repugna.",
+        "h10": "Fingiria interès per algú si això em convingués."
+      }
+    },
+    "inteligencia-emocional": {
+      "title": "Test d'intel·ligència emocional",
+      "tagline": "Et piloten les emocions o les pilotes tu?",
+      "description": "Quatre habilitats diferents: notar què sents, llegir què senten els altres, fer servir l'emoció com a combustible i abaixar-li el volum quan toca. Basat en el model de Salovey i Mayer i en l'estructura de l'escala WLEIS. No mesura la bona persona que ets: mesura destresa.",
+      "sources": {
+        "0": "El model original: la intel·ligència emocional com a conjunt d'habilitats, no com a tret",
+        "1": "Les 4 dimensions (pròpia, aliena, ús, regulació) i l'escala de referència (WLEIS)",
+        "2": "Metaanàlisi: la IE prediu el rendiment més enllà de la personalitat i el QI"
+      },
+      "items": {
+        "ie1": "Gairebé sempre sé per què em sento com em sento.",
+        "ie2": "Distingeixo bé si el que tinc és tristesa, frustració o simple cansament.",
+        "ie3": "De vegades m'adono tard que alguna cosa m'havia afectat.",
+        "ie4": "Quan m'enfado, identifico ràpid què ho ha provocat.",
+        "ie5": "Noto com se sent la gent encara que no digui res.",
+        "ie6": "Els meus amics diuen que se'm dona bé entendre què els passa.",
+        "ie7": "Em sorprenc sovint quan algú m'explica que està malament: no ho havia vist venir.",
+        "ie8": "Capto ràpid l'ambient d'una sala quan hi entro.",
+        "ie9": "Faig servir el bon humor per empènyer-me quan tinc tasques difícils.",
+        "ie10": "Sé motivar-me per continuar quan la cosa es posa costa amunt.",
+        "ie11": "Quan estic de capa caiguda, em costa moltíssim posar-me amb res.",
+        "ie12": "Converteixo els nervis en energia per actuar.",
+        "ie13": "Quan alguna cosa m'altera, recupero la calma en poca estona.",
+        "ie14": "Controlo el meu mal geni fins i tot en situacions molt tenses.",
+        "ie15": "Quan m'enfado, dic coses de les quals després me'n penedeixo.",
+        "ie16": "Una preocupació em pot segrestar el dia sencer."
+      }
+    },
+    "humor": {
+      "title": "Test de sentit de l'humor",
+      "tagline": "Digues-me de què rius i et diré qui ets",
+      "description": "Els quatre estils d'humor de Martin: el que uneix (afiliatiu), el que et sosté (automillora), el que talla (agressiu) i el que et posa a tu de diana (autodestructiu). Els dos primers van amb el benestar; els dos últims passen factura.",
+      "sources": {
+        "0": "L'instrument original: el Humor Styles Questionnaire i els seus 4 estils",
+        "1": "Metaanàlisi: quins estils van amb el benestar i quins amb el malestar",
+        "2": "Metaanàlisi: com encaixen els estils d'humor amb els Big Five"
+      },
+      "items": {
+        "hu1": "Faig riure la gent amb facilitat.",
+        "hu2": "L'humor és la meva manera d'acostar-me a la gent.",
+        "hu3": "Poques vegades explico acudits o faig broma en grup.",
+        "hu4": "Fer broma amb els amics és de les coses que més m'agraden.",
+        "hu5": "L'humor m'ajuda a no enfonsar-me quan les coses van malament.",
+        "hu6": "Si estic de capa caiguda, acostumo a trobar-hi el costat absurd per animar-me.",
+        "hu7": "Quan tinc un problema, perdo completament el sentit de l'humor.",
+        "hu8": "Ric dels meus propis embolics, i això els treu pes.",
+        "hu9": "Si algú es mereix una pulla, no me la guardo.",
+        "hu10": "El meu humor de vegades té més tall del que la gent espera.",
+        "hu11": "No m'afegeixo a les burles encara que tot el grup se'n rigui, d'algú.",
+        "hu12": "De vegades deixo anar una broma sabent que a algú li courà.",
+        "hu13": "Deixo que es riguin de mi més del compte si això fa gràcia al grup.",
+        "hu14": "Ric dels meus defectes davant dels altres per caure bé.",
+        "hu15": "Amago com em sento de debò darrere de les bromes.",
+        "hu16": "No necessito posar-me en ridícul perquè el grup m'accepti."
+      }
+    },
+    "autoestima": {
+      "title": "Test d'autoestima",
+      "tagline": "Com et portes amb tu?",
+      "description": "L'escala de Rosenberg: deu frases, mig segle d'ús i la foto ràpida més fiable de com et valores. L'autoestima baixa no és un tret fix: és un estat que es treballa, i aquest test et diu d'on parteixes.",
+      "sources": {
+        "0": "L'escala original de 10 ítems, l'instrument breu més utilitzat de la psicologia",
+        "1": "Metaanàlisi longitudinal: l'autoestima baixa precedeix la depressió, no a l'inrevés",
+        "2": "Com evoluciona l'autoestima al llarg de la vida (puja fins als ~60)"
+      },
+      "items": {
+        "ae1": "En general, m'agrada la persona que sóc.",
+        "ae2": "De vegades penso que no valc per a res.",
+        "ae3": "Sento que tinc bastants qualitats.",
+        "ae4": "Puc fer les coses tan bé com la majoria de la gent.",
+        "ae5": "Sento que no tinc gaire cosa de què presumir.",
+        "ae6": "De vegades em sento inútil de debò.",
+        "ae7": "Sento que valc, com a mínim, tant com qualsevol altra persona.",
+        "ae8": "M'agradaria tenir-me més respecte.",
+        "ae9": "Tendeixo a sentir que, en el fons, sóc un fracàs.",
+        "ae10": "Tinc una actitud positiva cap a mi."
+      }
+    },
+    "locus": {
+      "title": "Test de locus de control",
+      "tagline": "Qui condueix la teva vida: tu o l'atzar?",
+      "description": "El clàssic de Rotter: atribueixes el que et passa al teu esforç o a la sort, els contactes i el sistema? El locus intern prediu des del sou fins a la salut — encara que, portat a l'extrem, es converteix a culpar-te fins i tot de la pluja.",
+      "sources": {
+        "0": "El constructe original: expectatives internes vs. externes de control del reforç",
+        "1": "Metaanàlisi laboral: el locus intern va amb més satisfacció i millor rendiment",
+        "2": "Metaanàlisi transcultural: la relació locus-ansietat-depressió per països"
+      },
+      "items": {
+        "lc1": "El que aconsegueixo depèn sobretot del meu esforç.",
+        "lc2": "Bona part de la meva vida la decideixen factors que no controlo.",
+        "lc3": "Quan alguna cosa em surt malament, reviso què podria haver fet diferent.",
+        "lc4": "Tenir èxit és, més que res, qüestió de sort i de contactes.",
+        "lc5": "El meu futur el construeixo jo amb les meves decisions.",
+        "lc6": "Tant se val el que faci: el que hagi de passar, passarà.",
+        "lc7": "Si em preparo a fons, els resultats acaben arribant.",
+        "lc8": "Els plans poques vegades surten perquè el món és impredictible."
+      }
+    }
+  },
+  "insights": {
+    "ejecutor": {
+      "title": "Màquina d'executar",
+      "body": "La teva responsabilitat és molt alta. És el tret que millor prediu el rendiment acadèmic i laboral: acabes el que comences, i la gent ho nota."
+    },
+    "roca": {
+      "title": "Sistema nerviós a prova de bombes",
+      "body": "La teva estabilitat emocional és un avantatge injust: on els altres rumien, tu dorms. Compte: pot fer-te subestimar l'estrès dels altres."
+    },
+    "explorador": {
+      "title": "Ment exploradora",
+      "body": "Obertura alta: idees, estètica, curiositat. Ets de les persones que connecten mons que no es tocaven."
+    },
+    "amable-con-limites": {
+      "title": "Amable sense fer d'estora",
+      "body": "Combinació poc habitual: t'importa la gent però no necessites la seva aprovació. És el perfil del bon lideratge de proximitat."
+    },
+    "voz-propia": {
+      "title": "Veu pròpia",
+      "body": "Dius el que penses i defenses el que és teu. Negociar, posar límits i demanar el que vals et costa menys que a la majoria."
+    },
+    "pegamento": {
+      "title": "Cola social",
+      "body": "Extraversió i escalfor alhora: ets de les persones que fan que un grup existeixi. Els plans tiren endavant perquè tu els empenys."
+    },
+    "manos-limpias": {
+      "title": "Mans netes",
+      "body": "Puntues baixíssim en manipulació i fredor. La gent es pot refiar de tu — i a llarg termini aquesta reputació es capitalitza com l'interès compost."
+    },
+    "creativo-que-entrega": {
+      "title": "Creativitat que entrega",
+      "body": "Idees i disciplina alhora: la combinació més escassa i més ben pagada. La majoria en té una de les dues."
+    },
+    "procrastinador": {
+      "title": "Procrastinació crònica",
+      "body": "Responsabilitat baixa: el teu enemic no és la capacitat, és l'últim moment. Els sistemes externs (terminis públics, compromisos amb altres) et rendeixen més que la força de voluntat."
+    },
+    "rumiante": {
+      "title": "Rumiació",
+      "body": "Neuroticisme alt: la teva ment amplifica amenaces i repeteix escenes. No és cap debilitat — però sense higiene mental (exercici, son, escriure) et cobra interessos."
+    },
+    "mal-negociador": {
+      "title": "Negociar et costarà",
+      "body": "Molta amabilitat i poca assertivitat: el perfil que accepta el primer sou que li ofereixen i cobra de menys durant anys. Prepara les negociacions per escrit i amb xifres: et compensa el biaix."
+    },
+    "galeria": {
+      "title": "Vius per a la galeria",
+      "body": "Complaença alta: dius que sí per no decebre i després qui es decep ets tu. Cada «sí» al que no vols és un «no» a alguna cosa que sí que volies."
+    },
+    "conflicto-podrido": {
+      "title": "Conflictes que es podreixen",
+      "body": "Esquives la bronca però te l'endús a casa: el conflicte no desapareix, fermenta. Una conversa incòmoda de 10 minuts sol sortir més barata que tres setmanes de rumiació."
+    },
+    "reputacion": {
+      "title": "Reputació en joc",
+      "body": "Molta estratègia i poca cooperació: a curt termini guanyes partides; a llarg termini la gent compara notes. Els mercats repetits castiguen aquest perfil."
+    },
+    "aplauso": {
+      "title": "Fam d'aplaudiment",
+      "body": "Narcisisme alt: rendeixes millor amb públic, però la crítica et fa més mal del que admets, i pots confondre atenció amb afecte."
+    },
+    "frio": {
+      "title": "Massa fredor",
+      "body": "Puntues alt en duresa emocional. Útil en una crisi, cara en les relacions: els ponts que cremes ràpid triguen anys a reconstruir-se."
+    },
+    "confort-blindado": {
+      "title": "Zona de confort blindada",
+      "body": "Obertura baixa: el que ja coneixes et funciona, però el món canvia de base cada dècada. Programa novetat en dosis petites — un llibre, un viatge, una eina — abans que la necessitis."
+    },
+    "libro-abierto": {
+      "title": "De manual",
+      "body": "Obertura alta i progressisme cultural: és la correlació més replicada entre personalitat i política (r≈0,4). El teu perfil la compleix al peu de la lletra."
+    },
+    "contracorriente": {
+      "title": "A contracorrent",
+      "body": "Obertura alta amb valors tradicionals: estadísticament rar. Sols explorar idees noves… per acabar defensant les velles amb millors arguments."
+    },
+    "orden-total": {
+      "title": "L'ordre, dins i fora",
+      "body": "La disciplina personal i la preferència per l'ordre social solen anar de bracet — el teu perfil n'és l'exemple de llibre."
+    },
+    "artista-ansioso": {
+      "title": "Creativitat ansiosa",
+      "body": "Obertura + neuroticisme: el perfil clàssic de l'artista. La mateixa sensibilitat que et fa patir és la que et fa veure el que els altres no veuen."
+    },
+    "izquierda-tradicional": {
+      "title": "Esquerra tradicional",
+      "body": "Redistribució econòmica amb valors tradicionals: el vot obrer clàssic. Avui gairebé cap partit no representa aquest quadrant — per això et costa trobar casa política."
+    },
+    "liberal-clasico": {
+      "title": "Liberal de manual",
+      "body": "Mercat lliure i vida lliure: coherència total entre el teu eix econòmic i el d'autoritat. L'Estat, com més lluny, millor — per a tot."
+    },
+    "libertario-izq": {
+      "title": "Esquerra llibertària",
+      "body": "Igualtat econòmica sense autoritat estatal forta: la tradició àcrata. Desconfies de l'amo i del ministre a parts iguals."
+    },
+    "eco-mercado": {
+      "title": "Ecologisme de mercat",
+      "body": "Pro-mercat i pro-clima alhora: rara avis. La teva solució preferida probablement comença per «posar preu al carboni»."
+    },
+    "batallas-elegidas": {
+      "title": "Tries les teves batalles",
+      "body": "Saps plantar-te però detestes la bronca: no és cap contradicció, és economia. Guardes l'assertivitat per quan de debò importa."
+    },
+    "estratega-que-gusta": {
+      "title": "Estratega que necessita agradar",
+      "body": "Calcules els teus moviments… i alhora necessites caure bé. Aquesta tensió interna explica més decisions teves de les que et penses."
+    },
+    "fe-progresista": {
+      "title": "Fe progressista",
+      "body": "Religiositat alta amb cultura progressista: combinació minoritària i fascinant. La teva brúixola moral ve de la fe; les teves conclusions, del segle XXI."
+    },
+    "montana-rusa": {
+      "title": "Muntanya russa social",
+      "body": "Molta sociabilitat i molta reactivitat: les nits èpiques i les baixades de l'endemà són les dues cares de la mateixa moneda."
+    },
+    "ermitano-curioso": {
+      "title": "Exploració d'interiors",
+      "body": "Introversió i molta obertura: viatges més per dins que per fora. Llibres, idees i projectes propis et donen el que a d'altres els dona la festa."
+    },
+    "moral-binding": {
+      "title": "Moral de grup",
+      "body": "La lleialtat, l'autoritat i la puresa pesen més en tu que la cura individual. És la firma moral conservadora clàssica: el grup, l'ordre i allò sagrat abans que el cas particular."
+    },
+    "moral-individual": {
+      "title": "Moral d'individu",
+      "body": "Construeixes la teva moral gairebé només sobre cura i justícia. És la firma progressista de manual — i explica per què els arguments de lleialtat, autoritat o puresa et sonen a excusa."
+    },
+    "libertad-primero": {
+      "title": "No em diguis com he de viure",
+      "body": "La llibertat és el teu fonament moral dominant i l'autoritat no et diu res. Perfil llibertari pur: no és que siguis d'esquerres o de dretes, és que no suportes que et manin."
+    },
+    "brujula-firme": {
+      "title": "Brúixola ferma",
+      "body": "Honestedat alta i maquiavelisme baix: no jugues brut ni quan pots. És el tret que millor prediu la conducta ètica, el que més car es paga a curt termini i el que millor es paga a llarg."
+    },
+    "tentacion": {
+      "title": "Temptació a l'horitzó",
+      "body": "Pocs escrúpols i fam d'estatus: la combinació exacta que la recerca associa a saltar-se normes quan ningú no mira. Posa't tu els frens, perquè el context no ho farà."
+    },
+    "apego-seguro": {
+      "title": "Aferrament segur",
+      "body": "Ansietat baixa i evitació baixa: t'acostes sense por i te'n separes sense drama. És l'estil d'aproximadament la meitat de la gent i el que millor prediu relacions llargues i estables."
+    },
+    "apego-ansioso": {
+      "title": "Aferrament ansiós",
+      "body": "T'acostes molt i tems l'abandonament. Tendeixes a llegir els silencis com a senyals de perill i a demanar confirmació. Saber que el sistema d'alarma està calibrat alt ja canvia com ho interpretes."
+    },
+    "apego-evitativo": {
+      "title": "Aferrament evitatiu",
+      "body": "Prefereixes la independència a la intimitat i desactives la necessitat dels altres. Funciona bé fins que algú t'importa de debò: llavors la distància deixa de protegir-te."
+    },
+    "apego-temeroso": {
+      "title": "Aferrament temorós",
+      "body": "Vols proximitat i alhora la tems: el patró més esgotador dels quatre, perquè els dos sistemes estiren en direccions oposades. També és el que més es beneficia de la teràpia."
+    },
+    "ansiedad-y-complacencia": {
+      "title": "Por disfressada d'amabilitat",
+      "body": "L'ansietat d'aferrament i la complaença van juntes en tu: dius que sí perquè no marxin. El preu és que la relació se sosté sobre una versió teva que no ets tu."
+    },
+    "motor-logro": {
+      "title": "Motor d'assoliment",
+      "body": "Ambició i disciplina alineades: vols demostrar el que vals i, a més, tens l'hàbit per aconseguir-ho. És el perfil d'alt rendiment; el risc és no saber quan parar."
+    },
+    "hedonista-explorador": {
+      "title": "Vida en mode exploració",
+      "body": "Plaer i novetat per damunt de la seguretat: col·lecciones experiències, no estabilitat. Brillant als trenta; convé revisar-ho als cinquanta."
+    },
+    "ancla-seguridad": {
+      "title": "Àncora llançada",
+      "body": "Seguretat i conformitat altes amb poca set de novetat: valores que les coses siguin previsibles. Et dona una base sòlida, i et costa més que a d'altres aprofitar els canvis."
+    },
+    "universalista": {
+      "title": "Cercle moral ampli",
+      "body": "Universalisme i benevolència alts: la teva preocupació no s'atura en els teus. És el perfil de qui acaba dedicant-se a causes col·lectives — i de qui es crema si no posa límits."
+    },
+    "poder-sin-frenos": {
+      "title": "Poder sense contrapès",
+      "body": "Estatus alt, benevolència baixa i honestedat justeta. És la tríada de valors que la recerca associa a decisions que beneficien un mateix a costa del grup."
+    },
+    "valores-vs-politica": {
+      "title": "Tensió interna",
+      "body": "Valores molt la igualtat d'oportunitats però defenses posicions econòmiques de mercat. No és incoherent —hi ha tradicions senceres que hi viuen— però és una tensió que tard o d'hora et tocarà resoldre."
+    },
+    "cuidado-sin-limites": {
+      "title": "Cuides de tothom menys de tu",
+      "body": "Cura moral molt alta amb assertivitat baixa: absorbeixes el malestar aliè i no poses fre. El desgast per empatia no és cap mite, i aquest n'és el perfil exacte."
+    },
+    "termostato": {
+      "title": "Termòstat intern",
+      "body": "Regulació emocional alta sobre una base tranquil·la: no és que no sentis res, és que recuperes el comandament de seguida. Aquesta combinació esmorteeix gairebé qualsevol setmana dolenta."
+    },
+    "piloto-a-ciegas": {
+      "title": "Pilotar a cegues",
+      "body": "Molta turbulència emocional i poca visibilitat del que sents: te n'assabentes quan ja ha explotat. Posar nom al que notes —ràbia?, cansament?, por?— ja és mig arreglat."
+    },
+    "lector-estratega": {
+      "title": "Lectura amb agenda",
+      "body": "Llegeixes la gent amb precisió i, a més, calcules: persuasió de nivell expert. La frontera entre carisma i manipulació és només per a què ho fas servir."
+    },
+    "corazon-sin-radar": {
+      "title": "Cor sense radar",
+      "body": "T'importa la gent de debò, però no sempre llegeixes com està: intenció impecable, punteria regular. Preguntar «i tu, com ho portes?» compensa el radar."
+    },
+    "pegamento-social": {
+      "title": "Cola social",
+      "body": "Humor afiliatiu alt i energia social: ets la raó que el grup es trobi. Aquest paper sosté amistats durant dècades — i també cansa; permet-te no ser l'espectacle de tant en tant."
+    },
+    "escudo-de-risa": {
+      "title": "Escut de rialles",
+      "body": "El teu sistema nerviós es dispara fàcil, però el teu humor d'automillora l'esmorteeix: riure't de l'embolic és la teva regulació emocional casolana. És de les estratègies amb més evidència — continua fent-la servir."
+    },
+    "filo-que-corta": {
+      "title": "Un fil que talla",
+      "body": "Humor agressiu amb duresa emocional al darrere: les teves bromes tenen víctimes i ho saps. Graciós avui, factura social demà — la gent recorda qui la va fer sentir petita."
+    },
+    "payaso-triste": {
+      "title": "El pallasso trist",
+      "body": "Et rius de tu perquè el grup t'accepti, i la teva autoestima comença a creure-s'ho. L'autocrítica en to de broma continua sent autocrítica: el públic riu, tu prens nota."
+    },
+    "critico-interno": {
+      "title": "El crític no descansa",
+      "body": "Autoestima molt baixa: la veu que t'avalua és més dura amb tu que amb ningú. No és un tret de personalitat, és un front obert — i és del que millor respon quan s'hi treballa."
+    },
+    "ego-blindado": {
+      "title": "Ego amb armadura",
+      "body": "Autoestima alta I fam d'admiració: seguretat genuïna amb gana d'escenari. Funciona fins que algú no aplaudeix; allà es veu de què està feta la base."
+    },
+    "timon-propio": {
+      "title": "Mans al timó",
+      "body": "Creus que la teva vida depèn de tu i, a més, executes: el més semblant que existeix a una garantia. El risc residual: culpar-te també del que de debò no era teu."
+    },
+    "espectador": {
+      "title": "A la grada de la teva pròpia vida",
+      "body": "Creus que gairebé res no depèn de tu i, a més, no ho demanes: la profecia autocomplerta perfecta. Comença microscòpic: una cosa aquesta setmana que depengui només de tu, i mira-la passar."
+    },
+    "motor-exigente": {
+      "title": "Motor sense amortidor",
+      "body": "Creus que tot depèn de tu però no et creus capaç: responsabilitat màxima, confiança mínima. És el perfil que més s'exigeix i menys es perdona — revisa el repartiment de culpes."
+    }
+  },
+  "archetypes": {
+    "traditionalSuffix": "{name} tradicional",
+    "political": {
+      "libertario-izq": {
+        "name": "Esquerra llibertària",
+        "description": "Igualtat sense Estat fort."
+      },
+      "socialdemocrata": {
+        "name": "Socialdemòcrata",
+        "description": "Redistribució dins del sistema."
+      },
+      "socialismo-orden": {
+        "name": "Socialisme d'ordre",
+        "description": "Igualtat econòmica amb Estat fort."
+      },
+      "centrista-libertario": {
+        "name": "Centrisme llibertari",
+        "description": "Moderació en l'economia, llibertat innegociable."
+      },
+      "centrista": {
+        "name": "Centrista",
+        "description": "Equilibri en gairebé tot — o indecisió estratègica."
+      },
+      "centrista-orden": {
+        "name": "Centrista d'ordre",
+        "description": "Moderació en l'economia, mà ferma amb l'autoritat."
+      },
+      "liberal-clasico": {
+        "name": "Liberalisme clàssic",
+        "description": "Mercat lliure i vida lliure."
+      },
+      "liberal": {
+        "name": "Liberal",
+        "description": "Primer el mercat, pragmatisme per a la resta."
+      },
+      "conservador-orden": {
+        "name": "Dreta d'ordre",
+        "description": "Mercat, autoritat i jerarquia."
+      }
+    },
+    "dark": {
+      "t1": {
+        "name": "Ànima càndida",
+        "description": "El teu vilà interior s'ha mort d'avorriment."
+      },
+      "t2": {
+        "name": "Trapella d'estar per casa",
+        "description": "Malifetes de poca volada: res que no prescrigui."
+      },
+      "t3": {
+        "name": "Estratega gris",
+        "description": "Saps jugar brut. Tries no fer-ho… gairebé sempre."
+      },
+      "t4": {
+        "name": "Aire d'antiheroi",
+        "description": "Carisma, càlcul i pocs remordiments. Vigileu, allà fora."
+      },
+      "t5": {
+        "name": "Vilania de pel·lícula",
+        "description": "Només et falta el monòleg final i un gat blanc."
+      }
+    },
+    "pusilanime": {
+      "t1": {
+        "name": "Piconadora",
+        "description": "Pusil·lànime, el que se'n diu pusil·lànime… no ho ets pas."
+      },
+      "t2": {
+        "name": "Fermesa educada",
+        "description": "Defenses el que és teu sense tombar la taula. Equilibri sa."
+      },
+      "t3": {
+        "name": "Diplomàcia crònica",
+        "description": "Cedeixes més del que t'agradaria admetre."
+      },
+      "t4": {
+        "name": "Pusil·lànime funcional",
+        "description": "Dius «sí» amb la boca i «no» amb l'ànima."
+      },
+      "t5": {
+        "name": "Estora amb wifi",
+        "description": "Fins i tot els intèrfons t'aixequen la veu. Toca pla de xoc."
+      }
+    },
+    "attachment": {
+      "seguro": {
+        "name": "Vincle segur",
+        "description": "T'acostes sense por i te'n separes sense drama."
+      },
+      "ansioso": {
+        "name": "Vincle ansiós-preocupat",
+        "description": "Vols proximitat i tems perdre-la."
+      },
+      "evitativo": {
+        "name": "Vincle evitatiu-rebutjador",
+        "description": "Independència abans que intimitat."
+      },
+      "temeroso": {
+        "name": "Vincle temorós-evitatiu",
+        "description": "Vols proximitat i alhora la tems."
+      }
+    },
+    "moral": {
+      "individualizante": {
+        "name": "Moral individualitzant",
+        "description": "Cura i justícia per damunt de tot."
+      },
+      "vinculante": {
+        "name": "Moral vinculant",
+        "description": "Grup, ordre i allò sagrat com a fonament."
+      },
+      "equilibrada": {
+        "name": "Moral equilibrada",
+        "description": "Fas servir els sis fonaments de manera semblant."
+      },
+      "libertaria": {
+        "name": "Moral llibertària",
+        "description": "La llibertat per damunt de la resta de fonaments."
+      }
+    },
+    "autoestima": {
+      "t1": {
+        "name": "Crític implacable",
+        "description": "La veu interna va a degolla. Prioritat número u: abaixar-li el sou."
+      },
+      "t2": {
+        "name": "Fonaments en obres",
+        "description": "Et sostens, però costa més del que hauria de costar."
+      },
+      "t3": {
+        "name": "Estable amb esquerdes",
+        "description": "Dies bons i dies de judici sumaríssim."
+      },
+      "t4": {
+        "name": "Base sòlida",
+        "description": "Et tractes com tractaries algú que t'importa."
+      },
+      "t5": {
+        "name": "Roca mare",
+        "description": "Autoestima a prova de ratxes. Vigila només que no es torni sordesa."
+      }
+    },
+    "locus": {
+      "t1": {
+        "name": "Fulla al vent",
+        "description": "Sents que decideixen els altres: l'atzar, el sistema, la gent."
+      },
+      "t2": {
+        "name": "Més vela que timó",
+        "description": "Creus que la teva empenta compta poc; sols esperar a veure què passa."
+      },
+      "t3": {
+        "name": "Empat amb el destí",
+        "description": "Meitat esforç, meitat sort: depèn del dia."
+      },
+      "t4": {
+        "name": "Mà al timó",
+        "description": "El que et passa porta la teva signatura, i actues en conseqüència."
+      },
+      "t5": {
+        "name": "Al timó de tot",
+        "description": "Tot depèn de tu: el que va bé i també el que mai no va ser teu. Reparteix millor."
+      }
+    }
+  },
+  "studies": {
+    "title": "Els estudis que hi ha al darrere",
+    "subtitle": "Cada test de Psique es basa en instruments publicats en revistes amb revisió per parells. Aquí els tens tots, amb enllaç a l'article original i a Google Scholar per si el DOI és darrere un mur de pagament.",
+    "count": "{studies} referències · {tests} tests",
+    "caveatTitle": "Honestedat per davant:",
+    "caveatBody": "Psique no és una adaptació validada d'aquests instruments. Els ítems estan reescrits en llenguatge quotidià i escurçats, la mostra de comparació no és representativa de cap població, i els resultats no són cap diagnòstic. El que sí que és real: l'estructura de trets i les relacions entre ells venen d'aquesta literatura, no del no-res.",
+    "goToTest": "Mira el test →",
+    "doi": "DOI",
+    "source": "Font",
+    "scholar": "Scholar",
+    "homeTitle": "Això no és un horòscop",
+    "homeBody": "Els 8 tests es basen en instruments publicats i revisats per parells: Goldberg, Schwartz, Haidt, Paulhus, Ashton & Lee… Cada test enllaça les seves fonts, i aquí les tens totes juntes.",
+    "homeCta": "Mira els estudis"
+  },
+  "evolution": {
+    "title": "La teva evolució",
+    "subtitle": "{traits} trets mesurats més d'una vegada des de {since}.",
+    "emptyTitle": "Encara no hi ha evolució per ensenyar",
+    "emptyBody": "Guardem cada intent amb la seva data, així que tan bon punt repeteixis un test veuràs aquí com t'has mogut. Deixa passar uns quants mesos: és quan canvien de debò.",
+    "emptyCta": "Mira els tests",
+    "chartTitle": "Els {count} trets que més s'han mogut",
+    "chartSubtitle": "Cada punt és un test que vas fer aquell dia.",
+    "changesTitle": "Què ha canviat",
+    "changesSubtitle": "Comparat amb la primera vegada que ho vas mesurar.",
+    "changesNone": "De moment tot es manté estable: cap tret no s'ha mogut més de 5 punts.",
+    "measurements": "{count} mesuraments",
+    "stable": "estable",
+    "fromTo": "De {from} a {to} — t'has mogut cap a {pole}."
+  },
+  "share": {
+    "title": "Aquest és el seu perfil",
+    "titleNamed": "El perfil de {name}",
+    "subtitle": "Basat en {traits} trets mesurats amb instruments publicats.",
+    "metaTitle": "Un perfil a Psique",
+    "metaTitleNamed": "El perfil de {name} a Psique",
+    "metaDescription": "Espectre polític en 6 eixos, personalitat, costat fosc i molt més. Fes-te el teu gratis.",
+    "labelPolitical": "Arquetip polític",
+    "labelEsteem": "Autoestima · {score}/100",
+    "labelEsteemShort": "Autoestima",
+    "labelAttachment": "Estil d'aferrament",
+    "labelDark": "Nivell de vilà · {score}/100",
+    "labelDarkShort": "Nivell de vilà",
+    "labelPusilanime": "Pusil·lanimitat · {score}/100",
+    "labelMoral": "Perfil moral",
+    "labelLocus": "El seu locus de control · {score}/100",
+    "moralTop": "El seu fonament dominant: {trait}",
+    "ctaTitle": "I tu què ets?",
+    "ctaBody": "12 tests, 46 trets i 60 insights que es creuen entre ells. Gratis i amb les fonts a la vista.",
+    "ctaButton": "Fes-te el perfil a {brand}"
+  },
+  "account": {
+    "title": "El teu compte",
+    "shareTitle": "Comparteix el teu perfil",
+    "shareBody": "Genera un enllaç públic amb els teus arquetips — no amb les teves respostes. El pots revocar quan vulguis i l'enllaç deixa de funcionar a l'instant.",
+    "shareEnable": "Activa el meu enllaç públic",
+    "sharePolitics": "Inclou-hi també el meu arquetip polític",
+    "sharePoliticsHint": "La teva ideologia és una dada especialment protegida, així que va a part i sempre desactivada per defecte.",
+    "sharePoliticsMissing": "Has de fer el test d'espectre polític abans de poder compartir-lo.",
+    "copy": "Copia",
+    "copied": "Copiat!",
+    "saveError": "No hem pogut desar el canvi. Torna-ho a provar.",
+    "dataTitle": "Les teves dades",
+    "dataBody": "Tot el que guardem de tu: el teu perfil, cada intent i les respostes en cru.",
+    "exportButton": "Descarrega les meves dades (JSON)",
+    "deleteTitle": "Esborrar el compte",
+    "deleteBody": "S'esborra tot: perfil, intents i respostes. És immediat i no hi ha marxa enrere.",
+    "deleteButton": "Vull esborrar el meu compte",
+    "deleteConfirm": "Escriu {keyword} per confirmar.",
+    "deleteKeyword": "ESBORRAR",
+    "deleteFinal": "Esborrar definitivament",
+    "deleteLoading": "Esborrant…",
+    "deleteError": "No hem pogut esborrar el compte. Torna a entrar i prova-ho un altre cop.",
+    "cancel": "Cancel·la"
+  }
+}
