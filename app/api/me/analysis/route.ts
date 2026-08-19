@@ -21,9 +21,9 @@ export async function POST(req: Request) {
     const profile = await loadProfile(session.user.id);
     const measured = Object.keys(profile);
 
-    if (measured.length < 5) {
+    if (measured.length === 0) {
       return NextResponse.json(
-        { error: "Not enough traits measured to generate an analysis" },
+        { error: "No traits measured yet to generate an analysis" },
         { status: 400 },
       );
     }

@@ -73,8 +73,23 @@ model User {
   sessions     Session[]
   testAttempts TestAttempt[]
   traitScores  TraitScore[]
+  aiReports    AiReport[]
 
   @@map("users")
+}
+
+model AiReport {
+  id        String   @id @default(cuid())
+  userId    String   @map("user_id")
+  type      String   // "general" | "work" | "relationships" | "shadow" | "custom"
+  title     String
+  content   String   @db.Text
+  createdAt DateTime @default(now()) @map("created_at")
+
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@map("ai_reports")
 }
 
 model VerificationToken {

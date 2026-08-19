@@ -277,6 +277,98 @@ const RULES: Rule[] = [
     ["locus", "selfesteem"],
     (p) => p.locus >= 65 && p.selfesteem <= 40,
   ),
+
+  // ——— balanced & combined insights ———
+  R(
+    "ambiverti-adaptable",
+    "fortaleza",
+    ["extraversion"],
+    (p) => p.extraversion >= 42 && p.extraversion <= 58,
+  ),
+  R(
+    "estabilidad-emocional",
+    "fortaleza",
+    ["neuroticism"],
+    (p) => p.neuroticism <= 45 && p.neuroticism >= 31,
+  ),
+  R(
+    "mente-critica",
+    "curiosidad",
+    ["openness", "agreeableness"],
+    (p) => p.openness >= 55 && p.agreeableness <= 50,
+  ),
+  R(
+    "diplomatico-sereno",
+    "fortaleza",
+    ["agreeableness", "neuroticism"],
+    (p) => p.agreeableness >= 60 && p.neuroticism <= 45,
+  ),
+  R(
+    "perfeccionista-metodico",
+    "riesgo",
+    ["conscientiousness", "neuroticism"],
+    (p) => p.conscientiousness >= 65 && p.neuroticism >= 55,
+  ),
+  R(
+    "estratega-discreto",
+    "curiosidad",
+    ["mach", "extraversion"],
+    (p) => p.mach >= 55 && p.extraversion <= 45,
+  ),
+  R(
+    "lider-empatico",
+    "fortaleza",
+    ["extraversion", "agreeableness", "conscientiousness"],
+    (p) => p.extraversion >= 55 && p.agreeableness >= 55 && p.conscientiousness >= 55,
+  ),
+  R(
+    "solitario-autosuficiente",
+    "curiosidad",
+    ["extraversion", "agreeableness"],
+    (p) => p.extraversion <= 40 && p.agreeableness <= 45,
+  ),
+  R(
+    "sensibilidad-creativa",
+    "curiosidad",
+    ["openness", "neuroticism"],
+    (p) => p.openness >= 65 && p.neuroticism >= 50,
+  ),
+  R(
+    "pragmatismo-blindado",
+    "fortaleza",
+    ["openness", "conscientiousness"],
+    (p) => p.openness <= 45 && p.conscientiousness >= 60,
+  ),
+  R(
+    "negociador-firme",
+    "fortaleza",
+    ["asert", "agreeableness"],
+    (p) => p.asert >= 60 && p.agreeableness <= 45,
+  ),
+  R(
+    "observador-analitico",
+    "fortaleza",
+    ["extraversion", "openness", "neuroticism"],
+    (p) => p.extraversion <= 45 && p.openness >= 55 && p.neuroticism <= 45,
+  ),
+  R(
+    "generador-de-confianza",
+    "fortaleza",
+    ["honesty", "agreeableness"],
+    (p) => p.honesty >= 65 && p.agreeableness >= 60,
+  ),
+  R(
+    "impulso-emprendedor",
+    "fortaleza",
+    ["openness", "stimul", "achieve"],
+    (p) => p.openness >= 60 && p.stimul >= 60 && p.achieve >= 60,
+  ),
+  R(
+    "pensamiento-libre",
+    "fortaleza",
+    ["selfDir", "conform"],
+    (p) => p.selfDir >= 65 && p.conform <= 40,
+  ),
 ];
 
 export const INSIGHT_COUNT = RULES.length;

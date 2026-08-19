@@ -152,7 +152,7 @@ export function AIAnalysisBlock({
                 : "none",
             }}
           >
-            <div className="prose prose-sm prose-p:mb-3 max-w-none dark:prose-invert print:text-black">
+            <div className="prose prose-invert prose-p:text-fg/90 prose-p:leading-relaxed prose-headings:text-fg prose-strong:text-accent prose-hr:border-line max-w-none print:text-black print:prose-p:text-black">
               <ReactMarkdown
                 remarkPlugins={[remarkGfm]}
                 components={{

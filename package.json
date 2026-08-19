@@ -23,7 +23,7 @@
     "prisma:studio": "npx prisma studio",
     "prisma:generate": "npx prisma generate",
     "prisma:deploy": "npx prisma migrate deploy",
-    "prisma:reset": "npx prisma migrate reset --force --skip-seed",
+    "prisma:reset": "npx prisma migrate reset --force",
     "prisma:seed": "npx prisma db seed",
     "prisma:migrate": "npx prisma migrate dev",
     "kill-ports": "lsof -ti:3000 | xargs kill -9",

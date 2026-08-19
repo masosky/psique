@@ -21,7 +21,6 @@ import { CATEGORY_COLOR } from "@/lib/theme";
 import { Compass } from "@/components/charts/Compass";
 import { RadarBlock } from "@/components/charts/RadarBlock";
 import { TraitBar } from "@/components/charts/TraitBar";
-import { AIAnalysisBlock } from "./AIAnalysisBlock";
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
@@ -152,6 +151,22 @@ export default async function PerfilPage({
         </Link>
       </header>
 
+      <section className="mb-10 flex flex-wrap items-center justify-between gap-4 rounded-2xl border border-accent/40 bg-accent/10 p-6 shadow-sm">
+        <div>
+          <h2 className="font-display flex items-center gap-2 text-xl text-accent">
+            <span>✨</span> {t("aiTitle")}
+          </h2>
+          <p className="mt-1 text-sm text-muted">{t("aiSubtitle")}</p>
+        </div>
+        <Link
+          href="/analisis"
+          className="flex items-center gap-2 rounded-xl bg-accent-strong px-5 py-2.5 text-sm font-medium text-white transition hover:bg-accent shadow"
+        >
+          <span>{t("aiGenerate")}</span>
+          <span aria-hidden="true">→</span>
+        </Link>
+      </section>
+
       {/* Headlines */}
       <section className="mb-10 grid gap-4 sm:grid-cols-3">
         {bigFive && (
@@ -229,21 +244,6 @@ export default async function PerfilPage({
           </div>
         )}
       </section>
-
-      <AIAnalysisBlock
-        initialAnalysis={aiAnalysis}
-        canGenerate={measured.length >= 5}
-        labels={{
-          title: t("aiTitle"),
-          subtitle: t("aiSubtitle"),
-          generateBtn: t("aiGenerate"),
-          generating: t("aiGenerating"),
-          errorText: t("aiError"),
-          notEnoughData: t("aiNotEnoughData"),
-          readMore: t("aiReadMore"),
-          readLess: t("aiReadLess"),
-        }}
-      />
 
       {/* Compass + political radar */}
       {politicos.length >= 2 && (

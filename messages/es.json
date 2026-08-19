@@ -15,7 +15,8 @@
     "language": "Idioma",
     "studies": "Estudios",
     "evolution": "Evolución",
-    "account": "Cuenta"
+    "account": "Cuenta",
+    "aiAnalysis": "Análisis IA"
   },
   "home": {
     "eyebrow": "El test que no te hace la pelota",
@@ -1070,6 +1071,66 @@
     "motor-exigente": {
       "title": "Motor sin amortiguador",
       "body": "Crees que todo depende de ti pero no te crees capaz: responsabilidad máxima, confianza mínima. Es el perfil que más se exige y menos se perdona — revisa el reparto de culpas."
+    },
+    "ambiverti-adaptable": {
+      "title": "Ambiversión Adaptable",
+      "body": "Tu nivel intermedio de extraversión te da versatilidad social: disfrutas del contacto grupal pero eres plenamente capaz de recargar energía a solas sin sentir aislamiento."
+    },
+    "estabilidad-emocional": {
+      "title": "Paz y Estabilidad Emocional",
+      "body": "Tu nivel controlado de neuroticismo te confiere serenidad y resistencia ante imprevistos, manteniendo la cabeza fría cuando la mayoría se desborda."
+    },
+    "mente-critica": {
+      "title": "Pensador Crítico Independiente",
+      "body": "Combines una gran curiosidad intelectual con poca necesidad de complacer a la masa. Te atreves a cuestionar consensos y buscar la verdad sin filtro."
+    },
+    "diplomatico-sereno": {
+      "title": "Diplomático Sereno",
+      "body": "Tu calidez interpersonal combinada con una baja reactividad emocional te convierte en un pacificador natural que no absorbe el estrés de los demás."
+    },
+    "perfeccionista-metodico": {
+      "title": "Perfeccionismo Autoexigente",
+      "body": "Tu alta autoexigencia y disciplina pueden generar tensión interna si las cosas no salen como planeas. Aprende a celebrar el suficiente bien."
+    },
+    "estratega-discreto": {
+      "title": "Estratega Discreto",
+      "body": "Tu pragmatismo calculador opera mejor desde un perfil bajo: observas el tablero antes de mover ficha sin necesidad de llamar la atención."
+    },
+    "lider-empatico": {
+      "title": "Líder Integrador",
+      "body": "La combinación de dinamismo, empatía y organización te posiciona de forma natural para coordinar personas con cercanía y orientación a resultados."
+    },
+    "solitario-autosuficiente": {
+      "title": "Lobo Estepario Autosuficiente",
+      "body": "Posees una altísima autonomía psicológica: no dependes de la validación ni de la compañía ajena para trazar tu rumbo y estar en paz."
+    },
+    "sensibilidad-creativa": {
+      "title": "Antena Creativa Fina",
+      "body": "Tu intensa imaginación resuena con fuerza en tus emociones. Es el motor de una gran sensibilidad estética, pero requiere gestionar la sobreestimulación."
+    },
+    "pragmatismo-blindado": {
+      "title": "Foco Operativo y Pragmático",
+      "body": "Prefieres soluciones probadas y resultados tangibles antes que divagar en hipótesis abstractas. Eres el ancla de realidad en cualquier proyecto."
+    },
+    "negociador-firme": {
+      "title": "Negociador Firme",
+      "body": "Sabes decir lo que piensas y defender tus intereses sin ceder por compromiso o miedo a incomodar en una mesa de negociación."
+    },
+    "observador-analitico": {
+      "title": "Mente Analítica Tranquila",
+      "body": "Procesas la información de manera reflexiva, objetiva y sin reactividad emocional, lo que te permite tomar decisiones lúcidas en momentos críticos."
+    },
+    "generador-de-confianza": {
+      "title": "Integridad y Transparencia",
+      "body": "Tu honestidad y trato cercano generan una atmósfera de seguridad y lealtad espontánea en tu entorno."
+    },
+    "impulso-emprendedor": {
+      "title": "Impulso Innovador y Emprendedor",
+      "body": "Tienes la tríada perfecta del creador: apertura mental a lo nuevo, deseo de desafío y ambición por alcanzar metas tangibles."
+    },
+    "pensamiento-libre": {
+      "title": "Soberanía Cognitiva",
+      "body": "Valoras profundamente pensar y decidir por ti mismo, mostrando un rechazo instintivo a amoldarte ciegamente a normas o modas de grupo."
     }
   },
   "archetypes": {

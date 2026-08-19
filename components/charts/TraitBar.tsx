@@ -36,12 +36,23 @@ export function TraitBar({
       <div className="mb-1.5 flex items-baseline justify-between">
         <span className="flex items-center gap-1.5 text-sm font-medium">
           {labels.name}
-          <span
-            title={labels.description}
-            className="flex cursor-help text-muted hover:text-fg transition-colors"
-          >
-            <Info className="h-3.5 w-3.5" />
-          </span>
+          {labels.description && (
+            <span className="group relative inline-flex items-center">
+              <span
+                tabIndex={0}
+                className="flex cursor-help text-muted transition-colors hover:text-fg focus:text-fg focus:outline-none"
+              >
+                <Info className="h-3.5 w-3.5" />
+              </span>
+              <span className="pointer-events-none absolute bottom-full left-0 z-50 mb-2 hidden w-64 rounded-lg border border-line/80 bg-ink p-3 text-xs shadow-2xl group-hover:block group-focus-within:block">
+                <span className="mb-1 block font-semibold text-fg">{labels.name}</span>
+                <span className="block font-normal leading-relaxed text-muted">
+                  {labels.description}
+                </span>
+                <span className="absolute top-full left-2 -mt-1 block h-2 w-2 rotate-45 border-r border-b border-line/80 bg-ink" />
+              </span>
+            </span>
+          )}
         </span>
         <span className="text-xs text-muted">
           {percentile !== undefined && (
